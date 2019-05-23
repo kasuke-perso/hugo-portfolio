@@ -9,6 +9,7 @@ PygmentsStyle = "monokai"
 
 enableEmoji     = true
 
+
 [author]
   name = "Florian Dugat"
 
@@ -19,10 +20,11 @@ enableEmoji     = true
 
 [params]
   AuthorName = "florian"
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
+  dateform        = "2 Jan, 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "02-01-2006"
   dateformNumTime = "2006-01-02 15:04 -0700"
+  homeSubtitle = "Expert systèmes et réseaux"
 
   [[params.social]]
      name = "email"
@@ -35,6 +37,7 @@ enableEmoji     = true
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/florian-dugat-99a3a9153/"
+
 
   # Metadata mostly used in document's head
   description = "Homepage and blog by Florian Dugat"
@@ -59,14 +62,17 @@ enableEmoji     = true
         identifier = "projets"
         name = "Projets"
         url = "/projets"
+        weight = 1
       [[languages.fr.menu.main]]
         identifier = "blog"
         name = "Blog"
         url = "/blog"
+        weight = 2
       [[languages.fr.menu.main]]
         identifier = "contact"
         name = "Contact"
-        url = "/contact/contact"
+        url = "/contact"
+        weight = 3
 
   [languages.en]
     title = "Hello Friend NG"
