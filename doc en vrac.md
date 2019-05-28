@@ -9,3 +9,5 @@
 * __layouts__ : contient les squelettes des pages qui seront générés
 * __static__ : contiendra les données statiques ajoutées à votre site (les images,js, css,…)
 * __themes__ : où vous pourrez mettre les différents thèmes Hugo
+
+* Ajouter un nouveau post : `hugo new blog/tite-de-mon-article.md`
