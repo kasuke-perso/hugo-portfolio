@@ -71,3 +71,55 @@ Donc on va partitionner tout ça, on rentre en mode edition de partition sur `de
 sudo fdisk /dev/sda
 Command (m for help):
 ```
+Si on veut voir les partitions dedans on appui sur `p`
+```shell
+Command (m for help): p
+Disk /dev/sda: 150 GiB, 161061273600 bytes, 314572800 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x513bdfba
+
+Device     Boot   Start      End  Sectors  Size Id Type
+/dev/sda1  *       2048   999423   997376  487M 83 Linux
+/dev/sda2       1001470 33552383 32550914 15.5G  5 Extended
+/dev/sda3        999424  1001469     2046 1023K 83 Linux
+/dev/sda5       1001472 33552383 32550912 15.5G 8e Linux LVM
+
+Partition table entries are not in disk order.
+
+```
+On peut voir un `Partition table entries are not in disk order`
+
+je sais pas pourquoi je m'en rappel plus
+
+On créer un nouvelle partition en appuyant sur `n` ensuite sur `p`pour obtenir une partition primaire
+```shell
+Command (m for help): n
+Partition type
+   p   primary (2 primary, 1 extended, 1 free)
+   l   logical (numbered from 5)
+Select (default p): p
+```
+On choisis normalement une partition, dans mon cas ça s'est fait tout seul en prenant la 4 et on appuie direct sur entrer, ça choisira les bons secteur de disque (par défaut il prend le premier disponible jusqu'au dernier disponible)
+```shell
+Selected partition 4
+First sector (33552384-314572799, default 33552384):
+Last sector, +sectors or +size{K,M,G,T,P} (33552384-314572799, default 314572799):
+
+Created a new partition 4 of type 'Linux' and of size 134 GiB.
+
+```
+On peut voir que la partition a été créée avec 134 Go et de type 'Linux'
+
+Pour terminer et appliquer nos modifications, il suffit d'appuyer sur `w`
+```shell
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Re-reading the partition table failed.: Device or resource busy
+
+The kernel still uses the old table. The new table will be used at the next reboot or after you run partprobe(8) or kpartx(8).
+```
+Bon dans mon cas ça fonctionne pas car la partition que j'essaye de modifier est en cours d'utilisation (en même temps je fais comment pour me servir du système et de le modifier sans passer par un live CD 🤔 )
