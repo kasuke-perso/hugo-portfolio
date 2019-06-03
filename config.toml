@@ -9,6 +9,8 @@ PygmentsStyle = "monokai"
 
 enableEmoji     = true
 
+disqusShortname = "florian-dugat"
+
 
 [author]
   name = "Florian Dugat"
