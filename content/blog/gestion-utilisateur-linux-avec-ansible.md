@@ -15,20 +15,26 @@ Pour se faire, plusieurs méthodes s'offrent à nous:
 * Faire de A à Z un playbook avec le module [user](https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module)
 * Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur [ansible galaxy](https://galaxy.ansible.com/) par exemple
 
-Les 2 options peuvent convenir mais généralement les rôles qu'il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s'en servir que de le refaire sois-même.
+Les 2 options peuvent convenir, mais généralement les rôles qu'il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s'en servir que de le refaire sois-même.
 
 Donc aujourd'hui je vous propose ma solution qui va se servir d'un peu des deux car moi je veux un truc **SIMPLE** et facile d'utilisation sans avoir à replonger dans une doc pour s'en servir.
 
 ### Petits rappels
 
-Les rôles sont situés dans votre /home `~/.ansible/roles`
+* Les rôles sont situés dans votre /home `~/.ansible/roles`
 
-Les variables passés dans `--extra-pass` écrase toute celle que vous avez ailleurs
+* Les variables passées dans `--extra-pass` écrasent toute celles que vous avez ailleurs
 Je vais essayer d'utiliser un max de variables pour ne rien avoir à faire quand je m'en sers et pouvoir l'adapter à tout utilisateur
+
+* De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s'y connecter. Il faut alors rajouter `--ask-pass` et quand on a besoin des droits 'sudo' il faut aussi ajouter `--ask-become-pass`. 
+En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable `ansible_user=youruser` et `ansible_password=yourpassword` et `ansible_sudo_password=yourpassword` pour les droits sudo.
+
+* L'option `-i` permet de préciser quel fichier host utiliser (par défaut c'est `etc/ansible/hosts`)
+
 
 ------
 
-Je vais essayer de partir de ça https://github.com/nickjj/ansible-user et de le faire à ma sauce
+Je vais partir de ça https://github.com/nickjj/ansible-user et de le faire à ma sauce
 
 Il faut faire un petit `ansible-galaxy install nickjj.user` 
 
@@ -50,7 +56,7 @@ fdugat@SRV-ANSIBLE01:~/.ansible/roles/nickjj.user$ tree
 ```
 **Toute les variables sont dans** `defaults/main.yml`
 
-Bien faire attention à celà
+Ce sera THE fichier à modifier pour pouvoir l'adapter pour n'importe quel utilisateur.
 
 ### Mais ma nouvelle VM ne connait pas mes clés SSH justement ! Comment faire ?
 
@@ -71,9 +77,11 @@ On peut rajouter des variables soit directement dans notre fichier `hosts` (pas 
 
 ```bash
 ansible-playbook -i hosts /
-    --extra-vars "ansible_user=root ansible_password=yourpassword"
+    --extra-vars "ansible_user=root / 
+    ansible_sudo_password="yourpassword" /
+    ansible_password=yourpassword"
 ```
-* Exemple avec fichier hosts:
+* Contenu du fichier hosts:
 
 ```bash
 10.0.5.54 ansible_user="admin" ansible_password="yourpassword" / 
@@ -81,3 +89,4 @@ ansible_sudo_password="yourpassword" /
 ansible_python_interpreter="/usr/bin/python3"
 ```
 Si vous ne mettez pas `ansible_sudo_password` vous aurez une erreur puisque dans le playbook on se sert des droits sudo.
+
