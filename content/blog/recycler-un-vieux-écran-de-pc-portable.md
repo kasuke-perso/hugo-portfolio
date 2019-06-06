@@ -9,14 +9,17 @@ En gros c'est très simple.
 
 Ce qu'il vous faut c'est la référence de l'écran (qui doit être marquée derrière, après le plus dur c'est de voir quel numéro correspond à la référence)
 
---- prendre photo de l'arrière de mon écran pété ---
+![derriere ecran portable](/back_screen.jpg)
+
 
 Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve)
 On cherche <strong>board controller </strong>+ <strong>ref de l'écran</strong>
 
-plusieurs options s'offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c'est simple à brancher :) et il faut une petite alim qui va avec. 
+Plusieurs options s'offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c'est simple à brancher 😉 
 
-ça ressemble à ça et c'est super cool ~25$ au top
+Généralement ces board controller sont livrés sans alimentation (12V)
+
+ Voici une image d'un Board Controller et ça vaut ~25€
 
 <img class="alignnone size-full wp-image-36" src="https://kracyka.files.wordpress.com/2019/01/1f1a9c29-778c-4ea9-a212-1c5c7b1e9236.jpg" alt="1f1a9c29-778c-4ea9-a212-1c5c7b1e9236" width="600" height="600" />
 
