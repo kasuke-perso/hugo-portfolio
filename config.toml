@@ -26,7 +26,7 @@ disqusShortname = "florian-dugat"
   dateformShort   = "2 Jan"
   dateformNum     = "02-01-2006"
   dateformNumTime = "2006-01-02 15:04 -0700"
-  homeSubtitle = "Expert systèmes et réseaux"
+  homeSubtitle = "Bac+5 Expert systèmes et réseaux"
 
   [[params.social]]
      name = "email"
@@ -75,6 +75,11 @@ disqusShortname = "florian-dugat"
         name = "Contact"
         url = "/contact"
         weight = 3
+      [[languages.fr.menu.main]]
+        identifier = "A propos"
+        name = "A propos"
+        url = "about"
+        weight = 4
 
   [languages.en]
     title = "Hello Friend NG"
