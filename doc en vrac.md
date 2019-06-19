@@ -1,6 +1,7 @@
 # Comment JE me sers de Hugo
 
 * Lancer son serveur avec les pages modifiées hugo server -D (config les variables d'environnement)
+* Lancer son serveur sur un serveur : hugo server --bind=0.0.0.0 --baseUrl=http://mon.ip.ou.mon.adressse/
 
 -------------------------------------------------------
 * __archetypes__ : contient les éléments qui seront automatiquement rajouté quand vous créerez un nouvel article
