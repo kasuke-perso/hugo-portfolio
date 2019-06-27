@@ -1,16 +1,16 @@
 ---
-title: "Challenge Accepted"
+title: "Challenge Accepted - IaaS"
 date: 2017-04-20T16:32:35+02:00
 draft: false
-tags: ["ansible", "AWS", "terraform"]
+tags: ["ansible", "AWS", "terraform", "IaaS"]
 ---
 
-<center>![barney](/challenge-accepted.jpg)</center>
+{{< image src="/challenge-accepted.jpg" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
 Projet d'école (S4) proposé par Eric Lalitte :
 
 Automatisation de génération d'infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
 
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l'étudiant puisse réalisé un TP.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l'étudiant puisse réalisé un TP.
 
 Pour se faire, nous avons utilisé Ansible, Terraform et AWS.
 

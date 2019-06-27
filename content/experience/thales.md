@@ -7,7 +7,7 @@ tags: ["ansible"]
 
 Stage à Thales Velizy pendant 6 mois
 
-#### Mars 2018 - août 2018
+#### Mars 2018 - Août 2018
 
 Thème de la mission :
 ### Gestion de configuration massive
@@ -19,16 +19,14 @@ Le service Ingénierie développe et intègre des solutions de communication et 
 
 Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ». Les machines à déployer fonctionnent sur un OS Linux Debian 7 et doivent avoir une configuration système et applicative spécifique à chaque instance.
 
-A ce titre, mes missions étaient :
-
+#### A ce titre, mes missions étaient :
 * Faire l’inventaire et formaliser les profils de configuration.
 * Spécifier les processus de déploiement.
 * Formaliser et réaliser le déploiement via « Ansible ».
 * Tester en environnement virtualisé (VMWare/VirtualBox).
 * Documenter et apporter du support aux utilisateurs (validation) en anglais.
 
-Univers technologique :
-
+#### Univers technologique :
 * Linux Debian 7
 * VirtualBox
 * VMWare
