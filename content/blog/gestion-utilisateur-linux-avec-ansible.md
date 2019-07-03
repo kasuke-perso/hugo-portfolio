@@ -35,7 +35,7 @@ En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot 
 
 Je vais partir de ça https://github.com/nickjj/ansible-user
 
-Je précise qu'on est sur ubuntu server 18.04
+Je précise qu'on est sur ubuntu server 16.04
 
 Il faut faire un petit `ansible-galaxy install nickjj.user` 
 
@@ -82,7 +82,7 @@ ansible-playbook -i hosts /
     ansible_sudo_password="yourpassword" /
     ansible_password=yourpassword"
 ```
-* Contenu du fichier hosts:
+* Ou avec le fichier hosts:
 
 ```bash
 10.0.5.54 ansible_user="admin" ansible_password="yourpassword" / 
@@ -91,3 +91,59 @@ ansible_python_interpreter="/usr/bin/python3"
 ```
 Si vous ne mettez pas `ansible_sudo_password` vous aurez une erreur puisque dans le playbook on se sert des droits sudo.
 
+---
+
+### Exemple concret 
+Je veux rajouter robert lafondue avec sa clé publique qui est sur le serveur sur un serveur qui est en `192.168.0.12` par exemple.
+
+Contenu du fichier `~/.ansible/roles/nickjj.user/defaults/main.yml` :
+```YAML
+---
+# Optionally create additional user groupss. If empty, the user you create will
+# automatically be a part of their user's group, ie. deploy:deploy.
+user_groups: ["rlafondue", "adm", "cdrom", "sudo", "dip", "plugdev", "lxd", "lpadmin"]
+
+# The user you want to create.
+user_name: "rlafondue"
+
+# Which shell should you default to? Typically "bash" or "sh".
+user_shell: "/bin/bash"
+
+# Do you want to create an SSH keypair for this user? You probably don't for a
+# regular user that you plan to login as which is why it's disabled by default.
+user_generate_ssh_key: False
+
+# When set, this will copy your local SSH public key from this path to your
+# user's authorized keys on your server.
+#
+# If you don't want this behavior then use an empty string as the value but keep
+# in mind this role does not set a default password for the user you create, so
+# you will be locked out if you don't supply your public SSH key.
+user_local_ssh_key_path: "/home/rlafondue/.ssh/authorized_keys"
+
+# Do you want to enable running root commands without needing a password?
+user_enable_passwordless_sudo: True
+```
+
+Contenu du fichier `playbook.yml` :
+```YAML
+---
+
+- name: "Test transfert clé ssh"
+  hosts: "all"
+  become: True
+
+  roles:
+    - { role: "nickjj.user", tags: "user" }
+```
+
+Conteu du fichier `hosts` :
+```YAML
+192.168.0.12 ansible_user="root" ansible_password="passW0rd" ansible_sudo_password="passW0rd" ansible_python_interpreter="/usr/bin/python3"
+```
+
+Et enfin la commande pour lancer tout ça : 
+
+`(sudo) ansible-playbook -i hosts playbook.yml`
+
+Et voilà ! Aussi simple que ça.
