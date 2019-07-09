@@ -16,9 +16,11 @@ A la fin de son scan et de l'attaque, on obtient un rapport détaillé sur une i
 
 Puisque nous avions un raspberry, nous devions utilisé des techniques peu groumandes en ressources. Du coup le bruteforce était banni de nos attaques.
 
-Voici une vidéo d'attaque, bien sûr réalisé dans notre école sur un réseau spécial 😉
+Voici une vidéo d'attaque, bien sûr réalisée dans notre école sur un réseau spécial 😉
 
-** Afficher la vidéo nemesis **
+{{< youtube LdSwzABJ79Q >}}
+
+On ne le voit pas dans cette vidéo actuelle ** peut être rajouter une autre vidéo ** mais on génère un rapport de ce que l'on a trouvé et on a un résumé tout beau
 
 #### Ce que le projet fait :
 *	Collecte d’un maximum d'informations d'un point de vue intérieur et extérieur au réseau cible.
