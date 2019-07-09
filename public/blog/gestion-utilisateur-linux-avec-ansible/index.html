@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Florian Dugat ">
+<meta name="description"
+    content="Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/blog/gestion-utilisateur-linux-avec-ansible/" />
+
+
+<title>
+    
+    Gestion clés ssh Linux avec Ansible :: Florian DUGAT 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Gestion clés ssh Linux avec Ansible">
+<meta itemprop="description" content="Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&hellip;
+Des tâches répétitives qu&rsquo;on aimerait bien automatiser. C&rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&rsquo;ansible est plutôt bien.">
+
+
+<meta itemprop="datePublished" content="2019-05-29T14:29:12&#43;02:00" />
+<meta itemprop="dateModified" content="2019-05-29T14:29:12&#43;02:00" />
+<meta itemprop="wordCount" content="817">
+
+
+
+<meta itemprop="keywords" content="tuto,ansible,devops,automatisation,système," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gestion clés ssh Linux avec Ansible"/>
+<meta name="twitter:description" content="Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&hellip;
+Des tâches répétitives qu&rsquo;on aimerait bien automatiser. C&rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&rsquo;ansible est plutôt bien."/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-29 14:29:12 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text"># cd /home</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/projets">Projets</a></li><li><a href="/experience">Experiences</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/about">A propos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="/blog/gestion-utilisateur-linux-avec-ansible/">Gestion clés ssh Linux avec Ansible</a></h2>
+
+            
+
+            <div class="post-content">
+                
+
+<p>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&rsquo;en servir avec la même configuration.
+Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&hellip;</p>
+
+<p>Des tâches répétitives qu&rsquo;on aimerait bien automatiser. C&rsquo;est pourquoi Ansible est là !</p>
+
+<p>Pour se faire, plusieurs méthodes s&rsquo;offrent à nous:</p>
+
+<ul>
+<li>Faire de A à Z un playbook avec le module <a href="https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module">user</a>, la doc d&rsquo;ansible est plutôt bien.</li>
+<li>Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur <a href="https://galaxy.ansible.com/">ansible galaxy</a> ou github par exemple</li>
+</ul>
+
+<p>Les 2 options peuvent convenir, mais généralement les rôles qu&rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&rsquo;en servir que de le refaire sois-même.</p>
+
+<p>Donc aujourd&rsquo;hui je vous propose ma solution qui va se servir d&rsquo;un peu des deux car moi je veux un truc <strong>SIMPLE</strong> et facile d&rsquo;utilisation sans avoir à replonger dans une doc pour s&rsquo;en servir.</p>
+
+<h3 id="petits-rappels">Petits rappels</h3>
+
+<ul>
+<li><p>Les rôles sont situés dans votre /home <code>~/.ansible/roles</code></p></li>
+
+<li><p>Les variables passées dans <code>--extra-pass</code> écrasent toute celles que vous avez ailleurs</p></li>
+
+<li><p>De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s&rsquo;y connecter. Il faut alors rajouter <code>--ask-pass</code> et quand on a besoin des droits &lsquo;sudo&rsquo; il faut aussi ajouter <code>--ask-become-pass</code>.
+En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable <code>ansible_user=youruser</code> et <code>ansible_password=yourpassword</code> et <code>ansible_sudo_password=yourpassword</code> pour les droits sudo.</p></li>
+
+<li><p>L&rsquo;option <code>-i</code> permet de préciser quel fichier host utiliser (par défaut c&rsquo;est <code>etc/ansible/hosts</code>)</p></li>
+</ul>
+
+<hr />
+
+<p>Je vais partir de ça <a href="https://github.com/nickjj/ansible-user">https://github.com/nickjj/ansible-user</a></p>
+
+<p>Je précise qu&rsquo;on est sur ubuntu server 16.04</p>
+
+<p>Il faut faire un petit <code>ansible-galaxy install nickjj.user</code></p>
+
+<p>Cela va créer un dossier dans votre <code>~/.ansible/roles</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-batch" data-lang="batch">fdugat@SRV-ANSIBLE01:~/.ansible/roles/nickjj.user$<span style="color:#75715e"> tree</span>
+.
+├── CHANGES.md
+├── defaults
+│   └── main.yml
+├── LICENSE
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+└── tests
+    └── test.yml</code></pre></div>
+<p><strong>Toute les variables sont dans</strong> <code>defaults/main.yml</code></p>
+
+<p>Ce sera THE fichier à modifier pour pouvoir l&rsquo;adapter pour n&rsquo;importe quel utilisateur.</p>
+
+<h3 id="mais-ma-nouvelle-vm-ne-connait-pas-mes-clés-ssh-justement-comment-faire">Mais ma nouvelle VM ne connait pas mes clés SSH justement ! Comment faire ?</h3>
+
+<p>Hé bien mon petit Jamie, il y a une option dans Ansible qui permet ce genre de chose. Je considère que vous avez au moins un utilisateur qui peut se logger avec un mot de passe.</p>
+
+<p>Je vous conseil de faire ça juste pour ce cas précis. Créer un fichier dans votre <code>/home</code> que vous nommerez <code>.ansible.cfg</code>. Ce fichier contiendra des variables de configuration pour ansible qui seront propre à un utilisateur (et non en global du coup)</p>
+
+<p>Dans ce fichier vous pouvez mettre ceci :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">[defaults]
+host_key_checking = False</code></pre></div>
+<p>Ce qui aura pour conséquence de ne pas vérifier le fichier known_hosts et ainsi rajouter une nouvelle machine sans vérif &hellip; (pas bien)</p>
+
+<p>On peut rajouter des variables soit directement dans notre fichier <code>hosts</code> (pas /etc/host hein) soit on peut les passer quand on éxecute le playbook avec l&rsquo;option <code>--extra-pass</code></p>
+
+<ul>
+<li>Exemple avec commande ansible-playbook:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ansible-playbook -i hosts /
+    --extra-vars <span style="color:#e6db74">&#34;ansible_user=root / 
+</span><span style="color:#e6db74">    ansible_sudo_password=&#34;</span>yourpassword<span style="color:#e6db74">&#34; /
+</span><span style="color:#e6db74">    ansible_password=yourpassword&#34;</span></code></pre></div>
+<ul>
+<li>Ou avec le fichier hosts:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ae81ff">10</span>.0.5.54 ansible_user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;admin&#34;</span> ansible_password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yourpassword&#34;</span> / 
+ansible_sudo_password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yourpassword&#34;</span> /
+ansible_python_interpreter<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/usr/bin/python3&#34;</span></code></pre></div>
+<p>Si vous ne mettez pas <code>ansible_sudo_password</code> vous aurez une erreur puisque dans le playbook on se sert des droits sudo.</p>
+
+<hr />
+
+<h3 id="exemple-concret">Exemple concret</h3>
+
+<p>Je veux rajouter robert lafondue avec sa clé publique qui est sur le serveur sur un serveur qui est en <code>192.168.0.12</code> par exemple.</p>
+
+<p>Contenu du fichier <code>~/.ansible/roles/nickjj.user/defaults/main.yml</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">---
+<span style="color:#75715e"># Optionally create additional user groupss. If empty, the user you create will</span>
+<span style="color:#75715e"># automatically be a part of their user&#39;s group, ie. deploy:deploy.</span>
+user_groups: [<span style="color:#e6db74">&#34;rlafondue&#34;</span>, <span style="color:#e6db74">&#34;adm&#34;</span>, <span style="color:#e6db74">&#34;cdrom&#34;</span>, <span style="color:#e6db74">&#34;sudo&#34;</span>, <span style="color:#e6db74">&#34;dip&#34;</span>, <span style="color:#e6db74">&#34;plugdev&#34;</span>, <span style="color:#e6db74">&#34;lxd&#34;</span>, <span style="color:#e6db74">&#34;lpadmin&#34;</span>]
+
+<span style="color:#75715e"># The user you want to create.</span>
+user_name: <span style="color:#e6db74">&#34;rlafondue&#34;</span>
+
+<span style="color:#75715e"># Which shell should you default to? Typically &#34;bash&#34; or &#34;sh&#34;.</span>
+user_shell: <span style="color:#e6db74">&#34;/bin/bash&#34;</span>
+
+<span style="color:#75715e"># Do you want to create an SSH keypair for this user? You probably don&#39;t for a</span>
+<span style="color:#75715e"># regular user that you plan to login as which is why it&#39;s disabled by default.</span>
+user_generate_ssh_key: False
+
+<span style="color:#75715e"># When set, this will copy your local SSH public key from this path to your</span>
+<span style="color:#75715e"># user&#39;s authorized keys on your server.</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># If you don&#39;t want this behavior then use an empty string as the value but keep</span>
+<span style="color:#75715e"># in mind this role does not set a default password for the user you create, so</span>
+<span style="color:#75715e"># you will be locked out if you don&#39;t supply your public SSH key.</span>
+user_local_ssh_key_path: <span style="color:#e6db74">&#34;/home/rlafondue/.ssh/authorized_keys&#34;</span>
+
+<span style="color:#75715e"># Do you want to enable running root commands without needing a password?</span>
+user_enable_passwordless_sudo: True</code></pre></div>
+<p>Contenu du fichier <code>playbook.yml</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">--<span style="color:#e6db74">-
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">- name: &#34;Test transfert clé ssh&#34;</span>
+  hosts: <span style="color:#e6db74">&#34;all&#34;</span>
+  become: True
+
+  roles:
+    - { role: <span style="color:#e6db74">&#34;nickjj.user&#34;</span>, tags: <span style="color:#e6db74">&#34;user&#34;</span> }</code></pre></div>
+<p>Conteu du fichier <code>hosts</code> :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#ae81ff">192.168</span>.<span style="color:#ae81ff">0.12</span> ansible_user=<span style="color:#e6db74">&#34;root&#34;</span> ansible_password=<span style="color:#e6db74">&#34;passW0rd&#34;</span> ansible_sudo_password=<span style="color:#e6db74">&#34;passW0rd&#34;</span> ansible_python_interpreter=<span style="color:#e6db74">&#34;/usr/bin/python3&#34;</span></code></pre></div>
+<p>Et enfin la commande pour lancer tout ça :</p>
+
+<p><code>(sudo) ansible-playbook -i hosts playbook.yml</code></p>
+
+<p>Et voilà ! Aussi simple que ça.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/tuto">tuto</a></span><span class="tag"><a href="/tags/ansible">ansible</a></span><span class="tag"><a href="/tags/devops">devops</a></span><span class="tag"><a href="/tags/automatisation">automatisation</a></span><span class="tag"><a href="/tags/syst%C3%A8me">système</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="/">Florian Dugat</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>

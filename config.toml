@@ -1,6 +1,6 @@
 # Mettre basurl = "florian-dugat.ddns.net" quand sur serveur
 # Sinon baseurl = "/"
-baseurl = "florian-dugat.ddns.net"
+baseurl = "/"
 languageCode = "fr-fr"
 title = "Portfolio Florian"
 theme = "hugo-theme-hello-friend-ng-master"
@@ -17,9 +17,9 @@ disqusShortname = "florian-dugat"
 [author]
   name = "Florian Dugat"
 
-[taxonomies]
-  tag      = "tags"
-  category = ""
+#[taxonomies]
+#  tag      = "tags"
+#  category = ""
 
 
 [params]

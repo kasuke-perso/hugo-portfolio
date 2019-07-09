@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Florian DUGAT</title>
+    <link>/</link>
+    <description>Recent content on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 09 Jul 2019 19:31:11 +0200</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>L&#39;agefi</title>
+      <link>/experience/lagefi/</link>
+      <pubDate>Tue, 09 Jul 2019 19:31:11 +0200</pubDate>
+      
+      <guid>/experience/lagefi/</guid>
+      <description>Administrateur systèmes et réseaux en alternance Durée : 2 ans (Octobre 2018 - Septembre 2020)
+Dans une entreprise à taille moyenne (environ 100), je gère tout ce qu&amp;rsquo;il y a de relié à l&amp;rsquo;informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher ses périphériques à installer un serveur de supervision ELK pour statistique d&amp;rsquo;envoi de mail.
+Etant dans une équipe de trois personnes (un DSI, un RSSI et moi) nous servons un peu à tout, donc aussi de support pour les salariés de l&amp;rsquo;entreprise.</description>
+    </item>
+    
+    <item>
+      <title>A propos de moi</title>
+      <link>/about/</link>
+      <pubDate>Fri, 07 Jun 2019 14:19:58 +0200</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Passionné d&amp;rsquo;informatique et de nouvelles technologies, je suis actuellement diplômé BAC+5 Expert système et réseaux à mon école IN&amp;rsquo;TECH dans laquelle j&amp;rsquo;ai pu acquérir des connaissances dans différents langages informatique tel que le PHP/MySQL, CSS, Python, Bash, PowerShell sous divers environnements comme Windows mais essentiellement Linux (Kali, Arch, Debian, Ubuntu) et parfois OS X.
+J&amp;rsquo;ai pu aussi surtout apprendre le système et le réseau qui est mon métier actuel, beaucoup de linux, en passant par l&amp;rsquo;hébergement web, l&amp;rsquo;automatisation de création d&amp;rsquo;infrastructure, DNS, Serveur mail avec postfix etc &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Gestion clés ssh Linux avec Ansible</title>
+      <link>/blog/gestion-utilisateur-linux-avec-ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Agrandir Stockage Vm</title>
+      <link>/blog/agrandir-stockage-vm/</link>
+      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
+      
+      <guid>/blog/agrandir-stockage-vm/</guid>
+      <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
+Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
+    </item>
+    
+    <item>
+      <title>Recycler Un Vieux Écran De Pc Portable</title>
+      <link>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link>
+      <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
+      
+      <guid>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
+      <description>En gros c&amp;rsquo;est très simple.
+Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)
+Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écran
+Plusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
+    </item>
+    
+    <item>
+      <title>Sensibilisation au lockpicking</title>
+      <link>/blog/sensibilisation/</link>
+      <pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate>
+      
+      <guid>/blog/sensibilisation/</guid>
+      <description>Avant de me faire embrouille, je test juste un truc, ça vient de korben ;) 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐
+Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Wed, 22 May 2019 15:38:26 +0200</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>All</title>
+      <link>/projets/all/</link>
+      <pubDate>Wed, 22 May 2019 11:17:59 +0200</pubDate>
+      
+      <guid>/projets/all/</guid>
+      <description>Voici une liste de tout mes projets réalisés à ce jour html
+&amp;lt;h1&amp;gt; je suis un test de code &amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt; et pour ça je fais des trucs tout simple &amp;lt;/p&amp;gt; shell
+## Ceci est un commentaire $ echo ceci est une commande ceci est une commande ## édition d&amp;#39;un fichier $vi foo.md +++ date = &amp;#34;2014-09-28&amp;#34; title = &amp;#34;Création d&amp;#39;un nouveau thème&amp;#34; +++ Contenu du fichier :wq ## L&amp;#39;afficher $ cat foo.</description>
+    </item>
+    
+    <item>
+      <title>Thales</title>
+      <link>/experience/thales/</link>
+      <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
+      
+      <guid>/experience/thales/</guid>
+      <description>Stage à Thales Velizy pendant 6 mois
+Mars 2018 - Août 2018 Thème de la mission :
+Gestion de configuration massive Description de la mission :
+Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
+Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ».</description>
+    </item>
+    
+    <item>
+      <title>Nemesis - Sécurité réseaux</title>
+      <link>/projets/nemesis/</link>
+      <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
+      
+      <guid>/projets/nemesis/</guid>
+      <description>Projet de sécurité informatique (équipe de 3 personnes).
+Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
+A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>/projets/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>/projets/challenge-accepted/</guid>
+      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
+Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
+    </item>
+    
+    <item>
+      <title>Malesherbes</title>
+      <link>/experience/malesherbes/</link>
+      <pubDate>Thu, 09 Jul 2015 19:55:28 +0200</pubDate>
+      
+      <guid>/experience/malesherbes/</guid>
+      <description> Stage Développeur web (4 mois) Novembre 2015 - Février 2016
+Au sein d&amp;rsquo;une petite entreprise (Groupe Malesherbes Paris 17), j&amp;rsquo;ai pu aidé au développement de l&amp;rsquo;interface web pour &amp;ldquo;l&amp;rsquo;uberistation&amp;rdquo; d&amp;rsquo;une application d&amp;rsquo;auto-école.
+J&amp;rsquo;ai pu développer quelques fonctionnalités et apporter l&amp;rsquo;éxperience que j&amp;rsquo;ai eu à l&amp;rsquo;école où, à l&amp;rsquo;époque, je n&amp;rsquo;avais fais que des applications web essentiellement en php/mysql html/css.
+Univers technique :  HTML/CSS PHP/MYSQL WordPress IDE (j&amp;rsquo;ai commencé sur dreamwever mais j&amp;rsquo;ai préféré être sur phpstorm) API google (google maps)  </description>
+    </item>
+    
+    <item>
+      <title>Mon Premier Site</title>
+      <link>/projets/mon-premier-site/</link>
+      <pubDate>Tue, 27 Jun 2006 16:03:28 +0200</pubDate>
+      
+      <guid>/projets/mon-premier-site/</guid>
+      <description>Ma première expérience avec le monde de l&amp;rsquo;informatique 🤗
+Le site est affreux, j&amp;rsquo;étais très loin de savoir comment faire. Je me rappel j&amp;rsquo;étais déterminé et passionné comme jamais !
+Ceci est plus un &amp;ldquo;retour d&amp;rsquo;expérience&amp;rdquo; qu&amp;rsquo;autre chose.
+Je ne savais même pas qu&amp;rsquo;il était encore en ligne et le fait de le revoir m&amp;rsquo;a mis un coup de nostalgie.
+Je me rappel très bien, je me butais au site du zero (qui maintenant s&amp;rsquo;appel OpenClassroom &amp;hellip;) je faisais du html sur papier parceque j&amp;rsquo;avais &amp;ldquo;que&amp;rdquo; un mac (on se détent rien à voir avec vos macbook pro actuel hein &amp;hellip;)</description>
+    </item>
+    
+  </channel>
+</rss>

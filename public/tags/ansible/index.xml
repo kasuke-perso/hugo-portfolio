@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ansible on Portfolio Florian</title>
+    <title>ansible on Florian DUGAT</title>
     <link>/tags/ansible/</link>
-    <description>Recent content in Ansible on Portfolio Florian</description>
+    <description>Recent content in ansible on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    <atom:link href="/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Gestion clés ssh Linux avec Ansible</title>
@@ -15,99 +18,35 @@
       <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
       
       <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
-      <description>
-
-&lt;p&gt;Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration.
-Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !&lt;/p&gt;
-
-&lt;p&gt;Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Faire de A à Z un playbook avec le module &lt;a href=&#34;https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module&#34;&gt;user&lt;/a&gt;, la doc d&amp;rsquo;ansible est plutôt bien.&lt;/li&gt;
-&lt;li&gt;Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur &lt;a href=&#34;https://galaxy.ansible.com/&#34;&gt;ansible galaxy&lt;/a&gt; ou github par exemple&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Les 2 options peuvent convenir, mais généralement les rôles qu&amp;rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&amp;rsquo;en servir que de le refaire sois-même.&lt;/p&gt;
-
-&lt;p&gt;Donc aujourd&amp;rsquo;hui je vous propose ma solution qui va se servir d&amp;rsquo;un peu des deux car moi je veux un truc &lt;strong&gt;SIMPLE&lt;/strong&gt; et facile d&amp;rsquo;utilisation sans avoir à replonger dans une doc pour s&amp;rsquo;en servir.&lt;/p&gt;
-
-&lt;h3 id=&#34;petits-rappels:fa3f626fd3e78663e965dd70eef523d0&#34;&gt;Petits rappels&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Les rôles sont situés dans votre /home &lt;code&gt;~/.ansible/roles&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Les variables passées dans &lt;code&gt;--extra-pass&lt;/code&gt; écrasent toute celles que vous avez ailleurs&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s&amp;rsquo;y connecter. Il faut alors rajouter &lt;code&gt;--ask-pass&lt;/code&gt; et quand on a besoin des droits &amp;lsquo;sudo&amp;rsquo; il faut aussi ajouter &lt;code&gt;--ask-become-pass&lt;/code&gt;.
-En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable &lt;code&gt;ansible_user=youruser&lt;/code&gt; et &lt;code&gt;ansible_password=yourpassword&lt;/code&gt; et &lt;code&gt;ansible_sudo_password=yourpassword&lt;/code&gt; pour les droits sudo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;L&amp;rsquo;option &lt;code&gt;-i&lt;/code&gt; permet de préciser quel fichier host utiliser (par défaut c&amp;rsquo;est &lt;code&gt;etc/ansible/hosts&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Je vais partir de ça &lt;a href=&#34;https://github.com/nickjj/ansible-user&#34;&gt;https://github.com/nickjj/ansible-user&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Je précise qu&amp;rsquo;on est sur ubuntu server 18.04&lt;/p&gt;
-
-&lt;p&gt;Il faut faire un petit &lt;code&gt;ansible-galaxy install nickjj.user&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Cela va créer un dossier dans votre &lt;code&gt;~/.ansible/roles&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;fdugat@SRV-ANSIBLE01:~/.ansible/roles/nickjj.user$ tree
-.
-├── CHANGES.md
-├── defaults
-│   └── main.yml
-├── LICENSE
-├── meta
-│   └── main.yml
-├── README.md
-├── tasks
-│   └── main.yml
-└── tests
-    └── test.yml
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Toute les variables sont dans&lt;/strong&gt; &lt;code&gt;defaults/main.yml&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Ce sera THE fichier à modifier pour pouvoir l&amp;rsquo;adapter pour n&amp;rsquo;importe quel utilisateur.&lt;/p&gt;
-
-&lt;h3 id=&#34;mais-ma-nouvelle-vm-ne-connait-pas-mes-clés-ssh-justement-comment-faire:fa3f626fd3e78663e965dd70eef523d0&#34;&gt;Mais ma nouvelle VM ne connait pas mes clés SSH justement ! Comment faire ?&lt;/h3&gt;
-
-&lt;p&gt;Hé bien mon petit Jamie, il y a une option dans Ansible qui permet ce genre de chose. Je considère que vous avez au moins un utilisateur qui peut se logger avec un mot de passe.&lt;/p&gt;
-
-&lt;p&gt;Je vous conseil de faire ça juste pour ce cas précis. Créer un fichier dans votre &lt;code&gt;/home&lt;/code&gt; que vous nommerez &lt;code&gt;.ansible.cfg&lt;/code&gt;. Ce fichier contiendra des variables de configuration pour ansible qui seront propre à un utilisateur (et non en global du coup)&lt;/p&gt;
-
-&lt;p&gt;Dans ce fichier vous pouvez mettre ceci :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;[defaults]&lt;/span&gt;
-&lt;span style=&#34;color: #ae81ff&#34;&gt;host_key_checking = False&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ce qui aura pour conséquence de ne pas vérifier le fichier known_hosts et ainsi rajouter une nouvelle machine sans vérif &amp;hellip; (pas bien)&lt;/p&gt;
-
-&lt;p&gt;On peut rajouter des variables soit directement dans notre fichier &lt;code&gt;hosts&lt;/code&gt; (pas /etc/host hein) soit on peut les passer quand on éxecute le playbook avec l&amp;rsquo;option &lt;code&gt;--extra-pass&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exemple avec commande ansible-playbook:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;ansible-playbook -i hosts /
-    --extra-vars &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;ansible_user=root / &lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    ansible_sudo_password=&amp;quot;&lt;/span&gt;yourpassword&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot; /&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    ansible_password=yourpassword&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Contenu du fichier hosts:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;.0.5.54 &lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_user&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;admin&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_password&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;yourpassword&amp;quot;&lt;/span&gt; / 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_sudo_password&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;yourpassword&amp;quot;&lt;/span&gt; /
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_python_interpreter&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;/usr/bin/python3&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Si vous ne mettez pas &lt;code&gt;ansible_sudo_password&lt;/code&gt; vous aurez une erreur puisque dans le playbook on se sert des droits sudo.&lt;/p&gt;
-</description>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Thales</title>
+      <link>/experience/thales/</link>
+      <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
+      
+      <guid>/experience/thales/</guid>
+      <description>Stage à Thales Velizy pendant 6 mois
+Mars 2018 - Août 2018 Thème de la mission :
+Gestion de configuration massive Description de la mission :
+Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
+Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ».</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>/projets/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>/projets/challenge-accepted/</guid>
+      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
+Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
     </item>
     
   </channel>

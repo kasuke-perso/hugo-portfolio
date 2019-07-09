@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sécurité on Florian DUGAT</title>
+    <link>/tags/s%C3%A9curit%C3%A9/</link>
+    <description>Recent content in sécurité on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 20 Oct 2017 17:51:46 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/s%C3%A9curit%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nemesis - Sécurité réseaux</title>
+      <link>/projets/nemesis/</link>
+      <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
+      
+      <guid>/projets/nemesis/</guid>
+      <description>Projet de sécurité informatique (équipe de 3 personnes).
+Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
+A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
+    </item>
+    
+  </channel>
+</rss>

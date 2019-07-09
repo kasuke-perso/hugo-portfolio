@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Experiences on Portfolio Florian</title>
+    <title>Experiences on Florian DUGAT</title>
     <link>/experience/</link>
-    <description>Recent content in Experiences on Portfolio Florian</description>
+    <description>Recent content in Experiences on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Thu, 01 Mar 2018 17:04:36 +0200</lastBuildDate>
-    <atom:link href="/experience/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 09 Jul 2019 19:31:11 +0200</lastBuildDate>
+    
+	<atom:link href="/experience/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>L&#39;agefi</title>
+      <link>/experience/lagefi/</link>
+      <pubDate>Tue, 09 Jul 2019 19:31:11 +0200</pubDate>
+      
+      <guid>/experience/lagefi/</guid>
+      <description>Administrateur systèmes et réseaux en alternance Durée : 2 ans (Octobre 2018 - Septembre 2020)
+Dans une entreprise à taille moyenne (environ 100), je gère tout ce qu&amp;rsquo;il y a de relié à l&amp;rsquo;informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher ses périphériques à installer un serveur de supervision ELK pour statistique d&amp;rsquo;envoi de mail.
+Etant dans une équipe de trois personnes (un DSI, un RSSI et moi) nous servons un peu à tout, donc aussi de support pour les salariés de l&amp;rsquo;entreprise.</description>
+    </item>
     
     <item>
       <title>Thales</title>
@@ -15,30 +29,23 @@
       <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
       
       <guid>/experience/thales/</guid>
-      <description>&lt;p&gt;Stage à Thales Velizy pendant 6 mois&lt;/p&gt;
-
-&lt;p&gt;THEME DE LA MISSION :
-Gestion de configuration massive&lt;/p&gt;
-
-&lt;p&gt;Dates de début et de fin du stage:  Lundi 5 mars 2018 au Vendredi 31 août 2018&lt;/p&gt;
-
-&lt;p&gt;Description de la mission confiée au stagiaire ou à l’alternant :&lt;/p&gt;
-
-&lt;p&gt;Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
-Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ». Les machines à déployer fonctionnent sur un OS Linux Debian 7 et doivent avoir une configuration système et applicative spécifique à chaque instance.&lt;/p&gt;
-
-&lt;p&gt;A ce titre, vos missions sont :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Faire l’inventaire et formaliser les profils de configuration.&lt;/li&gt;
-&lt;li&gt;Spécifier les processus de déploiement.&lt;/li&gt;
-&lt;li&gt;Formaliser et réaliser le déploiement via « Ansible ».&lt;/li&gt;
-&lt;li&gt;Tester en environnement virtualisé (VMWare).&lt;/li&gt;
-&lt;li&gt;Documenter et apporter du support aux utilisateurs (validation).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ce stage vous permettra d’appréhender la richesse et la diversité technique du monde industriel.&lt;/p&gt;
-</description>
+      <description>Stage à Thales Velizy pendant 6 mois
+Mars 2018 - Août 2018 Thème de la mission :
+Gestion de configuration massive Description de la mission :
+Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
+Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ».</description>
+    </item>
+    
+    <item>
+      <title>Malesherbes</title>
+      <link>/experience/malesherbes/</link>
+      <pubDate>Thu, 09 Jul 2015 19:55:28 +0200</pubDate>
+      
+      <guid>/experience/malesherbes/</guid>
+      <description> Stage Développeur web (4 mois) Novembre 2015 - Février 2016
+Au sein d&amp;rsquo;une petite entreprise (Groupe Malesherbes Paris 17), j&amp;rsquo;ai pu aidé au développement de l&amp;rsquo;interface web pour &amp;ldquo;l&amp;rsquo;uberistation&amp;rdquo; d&amp;rsquo;une application d&amp;rsquo;auto-école.
+J&amp;rsquo;ai pu développer quelques fonctionnalités et apporter l&amp;rsquo;éxperience que j&amp;rsquo;ai eu à l&amp;rsquo;école où, à l&amp;rsquo;époque, je n&amp;rsquo;avais fais que des applications web essentiellement en php/mysql html/css.
+Univers technique :  HTML/CSS PHP/MYSQL WordPress IDE (j&amp;rsquo;ai commencé sur dreamwever mais j&amp;rsquo;ai préféré être sur phpstorm) API google (google maps)  </description>
     </item>
     
   </channel>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Portfolio Florian</title>
+    <title>Blogs on Florian DUGAT</title>
     <link>/blog/</link>
-    <description>Recent content in Blogs on Portfolio Florian</description>
+    <description>Recent content in Blogs on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Gestion clés ssh Linux avec Ansible</title>
@@ -15,99 +18,21 @@
       <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
       
       <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
-      <description>
-
-&lt;p&gt;Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration.
-Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !&lt;/p&gt;
-
-&lt;p&gt;Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Faire de A à Z un playbook avec le module &lt;a href=&#34;https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module&#34;&gt;user&lt;/a&gt;, la doc d&amp;rsquo;ansible est plutôt bien.&lt;/li&gt;
-&lt;li&gt;Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur &lt;a href=&#34;https://galaxy.ansible.com/&#34;&gt;ansible galaxy&lt;/a&gt; ou github par exemple&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Les 2 options peuvent convenir, mais généralement les rôles qu&amp;rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&amp;rsquo;en servir que de le refaire sois-même.&lt;/p&gt;
-
-&lt;p&gt;Donc aujourd&amp;rsquo;hui je vous propose ma solution qui va se servir d&amp;rsquo;un peu des deux car moi je veux un truc &lt;strong&gt;SIMPLE&lt;/strong&gt; et facile d&amp;rsquo;utilisation sans avoir à replonger dans une doc pour s&amp;rsquo;en servir.&lt;/p&gt;
-
-&lt;h3 id=&#34;petits-rappels:fa3f626fd3e78663e965dd70eef523d0&#34;&gt;Petits rappels&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Les rôles sont situés dans votre /home &lt;code&gt;~/.ansible/roles&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Les variables passées dans &lt;code&gt;--extra-pass&lt;/code&gt; écrasent toute celles que vous avez ailleurs&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s&amp;rsquo;y connecter. Il faut alors rajouter &lt;code&gt;--ask-pass&lt;/code&gt; et quand on a besoin des droits &amp;lsquo;sudo&amp;rsquo; il faut aussi ajouter &lt;code&gt;--ask-become-pass&lt;/code&gt;.
-En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable &lt;code&gt;ansible_user=youruser&lt;/code&gt; et &lt;code&gt;ansible_password=yourpassword&lt;/code&gt; et &lt;code&gt;ansible_sudo_password=yourpassword&lt;/code&gt; pour les droits sudo.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;L&amp;rsquo;option &lt;code&gt;-i&lt;/code&gt; permet de préciser quel fichier host utiliser (par défaut c&amp;rsquo;est &lt;code&gt;etc/ansible/hosts&lt;/code&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Je vais partir de ça &lt;a href=&#34;https://github.com/nickjj/ansible-user&#34;&gt;https://github.com/nickjj/ansible-user&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Je précise qu&amp;rsquo;on est sur ubuntu server 18.04&lt;/p&gt;
-
-&lt;p&gt;Il faut faire un petit &lt;code&gt;ansible-galaxy install nickjj.user&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Cela va créer un dossier dans votre &lt;code&gt;~/.ansible/roles&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;fdugat@SRV-ANSIBLE01:~/.ansible/roles/nickjj.user$ tree
-.
-├── CHANGES.md
-├── defaults
-│   └── main.yml
-├── LICENSE
-├── meta
-│   └── main.yml
-├── README.md
-├── tasks
-│   └── main.yml
-└── tests
-    └── test.yml
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Toute les variables sont dans&lt;/strong&gt; &lt;code&gt;defaults/main.yml&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Ce sera THE fichier à modifier pour pouvoir l&amp;rsquo;adapter pour n&amp;rsquo;importe quel utilisateur.&lt;/p&gt;
-
-&lt;h3 id=&#34;mais-ma-nouvelle-vm-ne-connait-pas-mes-clés-ssh-justement-comment-faire:fa3f626fd3e78663e965dd70eef523d0&#34;&gt;Mais ma nouvelle VM ne connait pas mes clés SSH justement ! Comment faire ?&lt;/h3&gt;
-
-&lt;p&gt;Hé bien mon petit Jamie, il y a une option dans Ansible qui permet ce genre de chose. Je considère que vous avez au moins un utilisateur qui peut se logger avec un mot de passe.&lt;/p&gt;
-
-&lt;p&gt;Je vous conseil de faire ça juste pour ce cas précis. Créer un fichier dans votre &lt;code&gt;/home&lt;/code&gt; que vous nommerez &lt;code&gt;.ansible.cfg&lt;/code&gt;. Ce fichier contiendra des variables de configuration pour ansible qui seront propre à un utilisateur (et non en global du coup)&lt;/p&gt;
-
-&lt;p&gt;Dans ce fichier vous pouvez mettre ceci :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;[defaults]&lt;/span&gt;
-&lt;span style=&#34;color: #ae81ff&#34;&gt;host_key_checking = False&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Ce qui aura pour conséquence de ne pas vérifier le fichier known_hosts et ainsi rajouter une nouvelle machine sans vérif &amp;hellip; (pas bien)&lt;/p&gt;
-
-&lt;p&gt;On peut rajouter des variables soit directement dans notre fichier &lt;code&gt;hosts&lt;/code&gt; (pas /etc/host hein) soit on peut les passer quand on éxecute le playbook avec l&amp;rsquo;option &lt;code&gt;--extra-pass&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exemple avec commande ansible-playbook:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;ansible-playbook -i hosts /
-    --extra-vars &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;ansible_user=root / &lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    ansible_sudo_password=&amp;quot;&lt;/span&gt;yourpassword&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot; /&lt;/span&gt;
-&lt;span style=&#34;color: #e6db74&#34;&gt;    ansible_password=yourpassword&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Contenu du fichier hosts:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;10&lt;/span&gt;.0.5.54 &lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_user&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;admin&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_password&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;yourpassword&amp;quot;&lt;/span&gt; / 
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_sudo_password&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;yourpassword&amp;quot;&lt;/span&gt; /
-&lt;span style=&#34;color: #f8f8f2&#34;&gt;ansible_python_interpreter&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;/usr/bin/python3&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Si vous ne mettez pas &lt;code&gt;ansible_sudo_password&lt;/code&gt; vous aurez une erreur puisque dans le playbook on se sert des droits sudo.&lt;/p&gt;
-</description>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Agrandir Stockage Vm</title>
+      <link>/blog/agrandir-stockage-vm/</link>
+      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
+      
+      <guid>/blog/agrandir-stockage-vm/</guid>
+      <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
+Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
     </item>
     
     <item>
@@ -116,42 +41,10 @@ En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot 
       <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
       
       <guid>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
-      <description>&lt;p&gt;En gros c&amp;rsquo;est très simple.&lt;/p&gt;
-
-&lt;p&gt;Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;/back_screen.jpg&#34; alt=&#34;derriere ecran portable&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve)
-On cherche &lt;strong&gt;board controller &lt;/strong&gt;+ &lt;strong&gt;ref de l&amp;rsquo;écran&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Plusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉&lt;/p&gt;
-
-&lt;p&gt;Généralement ces board controller sont livrés sans alimentation (12V)&lt;/p&gt;
-
-&lt;p&gt;Voici une image d&amp;rsquo;un Board Controller et ça vaut ~25€&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-36&#34; src=&#34;https://kracyka.files.wordpress.com/2019/01/1f1a9c29-778c-4ea9-a212-1c5c7b1e9236.jpg&#34; alt=&#34;1f1a9c29-778c-4ea9-a212-1c5c7b1e9236&#34; width=&#34;600&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;voici mes sources qui expliquent mieux que moi :&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/0YT3LIKY0gA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/CfirQC99xPc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Je l&amp;rsquo;avais fait pour un de mes ordis portable mort, c&amp;rsquo;est très efficace.
-Le plus dur sera de fabriquer le support de l&amp;rsquo;écran, mais j&amp;rsquo;ai très bien réussi à tenir quelques semaines en ayant rien fait pour. Juste de quoi tenir l&amp;rsquo;écran en équilibre sur une table ça fait l&amp;rsquo;affaire 😉&lt;/p&gt;
-
-&lt;p&gt;En lien avec ce truc la : &lt;a href=&#34;https://www.lapscreen.asia/&#34;&gt;https://www.lapscreen.asia/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>En gros c&amp;rsquo;est très simple.
+Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)
+Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écran
+Plusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
     </item>
     
     <item>
@@ -160,203 +53,8 @@ Le plus dur sera de fabriquer le support de l&amp;rsquo;écran, mais j&amp;rsquo
       <pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate>
       
       <guid>/blog/sensibilisation/</guid>
-      <description>
-
-&lt;h3 id=&#34;avant-de-me-faire-embrouille-je-test-juste-un-truc-ça-vient-de-korben:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;Avant de me faire embrouille, je test juste un truc, ça vient de korben ;)&lt;/h3&gt;
-
-&lt;p&gt;🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;em&gt;Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé. C’est du hacking de serrure si vous préférez. Et c’est juste passionnant (et bien sûr interdit si ce n’est pas votre propre serrure).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;D’ailleurs, MrJack donne des conférences, des cours et des formations à destination des professionnels de la sécurité (serruriers, responsables informatiques et gouvernements) avec son équipe.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Du coup, je lui ai demandé s’il pouvait partager son savoir avec nous, non pas pour nous expliquer comment ouvrir des serrures et aller cambrioler vos voisins, y’a tout ce qu’il faut sur le net pour ça, mais plutôt pour nous sensibiliser sur les « problèmes » de sécurité des cadenas et autres serrures et nous briefer sur la théorie et les différentes méthodes existantes, y compris celles qu’on ne voit pas dans les films. Et bien sûr MrJack nous donne quelques conseils pour se prémunir de ces attaques.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ah et désolé si après la lecture de cet article, votre monde s’effondre 😉&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Trêve de blabla, je laisse le clavier à MrJack !&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/MrJack.jpg&#34; alt=&#34;&#34; title=&#34;MrJack&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/MrJack.jpg&#34;&gt;https://korben.info/app/uploads/2012/08/MrJack.jpg&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;MrJack&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;fonctionnement-d-une-serrure:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;Fonctionnement d’une serrure&lt;/h2&gt;
-
-&lt;p&gt;Si vous vous êtes toujours demandé comment fonctionnent ces serrures que vous utilisez tous les jours, vous allez être contents. Et si en plus vous vous demandez s’il est possible de les ouvrir sans les clés, vous allez voir que la réponse est oui et vous allez découvrir leurs failles !&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/explication.png&#34; alt=&#34;&#34; title=&#34;explication&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/explication.png&#34;&gt;https://korben.info/app/uploads/2012/08/explication.png&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;xxx&lt;/p&gt;
-
-&lt;p&gt;D’abord, retour aux basics… Pour qu’une clé puisse tourner, elle doit aligner la césure entre les goupilles actives et passives avec la coupure entre le rotor et le stator.&lt;/p&gt;
-
-&lt;p&gt;A ce moment-là, plus rien n’empêche la clé de tourner :&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/01fonctionnementcleok.gif&#34; alt=&#34;&#34; title=&#34;01fonctionnementcleok&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/01fonctionnementcleok.gif&#34;&gt;https://korben.info/app/uploads/2012/08/01fonctionnementcleok.gif&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/02fonctionnementcleok.gif&#34; alt=&#34;&#34; title=&#34;02fonctionnementcleok&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/02fonctionnementcleok.gif&#34;&gt;https://korben.info/app/uploads/2012/08/02fonctionnementcleok.gif&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Pour tourner, les 5 lignes de césure des goupilles doivent être alignées en même temps. En théorie, seule la bonne clé devrait pouvoir y arriver…&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/ahah.jpg&#34; alt=&#34;&#34; title=&#34;ahah&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/ahah.jpg&#34;&gt;https://korben.info/app/uploads/2012/08/ahah.jpg&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;…Cependant, il existe plusieurs techniques qui permettent d’ouvrir une serrure sans posséder la clé. Certaines méthodes, assez largement médiatisées, peuvent faire sourire ou éveiller la curiosité. D’autres, moins répandues, devraient également inquiéter ceux qui se soucient de leur sécurité. Parmi les techniques « connues », on trouve en vrac le &lt;strong&gt;crochetage&lt;/strong&gt;, les &lt;strong&gt;bumpkeys&lt;/strong&gt; et les &lt;strong&gt;pickguns&lt;/strong&gt;. Quant aux autres, il existe notamment l’&lt;strong&gt;impression&lt;/strong&gt;, la &lt;strong&gt;copie de clé illicite&lt;/strong&gt; et la fabrication de &lt;strong&gt;passe-partout&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;le-crochetage:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;Le crochetage&lt;/h2&gt;
-
-&lt;p&gt;C’est ce que l’on voit le plus souvent dans les films ; la plupart du temps les personnages n’utilisent qu’un seul outil ou deux outils inappropriés. Il faut en réalité un crochet pour faire la combinaison et un entraîneur pour faire la rotation. La technique est effectivement relativement simple : on réalise les deux mêmes actions qu’avec une clé : on cherche la ligne de césure avec le crochet (c’est le rôle des dents de la clé), et on tourne avec l’entraîneur.&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/croch.png&#34; alt=&#34;&#34; title=&#34;croch&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/croch.png&#34;&gt;https://korben.info/app/uploads/2012/08/croch.png&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Des défauts de fabrication transforment une serrure à 5 goupilles en 5 serrures à 1 goupille… Le meilleur moyen pour comprendre comment ça marche, à part essayer, est de regarder cette vidéo qui illustre bien le principe :&lt;/p&gt;
-
-&lt;noscript&gt;&lt;iframe width=&#34;600&#34; height=&#34;450&#34; src=&#34;https://www.youtube.com/embed/ac4Btp44lsg?feature=oembed&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/noscript&gt;
-
-&lt;p&gt;Vous trouverez sur Youtube des milliers de vidéos avec les mots-clés « crochetage » ou « lockpicking », et le matériel est en vente libre sur une dizaine de sites Internet.&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/2012-08-0116.49.511.jpg&#34; alt=&#34;&#34; title=&#34;2012-08-0116.49.51&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/2012-08-0116.49.511.jpg&#34;&gt;https://korben.info/app/uploads/2012/08/2012-08-0116.49.511.jpg&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Pour s’en prémunir, il vaut mieux choisir des serrures avec un nombre important de goupilles, d’une qualité de fabrication exemplaire. Evitez les cylindres à 5 euros, la différence de prix s’explique aussi par le niveau de sécurité…&lt;/p&gt;
-
-&lt;h2 id=&#34;les-bumpkeys-et-le-pickgun:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;Les bumpkeys et le pickgun&lt;/h2&gt;
-
-&lt;p&gt;Les bumpkeys ou « clés de frappe » sont des clés modifiées pour être frappées d’un coup sec dans la serrure et exploiter le principe du pendule de newton &lt;a href=&#34;https://fr.wikipedia.org/wiki/Pendule_de_Newton&#34;&gt;https://fr.wikipedia.org/wiki/Pendule_de_Newton&lt;/a&gt; . La force est transmise à l’élément le plus éloigné (les goupilles passives), ce qui crée un vide dans la serrure pendant une fraction de seconde. C’est à ce moment précis que l’on peut tourner la clé pour ouvrir.&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/03BumpKeyok.gif&#34; alt=&#34;&#34; title=&#34;03BumpKeyok&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/03BumpKeyok.gif&#34;&gt;https://korben.info/app/uploads/2012/08/03BumpKeyok.gif&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;La technique du pickgun est un peu plus barbare mais utilise le même principe du boulier de newton ; l’outil est un peu plus universel et du coup un peu moins efficace.&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/04Pickgunok.gif&#34; alt=&#34;&#34; title=&#34;04Pickgunok&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/04Pickgunok.gif&#34;&gt;https://korben.info/app/uploads/2012/08/04Pickgunok.gif&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Voici une démo de la technique du pickgun en vidéo :&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Yjvo3HSF5ag&#34;&gt;https://www.youtube.com/watch?v=Yjvo3HSF5ag&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Le risque sur des serrures haut de gamme existe mais est plutôt négligeable dans la pratique. Pour plus d’infos sur les bumpkeys, je vous invite à lire le &lt;a href=&#34;http://toool.nl/images/7/75/Bumping.pdf&#34;&gt;white paper&lt;/a&gt; diffusé par &lt;a href=&#34;http://blackbag.nl&#34;&gt;Barry Wels&lt;/a&gt; de &lt;a href=&#34;http://toool.nl/&#34;&gt;l’association TOOOL&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Attention aux vidéos que vous pourrez trouver sur Internet, certaines sont véridiques, mais les plus spectaculaires sont souvent des fakes. Pour discerner le vrai du faux, rien de mieux que de faire vos propres tests ! Pour se prémunir de ces techniques, il faut choisir des serrures haute sécurité. Recherchez celles qui sont spécialement « anti-bumping », et celles dont le nombre de goupilles ou la complexité de l’entrée de clé empêchent l’utilisation d’un pickgun. Toutes ces techniques, vous en avez déjà probablement plus ou moins entendu parler ou vu dans nos &lt;a href=&#34;https://fr.wikipedia.org/wiki/James_Bond&#34;&gt;&lt;em&gt;James Bond&lt;/em&gt;&lt;/a&gt; et autres &lt;a href=&#34;http://www.cbs.com/shows/person_of_interest/&#34;&gt;&lt;em&gt;Person of Interest&lt;/em&gt;&lt;/a&gt; préférés… Mais il existe d’autres méthodes moins connues et qui sont pourtant celles dont il faut peut-être le plus se méfier.&lt;/p&gt;
-
-&lt;h2 id=&#34;l-impression:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;L’impression&lt;/h2&gt;
-
-&lt;p&gt;C’est une technique assez magique car elle permet à partir de Zéro de fabriquer une clé sur une serrure cible à l’aide d’une clé vierge et d’une lime.&lt;/p&gt;
-
-&lt;p&gt;La méthode est relativement simple… Lorsqu’une clé vierge est introduite dans la serrure, les mouvements de rotation (comme si on essayait d’ouvrir ou fermer avec une mauvaise clé) créent des « rayures » sur la clé.&lt;/p&gt;
-
-&lt;p&gt;Celles-ci apparaissent précisément là où il faut limer. Cela a pour effet de modifier légèrement la forme de la clé, et d’effacer les dites rayures. On recommence alors le processus jusqu’à ce qu’une dent soit à la bonne profondeur, la rayure cessera alors de se faire « comme par magie » (En réalité pour &lt;a href=&#34;http://frenchkey.fr/informations-generales/tutoriel-impression-cle-serrure-paracentrique/&#34;&gt;des raisons mécaniques bien précises&lt;/a&gt;). Une fois que toutes les dents de la clé sont limées à la bonne profondeur, plus aucune rayure ne doit apparaître, et la serrure s’ouvre.&lt;/p&gt;
-
-&lt;p&gt;Un bon exemple d’impression impressionnante 😉 :&lt;/p&gt;
-
-&lt;noscript&gt;&lt;iframe width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://www.youtube.com/embed/Bj9KEmLWRek?feature=oembed&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/noscript&gt;
-
-&lt;p&gt;Avec cette technique il est possible de fabriquer une clé en quelques heures voire quelques minutes, mais surtout en périodes interrompues. Un attaquant peut alors « travailler » sur une serrure par bribes de 20 secondes à chaque fois, et donc ne jamais se faire remarquer.&lt;/p&gt;
-
-&lt;p&gt;Toutes les serrures du marché sont vulnérables ou presque. La meilleure façon de s’en prémunir est de choisir un modèle de serrure dont la clé est brevetée, ce qui a pour conséquence qu’il est impossible de trouver des clés vierges. C’est un bon début, mais rien n’empêche un bon bricoleur de fabriquer sa propre clé vierge… Un autre point important pour éviter d’être victime de cette faille est d’utiliser une serrure avec un nombre important de goupilles (plus de 10), ce qui nécessite beaucoup plus de temps et de technique.&lt;/p&gt;
-
-&lt;h2 id=&#34;la-copie-de-clé-illicite:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;La copie de clé illicite&lt;/h2&gt;
-
-&lt;p&gt;Ce chapitre nécessiterait un article entier. Pour faire court, disons qu’il est possible de copier n’importe quelle clé mécanique. Quel que soit le niveau de sécurité, quelle que soit la complexité, clé brevetée ou non, un bon bricoleur trouvera toujours le moyen de faire une copie. La plupart du temps, &lt;a href=&#34;http://vision.ucsd.edu/~blaxton/pagePapers/laxton_wang_savage_ccs2008.pdf&#34;&gt;une photo suffit à reproduire une clé&lt;/a&gt; !&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/photocle.jpg&#34; alt=&#34;&#34; title=&#34;photocle&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/photocle.jpg&#34;&gt;https://korben.info/app/uploads/2012/08/photocle.jpg&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Votre clé est comme votre mot de passe. Vous ne pouvez pas prêter un mot de passe et croire qu’une fois rendu, votre interlocuteur l’aura oublié… Il faut penser que c’est la même chose pour les clés ! Faites attention à bien les ranger et à ne les prêter qu’à des personnes de grande confiance (ou gardez à l’esprit que toute sécurité est perdue dès l’instant où vous n’y faites plus attention). 95% des clés peuvent être copiées &lt;a href=&#34;http://blackbag.nl/?p=997&#34;&gt;en moins de 5 minutes&lt;/a&gt;…&lt;/p&gt;
-
-&lt;h2 id=&#34;la-fabrication-de-passe-partout:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;La fabrication de passe-partout&lt;/h2&gt;
-
-&lt;p&gt;C’est à mon avis le point faible le plus important à connaître et pourtant le moins soupçonné de tous. C’était l’objet de notre conférence lors de la Nuit Du Hack 2012. Par définition, &lt;a href=&#34;https://fr.wikipedia.org/wiki/Organigramme_de_serrurerie&#34;&gt;le passe-partout d’un organigramme&lt;/a&gt;est la clé qui permet d’ouvrir tous les bureaux ou tous les locaux d’un bâtiment. Probablement plus de 80% des entreprises, écoles, laboratoires, hôtels, et services techniques en tous genres sont équipés d’un organigramme de clés.&lt;/p&gt;
-
-&lt;p&gt;Parmi ces systèmes, une grande majorité sont équipés de serrures pour clés à dents (les clés dites « standard »), ou pour clés réversibles à trous de gamme moyenne. Ces systèmes ont un point commun : chaque serrure du bâtiment &lt;strong&gt;contient la combinaison du Passe Général qui permet d’ouvrir toutes les autres portes&lt;/strong&gt;. Du local poubelle au bureau du directeur en passant par tous les bureaux, toutes les serrures possèdent cette information pourtant très sensible !&lt;/p&gt;
-
-&lt;p&gt;Plusieurs possibilités s’offrent alors à un attaquant pour obtenir cette information et l’exploiter. La plus simple, bien qu’assez radicale, est de collecter plusieurs serrures et de les analyser. Le reverse engineering étant très facile en serrurerie, un attaquant trouvera rapidement &lt;strong&gt;la combinaison commune : Le Passe Général&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;La disparition de plusieurs serrures doit alerter le responsable de la sécurité !&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;[&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://korben.info/app/uploads/2012/08/passepartout.jpg&#34; alt=&#34;&#34; title=&#34;passepartout&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;](&lt;a href=&#34;https://korben.info/app/uploads/2012/08/passepartout.jpg&#34;&gt;https://korben.info/app/uploads/2012/08/passepartout.jpg&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;La seconde méthode, pour un attaquant de l’intérieur (femme de ménage, stagiaire, client, salarié peu scrupuleux ou un peu trop curieux…) est de démonter le cylindre de son propre bureau ou de sa propre chambre pour l’analyser. Il en déduira que la combinaison différente de sa clé est le Passe-Général.&lt;/p&gt;
-
-&lt;p&gt;Enfin, la dernière méthode est plus subtile car elle ne nécessite aucun démontage : elle consiste à exploiter une caractéristique propre au monde de la sécurité mécanique. Il s’agit d’un mélange de « codes de clés » qui permettra d’ouvrir sans problème la serrure. Le principe des « codes de clés » est simple à comprendre… C’est un peu comme si votre ordinateur avait 2 mots de passe : &lt;em&gt;azerty&lt;/em&gt; pour le compte Utilisateur1 et &lt;em&gt;password&lt;/em&gt; pour le compte Utilisateur2, mais qu’en assemblant les 2, le mot de passe « &lt;em&gt;azerword&lt;/em&gt; » puisse fonctionner.&lt;/p&gt;
-
-&lt;p&gt;Par une suite de tests (50 au maximum), l’attaquant pourra faire un brute-force de chaque position en combinant une partie du code de sa clé et le code testé et ainsi découvrir toutes les combinaisons possibles. Par conséquent, il pourra en déduire le Passe-Partout, comme s’il avait démonté sa serrure. Pour comprendre en détails cette méthode, je vous recommande le &lt;a href=&#34;http://www.crypto.com/papers/mk.pdf&#34;&gt;white paper de Matt Blaze&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Pour se protéger contre ce type d’attaque, la seule solution est d’installer des serrures à clés réversibles de Haute Sécurité dont les organigrammes sont conçues par appauvrissement de cylindres ; dans les faits, il s’agit des cylindres de 15 goupilles et plus.&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion:5f8199f4f386a952f95c8a5f2e4af485&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Toutes ces techniques fonctionnent et ont été éprouvées sur le terrain, aussi bien lors de tests d’intrusions que de vraies attaques subies par des entités qui se croyaient en sécurité.&lt;/p&gt;
-
-&lt;p&gt;Heureusement, les fabricants connaissent plus ou moins ces techniques (parfois plutôt moins que plus, mais bon…) et proposent donc des serrures haut de gamme, assez chères, mais qui nous permettent de nous protéger contre la plupart de ces techniques.&lt;/p&gt;
-
-&lt;p&gt;Comme toujours, l’utilisation que l’on en fait influe beaucoup ; une serrure de haute sécurité sur une porte vitrée n’a pas grand intérêt…&lt;/p&gt;
-
-&lt;p&gt;Citons quelques exemples de serrures de qualité, inviolables ou presque, que l’on trouve sur le marché français :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.vachette.fr/fr/site/Vachette/Systemes-de-Securite/?groupId=691123&amp;amp;productId=691126&#34;&gt;Vachette Radial NT+&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cism.fr/&#34;&gt;CISM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.evva.at/products/mechanical-locking-systems/mcs-locking-system/en/&#34;&gt;EVVA MCS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.abloy.com/en/abloy/abloycom/Products-MPC/?groupId=1540&amp;amp;productId=599&#34;&gt;Abloy Protec 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.dom-sicherheitstechnik.com/DOM-diamant.668.0.html&#34;&gt;DOM Diamant&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.fichet-pointfort.fr/rewrite/article/672/belle---sure,-c-est-une-fichet-!%3Cbr%3E%3Cbr%3Ef3d:la-technologie-fichet-qui-revolutionne-la-securite..htm?idRubrique=61&#34;&gt;Fichet F3D&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ce sont probablement les meilleures serrures du marché, certes pas infaillibles, mais c’est ce que l’on a de mieux… Il existe aussi des solutions électroniques chez la plupart de ces fabricants, mais peut-on faire confiance à du &lt;a href=&#34;http://www.numerama.com/magazine/22913-vote-electronique-anomalie-detectee-une-candidate-ump-conteste-l-election.html&#34;&gt;&lt;em&gt;logiciel propriétaire&lt;/em&gt;&lt;/a&gt; ?&lt;/p&gt;
-
-&lt;p&gt;Pour en savoir plus sur ces techniques, vous pouvez consulter le site &lt;a href=&#34;http://Lockpickingfrance.org&#34;&gt;Lockpickingfrance.org&lt;/a&gt; et vous inscrire sur le forum &lt;a href=&#34;http://locksport.fr&#34;&gt;locksport.fr&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Have Fun&lt;/p&gt;
-
-&lt;p&gt;MrJack, &lt;a href=&#34;http://frenchkey.fr&#34;&gt;frenchkey.fr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ps : Les images sont tirées des slides de &lt;a href=&#34;http://deviating.net/lockpicking/&#34;&gt;Deviant Ollam&lt;/a&gt; avec son aimable autorisation pour mes formations, conférences et présentations.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wallbase.cc/wallpaper/1248083&#34;&gt;Photo&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Avant de me faire embrouille, je test juste un truc, ça vient de korben ;) 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐
+Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé.</description>
     </item>
     
   </channel>
