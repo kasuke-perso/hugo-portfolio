@@ -1,7 +1,7 @@
 ---
 title: "Agrandir Stockage Vm"
 date: 2019-05-28T16:12:16+02:00
-draft: true
+draft: false
 tags: ["tuto", "système", "virtualisation"]
 ---
 

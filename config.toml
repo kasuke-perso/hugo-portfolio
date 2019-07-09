@@ -1,4 +1,6 @@
-baseurl = "/"
+# Mettre basurl = "florian-dugat.ddns.net" quand sur serveur
+# Sinon baseurl = "/"
+baseurl = "florian-dugat.ddns.net"
 languageCode = "fr-fr"
 title = "Portfolio Florian"
 theme = "hugo-theme-hello-friend-ng-master"

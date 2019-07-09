@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Portfolio Florian</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on Portfolio Florian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Fri, 07 Jun 2019 14:19:58 +0200</lastBuildDate>
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A propos de moi</title>
+      <link>/about/</link>
+      <pubDate>Fri, 07 Jun 2019 14:19:58 +0200</pubDate>
+      
+      <guid>/about/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;insert photo au milieu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Passionné d&amp;rsquo;informatique et de nouvelles technologies, je suis actuellement diplômé BAC+5 Expert systèmes et réseaux à mon école IN&amp;rsquo;TECH dans laquelle j&amp;rsquo;ai pu acquérir des connaissances dans différents langages informatique tel que le PHP/MySQL, CSS, Python, Bash, PowerShell sous divers environnements comme Windows mais essentiellement Linux (Kali, Arch, Debian, Ubuntu) et parfois OS X.&lt;/p&gt;
+
+&lt;p&gt;Ces connaissances ont été mis en pratique lors de plusieurs projets que j&amp;rsquo;ai pu réaliser au sein de l&amp;rsquo;école.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../projets/all&#34;&gt;Voir mes projets&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

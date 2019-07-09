@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experiences on Portfolio Florian</title>
+    <link>/experience/</link>
+    <description>Recent content in Experiences on Portfolio Florian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 01 Mar 2018 17:04:36 +0200</lastBuildDate>
+    <atom:link href="/experience/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Thales</title>
+      <link>/experience/thales/</link>
+      <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
+      
+      <guid>/experience/thales/</guid>
+      <description>&lt;p&gt;Stage à Thales Velizy pendant 6 mois&lt;/p&gt;
+
+&lt;p&gt;THEME DE LA MISSION :
+Gestion de configuration massive&lt;/p&gt;
+
+&lt;p&gt;Dates de début et de fin du stage:  Lundi 5 mars 2018 au Vendredi 31 août 2018&lt;/p&gt;
+
+&lt;p&gt;Description de la mission confiée au stagiaire ou à l’alternant :&lt;/p&gt;
+
+&lt;p&gt;Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
+Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ». Les machines à déployer fonctionnent sur un OS Linux Debian 7 et doivent avoir une configuration système et applicative spécifique à chaque instance.&lt;/p&gt;
+
+&lt;p&gt;A ce titre, vos missions sont :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Faire l’inventaire et formaliser les profils de configuration.&lt;/li&gt;
+&lt;li&gt;Spécifier les processus de déploiement.&lt;/li&gt;
+&lt;li&gt;Formaliser et réaliser le déploiement via « Ansible ».&lt;/li&gt;
+&lt;li&gt;Tester en environnement virtualisé (VMWare).&lt;/li&gt;
+&lt;li&gt;Documenter et apporter du support aux utilisateurs (validation).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ce stage vous permettra d’appréhender la richesse et la diversité technique du monde industriel.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

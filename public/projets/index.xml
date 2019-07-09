@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projets on Portfolio Florian</title>
+    <link>/projets/</link>
+    <description>Recent content in Projets on Portfolio Florian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 22 May 2019 11:17:59 +0200</lastBuildDate>
+    <atom:link href="/projets/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>All</title>
+      <link>/projets/all/</link>
+      <pubDate>Wed, 22 May 2019 11:17:59 +0200</pubDate>
+      
+      <guid>/projets/all/</guid>
+      <description>
+
+&lt;h1 id=&#34;voici-une-liste-de-tout-mes-projets-réalisés-à-ce-jour:4b05bb498d30b711811f28c61ae62e19&#34;&gt;Voici une liste de tout mes projets réalisés à ce jour&lt;/h1&gt;
+
+&lt;p&gt;html&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;h1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;gt;&lt;/span&gt; je suis un test de code &lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;h1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;gt;&lt;/span&gt; et pour ça je fais des trucs tout simple &lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;shell&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;## Ceci est un commentaire&lt;/span&gt;
+$ &lt;span style=&#34;color: #f8f8f2&#34;&gt;echo&lt;/span&gt; ceci est une commande
+ceci est une commande
+
+&lt;span style=&#34;color: #75715e&#34;&gt;## édition d&amp;#39;un fichier&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;$vi&lt;/span&gt; foo.md
++++
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;date&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;2014-09-28&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Création d&amp;#39;un nouveau thème&amp;quot;&lt;/span&gt;
++++
+
+Contenu du fichier
+:wq
+
+&lt;span style=&#34;color: #75715e&#34;&gt;## L&amp;#39;afficher&lt;/span&gt;
+$ cat foo.md
++++
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;date&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;2014-09-28&amp;quot;&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;Création d&amp;#39;un nouveau thème&amp;quot;&lt;/span&gt;
++++
+
+Contenu du fichier
+$
+&lt;/pre&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turn&#39;it</title>
+      <link>/projets/turnit/</link>
+      <pubDate>Sat, 07 Sep 2013 14:44:21 +0200</pubDate>
+      
+      <guid>/projets/turnit/</guid>
+      <description>&lt;p&gt;Turn&amp;rsquo;IT
+sept. 2013 – janv. 2014&lt;/p&gt;
+
+&lt;p&gt;Description du projet:
+Jeux de cartes en NodeJS où il faut trouver les bonne paires de cartes parmi les cartes cachées&lt;/p&gt;
+
+&lt;p&gt;Autres créateurs
+Guénolé Kikabou Loïc DONNE&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
