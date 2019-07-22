@@ -12,11 +12,14 @@ Perso j'aime bien, c'est bien intégrer, il y a un dark mode pour les "geek" qui
 
 ![screen app franz](/franz.PNG)
 
-Et c'est crossplateforme encore une fois donc génial (perso je l'ai installé et découvert sur ArchLinux)
+Et c'est crossplateforme encore une fois donc génial (perso je l'ai installé et découvert sur ArchLinux) et pas besoin de tout reconfigurer selon vos machines, vous avez un compte qui sauvegarde tout normalement (après il faudra juste rescanner et se connecter aux différents comptes)
 
-Alors c'est semi gratuit, ça l'est mais de temps en temps il vous faudra attendre 10 secondes avant d'accéder à l'application.
+Alors c'est semi gratuit, ça l'est mais de temps en temps il vous faudra attendre 10 secondes avant d'accéder à l'application. (cf l'image)
 
+![screen purchase](/franz_no_free.PNG)
 
-On peut personnaliser plein de choses et faire des workspaces, le mieux c'est de tester !
+Bien évidemment Franz ne garde aucune de vos données, (ça c'est le boulot de vos app genre fb/google 🙄 ...) et c'est opensource https://github.com/meetfranz/franz
+
+On peut personnaliser plein de choses et faire des workspaces, ça gère pleins de langues et il embarque même un correcteur orthographique pour les plus bons d'entre nous 😅 (Try to write Donaudampf-schifffahrtskapitänsmütze corretly the first time.) le mieux c'est de tester !
 
 Voici le lien si vous voulez voir ça https://meetfranz.com/
