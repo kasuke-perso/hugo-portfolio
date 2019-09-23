@@ -3,6 +3,7 @@ title: "Eternal Terminal - Accès ssh sans coupure"
 date: 2019-07-22T14:28:13+02:00
 draft: false
 tags: ["appcool", "crossplateforme"]
+comments: true
 ---
 
 Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.

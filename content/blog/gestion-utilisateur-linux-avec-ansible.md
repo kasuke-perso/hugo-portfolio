@@ -3,6 +3,7 @@ title: "Gestion clés ssh Linux avec Ansible"
 date: 2019-05-29T14:29:12+02:00
 draft: false
 tags: ["tuto", "ansible", "devops", "automatisation", "système"]
+comments: true
 ---
 
 Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s'en servir avec la même configuration.
@@ -25,7 +26,7 @@ Donc aujourd'hui je vous propose ma solution qui va se servir d'un peu des deux 
 
 * Les variables passées dans `--extra-pass` écrasent toute celles que vous avez ailleurs
 
-* De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s'y connecter. Il faut alors rajouter `--ask-pass` et quand on a besoin des droits 'sudo' il faut aussi ajouter `--ask-become-pass`. 
+* De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s'y connecter. Il faut alors rajouter `--ask-pass` et quand on a besoin des droits 'sudo' il faut aussi ajouter `--ask-become-pass`.
 En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable `ansible_user=youruser` et `ansible_password=yourpassword` et `ansible_sudo_password=yourpassword` pour les droits sudo.
 
 * L'option `-i` permet de préciser quel fichier host utiliser (par défaut c'est `etc/ansible/hosts`)
@@ -37,7 +38,7 @@ Je vais partir de ça https://github.com/nickjj/ansible-user
 
 Je précise qu'on est sur ubuntu server 16.04
 
-Il faut faire un petit `ansible-galaxy install nickjj.user` 
+Il faut faire un petit `ansible-galaxy install nickjj.user`
 
 Cela va créer un dossier dans votre `~/.ansible/roles`
 ```batch
@@ -72,20 +73,20 @@ host_key_checking = False
 ```
 Ce qui aura pour conséquence de ne pas vérifier le fichier known_hosts et ainsi rajouter une nouvelle machine sans vérif ... (pas bien)
 
-On peut rajouter des variables soit directement dans notre fichier `hosts` (pas /etc/host hein) soit on peut les passer quand on éxecute le playbook avec l'option `--extra-pass` 
+On peut rajouter des variables soit directement dans notre fichier `hosts` (pas /etc/host hein) soit on peut les passer quand on éxecute le playbook avec l'option `--extra-pass`
 
 * Exemple avec commande ansible-playbook:
 
 ```bash
 ansible-playbook -i hosts /
-    --extra-vars "ansible_user=root / 
+    --extra-vars "ansible_user=root /
     ansible_sudo_password="yourpassword" /
     ansible_password=yourpassword"
 ```
 * Ou avec le fichier hosts:
 
 ```bash
-10.0.5.54 ansible_user="admin" ansible_password="yourpassword" / 
+10.0.5.54 ansible_user="admin" ansible_password="yourpassword" /
 ansible_sudo_password="yourpassword" /
 ansible_python_interpreter="/usr/bin/python3"
 ```
@@ -93,7 +94,7 @@ Si vous ne mettez pas `ansible_sudo_password` vous aurez une erreur puisque dans
 
 ---
 
-### Exemple concret 
+### Exemple concret
 Je veux rajouter robert lafondue avec sa clé publique qui est sur le serveur sur un serveur qui est en `192.168.0.12` par exemple.
 
 Contenu du fichier `~/.ansible/roles/nickjj.user/defaults/main.yml` :
@@ -142,7 +143,7 @@ Conteu du fichier `hosts` :
 192.168.0.12 ansible_user="root" ansible_password="passW0rd" ansible_sudo_password="passW0rd" ansible_python_interpreter="/usr/bin/python3"
 ```
 
-Et enfin la commande pour lancer tout ça : 
+Et enfin la commande pour lancer tout ça :
 
 `(sudo) ansible-playbook -i hosts playbook.yml`
 

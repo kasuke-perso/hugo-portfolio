@@ -3,6 +3,7 @@ title: "VidCutter - Logiciel pour découper facilement des vidéos"
 date: 2019-07-22T11:55:31+02:00
 draft: false
 tags: ["appcool", "crossplateforme"]
+comments: true
 ---
 
 Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi [VidCutter](https://github.com/ozmartian/vidcutter)  pourrait vous intéresser.

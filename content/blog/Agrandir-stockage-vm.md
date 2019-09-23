@@ -3,9 +3,10 @@ title: "Agrandir Stockage Vm"
 date: 2019-05-28T16:12:16+02:00
 draft: false
 tags: ["tuto", "système", "virtualisation"]
+comments: true
 ---
 
-### Prérequis 
+### Prérequis
 Il faut avoir augmenté la taille de l'espace disque (donc là je le fais sur vsphere avec une VM)
 
 J'avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
@@ -16,7 +17,7 @@ Comment j'ai procédé pour insérer le cd :
 
 On est dans vSphere
 
-1. Modifier les paramètres 
+1. Modifier les paramètres
 2. Dans l'onglet **Matériel** -> clic sur Lecteur CD/DVD -> Fichier ISO banque de données (faut avoir mis l'iso dans la banque de données avant)
 ![screen vsphere](/vsphere_lecteurCD.PNG)
 3. Dans l'onglet **Options** -> Option de démarrage -> Forcer la configuation BIOS
@@ -130,7 +131,7 @@ Let's do this
   Logical volume root successfully resized.
 ```
 On peut voir que nous sommes bien passé de 13.52Go à 147.52Go !
-Il nous reste 2 commandes à effectuer mais il faut que la partition `dev/ubuntuLTS-16-vg/root` soit démontée... 
+Il nous reste 2 commandes à effectuer mais il faut que la partition `dev/ubuntuLTS-16-vg/root` soit démontée...
 
 Et pour ceux qui sont parti du liveCD vous aurez ces messages d'erreurs :
 ```bash
@@ -161,7 +162,7 @@ Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
-ou encore 
+ou encore
 ```bash
 ➜  ~ df -h
 Filesystem                          Size  Used Avail Use% Mounted on

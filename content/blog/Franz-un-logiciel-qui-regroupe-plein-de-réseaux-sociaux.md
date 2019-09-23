@@ -3,6 +3,7 @@ title: "Franz - Un logiciel qui regroupe chat et service de messagerie"
 date: 2019-07-22T14:37:09+02:00
 draft: false
 tags: ["appcool", "crossplateforme"]
+comments: true
 ---
 ![Logo franz](/franz.bmp) Franz 5 (à l'heure où j'écris)
 

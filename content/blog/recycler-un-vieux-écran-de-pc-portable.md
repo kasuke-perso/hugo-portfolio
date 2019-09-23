@@ -3,6 +3,7 @@ title: "Recycler Un Vieux Écran De Pc Portable"
 date: 2019-05-23T12:22:30+02:00
 draft: false
 tags: ["DIY"]
+comments: true
 ---
 
 En gros c'est très simple.
@@ -15,7 +16,7 @@ Ce qu'il vous faut c'est la référence de l'écran (qui doit être marquée der
 Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve)
 On cherche <strong>board controller </strong>+ <strong>ref de l'écran</strong>
 
-Plusieurs options s'offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c'est simple à brancher 😉 
+Plusieurs options s'offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c'est simple à brancher 😉
 
 Généralement ces board controller sont livrés sans alimentation (12V)
 
