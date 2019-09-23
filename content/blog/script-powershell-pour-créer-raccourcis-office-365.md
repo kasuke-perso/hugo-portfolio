@@ -3,6 +3,7 @@ title: "Script PowerShell pour créer raccourcis Office 365"
 date: 2019-09-17T09:54:45+02:00
 draft: false
 tags: ["powershell"]
+comments: true
 ---
 
 N'ayant pas trouvé de post précisément pour office (365), puisqu'il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅
