@@ -1,5 +1,5 @@
 ---
-title: "Agrandir Stockage Vm"
+title: "Agrandir Stockage Vm vSphere"
 date: 2019-05-28T16:12:16+02:00
 draft: false
 tags: ["tuto", "système", "virtualisation"]
@@ -8,6 +8,8 @@ comments: true
 
 ### Prérequis
 Il faut avoir augmenté la taille de l'espace disque (donc là je le fais sur vsphere avec une VM)
+
+**Je suis sous ubuntu 16.04 et vSphere 6.0**
 
 J'avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
 ![screen vsphere](/screen_vsphere.PNG)
