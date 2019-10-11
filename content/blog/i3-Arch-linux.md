@@ -17,7 +17,7 @@ Soit vous prenez i3-gaps vous permettant d'avoir des bordures de fenêtre, soit 
 
 Sélectionnez tous les autres packages aussi sinon vous aurez une belle erreur au lancement.
 
-De façon général tout va se configurer dans ce fichier  ̀`~/.config/i3/config` on va revenir sur ce fichier tout au long de ce "tuto" plus une doc ++ que je me fais.
+De façon général tout va se configurer dans ce fichier `~/.config/i3/config` on va revenir sur ce fichier tout au long de ce "tuto" plus une doc ++ que je me fais.
 
 #### Voici une liste de packages qui vous seront bien utiles :
 * ranger - gestionnaire de fichier en ligne de commande (pas mal)
@@ -27,6 +27,8 @@ De façon général tout va se configurer dans ce fichier  ̀`~/.config/i3/confi
 * polybar - remplace la vieille barre dégueulasse de base
 * compton - si vous voulez rajouter des trucs jolies
 * flameshot - pour prendre des captures d'écran
+* urxvt - Terminal
+* pywal - gestion xressources selon fond d'écran
 
 Je vous conseil de prendre des powerline fonts aussi. Si vous voulez un git avec pleins de dotfiles plutôt propre -> https://github.com/NicklasLallo/dotfiles
 
@@ -45,7 +47,8 @@ De base ce c*n ne retient pas les mots de passe wifi et il faut les retaper sans
 ```sh
 pacman -S gnome-keyring
 ```
-
+🤔 D'après mes recherches et mon expérience, je vais plutôt utiliser `nmtui` qui permet d'avoir une interface "graphique" en ligne de commande.
+Vos réseaux sont enregistrés automatiquement et dès que vous croiser un réseau connu, il s'y connecte automatiquement à condition d'avoir cocher les cases nécessaire.
 # Rofi
 
 Pour que rofi fonctionne bien, il faut rajouter une ligne dans le fichier `.config/i3/config`
@@ -71,13 +74,14 @@ Sinon vous pouvez le custom vous même dans le `~/.Xressources`
 ### Dès que vous changer le moindre truc dans votre config i3, il faut le relancer : `i3-msg restart` ou `mod+shift+c`
 
 # URXVT
-Terminal
+Prenez plutot celui-là : `pacman -S rxvt-unicode-pixbuf` qui vous permettra d'avoir les previews d'image dans ranger (on en parle juste après)
 
 Pour ce terminal le fichier de conf sera soit dans le `.Xressources` soit on fera appel à un fichier dédié que l'on nommera `.urxvt`. On peut rajouter des extensions perl à urxvt par exemple une extension pour faire en sorte que les liens soient cliquables.
 
 * Pour copier - Ctrl+Inser
 * Pour coller - Ctrl+Shift+Inser
 
+Un peu de personnalisation
 ### Personnalisation des couleurs
 
 # Ranger
@@ -111,7 +115,49 @@ warn: pulseaudio: using default sink alsa_output.pci-0000_00_1f.3.analog-stereo
 error: tray: Failed to put tray above 0x1200002 in the stack (XCB_MATCH (8))
 warn: Systray selection already managed (window=0x060000c)
 ```
-Certains modules ne sont pas trop compatibles selon les machines du coup parfois il faut faire des scripts. Par exemple moi j'utilise un script pour pouvoir gérer la luminosité vu que le module xbacklight ne fonctionne pas.
+Certains modules ne sont pas trop compatibles selon les machines du coup parfois il faut faire des scripts. Sauf qu'on s'en fou c'est juste pour afficher des infos sur polybar.
+
+C'est découpé en modules et chaque module va vous afficher des trucs dans la bar(re)
+
+Ce qu'il faut changer dans le fichier de configuration de i3 `~/.config/i3/config` :
+```sh
+# Faut retirer cette ligne
+bar {
+    i3bar_command i3bar
+}
+```  
+Pour lancer polybar cf la partie Pywal.
+
+### Custom Polybar
+Perso je me suis pas embêté, j'ai clone ce git https://github.com/adi1090x/polybar-themes.git
+
+J'ai pris le polybar-4, il faut juste ajouter les polices :
+```sh
+~/polybar-themes/polybar-4
+cd fonts
+cp * /usr/local/share/fonts/
+#reload les fonts
+fc-cache
+```
+Vous avez un script qui vous permet de tester les différents modules `tester.sh`
+
+Mais c'est pas tout, il va falloir pimper à sa sauce quand même. On a une belle base mais il y a des trucs qui me plaise pas.
+
+Déjà j'ai changé la position de base de la bar `vim ~/.config/polybar/config.ini` :
+```sh
+; Put the bar at the bottom of the screen
+# De base il était à true
+bottom = false
+```
+
+Il faudra gérer aussi les modules `vim ~/.config/polybar/modules.ini`
+
+Mais ce serait trop long de dire un par un ce que j'ai changé, je le mettrais sur mon [git](https://github.com/kasuke5) ce qu'il faut surtout savoir c'est que polybar fonctionne avec des modules, donc regarder les différents modules, voir leur configuation sur github ou sur unixporn si y'en a un qui vous a plus. Vous pouvez aussi faire vos propres modules, dans mon cas ils sont ici `~/.config/polybar/user_modules.ini` qui font eux même appel aux scripts situés dans le dossier `~/.config/polybar/scripts`
+
+Je vous conseil de vous mettre en mode debug pour voir tout ce qui est chargé en temps réel pour ainsi identifier les éléments qui ne fonctionnent pas (qui sont propre à chacun)
+
+# Quelques configuration d'i3
+Par exemple moi j'utilise un script pour pouvoir gérer la luminosité vu que le module xbacklight ne fonctionne pas.
 
 Voici mon `brightness.sh`
 ```sh
@@ -151,6 +197,68 @@ Plusieurs options viennent avec feh, dans mon cas j'ai mis l'option pour que la 
 ```
 On est d'accord le chemin pointe vers une image qui existe ...
 Plus d'info sur feh ici https://wiki.archlinux.org/index.php/Feh
+
+Mais on peut faire autrement ...
+# Pywal
+Pywal est un outil qui génère une palette de couleur à partir des couleurs dominante d'une image. Ensuite il l'applique à tout le système à la volée sur la plupart des programmes.
+
+Alors pas grand chose à configurer pour que ça fonctionne, ensuite vous pouvez aller voir sur son [git](https://github.com/dylanaraps/pywal)
+
+Petite configuration à rajouter dans le `~.config/i3/config`
+```sh
+###--- i3 coloring ---###
+# Make it clear when failed using red - otherwise set i3 colors with wal from xresources
+set_from_resource $bg           i3wm.color0 #ff0000
+set_from_resource $bg-alt       i3wm.color14 #ff0000
+set_from_resource $fg           i3wm.color15 #ff0000
+set_from_resource $fg-alt       i3wm.color2 #ff0000
+set_from_resource $hl           i3wm.color13 #ff0000
+
+# class                 border      backgr. text indicator      child_border
+client.focused          $fg-alt     $bg     $hl  $fg-alt        $hl
+client.focused_inactive $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.unfocused        $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.urgent           $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.placeholder      $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+
+client.background       $bg
+
+# Active les couleurs de pywal avant de lancer polybar
+exec --no-startup-id sleep 2; sh ~/beautify.sh
+```
+Le script `beautify.sh` :
+```sh
+#!/bin/bash
+
+# Waits for wal to set colors and then starts polybar
+while true; do
+    if [[ ! $color15 ]]; then
+        source "${HOME}/.cache/wal/colors.sh"
+        sh ~/.config/polybar/launch.sh
+        exit 1
+    fi
+    sleep 0.1
+done
+```
+
+Et rajouter cette option dans le fichier de configuation de ranger `~/.config/ranger/rc.conf`
+```sh
+map bw shell wal -i %s
+```
+Ce qui permettra de pouvoir utiliser et appliquer pywal, depuis ranger en étant sur une image,  en appuyant juste sur `bw`
+
+# Avoir de belles fenêtres 🤩
+
+Alors de base il y a une police dégueulasse sur le titre des fenêtres et il suffit de changer cette ligne dans le fichier de configutation de i3 :
+```sh
+font pango:monospace 8
+```
+Et de la remplacer par une un peu plus jolie :
+```sh
+font pango:monospace 12
+```
+Faut que je trouve quelque chose de mieux mais déjà c'est moins pire.
+
 # Reminder de mes raccourcis
 * mod+d - rofi
 * mod+f - fullscreen
@@ -162,3 +270,4 @@ Plus d'info sur feh ici https://wiki.archlinux.org/index.php/Feh
 * mod+shift+q - pour kill une app (faites attention dans la conf c'est marqué a mais on est en azerty donc c'est q)
 * mod+r - pour resize des fenêtres
 * mod+l - pour lock
+* dans ranger bw sur une image pour changer xressources
