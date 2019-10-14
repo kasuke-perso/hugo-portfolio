@@ -82,7 +82,6 @@ Pour ce terminal le fichier de conf sera soit dans le `.Xressources` soit on fer
 * Pour coller - Ctrl+Shift+Inser
 
 Un peu de personnalisation
-### Personnalisation des couleurs
 
 # Ranger
 Il est déjà très bien de base, je veux juste un truc en plus les previews d'images quand on passe dessus, pour ne pas avoir à les ouvrir avec un logiciel
@@ -126,7 +125,7 @@ bar {
     i3bar_command i3bar
 }
 ```  
-Pour lancer polybar cf la partie Pywal.
+Pour lancer polybar au démarrage cf la partie Pywal.
 
 ### Custom Polybar
 Perso je me suis pas embêté, j'ai clone ce git https://github.com/adi1090x/polybar-themes.git
@@ -258,6 +257,13 @@ Et de la remplacer par une un peu plus jolie :
 font pango:monospace 12
 ```
 Faut que je trouve quelque chose de mieux mais déjà c'est moins pire.
+
+# Résoudre les problèmes de tearing et ajouter des effets (transparent, fade ...)
+ça va être le boulot de compton ... non pas celui-là (même si on l'adore) ![compton](/Straight_Outta_Compton_logo.jpg)
+
+Dans vos recherche je vous conseil de mettre compton window manager sinon vous allez tomber sur N.W.A 😅
+
+Pareil ici cela reste assez simple, il va falloir configurer à sa sauce.
 
 # Reminder de mes raccourcis
 * mod+d - rofi
