@@ -25,7 +25,7 @@ De façon général tout va se configurer dans ce fichier `~/.config/i3/config` 
 * feh - en gros pour avoir un fond d'écran
 * `sudo pacman -S NetworkManager` - pour gérer le wifi :)
 * polybar - remplace la vieille barre dégueulasse de base
-* compton - si vous voulez rajouter des trucs jolies
+* compton-tryone-git - si vous voulez rajouter des trucs jolies
 * flameshot - pour prendre des captures d'écran
 * urxvt - Terminal
 * pywal - gestion xressources selon fond d'écran
@@ -197,7 +197,7 @@ Plusieurs options viennent avec feh, dans mon cas j'ai mis l'option pour que la 
 On est d'accord le chemin pointe vers une image qui existe ...
 Plus d'info sur feh ici https://wiki.archlinux.org/index.php/Feh
 
-Mais on peut faire autrement ...
+**Mais on peut faire autrement ...**
 # Pywal
 Pywal est un outil qui génère une palette de couleur à partir des couleurs dominante d'une image. Ensuite il l'applique à tout le système à la volée sur la plupart des programmes.
 
@@ -240,7 +240,7 @@ while true; do
 done
 ```
 
-Et rajouter cette option dans le fichier de configuation de ranger `~/.config/ranger/rc.conf`
+Ajouter cette option dans le fichier de configuation de ranger `~/.config/ranger/rc.conf`
 ```sh
 map bw shell wal -i %s
 ```
@@ -261,9 +261,22 @@ Faut que je trouve quelque chose de mieux mais déjà c'est moins pire.
 # Résoudre les problèmes de tearing et ajouter des effets (transparent, fade ...)
 ça va être le boulot de compton ... non pas celui-là (même si on l'adore) ![compton](/Straight_Outta_Compton_logo.jpg)
 
-Dans vos recherche je vous conseil de mettre compton window manager sinon vous allez tomber sur N.W.A 😅
+Dans vos recherches je vous conseil de mettre compton window manager sinon vous allez tomber sur N.W.A 😅
 
-Pareil ici cela reste assez simple, il va falloir configurer à sa sauce.
+Prenez la version `compton-tryone-git` qui est dispo dans AUR, cela vous permettra d'avoir la gestion du blur (flou)
+
+Pareil ici cela reste assez simple, il va falloir configurer à sa sauce. Je vous conseil de prendre un fichier d'exemple sur github et de l'adapter.
+
+Perso je trouve que le wiki sur le github explique pas grand chose ... Sinon vous prenez le fichier qu'il y a sur mon github et vous l'adaptez à vos besoins
+
+# ZSH
+Pour moi c'est un must have, plus complet que bash et d'autre (en fait c'est une compil de fonctionnalité cool de bash, ksh et tcsh). Bref je vous le recommande fortement et l'autocomplétion est carrément mieux gérée.
+
+Combiné avec [oh-my-zsh](https://ohmyz.sh/), vous aurez un super shell 🤟
+
+Et je vous conseil un thème (qui n'est pas dans les thèmes officiel de zsh) [Powerlevel10k](https://github.com/romkatv/powerlevel10k) qui a l'avantage d'être beau ET rapide.
+
+Rendez-vous sur les liens fournies pour installer le tout (c'est très bien expliqué et facile). Dans l'ordre zsh ensuite oh-my-zsh et ensuite Powerlevel10k. Si jamais vous voulez reconfigurer Powerlevel10k, vous pouvez en faisant un petit `p10k configure`
 
 # Reminder de mes raccourcis
 * mod+d - rofi
@@ -276,4 +289,10 @@ Pareil ici cela reste assez simple, il va falloir configurer à sa sauce.
 * mod+shift+q - pour kill une app (faites attention dans la conf c'est marqué a mais on est en azerty donc c'est q)
 * mod+r - pour resize des fenêtres
 * mod+l - pour lock
-* dans ranger bw sur une image pour changer xressources
+* dans ranger bw sur une image pour changer et le fond d'écran et les couleurs systèmes
+---
+Et si vous êtes un MASTER flemmard... Ba en fait il y a une distrib Arch avec déjà i3 configuré (et pleins d'autre WM).
+
+C'est ArcoLinux (anciennement Archmerge il me semble) -> https://arcolinux.info/download/ , je vous conseil la LTS (ArcoLinuxB) pour des raisons évidente de stabilité
+
+Mais attention car elle est un peu ... comment dire ... surchargée, mais il y a pleins de choses configurées (il n'y a qu'à voir le bashrc pour s'en rendre compte). Il faudra sans doute faire du ménage dans les packages et configurer à votre sauce quand même (genre rien que les touches i3). Ce "tuto" pourra quand même vous éclairer sur la configuration de tout les éléments.
