@@ -278,6 +278,21 @@ Et je vous conseil un thème (qui n'est pas dans les thèmes officiel de zsh) [P
 
 Rendez-vous sur les liens fournies pour installer le tout (c'est très bien expliqué et facile). Dans l'ordre zsh ensuite oh-my-zsh et ensuite Powerlevel10k. Si jamais vous voulez reconfigurer Powerlevel10k, vous pouvez en faisant un petit `p10k configure`
 
+# Bonus (bootloader)
+On peut aussi pimper notre bootloader, dans mon cas c'est grub et pour la plupart des gens ça va être la même chose.
+
+Pour se faire, comme d'habitude j'ai trouvé un git sympa -> https://github.com/vinceliuice/grub2-themes
+
+Petit preview de la gueule que ça a, mais vous pouvez avoir d'autres thèmes :
+![grub](/grub-theme-vimix.jpg)
+
+---
+# Preview
+Voilà ce que ça peut donner (mais j'ai pas finis ça va changer)
+![clean](/clear.png)
+![busy](/Capture d’écran du 2019-10-25 11-26-15.png)
+![busy2](/Capture d’écran du 2019-10-25 11-46-23.png)
+
 # Reminder de mes raccourcis
 * mod+d - rofi
 * mod+f - fullscreen
