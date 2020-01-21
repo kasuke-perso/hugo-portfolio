@@ -24,7 +24,7 @@ Donc aujourd'hui je vous propose ma solution qui va se servir d'un peu des deux 
 
 * Les rôles sont situés dans votre /home `~/.ansible/roles`
 
-* Les variables passées dans `--extra-pass` écrasent toute celles que vous avez ailleurs
+* Les variables passées dans `--extra-vars` écrasent toute celles que vous avez ailleurs
 
 * De base Ansible se sert des clés ssh pour communiquer, mais nous pouvons aussi utiliser un login mot de passe pour s'y connecter. Il faut alors rajouter `--ask-pass` et quand on a besoin des droits 'sudo' il faut aussi ajouter `--ask-become-pass`.
 En utilisant ask, lorsque vous lancerez votre playbook on vous demandera un mot de passe. Pour éviter celà, on peut alors ajouter en variable `ansible_user=youruser` et `ansible_password=yourpassword` et `ansible_sudo_password=yourpassword` pour les droits sudo.
