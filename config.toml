@@ -45,13 +45,13 @@ disqusShortname = "florian-dugat"
   [params.favicon]
   # you may want to use https://realfavicongenerator.net to generate you files
   # used in layouts/partials/head.favicon.html
-  # relURL is applied to path 
+  # relURL is applied to path
   enable    = true
   path      = "/images/favicons"
   version   = "1"
-  maskIicon = "#5bbad5" 
-  tileColor = "#da532c" 
-  themeColor= "#ffffff" 
+  maskIicon = "#5bbad5"
+  tileColor = "#da532c"
+  themeColor= "#ffffff"
 
 
   # Metadata mostly used in document's head
@@ -100,14 +100,14 @@ disqusShortname = "florian-dugat"
         weight = 2
 
   [languages.en]
-    title = "Hello Friend NG"
-    subtitle = "A simple theme for Hugo"
+    title = "Florian DUGAT"
+    homeSubtitle = "System and network IT "
     keywords = ""
     copyright = ""
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "hello friend ng"
+      logoText = "# cd /home/français"
       logoHomeLink = "/"
     # or
     #
@@ -123,7 +123,7 @@ disqusShortname = "florian-dugat"
       [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
-        url = "/showcase"
+        url = "/blog"
 
 
 # And you can even create generic menu
@@ -136,4 +136,3 @@ disqusShortname = "florian-dugat"
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
-

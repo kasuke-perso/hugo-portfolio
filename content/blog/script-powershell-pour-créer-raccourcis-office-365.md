@@ -4,6 +4,7 @@ date: 2019-09-17T09:54:45+02:00
 draft: false
 tags: ["powershell"]
 comments: true
+translationKey: script-powershell-pour-créer-raccourcis-office-365
 ---
 
 N'ayant pas trouvé de post précisément pour office (365), puisqu'il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅
@@ -34,6 +35,12 @@ N'hésitez pas à vérifier avec votre terminal et à utilisez le beau `tab` �
 
 Pareil pour les dossiers du genre 'Bureau' qui sera plutôt Desktop etc...
 
+C'est pour cela qu'il vaut mieux utiliser aux maximum les variables d'environnement en remplaçant cette ligne : `$objShortCut.TargetPath="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
+` par celle là `  $objShortCut.TargetPath= $env:ProgramFiles + "\Microsoft Office\root\Office16\OUTLOOK.EXE"
+`
+
+Pour voir les variables d'environnement Windows sur PowerShell (équivalent de SET sur le cmd) : `Get-ChildItem env:`
+
 On va rajouter une condition pour pouvoir le mettre dans une GPO au lancement de session et ne pas devoir refaire la création tout le temps:
 ```PowerShell
 $raccourci = $env:USERPROFILE+"\Desktop\Outlook.lnk"
@@ -44,7 +51,7 @@ if (-not (Test-Path $raccourci))
   # Destination du raccourci
   $objShortCut = $objShell.CreateShortcut($env:USERPROFILE + "\Desktop" +"\Outlook.lnk")
   # Vers ou doit pointer le raccourci
-  $objShortCut.TargetPath="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
+  $objShortCut.TargetPath= $env:ProgramFiles + "\Microsoft Office\root\Office16\OUTLOOK.EXE"
   # Création du raccourci
   $objShortCut.Save()
 }else
