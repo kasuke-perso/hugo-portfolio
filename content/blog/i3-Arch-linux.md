@@ -310,4 +310,4 @@ Et si vous êtes un MASTER flemmard... Ba en fait il y a une distrib Arch avec d
 
 C'est ArcoLinux (anciennement Archmerge il me semble) -> https://arcolinux.info/download/ , je vous conseil la LTS (ArcoLinuxB) pour des raisons évidente de stabilité
 
-Mais attention car elle est un peu ... comment dire ... surchargée, mais il y a pleins de choses configurées (il n'y a qu'à voir le bashrc pour s'en rendre compte). Il faudra sans doute faire du ménage dans les packages et configurer à votre sauce quand même (genre rien que les touches i3). Ce "tuto" pourra quand même vous éclairer sur la configuration de tout les éléments.
+Mais attention car elle est un peu ... comment dire ... surchargée, mais il y a pleins de choses configurées (il n'y a qu'à voir le bashrc pour s'en rendre compte). Il faudra sans doute faire du ménage dans les packages et configurer à votre sauce quand même (genre rien que les touches i3). Ce "tuto" pourra quand même vous éclairer sur la configuration de tous les éléments.

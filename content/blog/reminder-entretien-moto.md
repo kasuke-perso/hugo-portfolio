@@ -6,7 +6,7 @@ draft: true
 
 # Kit chaîne
 
-* Il faut l'entretenir en graissant la chaine (si possible par l'intérieur) tous les
+* Il faut l'entretenir en graissant la chaine (si possible par l'intérieur) tous les 6000km
 * Check les points durs (en regardant si partout ça remonte bien, ça bloque pas à un endroit)
 * Tension de la chaine
 * check l'usure des dents de la couronne

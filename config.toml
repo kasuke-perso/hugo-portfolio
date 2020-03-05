@@ -107,7 +107,7 @@ disqusShortname = "florian-dugat"
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "# cd /home/français"
+      logoText = "# cd /home/french"
       logoHomeLink = "/"
     # or
     #
@@ -124,6 +124,10 @@ disqusShortname = "florian-dugat"
         identifier = "showcase"
         name = "Showcase"
         url = "/blog"
+      [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "/projets"
 
 
 # And you can even create generic menu
