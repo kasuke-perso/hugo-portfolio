@@ -1,5 +1,5 @@
 ---
-title: "L'agefi"
+title: "L'agefi - Administrateur systèmes et réseaux junior - 2 ans"
 date: 2019-07-09T19:31:11+02:00
 draft: false
 ---
@@ -14,7 +14,7 @@ Etant dans une équipe de trois personnes (un DSI, un Administrateur systèmes e
 
 Des tâches et des missions très variées où j'ai pu me familiariser avec l'environnement Windows (et toute son organisation AD etc ...) que je n'avais que très peu vu à l'école.
 
-J'ai pu apprendre beaucoup de choses durant cette alternance **que j'ai pas finis donc cette page va encore évoluer**
+J'ai pu apprendre beaucoup de choses durant cette alternance.
 
 #### Univers techniques :
 * Vsphere
@@ -33,4 +33,4 @@ J'ai pu apprendre beaucoup de choses durant cette alternance **que j'ai pas fini
 * Bash
 * PDQ Deploy
 * GLPI
-* 
+* Support suite office

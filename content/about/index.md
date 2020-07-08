@@ -16,17 +16,19 @@ Do It Yourself ou fais le toi même pour les gens fâchés avec l'anglais.
 
 C'est un concept auquel j'adhère à fond ! Le principe, pour ceux qui ne sauraient pas, est de créer, réparer, bidouiller des objets de la vie courante, technologiques, ou artistiques, généralement de façon artisanale. En gros c'est être **créatif** et **bricoleur**. Je manque encore d'expèrience et de connaissances pour le bricolage mais j'aimerais vraiment en apprendre plus et être capable de bricoler un peu de tout.
 
-J'ai déjà personnellement fais pas mal de DIY pour   
+J'ai déjà personnellement fais pas mal de DIY mais je ne vais pas montrer tout ce que j'ai fais il risquerait de ne plus y avoir de place 🤣
 
-Et le plus important pour moi c'est la satifaction engendrer par quelque chose que l'on a fait de ses propres mains
+Et le plus important pour moi, au final ce n'est pas vraiment de savoir si ce que l'on a fait est unique ou utile mais c'est surtout la satisfaction engendrée par quelque chose que l'on a fait de ses propres mains. Je le conseil à tout le monde c'est très agréable.
 ![fier](/3rhruz.jpg)
 ## Sécurité informatique
 
-La problématique de la sécurité informatique est très interessante, malheuresement asssez complexe parfois à mettre en place puisque beaucoup de recherches et pas forcément les infras disponibles pour tester.
+La problématique de la sécurité informatique est très interessante, malheuresement asssez complexe parfois à mettre en place puisque beaucoup de recherches et pas forcément les infras disponibles pour tester. Mais aussi, demande beaucoup de temps et de gymnastique intellectuelle.
 
 Heureusement il y a des sites tel que [root-me](https://www.root-me.org/) pour pouvoir s'entrainer avec tout type de challenges avec les infras/machines nécessaire.
 
-A l'heure où j'écris ces lignes, j'ai un score de 1065. Il me reste beaucoup de chemins à parcourir j'en suis conscient mais avec de la pratique et beaucoup (trop 😅) de documentation, je devrais arriver les différents challenges proposé. En CTF, c'est assez souvent la même chose, on fait un petit nmap pour voir ce qui est ouvert et récupérer quelques infos qui pourraient être utiles, on fait souvent un dirb pour voir s'il y a des chemins que l'on peut exploiter pour obtenir  un reverse shell et une fois avec un shell, un moyen d'obtenir les droits de root.
+A l'heure où j'écris ces lignes, j'ai un score de 1105. Il me reste beaucoup de chemins à parcourir j'en suis conscient mais avec de la pratique et beaucoup (trop 😅) de documentation, je devrais arriver les différents challenges proposé. Faisant cela sur mon temps libre, il m'est de plus en plus difficile d'y consacrer du temps.
+
+En CTF, c'est souvent la même chose : on fait un petit nmap pour voir ce qui est ouvert et récupérer quelques infos qui pourraient être utiles, on fait souvent un dirb pour voir s'il y a des chemins que l'on peut exploiter pour obtenir  un reverse shell et une fois avec un shell, un moyen d'obtenir les droits de root.
 
 Via twitter, je reste alerté des diverses failles et exploitations.
 
@@ -40,12 +42,12 @@ Je me suis donc lancé à faire de la guitare, ma seule motivation était de sav
 
 J'ai ensuite pris goût à jouer des morceaux qui me plaisaient et j'ai continué à en apprendre d'autre. Le plus difficile étant d'être régulier, chose que j'ai bien souvent du mal à faire.
 
-Dans la suite "logique", je me suis réconcilié avec le piano, j'apprends des morceaux que j'ai choisis d'apprendre et qui me plaisent. Je sais que ce n'est pas une façon pour apprendre la musique mais mon but n'est pas d'être musicien c'est surtout de me faire plaisir à jouer des morceaux qui me plaisent.
+Dans la suite "logique", je me suis réconcilié avec le piano, j'apprends des morceaux que j'ai choisis d'apprendre et qui me plaisent. Je sais que ce n'est pas une façon pour apprendre la musique mais mon but n'est pas d'être musicien c'est surtout de me faire plaisir à jouer des morceaux que je choisis.
 
 ## Sport
 J'ai toujours été sportif et ça a toujours été plutôt facile pour moi.
 
-Récemment je me suis mis à la musculation et j'ai pu découvrir pas mal de choses.
+Récemment je me suis mis à la musculation (car j'ai eu un petit accident de moto et je devais remuscler mes jambes) et j'ai pu découvrir pas mal de choses.
 
 * Nutrition
 * Rigueur
@@ -53,7 +55,7 @@ Récemment je me suis mis à la musculation et j'ai pu découvrir pas mal de cho
 * Mental, esprit sain corps sain
 * Dépassement de soi
 * Motivation, détermination
-* Savoir se fixer des objectifs
+* Savoir se fixer des objectifs et les atteindre
 * Développement personnel
 
 ## Hardware
@@ -70,9 +72,9 @@ Plus tard, losque j'avais un peu plus de moyen financier, je m'étais mis au wat
 Mais ... Comme d'habitude le premier résultat est décevant et pleins d'erreurs. Le "cable management" est désastreux sur le premier 😅 Les photos parlent d'elles mêmes. Voici le premier watercooling que j'ai effectué :
 ![1er WC](/fFUzM5U.jpg)
 ![1er WC 2](/nVe3xDt.jpg)
-Et ensuite, quelques années plus tard (avec beaucoup de pièces recylclées et modifiées car c'est très onéreux) j'ai fais les choses mieux, plus propre et moins cher 😀
+Et ensuite, quelques années plus tard, avec pratiquement les mêmes pièces que j'ai modifié car c'est très onéreux, j'ai fais les choses mieux, plus propre et moins cher 😀
 ![2e WC](/T2Z9aZ9.jpg)
-ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour notamment trouvé des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
+ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour, notamment trouver des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
 
 * Mon premier fail avec le watercooling cable management et tout le tralalala.
 * Mon deuxième watercooling et la relation que devrait avoir un informaticien et le hard
@@ -89,7 +91,7 @@ C'est un OS parfait pour apprendre car complétement gratuit et dôté d'une com
 
 Personnellement j'ai testé ArchLinux, Ubuntu, Gentoo, Debian, Kali, Parrot, Arcolinux, centOS. J'ai eu une multitudes de problèmes avec mes OS car je privilégie le dual (ou plus) boot plutôt que les machines virtuel ou les très récents WSL (Windows subsystem for Linux) et comme d'habitude, j'ai appris beaucoup de choses "grace" à ces problèmes.
 
-Ah mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de cette communauté reddit [unixporn](https://www.reddit.com/r/unixporn/) c'est assez formateur si on veut bien comprendre son système.
+A mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de cette communauté reddit [unixporn](https://www.reddit.com/r/unixporn/) c'est assez formateur si on veut bien comprendre son système.
 
 ## Moto
 Je possède donc une moto (pour le moment c'est une Suzuki SV650S de 2000 à carbu).
