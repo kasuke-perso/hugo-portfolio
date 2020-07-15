@@ -18,6 +18,8 @@ C'est un concept auquel j'adhère à fond ! Le principe, pour ceux qui ne saurai
 
 J'ai déjà personnellement fais pas mal de DIY mais je ne vais pas montrer tout ce que j'ai fais il risquerait de ne plus y avoir de place 🤣
 
+Récemment je me suis pris une imprimante 3D (j'ai fais un article plus détaillé sur le sujet) et je m'amuse comme un petit fou avec, ça permet de pousser le DIY encore bien plus loin, d'autant plus si on l'associe avec de l'électronique (mes cours de SI me servent bien 😂)
+
 Et le plus important pour moi, au final ce n'est pas vraiment de savoir si ce que l'on a fait est unique ou utile mais c'est surtout la satisfaction engendrée par quelque chose que l'on a fait de ses propres mains. Je le conseil à tout le monde c'est très agréable.
 ![fier](/3rhruz.jpg)
 ## Sécurité informatique
@@ -28,6 +30,8 @@ Heureusement il y a des sites tel que [root-me](https://www.root-me.org/) pour p
 
 A l'heure où j'écris ces lignes, j'ai un score de 1105. Il me reste beaucoup de chemins à parcourir j'en suis conscient mais avec de la pratique et beaucoup (trop 😅) de documentation, je devrais arriver les différents challenges proposé. Faisant cela sur mon temps libre, il m'est de plus en plus difficile d'y consacrer du temps.
 
+![page root-me](/Root-me.PNG)
+
 En CTF, c'est souvent la même chose : on fait un petit nmap pour voir ce qui est ouvert et récupérer quelques infos qui pourraient être utiles, on fait souvent un dirb pour voir s'il y a des chemins que l'on peut exploiter pour obtenir  un reverse shell et une fois avec un shell, un moyen d'obtenir les droits de root.
 
 Via twitter, je reste alerté des diverses failles et exploitations.
@@ -36,18 +40,26 @@ Via twitter, je reste alerté des diverses failles et exploitations.
 * Mauvaise exp avec le piano et le solfège
 * Autodidacte guitare
 
+J'ai commencé à vouloir faire du piano quand j'étais petit, du coup ma mère m'a inscris à l'école de musique qui comprend ce bon vieux solfège que tout le monde adore, et des cours de piano. Malheuresement je n'ai jamais vraiment aimé cela, ce que je devais apprendre était déjà prédéfini et je subissais plus qu'autre chose. Quand j'étais petit je voyais ça plus comme un jouet qu'autre chose.
+
 Des années plus tard, je trouvais intéressant de pouvoir faire de la musique. Mais l'initiative devait venir de moi et moi seul.
 
 Je me suis donc lancé à faire de la guitare, ma seule motivation était de savoir jouer un morceau particulier. Je me suis dis, tant que je ne saurais pas jouer ce morceau, je n'arrête pas ! C'est très frustrant au début de ne rien savoir faire 😤 ça a mis ma patience à rude épreuve. Mais j'étais **déterminé** à **atteindre mon objectif** et finalement j'ai réussi le défis. Je me suis rendu compte que (pratiquement) rien n'était impossible si on s'en donnait les moyens.
 
 J'ai ensuite pris goût à jouer des morceaux qui me plaisaient et j'ai continué à en apprendre d'autre. Le plus difficile étant d'être régulier, chose que j'ai bien souvent du mal à faire.
 
-Dans la suite "logique", je me suis réconcilié avec le piano, j'apprends des morceaux que j'ai choisis d'apprendre et qui me plaisent. Je sais que ce n'est pas une façon pour apprendre la musique mais mon but n'est pas d'être musicien c'est surtout de me faire plaisir à jouer des morceaux que je choisis.
+Dans la suite "logique", je me suis réconcilié avec le piano, j'apprends des morceaux que j'ai choisis d'apprendre et qui me plaisent. Je sais que ce n'est pas une façon pour apprendre la musique mais mon but n'est pas d'être musicien c'est surtout de me faire plaisir à jouer des morceaux que JE choisis.
 
 ## Sport
-J'ai toujours été sportif et ça a toujours été plutôt facile pour moi.
+J'ai toujours été sportif et ça a toujours été plutôt facile pour moi. J'ai fais du basket pendant quelques années, mon poste était meneur car j'ai toujours été petit 😓 mais j'aimais bien ça. La vie à fait que je ne pouvais plus continuer dans mon club et j'ai par la suite changé de sport.
 
-Récemment je me suis mis à la musculation (car j'ai eu un petit accident de moto et je devais remuscler mes jambes) et j'ai pu découvrir pas mal de choses.
+Je pratiquais du "[parkour](https://www.youtube.com/watch?v=NX7QNWEGcNI)" tout seul dans mon coin, j'essayais de motiver quelques copains avec moi, mais ça n'a jamais vraiment pris vu que j'habitais assez loin de tous. J'ai d'ailleurs pu faire du parkour avec le (maitenant) célèbre [Clément DUMAIS](https://www.instagram.com/clement.htr/?hl=fr) de [Hit the road](https://www.youtube.com/user/ParkourhitstheRoad). J'aimais bien ça aussi mais comme je suis parti en internat ça a été aussi compliqué de continuer.
+
+On m'a ensuite proposé de faire du [tumbling](https://www.youtube.com/watch?v=Y5puaQ9oNVw), j'ai bien apprécié aussi, j'étais dans une bonne équipe où j'ai pu apprendre très vite, mais c'était aussi difficile d'en faire vu que j'étais dispo que le weekend et le club pas toujours.
+
+J'ai voulu faire de la gymnastique mais quand je suis revenu de mon premier cours, j'ai eu un accident de moto et je me suis cassé la jambe 😕
+
+Récemment je me suis mis à la musculation (car suite à l'accident, je devais remuscler mes jambes) et j'ai pu découvrir pas mal de choses :
 
 * Nutrition
 * Rigueur
@@ -57,6 +69,10 @@ Récemment je me suis mis à la musculation (car j'ai eu un petit accident de mo
 * Motivation, détermination
 * Savoir se fixer des objectifs et les atteindre
 * Développement personnel
+
+Je pourrais en parler des pages et des pages mais ça n'est pas le but de celle-ci c'est pourquoi je résume ce que ça m'a apporté brièvement. Je continue d'ailleurs actuellement cette discipline.
+
+J'ai voulu quand même faire de la gym ou du parkour en club, j'en ai trouvé près de mon appart, l'équipe était très cool mais pour la gym, le niveau était pas à la hauteur et pour le parkour c'était bien et libre avec des gens sympa et bon, le seul défaut est que c'était qu'une fois par semaine, ça faisait un peu cher pour si peu.
 
 ## Hardware
 Puisque pour moi c'est essentiel de connaitre son materiel en informatique et pour rester dans la logique du DIY, je reste informé sur le hardware, surtout que dans ce monde là, ça bouge très vite.
@@ -75,10 +91,6 @@ Mais ... Comme d'habitude le premier résultat est décevant et pleins d'erreurs
 Et ensuite, quelques années plus tard, avec pratiquement les mêmes pièces que j'ai modifié car c'est très onéreux, j'ai fais les choses mieux, plus propre et moins cher 😀
 ![2e WC](/T2Z9aZ9.jpg)
 ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour, notamment trouver des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
-
-* Mon premier fail avec le watercooling cable management et tout le tralalala.
-* Mon deuxième watercooling et la relation que devrait avoir un informaticien et le hard
-* Dépassement de sois (on verra ça en muscu) et des difficultés
 
 
 ## Linux
