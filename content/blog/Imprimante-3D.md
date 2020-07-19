@@ -89,13 +89,25 @@ Alors là, il y a de quoi faire ...
 - Changer le Firmware Marlin mais changer la carte mère alors (8bits aime pas trop faut passer sur 32bits)
 - Changer le truc en plastique par le truc en alu extruder
 
+# BL Touch
+- G29 permet d'initialiser le probe point (la calibration)
+
+
 # Récuap liens utiles
 - https://m.all3dp.com/2/elephant-s-foot-3d-printing-problem-easy-fixes/
 - [Reddit Ender 3](https://www.reddit.com/r/ender3/)  
 
-Cette chaine youtube est un must follow !!! [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw)
-guide for mini board skr 1.2 : https://www.reddit.com/r/ender3/comments/e894j7/marlin_20x_guide_for_ender_3_using_skr_mini_e3_v12/
-guide pour le V2 MAMEEEENE : https://www.reddit.com/r/ender3/comments/h8y1ia/marlin_20x_guide_skr_mini_e3_v20_ender_3/
-Pour régler son k factor : https://marlinfw.org/tools/lin_advance/k-factor.html + https://youtu.be/n3yK0lJ8TWM
-https://all3dp.com/2/ender-3-calibration-how-to-calibrate-your-ender-3/ -> Calibration ender 3 (plateau, axe X, Y etc...)
-PID autotune pour re régler les températures si elles font n'importe quoi -> https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
+- Cette chaine youtube est un must follow !!! [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw)
+- guide for mini board skr 1.2 : https://www.reddit.com/r/ender3/comments/e894j7/marlin_20x_guide_for_ender_3_using_skr_mini_e3_v12/
+- guide pour le V2 MAMEEEENE : https://www.reddit.com/r/ender3/comments/h8y1ia/marlin_20x_guide_skr_mini_e3_v20_ender_3/
+- Pour régler son k factor : https://marlinfw.org/tools/lin_advance/k-factor.html + https://youtu.be/n3yK0lJ8TWM
+- https://all3dp.com/2/ender-3-calibration-how-to-calibrate-your-ender-3/ -> Calibration ender 3 (plateau, axe X, Y etc...)
+- PID autotune pour re régler les températures si elles font n'importe quoi -> https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
+
+# Commandes Marlin utiles :
+
+- M500 : sauvegarder les paramètres en cours dans l'EEPROM (à vie même en redémarrant)
+- M503 : affiche les paramètres de l'imprimante
+- M900 : Affiche le K factor (line advance)
+ - M900 K0.7 (par exmple) pour définir depuis le terminal le k factor
+- G29 : prob test (calibration de l'axe Z avec bl touch ou autre)
