@@ -19,6 +19,7 @@ Au cours de la vidéo j'ai remarqué que la qualité était au rendez-vous mais 
 C'est la partie la moins difficile puisque de nombeux sites et personnes mettent à disposition des modèles 3D
 
 Voici les plus populaires et généralement gratuit :
+
 - [Thingiverse](https://www.thingiverse.com/)
 - [Cults 3D](https://cults3d.com/)
 - [MyMiniFactory](https://www.myminifactory.com)
@@ -48,13 +49,15 @@ Si vous voulez avoir plus de détails (et en français aussi) sur les slicer en 
 Personnellement j'utilise Cura, d'abord car c'est gratuit et OpenSource (on aime) ensuite car il dispose d'une forte communauté et il possède des profils pour pas mal d'imprimante 3D dont la mienne. Le "soucis" est qu'il y a souvent des mise à jour alors quand vous regardez un tuto dessus, bien souvent la version n'est pas la même et l'interface non plus. Bien qu'il soit dispo en Français, je vous recommande de le mettre en anglais étant donné que de nombeux tutos le seront également.
 
 Je vous recommande des petits articles et profiles pour Cura :
+
 - https://all3dp.com/fr/2/cura-ender-3-profil-reglages-configurer-settings/ (FR)
 - https://all3dp.com/2/ender-3-cura-settings-best-ender-3-cura-profile/ (EN)
 - [Profile Cura CHEP](https://www.chepclub.com/cura-profiles.html)
 
 ## Filament
-Je vais être assez bref sur le sujet mais En gros il existe 3 sorte de filament (le plastique qu'on va fondre pour imprimer) :
-- **PLA** : Facile à imprimer, parfait pour débuter, mais peu résistant à la chaleur, température d'impression (en moyenne) : 200°C
+Je vais être assez bref sur le sujet mais en gros il existe 3 sorte de filament (le plastique qu'on va fondre pour imprimer) :
+
+- **PLA** : Facile à imprimer, parfait pour débuter, plastique dur et biodégradable, mais peu résistant à la chaleur, température d'impression (en moyenne) : 200°C
 - **ABS** : 230°C
 - **PETG** : 240°C
 

@@ -84,9 +84,9 @@ disqusShortname = "florian-dugat"
         url = "/blog"
         weight = 3
       [[languages.fr.menu.main]]
-        identifier = "contact"
-        name = "Contact"
-        url = "/contact"
+        identifier = "Compétences"
+        name = "Compétences"
+        url = "/compétences"
         weight = 4
       [[languages.fr.menu.main]]
         identifier = "A propos"
