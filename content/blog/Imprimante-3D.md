@@ -104,6 +104,11 @@ Alors là, il y a de quoi faire ...
 - https://all3dp.com/2/ender-3-calibration-how-to-calibrate-your-ender-3/ -> Calibration ender 3 (plateau, axe X, Y etc...)
 - PID autotune pour re régler les températures si elles font n'importe quoi -> https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
 
+# Bed leveling en images :
+![bed 1](/bed level 1.jpg)
+![bed 2](/bed level 2.png)
+![bed 3](/bed level 3.jpg)
+
 # Commandes Marlin utiles :
 
 - M500 : sauvegarder les paramètres en cours dans l'EEPROM (à vie même en redémarrant)

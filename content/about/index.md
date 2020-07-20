@@ -40,7 +40,7 @@ Via twitter, je reste alerté des diverses failles et exploitations.
 * Mauvaise exp avec le piano et le solfège
 * Autodidacte guitare
 
-J'ai commencé à vouloir faire du piano quand j'étais petit, du coup ma mère m'a inscris à l'école de musique qui comprend ce bon vieux solfège que tout le monde adore, et des cours de piano. Malheuresement je n'ai jamais vraiment aimé cela, ce que je devais apprendre était déjà prédéfini et je subissais plus qu'autre chose. Quand j'étais petit je voyais ça plus comme un jouet qu'autre chose.
+J'ai commencé à vouloir faire du piano quand j'étais petit, du coup ma mère m'a inscris à l'école de musique qui comprend ce bon vieux solfège, que tout le monde adore, et des cours de piano. Malheuresement je n'ai jamais vraiment aimé cela, ce que je devais apprendre était déjà prédéfini et je subissais plus qu'autre chose. J'avais demandé celà petit car je voyais le piano comme un jouet.
 
 Des années plus tard, je trouvais intéressant de pouvoir faire de la musique. Mais l'initiative devait venir de moi et moi seul.
 
@@ -61,10 +61,12 @@ J'ai voulu faire de la gymnastique mais quand je suis revenu de mon premier cour
 
 Récemment je me suis mis à la musculation (car suite à l'accident, je devais remuscler mes jambes) et j'ai pu découvrir pas mal de choses :
 
-* Nutrition
+* Nutrition (macros/micros nutriments)
 * Rigueur
 * Chercher l'info et les bonnes
 * Mental, esprit sain corps sain
+* Connaitre son corps
+* Anatomie musculaire
 * Dépassement de soi
 * Motivation, détermination
 * Savoir se fixer des objectifs et les atteindre
