@@ -95,18 +95,6 @@ Et ensuite, quelques années plus tard, avec pratiquement les mêmes pièces que
 ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour, notamment trouver des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
 
 
-## Linux
-![linux master race](/97f.png)
-Pour plusieurs raisons j'adore Linux. Premièrement car c'est l'OS dont nous nous sommes servi le plus à l'école.
-
-Ensuite l'aspect **OpenSource** est essentiel selon moi, que l'on puisse tous accéder et modifier le code source à sa guise me semble être une très bonne idée.
-
-C'est un OS parfait pour apprendre car complétement gratuit et dôté d'une communauté extremement active. Si tu as un problème sur linux, c'est pratiquement sûr et certain que quelqu'un, sur un forum ou stackoverflow ou autre, a eu le même soucis que toi. Il existe plusieurs distribution qui sont plus ou moins "user friendly".
-
-Personnellement j'ai testé ArchLinux, Ubuntu, Gentoo, Debian, Kali, Parrot, Arcolinux, centOS. J'ai eu une multitudes de problèmes avec mes OS car je privilégie le dual (ou plus) boot plutôt que les machines virtuel ou les très récents WSL (Windows subsystem for Linux) et comme d'habitude, j'ai appris beaucoup de choses "grace" à ces problèmes.
-
-A mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de cette communauté reddit [unixporn](https://www.reddit.com/r/unixporn/) c'est assez formateur si on veut bien comprendre son système.
-
 ## Moto
 Je possède donc une moto (pour le moment c'est une Suzuki SV650S de 2000 à carbu).
 ![ma super moto](/WGOTEBR.jpg)
