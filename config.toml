@@ -72,12 +72,12 @@ disqusShortname = "florian-dugat"
       linkedin = "https://linkedin.com/fr/whoever"
       [languages.fr.params.navigation]
         help = "Aide"
-  [languages.fr.menu]
-      [[languages.fr.menu.main]]
-        identifier = "projets"
-        name = "Projets"
-        url = "/projets"
-        weight = 1
+  #[languages.fr.menu]
+  #    [[languages.fr.menu.main]]
+  #      identifier = "projets"
+  #      name = "Projets"
+  #      url = "/projets"
+  #      weight = 1
       [[languages.fr.menu.main]]
         identifier = "blog"
         name = "Blog"
@@ -95,9 +95,14 @@ disqusShortname = "florian-dugat"
         weight = 5
       [[languages.fr.menu.main]]
         identifier = "experiences"
-        name = "Experiences"
+        name = "Parcours"
         url = "experience"
         weight = 2
+      [[languages.fr.menu.main]]
+          identifier = "realisations"
+          name = "Réalisations"
+          url = "realisations"
+          weight = 1
 
   [languages.en]
     title = "Florian DUGAT"

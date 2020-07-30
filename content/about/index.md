@@ -22,19 +22,6 @@ Récemment je me suis pris une imprimante 3D (j'ai fais un article plus détaill
 
 Et le plus important pour moi, au final ce n'est pas vraiment de savoir si ce que l'on a fait est unique ou utile mais c'est surtout la satisfaction engendrée par quelque chose que l'on a fait de ses propres mains. Je le conseil à tout le monde c'est très agréable.
 ![fier](/3rhruz.jpg)
-## Sécurité informatique
-
-La problématique de la sécurité informatique est très interessante, malheuresement asssez complexe parfois à mettre en place puisque beaucoup de recherches et pas forcément les infras disponibles pour tester. Mais aussi, demande beaucoup de temps et de gymnastique intellectuelle.
-
-Heureusement il y a des sites tel que [root-me](https://www.root-me.org/) pour pouvoir s'entrainer avec tout type de challenges avec les infras/machines nécessaire.
-
-A l'heure où j'écris ces lignes, j'ai un score de 1105. Il me reste beaucoup de chemins à parcourir j'en suis conscient mais avec de la pratique et beaucoup (trop 😅) de documentation, je devrais arriver les différents challenges proposé. Faisant cela sur mon temps libre, il m'est de plus en plus difficile d'y consacrer du temps.
-
-![page root-me](/Root-me.PNG)
-
-En CTF, c'est souvent la même chose : on fait un petit nmap pour voir ce qui est ouvert et récupérer quelques infos qui pourraient être utiles, on fait souvent un dirb pour voir s'il y a des chemins que l'on peut exploiter pour obtenir  un reverse shell et une fois avec un shell, un moyen d'obtenir les droits de root.
-
-Via twitter, je reste alerté des diverses failles et exploitations.
 
 ## Musique
 * Mauvaise exp avec le piano et le solfège
