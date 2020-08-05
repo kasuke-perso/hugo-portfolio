@@ -3,7 +3,6 @@ title: "Gestion clés ssh Linux avec Ansible"
 date: 2019-05-29T14:29:12+02:00
 draft: false
 tags: ["tuto", "ansible", "devops", "automatisation", "système"]
-comments: true
 ---
 
 Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s'en servir avec la même configuration.
