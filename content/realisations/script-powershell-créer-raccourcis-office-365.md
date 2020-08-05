@@ -16,7 +16,7 @@ $objShortCut.TargetPath="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK
 # Création du raccourci
 $objShortCut.Save()
 ```
-Enregistrez au format .ps1 et éxectuer direct, boom nouvel îcone sur le bureau avec Outlook !
+Enregistrez au format .ps1 et exéctuez direct, boom nouvel îcone sur le bureau avec Outlook !
 
 En fait on peut l'apliquer pout tout, mais il faut bien faire attention au chemin qu'il y a d'afficher sur l'explorer
 ![explorer](/explorer-office.PNG)
@@ -29,7 +29,7 @@ N'hésitez pas à vérifier avec votre terminal et à utilisez le beau `tab` �
 Pareil pour les dossiers du genre 'Bureau' qui sera plutôt Desktop etc...
 
 C'est pour cela qu'il vaut mieux utiliser aux maximum les variables d'environnement en remplaçant cette ligne : `$objShortCut.TargetPath="C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE"
-` par celle là `  $objShortCut.TargetPath= $env:ProgramFiles + "\Microsoft Office\root\Office16\OUTLOOK.EXE"
+` par celle-là `  $objShortCut.TargetPath= $env:ProgramFiles + "\Microsoft Office\root\Office16\OUTLOOK.EXE"
 `
 
 Pour voir les variables d'environnement Windows sur PowerShell (équivalent de SET sur le cmd) : `Get-ChildItem env:`

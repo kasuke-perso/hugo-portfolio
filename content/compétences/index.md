@@ -9,17 +9,17 @@ draft: false
 
 Depuis le début de mes études j'ai tout de suite adhérer à Linux, j'avais un peu commencé de mon côté avant l'école mais c'est vraiment là-bas que j'ai pu le plus approfondir mes connaissances.
 
-Pour moi l'OpenSource c'est essentiel et pour des étudiants, c'est bien pratique d'avoir un OS totalement gratuit. De plus, Linux dispose d'un support d'assez bonne qualité sur internet notamment par le biais de groupes de diffusion ou de forums. Bien que les versions de linux soient souvent mis à jour (ce qui est très bien par ailleurs) il reste quand même facile de trouver une solution à son problème en regardant sur des forums.
+Pour moi l'OpenSource c'est essentiel et pour des étudiants, c'est bien pratique d'avoir un OS totalement gratuit. De plus, Linux dispose d'un support d'assez bonne qualité sur internet notamment par le biais de groupes de diffusion ou de forums. Bien que les versions de Linux soient souvent mis à jour (ce qui est très bien par ailleurs) il reste quand même facile de trouver une solution à son problème en regardant sur des forums.
 
-![linux master race](/97f.png)
+![Linux master race](/97f.png)
 
-Contrairement à windows, ce qui est aussi bien sur linux est que l'on a le controle intégral de son système, pas des milliers de processus, dont on ne sait pas l'utilité, qui fait ramer votre ordinateur. Il est possible ainsi de l'installer sur à peu près tout (même des vieux mac en PowerPC si si), sur de l'arm, des raspberry etc... Et vu qu'on a le controle intégral, il est possible d'optimiser un max votre linux pour que même le vieil ordinateur familial du salon soit fluide et agréable à utiliser au quotidien (on ne va quand même pas pouvoir faire tourner crisis mais c'est normal 😅).
+Contrairement à windows, ce qui est aussi bien sur Linux est que l'on a le controle intégral de son système, pas des milliers de processus, dont on ne sait pas l'utilité, qui fait ramer votre ordinateur. Il est possible ainsi de l'installer sur à peu près tout (même des vieux mac en PowerPC si si), sur de l'arm, des raspberry etc... Et vu qu'on a le controle intégral, il est possible d'optimiser un max votre Linux pour que même le vieil ordinateur familial du salon soit fluide et agréable à utiliser au quotidien (on ne va quand même pas pouvoir faire tourner crisis mais c'est normal 😅).
 
-Selon vos besoin il y a forcément une distribution faites pour vous et si vous êtes joueur vous pouvez installer de A à Z tout, comme sur un ArchLinux ou un Gentoo. Vous pouvez notamment faire semblant d'avoir un mac pour ceux qui aiment le style épuré ou pour les plus fous d'entre vous, customiser son linux pour qu'il ressemble à un Windows 🤮. Linux sera plus ou moins "user friendly" selon la distribution que vous possèdez, personnellement j'adore mettre les mains dans la console et me prendre pour Eliot de la série TV Mr Robot mais je comprends que ce soit pas le cas de tout le monde et néanmoins, il reste possible d'avoir un Linux sans être un gros "geek", je le recommande pour pas mal de personnes si vous faites que de la navigation internet. En plus c'est beaucoup plus sûr puisque la plupart des cibles des virus restent les Windows car il y a beaucoup plus d'utilisateurs.
+Selon vos besoin il y a forcément une distribution faites pour vous et si vous êtes joueur vous pouvez installer de A à Z tout, comme sur un ArchLinux ou un Gentoo. Vous pouvez notamment faire semblant d'avoir un mac pour ceux qui aiment le style épuré ou pour les plus fous d'entre vous, customiser son Linux pour qu'il ressemble à un Windows 🤮. Linux sera plus ou moins "user friendly" selon la distribution que vous possèdez, personnellement j'adore mettre les mains dans la console et me prendre pour Eliot de la série TV Mr Robot mais je comprends que ce soit pas le cas de tout le monde et néanmoins, il reste possible d'avoir un Linux sans être un gros "geek", je le recommande pour pas mal de personnes si vous faites que de la navigation internet. En plus c'est beaucoup plus sûr puisque la plupart des cibles des virus restent les Windows car il y a beaucoup plus d'utilisateurs.
 
-Personnellement j'ai testé ArchLinux, Ubuntu, Gentoo, Debian, Kali, Parrot, Arcolinux, centOS. J'ai eu une multitudes de problèmes avec mes OS car je privilégie le dual (ou plus) boot plutôt que les machines virtuel ou les très récents WSL (Windows subsystem for Linux) et comme d'habitude, j'ai appris beaucoup de choses "grace" à ces problèmes.
+Personnellement j'ai testé ArchLinux, Ubuntu, Gentoo, Debian, Kali, Parrot, ArcoLinux, centOS. J'ai eu une multitudes de problèmes avec mes OS car je privilégie le dual (ou plus) boot plutôt que les machines virtuelles ou les très récents WSL (Windows subsystem for Linux) et comme d'habitude, j'ai appris beaucoup de choses "grâce" à ces problèmes.
 
-A mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de cette communauté reddit [unixporn](https://www.reddit.com/r/unixporn/) c'est assez formateur si on veut bien comprendre son système. (voici à quoi ça ressemble chez moi)
+À mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de cette communauté reddit [unixporn](https://www.reddit.com/r/unixporn/) c'est assez formateur si on veut bien comprendre son système. (voici à quoi ça ressemble chez moi)
 ![clean](/clear.png)
 
 ## SSH
@@ -30,7 +30,7 @@ S'il y a bien un outil dont je me sers pratiquement quotidiennement c'est bien c
 
 En effet je possède des serveurs personnels (dont ce site) et même lors de mes projets à l'école ou encore au travail, je me sers de SSH qui est un "classique" en système et réseau. Cependant, il est bien souvent mal exploité, en effet on privilégie bien (trop) souvent le "il faut que ça fonctionne tout de suite, on verra plus tard" à "on le fait fonctionner et on le fait bien".
 
-Donc on se retrouve avec des configurations assez classique alors que ça n'est pas très compliqué de désactiver la connexion avec un login/mot de passe pour favoriser le login via une clé sécurisée permettant ainsi de se protéger de certains types d'attaque.
+Donc on se retrouve avec des configurations assez classiques alors que ça n'est pas très compliqué de désactiver la connexion avec un login/mot de passe pour favoriser le login via une clé sécurisée permettant ainsi de se protéger de certains types d'attaques.
 
 ## Ansible
 {{< image src="/Ansible.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
@@ -41,27 +41,27 @@ J'ai eu une première expérience dans un de mes projet d'école -> [Challenge A
 
 J'ai, grâce à l'expérience que j'ai eu à l'école, pu me servir de cette technologie chez [Thales](/experience/thales). J'ai pu approfondir mes connaissances sur Ansible et j'ai notamment plus utilisé les variables et les templates de playbooks. Lors de mon alternance aussi j'ai implémenté sur un petit serveur un Ansible mais je n'ai pas vraiment eu le temps d'en faire grand chose alors il ne sert qu'à mettre à jour les clés SSH sur tous les serveurs vSphere.
 
-J'ai vraiment apprécié travailler avec Ansible car cela m'a permis de voir à quel point il pouvait être un outil puissant et pratique, surtout si l'on a de nombreuses machines ou des tâches répétitives à executer. La documentation officielle est très bien fournie et on s'y retrouve facilement aussi. Le tout en OpenSource sur linux comme j'adore.
+J'ai vraiment apprécié travailler avec Ansible car cela m'a permis de voir à quel point il pouvait être un outil puissant et pratique, surtout si l'on a de nombreuses machines ou des tâches répétitives à executer. La documentation officielle est très bien fournie et on s'y retrouve facilement aussi. Le tout en OpenSource sur Linux comme j'adore.
 
-Il est possible avec Ansible de créer de toute pièces des machines comme on pourrait le faire avec Terraform mais, pour avoir déjà essayé, il n'est vraiment pas adapté pour cette utilisation et je ne le recommande pas du tout. Ansible = provisioning point.
+Il est possible avec Ansible de créer de toutes pièces des machines comme on pourrait le faire avec Terraform mais, pour avoir déjà essayé, il n'est vraiment pas adapté pour cette utilisation et je ne le recommande pas du tout. Ansible = provisioning point.
 
 ## vSphere
 {{< image src="/vsphere.jpg" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
 
 vSphere est un logiciel d'infrastructure de "Cloud Computing", c'est un hyperviseur de type 1 (Bare metal), pour faire simple on est plus proche du hardware que sur du type 2 (comme un VirtualBox) ce qui permet d'avoir plus de performances.
 
-J'ai pu me familiariser avec cet outil lors de mon alternance chez l'Agefi, on gérait tous nos serveurs via vSphere.
+J'ai pu me familiariser avec cet outil lors de mon alternance chez [L'AGEFI](/experience/l'agefi), on gére tous nos serveurs via vSphere.
 J'avais installé, sur une machine à part, un ESXi pour faire quelque test de déploiement automatique de machines virtuelles, j'ai pu mieux comprendre le fonctionnement derrière.
 
 ## Docker
 {{< image src="/docker.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
 Docker permet la mise en œuvre de conteneurs s'exécutant en isolation, via une API de haut-niveau. Construit sur des capacités du noyau Linux (surtout les cgroups et espaces de nommage), un conteneur Docker, à l'opposé de machines virtuelles traditionnelles, ne requiert aucun système d'exploitation séparé et n'en fournit aucun. Il s'appuie plutôt sur les fonctionnalités du noyau et utilise l'isolation de ressources (comme le processeur, la mémoire, les entrées et sorties et les connexions réseau) ainsi que des espaces de noms séparés pour isoler le système d'exploitation tel que vu par l'application. Docker accède aux capacités de virtualisation du noyau Linux, soit directement à travers la bibliothèque runc (disponible depuis Docker 0.9), soit indirectement via libcrt, LXC (Linux Containers) ou systemd-nspawn
 
-![Docker interface](/Docker-linux-interfaces.svg.png)
+![Docker interface](/Docker-Linux-interfaces.svg.png)
 
 J'ai pu m'en servir un peu lorsque j'étais chez Thales quand il a fallu installer AWX -> [AWX](/realisations/installation-awx)
 
-Il m'a fallu un peu de temps avant de bien comprendre comment fonctionnait les conteneurs mais une fois que l'on a bien compris l'architecture, cela devient plus clair. C'est comme avoir un petit linux isolé de son système sans avoir la "lourdeur" d'une machine virtuelle.
+Il m'a fallu un peu de temps avant de bien comprendre comment fonctionnait les conteneurs mais une fois que l'on a bien compris l'architecture, cela devient plus clair. C'est comme avoir un petit Linux isolé de son système sans avoir la "lourdeur" d'une machine virtuelle.
 
 ## Sécurité informatique
 
@@ -87,7 +87,7 @@ Ayant travaillé dans un EPHAD pendant 5 ans en tant que serveur essentiellement
 ## Sociable, souriant, sympathique
 Appelez ça comme vous voulez, pour moi c'est un tout.
 
-Selon moi, ce sont des compétences essentiel au sein d'un travail en équipe. Cela permet de garder une bonne ambiance malgré les difficultés. Ambiance qui est essentiel d'avoir dans un travail auquel cas on risque de le subir même s'il est intéressant et enrichissant à la base. A moins de faire un métier avec 0 interactions avec les gens, ces compétences sont toujours appréciées, en tous cas pour ma part, on m'en a toujours dit du bien et ceux même si durant une de mes expèrience cela s'est mal déroulé.
+Selon moi, ce sont des compétences essentielles au sein d'un travail en équipe. Cela permet de garder une bonne ambiance malgré les difficultés. Ambiance qui est essentielle d'avoir dans un travail auquel cas on risque de le subir même s'il est intéressant et enrichissant à la base. A moins de faire un métier avec 0 interactions avec les gens, ces compétences sont toujours appréciées, en tous cas pour ma part, on m'en a toujours dit du bien et ceux même si durant une de mes expèriences cela s'est mal déroulé.
 
 Tout ceux qui me connaissent vous le diront, je suis souriant, souvent de bonne humeur et drôle.
 

@@ -3,7 +3,7 @@ title: "VSphere - Augmenter taille de stockage sur machine existante"
 date: 2020-07-30T12:25:42+02:00
 draft: false
 ---
-Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système linux déjà existant qui utilise déjà un disque, on veut booster sa taille.
+Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système Linux déjà existant qui utilise déjà un disque, on veut booster sa taille.
 
 
 
@@ -86,7 +86,7 @@ tmpfs                               3.9G     0  3.9G   0% /sys/fs/cgroup
 tmpfs                               799M     0  799M   0% /run/user/1002
 
 ```
-Sur Gparted, on devrait voir notre partition en `non allouée`, dans mon cas j'ai été bloqué je ne pouvais pas modifié `/dev/sda2` qui est ma partition 'extended', il faut faire **clic droit** sur `dev/sda5` et **désactiver**
+Sur Gparted, on devrait voir notre partition en `non allouée`, dans mon cas j'ai été bloqué je ne pouvais pas modifier `/dev/sda2` qui est ma partition 'extended', il faut faire **clic droit** sur `dev/sda5` et **désactiver**
 ![gparted lock](/gparted_lock.PNG)
 
 Il ne faut plus qu'il y ai le logo de clés ou d'un cadenas !
@@ -95,7 +95,7 @@ Ensuite clic droit sur la partition extended `dev/sda2` et **Redimensionner/Dép
 
 Appliquer et on a notre `/dev/sda2` qui est de 149.52Go
 
-Mais ça ne suffira pas
+Mais ça ne suffira pas.
 
 Seule la liste des PE (partition extended) du système LVM a été modifiée par ce qui vient d'être fait avec GParted,
 maintenant, il va falloir attribuer ces nouveaux PE au VolumeGroup qui contient le VolumeLogique **/ubuntuLTS-16--vg-root** en agrandissant ce VolumeGroup

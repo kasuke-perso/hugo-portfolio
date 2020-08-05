@@ -1,5 +1,5 @@
 ---
-title: "L'agefi - Administrateur systèmes et réseaux junior - 2 ans"
+title: "L'AGEFI - Administrateur systèmes et réseaux junior - 2 ans"
 date: 2019-07-09T19:31:11+02:00
 draft: false
 ---
@@ -8,7 +8,7 @@ draft: false
 
 Durée : 2 ans (Octobre 2018 - Septembre 2020)
 
-Dans une entreprise à taille moyenne (environ 100), je gère tout ce qu'il y a de relié à l'informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher leurs périphériques, à installer un serveur de supervision ELK pour statistiques d'envoi de mail.
+Dans une entreprise de taille moyenne (environ 100 collaborateurs), je gère tout ce qu'il y a de relié à l'informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher leurs périphériques, à installer un serveur de supervision ELK pour statistiques d'envoi de mail.
 
 Etant dans une équipe de trois personnes (un DSI, un Administrateur systèmes et réseaux et moi-même) nous servons un peu à tout, donc aussi de support pour les salariés de l'entreprise.
 

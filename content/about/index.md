@@ -14,9 +14,9 @@ Polyvalent, curieux et créatif, j'ai toujours aimé bidouiller tout ce que je t
 ## DIY
 Do It Yourself ou fais le toi même pour les gens fâchés avec l'anglais.
 
-C'est un concept auquel j'adhère à fond ! Le principe, pour ceux qui ne sauraient pas, est de créer, réparer, bidouiller des objets de la vie courante, technologiques, ou artistiques, généralement de façon artisanale. En gros c'est être **créatif** et **bricoleur**. Je manque encore d'expèrience et de connaissances pour le bricolage mais j'aimerais vraiment en apprendre plus et être capable de bricoler un peu de tout.
+C'est un concept auquel j'adhère à fond ! Le principe, pour ceux qui ne sauraient pas, est de créer, réparer, bidouiller des objets de la vie courante, technologiques, ou artistiques, généralement de façon artisanale. En gros c'est être **créatif** et **bricoleur**. Je manque encore d'expèriences et de connaissances pour le bricolage mais j'aimerais vraiment en apprendre plus et être capable de bricoler un peu de tout.
 
-J'ai déjà personnellement fais pas mal de DIY mais je ne vais pas montrer tout ce que j'ai fais il risquerait de ne plus y avoir de place 🤣
+J'ai déjà fais pas mal de DIY mais je ne vais pas montrer tout ce que j'ai fais il risquerait de ne plus y avoir de place 🤣
 
 Récemment je me suis pris une imprimante 3D (j'ai fais un article plus détaillé sur le sujet) et je m'amuse comme un petit fou avec, ça permet de pousser le DIY encore bien plus loin, d'autant plus si on l'associe avec de l'électronique (mes cours de SI me servent bien 😂)
 
@@ -90,17 +90,17 @@ Ayant été **déterminé** à la posséder le plus vite possible. J'ai enchain�
 
 Forcément j'en ai pas acheté une neuve et ceux qui possèdent une moto savent très bien qu'il y a pas mal d'entretien a effectuer dessus. A moins d'avoir beaucoup d'argent (ce qui n'est pas vraiment le cas d'un étudiant) il faut mettre la main à la patte...
 
-Et il faut **affronter ses "peur"**, surtout celle de l'inconnu. Contrairement au Hardware, mettre les mains dans la mécanique, et surtout dans celle de ma moto, ne me rassurais mais alors pas du tout ! Je me disais qu'à la moindre erreur, c'est ma vie que je mettais en péril !
+Et il faut **affronter ses "peurs"**, surtout celles de l'inconnu. Contrairement au Hardware, mettre les mains dans la mécanique, et surtout dans celle de ma moto, ne me rassurais mais alors pas du tout ! Je me disais qu'à la moindre erreur, c'est ma vie que je mettais en péril !
 
-Ceci dis je n'avais pas complétement tort mais de là à ne rien touché dessus ... 😐 Et quelle difficulté de tomber sur un bon garagiste, qui te vol pas ton argent, qui te fais du bon boulot et surtout qui ne mette pas 6 mois pour à peine réparer ta moto 😒 (qui est ton petit bébé qui te sers tous les jours surtout à Paris)
+Ceci dis je n'avais pas complétement tort mais de là à ne rien toucher dessus ... 😐 Et quelle difficulté de tomber sur un bon garagiste, qui te vol pas ton argent, qui te fais du bon boulot et surtout qui ne mette pas 6 mois pour à peine réparer ta moto 😒 (qui est ton petit bébé qui te sers tous les jours surtout à Paris)
 
 C'est en forgeant qu'on devient forgeron après tout, alors j'ai pris mon courage à deux mains et je m'y suis mis.
 
-Au final ça ressemble beaucoup à l'informatique : tu as un problème, il faut savoir l'identifier, rechercher une solution et tester si ça fonctionne. Plus tu as rencontré de difficulté et plus tu es capable d'identifier les problèmes et ainsi de les résoudre.
+Au final ça ressemble beaucoup à l'informatique : tu as un problème, il faut savoir l'identifier, rechercher une solution et tester si ça fonctionne. Plus tu as rencontré de difficultés et plus tu es capable d'identifier les problèmes et ainsi de les résoudre.
 
 Et avec la mienne j'ai été bien servi niveau problèmes croyez moi ... 😒 Mais bon, les garages ne pourront plus me la mettre à l'envers 🙃
 
-Je suis très content de ce que j'ai appris avec ma petite moto, maitenant je fais de la piste de temps en temps sur Carole (la encore c'est un autre monde et il faut **savoir se dépasser** aussi, pour le moment je les trouve tous fous 🤯) les motards sont super cools entre eux, ils m'ont donné pleins de conseils et j'aime le fait que l'on **s'entraide** dès que possible. Je suis très content et fière de faire parti de cette communauté ✌️
+Je suis très content de ce que j'ai appris avec ma petite moto, maintenant je fais de la piste de temps en temps sur Carole (la encore c'est un autre monde et il faut **savoir se dépasser** aussi, pour le moment je les trouve tous fous 🤯) les motards sont super cools entre eux, ils m'ont donné pleins de conseils et j'aime le fait que l'on **s'entraide** dès que possible. Je suis très content et fier de faire parti de cette communauté ✌️
 
 Petite photo sur le circuit Carole (on voit qu'elle est pas pareil qu'au début la moto 😅)
 ![sur le circuit carole](/vuuFZiR.jpg)
