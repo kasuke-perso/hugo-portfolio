@@ -23,9 +23,14 @@ A mes heures perdues, je m'amuse à customiser mon ArchLinux en m'inspirant de c
 ![clean](/clear.png)
 
 ## SSH
-S'il y a bien un outils dont je me sers pratiquement quotidiennement c'est bien celui-ci.
+{{< image src="/openssh.gif" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
+Dois-je vraiment présenter ce protocole ? SSH est un protocole de communication sécurisé, qui permet notamment à l’administrateur système (adminsys) de se connecter à des machines distantes en s’assurant de l’intégrité et de la confidentialité des informations qui transitent entre les machines. Il est très utile lorsque l'on est pas présent physiquement devant les serveurs ou postes de travail.
 
-En effet je possède des serveurs personnels (dont ce site) et même lors de mes projets à l'école ou encore au travail, je me sers de SSH qui est un "classique" en système et réseau. Bien trop souvent, il est utilisé avec peu de configuration ce qui rend sa sécurité bancale
+S'il y a bien un outil dont je me sers pratiquement quotidiennement c'est bien celui-ci.
+
+En effet je possède des serveurs personnels (dont ce site) et même lors de mes projets à l'école ou encore au travail, je me sers de SSH qui est un "classique" en système et réseau. Cependant, il est bien souvent mal exploité, en effet on privilégie bien (trop) souvent le "il faut que ça fonctionne tout de suite, on verra plus tard" à "on le fait fonctionner et on le fait bien".
+
+Donc on se retrouve avec des configurations assez classique alors que ça n'est pas très compliqué de désactiver la connexion avec un login/mot de passe pour favoriser le login via une clé sécurisée permettant ainsi de se protéger de certains types d'attaque.
 
 ## Ansible
 {{< image src="/Ansible.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
@@ -45,7 +50,7 @@ Il est possible avec Ansible de créer de toute pièces des machines comme on po
 
 vSphere est un logiciel d'infrastructure de "Cloud Computing", c'est un hyperviseur de type 1 (Bare metal), pour faire simple on est plus proche du hardware que sur du type 2 (comme un VirtualBox) ce qui permet d'avoir plus de performances.
 
-J'ai pu me familiariser avec cet outils lors de mon alternance chez l'Agefi, on gérait tous nos serveurs via vSphere.
+J'ai pu me familiariser avec cet outil lors de mon alternance chez l'Agefi, on gérait tous nos serveurs via vSphere.
 J'avais installé, sur une machine à part, un ESXi pour faire quelque test de déploiement automatique de machines virtuelles, j'ai pu mieux comprendre le fonctionnement derrière.
 
 ## Docker
@@ -56,7 +61,7 @@ Docker permet la mise en œuvre de conteneurs s'exécutant en isolation, via une
 
 J'ai pu m'en servir un peu lorsque j'étais chez Thales quand il a fallu installer AWX -> lien vers réalisation
 
-Il m'a fallu un peu de temps avant de bien comprendre comment fonctionnait les conteneurs mais au final, ce n'est pas si différent d'un autre linux.
+Il m'a fallu un peu de temps avant de bien comprendre comment fonctionnait les conteneurs mais une fois que l'on a bien compris l'architecture, cela devient plus clair. C'est comme avoir un petit linux isolé de son système sans avoir la "lourdeur" d'une machine virtuelle.
 
 ## Sécurité informatique
 
@@ -75,18 +80,20 @@ Via twitter, je reste alerté des diverses failles et exploitations.
 ## Polyvalent, adaptabilité
 Durant mon alternance, j'ai particulièrement exploité cette compétence puisque nous étions une équipe de 3 (moi compris) pour effectuer tout ce qui touche de près ou de loin à l'informatique. J'ai du m'adapter à toute sorte de situation et d'outils que je n'avais jamais vu auparavant.
 
+Ayant travaillé dans un EPHAD pendant 5 ans en tant que serveur essentiellement mais parfois en commis de cuisine, j'ai du m'adapter à un nombre incalculable de situations. Si vous voulez un exemple, une fois il y a eu un départ de feu dans les cuisines et il a fallu évacuer tout le monde et trouver un moyen de réorganiser cela dans l'urgence puisqu'il n'y avait plus de restaurant ni de cuisine. ça a pris des heures voir des jours mais nous avons réussi à trouver une solution viable.
+
 ## Sociable, souriant, sympathique
 Appelez ça comme vous voulez, pour moi c'est un tout.
 
-Selon moi, c'est une compétence essentiel au sein d'un travail en équipe. Cela permet de garder une bonne ambiance malgré les difficultés. Ambiance qui est essentiel d'avoir dans un travail auquel cas on risque de subir son travail même s'il est intéressant et enrichissant à la base.
+Selon moi, ce sont des compétences essentiel au sein d'un travail en équipe. Cela permet de garder une bonne ambiance malgré les difficultés. Ambiance qui est essentiel d'avoir dans un travail auquel cas on risque de le subir même s'il est intéressant et enrichissant à la base. A moins de faire un métier avec 0 interactions avec les gens, ces compétences sont toujours appréciées, en tous cas pour ma part, on m'en a toujours dit du bien et ceux même si durant une de mes expèrience cela s'est mal déroulé.
 
-J'ai travaillé dans un EPHAD pendant plus de 5 ans (pendant les week-ends, vacances et jours fériés) et garder le sourir même quand on vous marche dessus n'est pas forcément évident
+Tout ceux qui me connaissent vous le diront, je suis souriant, souvent de bonne humeur et drôle.
 
 ## Curieux
 En informatique il est essentiel d'être curieux. En effet, les technologies sont vraiment vastes, variées et évoluent extrêmement vite, il est donc important de rester à jour sur ce qui se fait dans son domaine mais pas que.
 
 Personnellement je suis interessé par une multitude de choses comme le sport, la mécanique, l'électronique, la musique, la bricole etc ... Il y a toujours quelque chose à apprendre d'intéressant et la vie est un apprentissage permanent plus on croit savoir, moins on sait, tant les choses changent, et avec elles les mentalités.
 
-Selon moi rester curieux et vouloir en apprendre tout le temps permet de ne pas devenir un "vieux con" bien borné, vous savez celui qui a toujours fais comme ça et qui ne changera jamais de sa vie.
+Selon moi rester curieux et vouloir en apprendre tout le temps permet de ne pas devenir un "vieux con" bien borné, vous savez celui qui a toujours fais comme ça et qui ne changera jamais de sa vie. Le "c'était mieux de mon époque", "internet et les réseaux c'est de la 💩" etc... Pour avoir travaillé dans une maison de retraite je peux vous dire que ça me donne pas envie 😅
 
 C'est d'ailleurs grâce à cette curiosité que je fais ce métier aujourd'hui, j'ai essentiellement appris les choses grâce à cela. A l'école on nous fourni un cadre, ensuite c'est à nous d'aller chercher les informations et de se former un peu tout seul.

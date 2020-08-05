@@ -1,9 +1,9 @@
 ---
-title: "VSphere"
+title: "VSphere - Augmenter taille de stockage sur machine existante"
 date: 2020-07-30T12:25:42+02:00
 draft: false
 ---
-Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système linux déjà existant.
+Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système linux déjà existant qui utilise déjà un disque, on veut booster sa taille.
 
 
 

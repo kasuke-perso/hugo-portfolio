@@ -61,7 +61,7 @@ Récemment je me suis mis à la musculation (car suite à l'accident, je devais 
 
 Je pourrais en parler des pages et des pages mais ça n'est pas le but de celle-ci c'est pourquoi je résume ce que ça m'a apporté brièvement. Je continue d'ailleurs actuellement cette discipline.
 
-J'ai voulu quand même faire de la gym ou du parkour en club, j'en ai trouvé près de mon appart, l'équipe était très cool mais pour la gym, le niveau était pas à la hauteur et pour le parkour c'était bien et libre avec des gens sympa et bon, le seul défaut est que c'était qu'une fois par semaine, ça faisait un peu cher pour si peu.
+J'ai voulu quand même faire de la gym ou du parkour en club, j'en ai trouvé près de mon appartement, l'équipe était très cool mais pour la gym, le niveau était pas à la hauteur et pour le parkour c'était bien et libre avec des gens sympa et doué, le seul défaut est que c'était qu'une fois par semaine, ça faisait un peu cher pour si peu.
 
 ## Hardware
 Puisque pour moi c'est essentiel de connaitre son materiel en informatique et pour rester dans la logique du DIY, je reste informé sur le hardware, surtout que dans ce monde là, ça bouge très vite.
