@@ -59,7 +59,7 @@ Docker permet la mise en œuvre de conteneurs s'exécutant en isolation, via une
 
 ![Docker interface](/Docker-linux-interfaces.svg.png)
 
-J'ai pu m'en servir un peu lorsque j'étais chez Thales quand il a fallu installer AWX -> lien vers réalisation
+J'ai pu m'en servir un peu lorsque j'étais chez Thales quand il a fallu installer AWX -> [AWX](/realisations/installation-awx)
 
 Il m'a fallu un peu de temps avant de bien comprendre comment fonctionnait les conteneurs mais une fois que l'on a bien compris l'architecture, cela devient plus clair. C'est comme avoir un petit linux isolé de son système sans avoir la "lourdeur" d'une machine virtuelle.
 
@@ -74,6 +74,8 @@ A l'heure où j'écris ces lignes, j'ai un score de 1105. Il me reste beaucoup d
 ![page root-me](/Root-me.PNG)
 
 En CTF, c'est souvent la même chose : on fait un petit nmap pour voir ce qui est ouvert et récupérer quelques infos qui pourraient être utiles, on fait souvent un dirb pour voir s'il y a des chemins que l'on peut exploiter pour obtenir  un reverse shell et une fois avec un shell, un moyen d'obtenir les droits de root.
+
+J'ai pu faire un projet sur la cybersécurité quand j'étais à l'école que je vous invite à aller voir -> [Nemesis](/realisations/nemesis)
 
 Via twitter, je reste alerté des diverses failles et exploitations.
 # Compétences transverses
