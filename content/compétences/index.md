@@ -50,7 +50,7 @@ Il est possible avec Ansible de créer de toutes pièces des machines comme on p
 
 vSphere est un logiciel d'infrastructure de "Cloud Computing", c'est un hyperviseur de type 1 (Bare metal), pour faire simple on est plus proche du hardware que sur du type 2 (comme un VirtualBox) ce qui permet d'avoir plus de performances.
 
-J'ai pu me familiariser avec cet outil lors de mon alternance chez [L'AGEFI](/experience/l'agefi), on gére tous nos serveurs via vSphere.
+J'ai pu me familiariser avec cet outil lors de mon alternance chez [L'AGEFI](/experience/lagefi), on gére tous nos serveurs via vSphere.
 J'avais installé, sur une machine à part, un ESXi pour faire quelque test de déploiement automatique de machines virtuelles, j'ai pu mieux comprendre le fonctionnement derrière.
 
 ## Docker

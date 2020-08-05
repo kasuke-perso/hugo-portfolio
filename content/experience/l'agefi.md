@@ -3,9 +3,6 @@ title: "L'AGEFI - Administrateur systèmes et réseaux junior - 2 ans"
 date: 2019-07-09T19:31:11+02:00
 draft: false
 ---
-
-# Administrateur systèmes et réseaux en alternance
-
 Durée : 2 ans (Octobre 2018 - Septembre 2020)
 
 Dans une entreprise de taille moyenne (environ 100 collaborateurs), je gère tout ce qu'il y a de relié à l'informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher leurs périphériques, à installer un serveur de supervision ELK pour statistiques d'envoi de mail.
