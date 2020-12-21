@@ -12,9 +12,9 @@ Sur un Raspberry avec Kali, nous voulions faire un système de récupération d'
 
 A l'aide d'une batterie externe et d'un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.
 
-A la fin de son scan et de l'attaque, on obtient un rapport détaillé sur une interface web que l'on peut exporter par la suite, montrant toute les failles découvertes, avec leur CVE correspondant et tous les fichiers que l'on a pu extraire.
+A la fin du scan et de l'attaque, on obtient un rapport détaillé sur une interface web que l'on peut exporter par la suite, montrant toute les failles découvertes, avec leur CVE correspondante et tous les fichiers que l'on a pu extraire.
 
-Puisque nous avions un raspberry, nous devions utilisé des techniques peu groumandes en ressources. Du coup le bruteforce était banni de nos attaques.
+Puisque nous avions un raspberry, nous devions utilisé des techniques peu groumandes en ressources. Ainsi le bruteforce était banni de nos attaques.
 
 Voici une vidéo d'attaque, bien sûr réalisée dans notre école sur un réseau spécial 😉
 
@@ -43,7 +43,7 @@ On ne le voit pas dans cette vidéo actuelle ** peut être rajouter une autre vi
 * tcpdump
 * OpenVAS
 * SocialEngineerToolKit
-* SQLMap 
+* SQLMap
 * Commix
 * Backdoor-Factory
 * KRACK

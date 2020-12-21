@@ -10,7 +10,7 @@ Projet d'école (S4) proposé par Eric Lalitte :
 
 Automatisation de génération d'infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
 
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l'étudiant puisse réalisé un TP.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l'étudiant puisse réaliser un TP.
 
 Pour se faire, nous avons utilisé Ansible, Terraform et AWS.
 
