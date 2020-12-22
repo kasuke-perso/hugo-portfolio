@@ -142,6 +142,8 @@ Vous aurez FORCEMENT à un moment ou un autre, un problème avec votre imprimant
 - M92 - Set Axis Steps-per-unit -> à faire quand on change d'extruder (ou s'il n'est plus précis)
   - ex: M92 E688.4
 - M851 : Pour indiquer à quelle distance le bl touch (ou autre) est de la buse ex : M851 X-1.70 Y-1.30
+
+**Pour avoir toute les commandes Marlins -> https://marlinfw.org/meta/gcode**
 # Trucs utiles pour firmware (MARLIN bugfix 2.0)
 Quand maj de firmware, ne pas oublier d'aller chercher les fichiers config ici -> https://github.com/MarlinFirmware/Marlin/tree/bugfix-2.0.x/config et mettre dans le **sous dossier** Marlin (dans Marlin, à mes souhaits)
 - Lien vidéo de comment bien mettre à jour avec github teaching tech : https://youtu.be/hLvzLYemUn8
