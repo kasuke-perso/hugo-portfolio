@@ -162,7 +162,7 @@ Quand maj de firmware, ne pas oublier d'aller chercher les fichiers config ici -
 - Send: M851
 - Recv: Probe Offset X39.00 Y2.00 Z-1.41
 - `#define TEMP_SENSOR_0 5` dans `configuration.h` pour le capteur de chaleur custom ;)
-- pour régler la distance de la buse en fonction du bl touch : `#define NOZZLE_TO_PROBE_OFFSET {39, -2, 0}` (à verifier avec M851)
+- pour régler la distance de la buse en fonction du bl touch : `#define NOZZLE_TO_PROBE_OFFSET {39, 2, 0}` (à verifier avec M851)
 - `M115` pour check quand le fimrware a été compil pour trouver le bon et `M503` pour check les paramètres qu'il y a
 - Pour que le detecteur de filament intelligent fonctionne bien (et peut-être aussi enfin le fait de faire stop print via l'ecran LCD en ayant lancé un print depuis octoprint) :  
 Configuration_adv.h
@@ -184,3 +184,21 @@ Dans Configuration_adv.h :
 ```
 regarder dans pins/stm32f1/pins_BTT_SKR_MINI_E3_V2.h quel pin est utilisé pour `#define FIL_RUNOUT_PIN` ou spécifier un pin qu'on souhaite utiliser (normalement c'est E0-Stop)
 -
+---
+## Z-Offset Instructions:
+
+  * Home 3D printer
+  *  M851 Z0 - Reset Z0Offset
+  *  M500 - Store setting to eeprom
+  *  M501 - Set active parameters
+  *  M503 - Display Active Parameters
+  *  G28 Z - Home Z Axis
+  *  G1 F60 Z0 - Move nozzle to true 0 offset
+  *  M211 S0 - Switch off soft endstops
+  *  Move nozzle towards bed slowly until the paper can barely move
+  *  Take note of the Z on the printer display (take that number and add the measurment of the calibration sheet or device used)
+  *  M851 Z X.XX (X.XX being your z offset achieved)
+  *  M211 S1 - Enable Soft Endstops
+  *  M500 - Save settings to Eeprom
+  *  M501 - Set Active Parameters
+  *  M503 - display current settings
