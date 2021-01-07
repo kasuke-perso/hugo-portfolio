@@ -125,6 +125,7 @@ Vous aurez FORCEMENT à un moment ou un autre, un problème avec votre imprimant
 - Si le Z offset n'est pas pris en compte, M502 + 500
 - Si vous avez fail un print et que vous avez pas envie de recommencer depuis le début https://www.instructables.com/continue-failed-3d-print/
 - La page de Teaching Tech pour calibrer de façon complète et détaillé une imprimante 😍 -> https://teachingtechyt.github.io/calibration.html#intro
+- Pour calibrer son extruder -> https://mattshub.com/blogs/blog/extruder-calibration
 
 # Bed leveling en images :
 ![bed 1](/bed level 1.jpg)
@@ -183,7 +184,6 @@ Dans Configuration_adv.h :
 (E) #define ADVANCED_PAUSE_FEATURE
 ```
 regarder dans pins/stm32f1/pins_BTT_SKR_MINI_E3_V2.h quel pin est utilisé pour `#define FIL_RUNOUT_PIN` ou spécifier un pin qu'on souhaite utiliser (normalement c'est E0-Stop)
--
 ---
 ## Z-Offset Instructions:
 
