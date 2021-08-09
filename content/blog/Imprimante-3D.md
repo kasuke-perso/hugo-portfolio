@@ -101,16 +101,6 @@ Mais bon, dans tous les cas avant de changer quoi que ce soit, je vous conseil d
 - Pour l'installation d'un BL touch il va falloir toucher au firmware, je vous explique les grandes lignes et je vous invite à aller voir la vidéo de [KaminoKGY](https://youtu.be/1NhAo3xR9HY) en français svp 🧐 spécifique un peu pour ceux qui aurait changer de carte mère (ce que je vous recommande très fortement) pour une [SKR mini E3 V2.0](https://fr.aliexpress.com/af/skr-mini-e3-v2.html?d=y&origin=n&SearchText=skr+mini+e3+v2&catId=0&initiative_id=AS_20201028002357) je vous conseil BIG TREE TECH vu que c'est à eux 😅
 - G29 permet d'initialiser le probe point (la calibration)
 
-# Résolution de problèmes
-Vous aurez FORCEMENT à un moment ou un autre, un problème avec votre imprimante ... Voici une liste non exhaustive de ce que j'ai déjà pu rencontrer comme problème et leur solutions
-
-| Symptomes        | Potentielle(s) résolution(s)           | Liens/aide  |
-| ------------- |:-------------:| -----:|
-| La première couche ne tient pas     |<ul><li>Vérifier le nivellement du lit</li><li>Vérifier la température (pid_autotune à refaire ?)</li><li>Vérifier que les roues de l'axe soient bien fixées</li></ul>| <ul><li>Pour régler le niveau du lit plusieurs façon de faire : </li><li>Mettre du scotch de peinture, mettre bombe collante genre spray pour cheveux ou 3D lac</li><li>[fix Wobble & adjust eccentric nuts](https://youtu.be/GsEdU8ZtI6U)</li></ul> |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-| | See the list | from the first column|
-
 
 # Récap liens utiles
 - https://m.all3dp.com/2/elephant-s-foot-3d-printing-problem-easy-fixes/
@@ -131,6 +121,12 @@ Vous aurez FORCEMENT à un moment ou un autre, un problème avec votre imprimant
 ![bed 1](/bed level 1.jpg)
 ![bed 2](/bed level 2.png)
 ![bed 3](/bed level 3.jpg)
+
+# Video utile pour comprendre le Gcode :
+{{< youtube 2TByiMNduss>}}
+
+# Reprendre une impression foirée :
+https://www.cnckitchen.com/blog/guide-resuming-a-failed-3d-print
 
 # Commandes Marlin utiles :
 
