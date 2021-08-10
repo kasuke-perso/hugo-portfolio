@@ -105,15 +105,12 @@ Mais bon, dans tous les cas avant de changer quoi que ce soit, je vous conseil d
 # Récap liens utiles
 - https://m.all3dp.com/2/elephant-s-foot-3d-printing-problem-easy-fixes/
 - [Reddit Ender 3](https://www.reddit.com/r/ender3/)  
-
 - Cette chaine youtube est un must follow !!! [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw)
-- guide for mini board skr 1.2 : https://www.reddit.com/r/ender3/comments/e894j7/marlin_20x_guide_for_ender_3_using_skr_mini_e3_v12/
-- guide pour le V2 MAMEEEENE : https://www.reddit.com/r/ender3/comments/h8y1ia/marlin_20x_guide_skr_mini_e3_v20_ender_3/
+- Guide for mini board skr mini e3 1.2 : https://www.reddit.com/r/ender3/comments/e894j7/marlin_20x_guide_for_ender_3_using_skr_mini_e3_v12/
+- Guide pour le skr mini e3V2 : https://www.reddit.com/r/ender3/comments/h8y1ia/marlin_20x_guide_skr_mini_e3_v20_ender_3/
+- Pour régler/optimiser/Set son imprimante -> https://teachingtechyt.github.io/calibration.html
 - Pour régler son k factor : https://marlinfw.org/tools/lin_advance/k-factor.html + https://youtu.be/n3yK0lJ8TWM
 - https://all3dp.com/2/ender-3-calibration-how-to-calibrate-your-ender-3/ -> Calibration ender 3 (plateau, axe X, Y etc...)
-- PID autotune pour re régler les températures si elles font n'importe quoi -> https://www.reddit.com/r/3Dprinting/comments/h8xqrn/pid_autotune/
-- Si le Z offset n'est pas pris en compte, M502 + 500
-- Si vous avez fail un print et que vous avez pas envie de recommencer depuis le début https://www.instructables.com/continue-failed-3d-print/
 - La page de Teaching Tech pour calibrer de façon complète et détaillé une imprimante 😍 -> https://teachingtechyt.github.io/calibration.html#intro
 - Pour calibrer son extruder -> https://mattshub.com/blogs/blog/extruder-calibration
 
@@ -122,19 +119,18 @@ Mais bon, dans tous les cas avant de changer quoi que ce soit, je vous conseil d
 ![bed 2](/bed level 2.png)
 ![bed 3](/bed level 3.jpg)
 
-# Video utile pour comprendre le Gcode :
-{{< youtube 2TByiMNduss>}}
-
 # Reprendre une impression foirée :
 https://www.cnckitchen.com/blog/guide-resuming-a-failed-3d-print
 
-# Commandes Marlin utiles :
+# Commandes Marlin utiles et Tips G-code :
+{{< youtube 2TByiMNduss>}}
 
 - M500 : sauvegarder les paramètres en cours dans l'EEPROM (à vie même en redémarrant)
-- M502 : reset config par défaut (utile quand on a changé des paramètres du firmware et qu'ils ne se sont pas sauvegardé, à coupler avec M500)
+- M502 : reset config (reset EPROM) par défaut (utile quand on a changé des paramètres du firmware et qu'ils ne se sont pas sauvegardé, à coupler avec M500)
 - M503 : affiche les paramètres de l'imprimante
 - M900 : Affiche le K factor (line advance)
  - M900 K0.7 (par exmple) pour définir depuis le terminal le k factor
+- G28 : auto home
 - G29 : prob test (calibration de l'axe Z avec bl touch ou autre)
 - M92 - Set Axis Steps-per-unit -> à faire quand on change d'extruder (ou s'il n'est plus précis)
   - ex: M92 E688.4
@@ -148,38 +144,6 @@ Quand maj de firmware, ne pas oublier d'aller chercher les fichiers config ici -
 - Changer le sens du moteur extruder : dans `configuration.h` -> `#define INVERT_E0_DIR true` ou false
 - pour régler le k factor -> lien vidéo teaching tech : `#define LIN_ADVANCE_K 0.0`  
 
-# Notes perso pour mon firmware avec mon install qui correspond pas au reddit :
-- `#define Z_MAX_POS` à voir
-- e-steps pre mm (415 ?à verif avec M92 Exxxx)
-- M92 X80.00 Y80.00 Z400.00 E275.00
-- Recv: echo:; PID settings:
-- Recv: echo:  M301 P22.20 I1.08 D114.00
-- Recv: echo:; Linear Advance:
-- Recv: echo:  M900 K0.10
-- Send: M851
-- Recv: Probe Offset X39.00 Y2.00 Z-1.41
-- `#define TEMP_SENSOR_0 5` dans `configuration.h` pour le capteur de chaleur custom ;)
-- pour régler la distance de la buse en fonction du bl touch : `#define NOZZLE_TO_PROBE_OFFSET {39, 2, 0}` (à verifier avec M851)
-- `M115` pour check quand le fimrware a été compil pour trouver le bon et `M503` pour check les paramètres qu'il y a
-- Pour que le detecteur de filament intelligent fonctionne bien (et peut-être aussi enfin le fait de faire stop print via l'ecran LCD en ayant lancé un print depuis octoprint) :  
-Configuration_adv.h
-```
-(E) #define HOST_ACTION_COMMANDS`
-(E) #define HOST_PROMPT_SUPPORT
-(E) #define EMERGENCY_PARSER
-```
-Dans Configuration.h :
-```
-(E) #define FILAMENT_RUNOUT_SENSOR
-(E&C) #define FILAMENT_RUNOUT_DISTANCE_MM 7
-(E) #define FILAMENT_MOTION_SENSOR
-(E) #define NOZZLE_PARK_FEATURE
-```
-Dans Configuration_adv.h :
-```
-(E) #define ADVANCED_PAUSE_FEATURE
-```
-regarder dans pins/stm32f1/pins_BTT_SKR_MINI_E3_V2.h quel pin est utilisé pour `#define FIL_RUNOUT_PIN` ou spécifier un pin qu'on souhaite utiliser (normalement c'est E0-Stop)
 ---
 ## Z-Offset Instructions:
 
