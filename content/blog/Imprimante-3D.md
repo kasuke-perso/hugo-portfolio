@@ -1,7 +1,7 @@
 ---
 title: "Imprimante 3D"
 date: 2020-06-14T17:41:43+02:00
-draft: true
+draft: false
 ---
 
 # Quelle imprimante ?
@@ -24,7 +24,7 @@ Voici les plus populaires et généralement gratuit :
 - [Cults 3D](https://cults3d.com/)
 - [MyMiniFactory](https://www.myminifactory.com)
 
-Personnellement c 'est surtout Thingiverse dont je me sers, j'ai l'impression que la communauté est plus grosse dessus.
+Personnellement c'est surtout Thingiverse dont je me sers, j'ai l'impression que la communauté est plus grosse dessus.
 
 On peut aussi créer des pièces 3D "from scratch" et pour cela il existe un tas de logiciel, je vais citer que les plus populaires.
 
@@ -32,7 +32,7 @@ On peut aussi créer des pièces 3D "from scratch" et pour cela il existe un tas
 - [Blender](https://www.blender.org/) -> gratuit et dispose d'un gros support communautaire
 - [Fusion 360](https://www.autodesk.fr/products/fusion-360/overview) -> On peut l'obtenir gratuitement et légal 🧐
 
-Mais personnellement j'avais fais de la CAO au lycée sur **Solidworks** donc c'est celui-ci que j'utilise (payant)
+Mais personnellement j'avais fais de la CAO au lycée sur **Solidworks** donc c'est celui-ci que j'utilise (payant) mais en fait non après quelques semaines j'utilises Fusion360 car plus de support sur youtube et plus simple à prendre en main.
 
 Il en existe pleins d'autres mais ça n'est pas le sujet de l'article. La seule chose à savoir avec c'est qu'il faudra exporter votre modèle 3D en **.STL** (enfin ça fonctionne avec d'autres formats mais c'est le plus populaire) pour que le slicer puisse l'interpréter.
 ## Le "slicer"
@@ -74,7 +74,7 @@ Pourquoi la pro et pas la normal ? Perso je l'avais pour moins cher que la norma
 C'est une machine géniale, elle est pas cher, il y a donc une communauté très active aussi par exemple sur [Reddit](https://www.reddit.com/r/ender3/). Qui dit pas cher, dit un peu de configuation à faire mais honnêtement, je préfère comme cela, on est obligé de s'y intéresser et du coup on connait vraiment notre matos avec lequel on imprime.
 
 
-## Les Améliorations
+## Les Améliorations (sur Ender 3)
 Alors là, il y a de quoi faire ...
 - Octoprint (must have pour moi) il vous faudra un Raspberry (ça fonctionne sur un zero mais pas si vous voulez mettre une camera) je vous conseillerai de prendre au moins RPi3, perso j'ai pris la 4 version 4Go comme ça je suis tranquille. -> lien vers vidéo ou tuto octoprint
 - BL Touch, ou autre copie chinoise, ça fait la même chose, la aussi je vous invite à aller voir un article plus détaillé sur le sujet. Le plus gros problème avec ces imprimantes c'est le nivellement du lit, la première couche est la plus importante sinon votre impression risque de partir en sucette. Donc si vous avez du mal à régler avec les ressorts sous le plateau (c'est cette technique sur l'ender 3 mais pas forcément pour toute) et bien je vous conseil vivement de prendre cette améliorations !
