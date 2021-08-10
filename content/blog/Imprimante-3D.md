@@ -125,6 +125,8 @@ https://www.cnckitchen.com/blog/guide-resuming-a-failed-3d-print
 # Commandes Marlin utiles et Tips G-code :
 {{< youtube 2TByiMNduss>}}
 
+https://www.cnckitchen.com/blog/g-code-basics-for-3d-printing
+
 - M500 : sauvegarder les paramètres en cours dans l'EEPROM (à vie même en redémarrant)
 - M502 : reset config (reset EPROM) par défaut (utile quand on a changé des paramètres du firmware et qu'ils ne se sont pas sauvegardé, à coupler avec M500)
 - M503 : affiche les paramètres de l'imprimante
