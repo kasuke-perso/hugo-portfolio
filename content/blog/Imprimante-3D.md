@@ -103,6 +103,7 @@ Mais bon, dans tous les cas avant de changer quoi que ce soit, je vous conseil d
 
 
 # Récap liens utiles
+- Le post reddit qui vous dit comment bien commencer avec une Ender 3 -> https://www.reddit.com/r/ender3/comments/mifmku/just_got_your_ender_3_please_read_this_before/
 - https://m.all3dp.com/2/elephant-s-foot-3d-printing-problem-easy-fixes/
 - [Reddit Ender 3](https://www.reddit.com/r/ender3/)  
 - Cette chaine youtube est un must follow !!! [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw)
