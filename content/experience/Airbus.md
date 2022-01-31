@@ -11,7 +11,17 @@ Le tout étant hébergé sur un gitlab privée afin d'avoir un suivi de versions
 
 J'ai d'ailleurs implémenté une partie d'automatisation des configs BIOS et ILO des serveurs Baremetal, une partie automatisation de déploiement et configuration de VM de tests quand je n'étais pas parti pour déployer chez différents clients cible. Pour se faire j'ai utilisé les technos suivantes: Ansible, Terraform, API Ilorest, cloud-init.
 
-#### Univers techniques :
+### Ce que j'ai aimé
+- L'équipe dans laquelle je travaillais était bien, constitué de personnes ayant plus ou moins les mêmes profils et même appetance technique. J'ai appris beaucoup de chose grâce à eux.
+- L'univers technique ...
+
+### Ce que j'ai pas aimé
+- Le gros point noir c'est toujours le même dans ce genre de grosse entreprise, les process lourd et long pour absolument tout.
+- Le management a été assez mal géré du coup l'équipe s'est fracturée
+- ... L'univers techniques semblait bien sur le papier, mais en réalité mal géré, pas justifié pour les différents besoins.
+- Les missions qui m'étais affecté n'étaient pas du tout celle que j'avais espéré, manque de challenge et je ne me sentais pas du tout écouté.
+
+### Univers techniques :
 * SUSE/SLES/OpenSUSE
 * Kubernetes
 * Rancher

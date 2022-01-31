@@ -13,7 +13,7 @@ Des tâches et des missions très variées où j'ai pu me familiariser avec l'en
 
 J'ai pu apprendre beaucoup de choses durant cette alternance.
 
-#### Univers techniques :
+### Univers techniques :
 * Vsphere
 * Windows (server 2008/2012/core 2016 et desktop 10\7)
 * Linux (Ubuntu server 16.04 18.04)
