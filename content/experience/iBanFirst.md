@@ -12,7 +12,7 @@ Elle est composée d'une grosse partie en interne auto hébergé mais possède a
 
 Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens régulièrement informé des bonnes pratiques, des différents CVE, menaces et patchs à mettre en place sur nos différents serveurs.
 
-Mes missions :
+### Mes missions :
 - MCO/MCS de l'infra
 - POC de différentes solutions pour les passer en production plus tard ou non
 - Gestion des switchs/Firewalls (rules and policy)
