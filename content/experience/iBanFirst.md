@@ -32,7 +32,4 @@ Mes missions :
 - Linux (CentOS/Ubuntu)
 - Windows (10/Azure/Intune)
 - vSphere
-<<<<<<< HEAD
 - Cloud (AWS)
-=======
->>>>>>> 00cd6b78ee232bfec74fdd50806c7a8ccc0d18c8
