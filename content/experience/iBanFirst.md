@@ -18,13 +18,18 @@ Mes missions :
 - Gestion des switchs/Firewalls (rules and policy)
 - Supervision/Logs (ELK/Centreon)
 - Contenerisation d'applications
-- Passe d'applications sur du Kubernetes ou cloud
+- Passe d'applications sur du Kubernetes et cloud
 
 ### Ce que j'ai fais pour le moment
-- Mise en place d'Ansible/AWX sur un K3s avec inventaire dynamic (Netbox)
+- Mise en place d'Ansible/AWX sur un K3s avec inventaire dynamique (Netbox) + SSO
 - Mise en place d'un gitlab privé avec accès sso
+- Provisionnement de l'inventaire système et réseau de tous les sites sur netbox
+- Passage en cloud de la solution ELK sur AWS + Opensearch
+- Réplication des sauvegardes VEEAM sur AWS
+
 
 ### Univers techniques :
 - Linux (CentOS/Ubuntu)
 - Windows (10/Azure/Intune)
-- 
+- vSphere
+- Cloud (AWS)

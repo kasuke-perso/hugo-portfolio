@@ -56,7 +56,7 @@ disqusShortname = "florian-dugat"
 
   # Metadata mostly used in document's head
   description = "Homepage and blog by Florian Dugat"
-  keywords ="devops", homepage, blog, IT, system, network, informatic, development, programming, portfolio, CV"
+  keywords =""
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
