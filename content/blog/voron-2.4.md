@@ -48,7 +48,7 @@ Sur le site, vous pouvez générer une BOM (liste de matériel nécessaire pour 
 
 Donc j'y vais un peu en mode solo paulo, je me débrouille pour avoir les composants sans trop me faire souiller par les fdp et autres. Pour cela, je m'aide beaucoup du discord Voron et de la section [FR- honhonhonbaguette](https://discord.com/channels/460117602945990666/500407802414628876)
 
-Il y a un peu de tout, ça semble assez caothique au début mais on s'y fait 😄 Il faut bien aussi regarder les autres sections qui ont chacune leur spécificité, et checker les messages pinned : ![discord](/static/pinned.PNG)
+Il y a un peu de tout, ça semble assez caothique au début mais on s'y fait 😄 Il faut bien aussi regarder les autres sections qui ont chacune leur spécificité, et checker les messages pinned : ![discord](/pinned.PNG)
 
 # 1ere étape - La frame !
 Pour commencer, j'ai décidé de prendre d'abord les profilés aluminium, apparemment sur ce [site](https://www.dold-mechatronik.de/Profile-en-aluminium-20x20-rainure-de-type-B-6) c'est pas mal et c'est beaucoup moins cher que les Misumi recommandé par la BOM  (Bill of Material) officiel de Voron.
