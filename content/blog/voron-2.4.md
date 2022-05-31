@@ -40,15 +40,48 @@ Il existe 4 design d'imprimante Voron :
 - Voron0 :  Core XY en taille réduit
 - Voron Trident : Core YZ (permet d'être plus rapide et existe en différente taille)
 - Voron Switchwire : Style i3 comme les ender, prusa MK3 & cie mais quand meme différent :)
-- Voron 2.4 : Core XY avec plusieurs taille (250x250, 300x300, 350x350) mais bien évidemment vous pouvez pimper la taille comme bon vous semble c'est vous qui fabriquez l'imprimante
+- Voron 2 : Core XY avec plusieurs taille (250x250, 300x300, 350x350) mais bien évidemment vous pouvez pimper la taille comme bon vous semble c'est vous qui fabriquez l'imprimante
 
-Tout le monde vous dira qu'il vaut mieux commencer avec une Switchwire ou Voron0 qui seront bien plus facile à monter. Mais moi j'aime les challenges et comme je possède déjà plusieurs imprimantes de différentes taille, je décide de partir sur la Voron 2.4R2.
+Tout le monde vous dira qu'il vaut mieux commencer avec une Switchwire ou Voron0 qui seront bien plus facile à monter. Mais moi j'aime les challenges et comme je possède déjà plusieurs imprimantes de différentes taille, je décide de partir sur la Voron 2(2.4R2).
 
 Sur le site, vous pouvez générer une BOM (liste de matériel nécessaire pour réaliser le projet) avec des liens pour acheté les pièces, mais bon généralement c'est aliexpress, amazon de je ne sais quel pays et souvent pas à jour non plus ... 
 
-Donc j'y vais un peu en mode, je me débrouille pour avoir les composants sans trop me faire souiller par les fdp et autres. Pour cela, je m'aide beaucoup du discord Voron et de la section [FR- honhonhonbaguette](https://discord.com/channels/460117602945990666/500407802414628876)
+Donc j'y vais un peu en mode solo paulo, je me débrouille pour avoir les composants sans trop me faire souiller par les fdp et autres. Pour cela, je m'aide beaucoup du discord Voron et de la section [FR- honhonhonbaguette](https://discord.com/channels/460117602945990666/500407802414628876)
 
 Il y a un peu de tout, ça semble assez caothique au début mais on s'y fait 😄 Il faut bien aussi regarder les autres sections qui ont chacune leur spécificité, et checker les messages pinned : ![discord](/static/pinned.PNG)
 
-# Ma BOM et l'ordre de mon procédé
-Pour commencer, j'ai décidé de prendre d'abord les profilés aluminium, apparemment sur ce [site](https://www.dold-mechatronik.de/Profile-en-aluminium-20x20-rainure-de-type-B-6) c'est pas mal et c'est beaucoup moins cher que les Misumi recommandé par la BOM.
+# 1ere étape - La frame !
+Pour commencer, j'ai décidé de prendre d'abord les profilés aluminium, apparemment sur ce [site](https://www.dold-mechatronik.de/Profile-en-aluminium-20x20-rainure-de-type-B-6) c'est pas mal et c'est beaucoup moins cher que les Misumi recommandé par la BOM  (Bill of Material) officiel de Voron.
+
+Je possédais pas mal de vis mais pour faire plus simple j'ai commandé un set de vis spécial voron qui respect la BOM officiel -> https://fr.aliexpress.com/item/1005003333222664.html comme ça j'ai un peu de spare.
+
+Pour pouvoir monter tout le cadre il me fallait aussi des rails DIN qui sont en fait des rails standardisé pour prendre les appareils électrique comme les disjoncteur et autres. Pratique car on peut y mettre toute l'electronique dessus.
+![din](/din.webp)
+
+Il me fallait ensuite la plaque qui va en dessous de l'imprimante et par la même occasion celle qui va derrière.
+![plaque-cad](/plaque-voron.PNG)
+ Ce sont les plaques en alu que l'on voit souvent dans les magasins de brico au niveau des découpe (bois, plexi, alu). 
+ ![plaque-1](/voron-plaque-2.jpg)
+ Je peux vous dire que une plaque suffit largement, regardez moi la taille de ce machin !
+ ![plaque-2](/voron-plaque-1.jpg)
+
+---
+# Les profilés aluminium reçu 
+![rails](/mes-rails.jpg)
+Il va falloir faire des trous et des tarauds ... Perso je m'y connais pas du tout mais apparemment c'est facile, il suffit d'avoir les outils qu'il faut et pour tarauder l'aluminium c'est simple étant donné que le matériau n'est pas trop dur.
+
+Je vous conseil ces fichiers STL https://github.com/elpopo-eng/VoronFrenchUsers/tree/main/Mod/Blind_Hole_Tools qui vont vous aider pour faire les trous surtout.
+
+On va avoir un soucis avec ceux-la : 
+![discord](/mesure-profil.PNG)
+
+Un gars, qui s'y connait bien en taraudage pour le coup, m'a **certifié** qu'il fallait au moins 1mm pour tarauder donc pour faire un pas de vis en M6 il fallait faire un trou de 5mm et non 5,5 comme annoncé ici ... Mais bon apparemment pleins de personnes ont réussi à faire en sorte que ça bouge pas. Il m'a dit que c'était faisable mais qu'il fallait pas serré comme un goret.
+
+Après avoir essayé de tarauder, je peux vous dire que ça fonctionne pas trop... donc ce que j'ai fais c'est de visser directement la vis dedans, l'aluminium étant assez tendre, ça passe, j'aurais préféré pouvoir faire un vrai taraudage donc je ne suis pas sûr de recommandé les profilés aluminium que j'ai pris. Toutefois il était possible de pouvoir mettre un taraudage M6 lors de la commande, mais à 1,19X2 (pour les deux côtés) X 10 = 24€ sachant que c'est 6€ le mètre ...
+
+Il y a déjà de bon tutos sur le sujet de comment avoir une frame bien carré : 
+{{< youtube GSg7RDLgYV0 >}} et  {{< youtube TCMxw5fH0VA >}}
+
+
+# 2 - Les rails linéaires
+Toujours en se basant sur la BOM officiel, désormais pour l'axe X, il ne faut plus deux rails MG9H mais un rail MG12H, je prends un truc pas cher chez ali qui a de bons retours  -> https://fr.aliexpress.com/item/32829826159.html
