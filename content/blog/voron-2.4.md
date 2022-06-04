@@ -85,3 +85,12 @@ Il y a déjà de bon tutos sur le sujet de comment avoir une frame bien carré :
 
 # 2 - Les rails linéaires
 Toujours en se basant sur la BOM officiel, désormais pour l'axe X, il ne faut plus deux rails MG9H mais un rail MG12H, je prends un truc pas cher chez ali qui a de bons retours  -> https://fr.aliexpress.com/item/32829826159.html
+
+# 3 - Découpe de la plaque de dibond
+
+ça n'a pas été une mince affaire 😕 mais avec un cutter, de la patience et une perceuse (surtout pour tout ce qui sera les ronds).
+
+Je vous conseil, si vous faites comme moi, de couper déjà la plaque en plusieurs morceaux car elle est super grande de base quand vous la prenez chez leroy merlin ou autre. Pour se faire, prenez une règle et essayer de suivre quand vous couper avec le cutter, allez y progressivement, on force de plus en plus pour aller le plus profond possible car la deuxieme couche en dessous est assez compliqué à avoir. Une fois plusieurs coupe passée, je vous conseil de ne pas aller jusqu'au bout mais à partir d'un moment de plier la plaque, vous allez voir que ça part plutot simplement au final.
+
+Servez vous du guide qui est dans le github -> Drawings_DFX -> Panels -> [la_taille]_Deck_Panel.dxf, ouvrez le avec fusion 360 ou autre et utilisez l'outil inspecter pour avoir vos mesures : 
+![inspecter](./2022-0inspecter-fusion.png)  
