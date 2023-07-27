@@ -92,7 +92,7 @@ disqusShortname = "florian-dugat"
         identifier = "A propos"
         name = "A propos"
         url = "about"
-        weight = 5
+        weight = 4
       [[languages.fr.menu.main]]
         identifier = "experiences"
         name = "Expériences"
