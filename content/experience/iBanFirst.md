@@ -1,5 +1,5 @@
 ---
-title: "iBanFirst - Administrateur infra, système réseau, cloud, devops"
+title: "iBanFirst - Administrateur infra, système réseau, cloud, devops - 2 ans"
 date: 2021-12-01T10:17:34+02:00
 draft: false
 ---
@@ -21,18 +21,18 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 - Passe d'applications sur du Kubernetes et cloud
 - IaC via terraform
 
-### Ce que j'ai fais pour le moment
+### Ce que j'ai fais
 - Mise en place d'Ansible/AWX sur un K3s avec inventaire dynamique (Netbox) + SSO + Inventory from VMware
 - Mise en place d'un gitlab privé avec accès sso
 - Provisionnement de l'inventaire système et réseau de tous les sites sur netbox
 - Passage en cloud de la solution ELK sur AWS + Opensearch
 - Réplication des sauvegardes VEEAM sur AWS (SOBR + Worm + Terraform)
 - Mise en place de pipeline CI/CD gitlab 
-- Passage en IaaS plusieurs applications
+- Passage en SaaS plusieurs applications
 - Mise en place PKI IaaS
 - Gestion policies intune
 - Mise en place Pfsense
-- Déploiement de notre baie serveur sur les différents site en europe (switch/firewall/AP/)
+- Déploiement de notre baie serveur sur les différents site en europe (switch - cisco catalyst/firewall - Palo Alto/AP - Meraki)
 
 
 ### Univers techniques :
@@ -48,4 +48,3 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 
 ### Ce que j'ai moins aimé
 - Manque d'organisations du coup projet souvent commencé mais pas fini
-- test
