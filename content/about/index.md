@@ -80,7 +80,9 @@ Mais ... Comme d'habitude le premier résultat est décevant et pleins d'erreurs
 Et ensuite, quelques années plus tard, avec pratiquement les mêmes pièces que j'ai modifié car c'est très onéreux, j'ai fais les choses mieux, plus propre et moins cher 😀
 ![2e WC](/T2Z9aZ9.jpg)
 ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour, notamment trouver des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
-Et voici mon dernier boitier à ce jour, enfin plutot setup la ![3e WC](/buro3.jpg), je vous passe les détails car il y a eu beaucoup de choses de faite (la j'ai carrément fais un mur et un plafond pour pouvoir cacher les cables du boitier)
+
+Et voici mon dernier boitier à ce jour, (enfin plutot setup la) ![3e WC](/buro3.jpg) 
+je vous passe les détails car il y a eu beaucoup de choses de faite (la j'ai carrément fais un mur et un plafond pour pouvoir cacher les cables du boitier, je me suis mis sur du hardtubing, j'ai fais de la récup, j'ai adapté en concevant des pieces en 3D etc...)
 
 
 ## Moto
