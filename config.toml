@@ -95,7 +95,7 @@ disqusShortname = "florian-dugat"
         weight = 5
       [[languages.fr.menu.main]]
         identifier = "experiences"
-        name = "Parcours"
+        name = "Expériences"
         url = "experience"
         weight = 2
       [[languages.fr.menu.main]]
