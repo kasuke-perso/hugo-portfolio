@@ -83,11 +83,11 @@ disqusShortname = "florian-dugat"
         name = "Blog"
         url = "/blog"
         weight = 3
-      [[languages.fr.menu.main]]
-        identifier = "Compétences"
-        name = "Compétences"
-        url = "/compétences"
-        weight = 4
+#      [[languages.fr.menu.main]]
+#        identifier = "Compétences"
+#        name = "Compétences"
+#        url = "/compétences"
+#        weight = 4
       [[languages.fr.menu.main]]
         identifier = "A propos"
         name = "A propos"
