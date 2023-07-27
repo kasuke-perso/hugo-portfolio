@@ -40,9 +40,9 @@ Dans la suite "logique", je me suis réconcilié avec le piano, j'apprends des m
 ## Sport
 J'ai toujours été sportif et ça a toujours été plutôt facile pour moi. J'ai fais du basket pendant quelques années, mon poste était meneur car j'ai toujours été petit 😓 mais j'aimais bien ça. La vie à fait que je ne pouvais plus continuer dans mon club et j'ai par la suite changé de sport.
 
-Je pratiquais du "[parkour](https://www.youtube.com/watch?v=NX7QNWEGcNI)" tout seul dans mon coin, j'essayais de motiver quelques copains avec moi, mais ça n'a jamais vraiment pris vu que j'habitais assez loin de tous. J'ai d'ailleurs pu faire du parkour avec le (maitenant) célèbre [Clément DUMAIS](https://www.instagram.com/clement.htr/?hl=fr) de [Hit the road](https://www.youtube.com/user/ParkourhitstheRoad). J'aimais bien ça aussi mais comme je suis parti en internat ça a été aussi compliqué de continuer.
+Je pratiquais du "[parkour](https://www.youtube.com/watch?v=NX7QNWEGcNI)" tout seul dans mon coin, j'essayais de motiver quelques copains avec moi, mais ça n'a jamais vraiment pris vu que j'habitais assez loin de tout et tout le monde. J'aimais bien ça aussi mais comme je suis parti en internat ça a été aussi compliqué de continuer.
 
-On m'a ensuite proposé de faire du [tumbling](https://www.youtube.com/watch?v=Y5puaQ9oNVw), j'ai bien apprécié aussi, j'étais dans une bonne équipe où j'ai pu apprendre très vite, mais c'était aussi difficile d'en faire vu que j'étais dispo que le weekend et le club pas toujours.
+On m'a ensuite proposé de faire du [tumbling](https://www.youtube.com/watch?v=Y5puaQ9oNVw), j'ai bien apprécié aussi, j'étais dans une bonne équipe, bien veillante où j'ai pu apprendre très vite, mais c'était aussi difficile d'en faire vu que j'étais dispo que le weekend et le club pas toujours, c'était leur moment pour les compétitions.
 
 J'ai voulu faire de la gymnastique mais quand je suis revenu de mon premier cours, j'ai eu un accident de moto et je me suis cassé la jambe 😕
 
@@ -68,7 +68,7 @@ Puisque pour moi c'est essentiel de connaitre son materiel en informatique et po
 
 De façon général, j'ai appris beaucoup de choses avec le hardware, ce qui m'a permis de mieux comprendre mon ordinateur mais aussi **d'affronter mes peurs**.
 
-En effet, à plusieurs reprise j'ai dû "mettre les mains dedans" : ayant absolument eu l'envie d'obtenir un ordinateur, et manquant de moyen, je me suis **débrouillé** pour en obtenir un lorsque j'étais en 3e. Sauf qu'un jour l'écran s'est cassé 😭, c'était un netbook, un tout petit ordinateur portable, impossible pour moi de racheter un nouvel ordinateur donc je me suis débrouillé pour obtenir un nouvel écran et de le monter moi même. Mais j'avais peur de mal m'y prendre et d'empirer les choses... Pour faire court, j'ai tellement appréhender que je m'y suis mal pris et ça a été pire.
+En effet, à plusieurs reprise j'ai dû "mettre les mains dedans" : ayant absolument eu l'envie d'obtenir un ordinateur, et manquant de moyen, je me suis **débrouillé** pour en obtenir un lorsque j'étais en 3e. Sauf qu'un jour l'écran s'est cassé 😭, c'était un netbook, un tout petit ordinateur portable, impossible pour moi de racheter un nouvel ordinateur donc je me suis débrouillé pour obtenir un nouvel écran et de le monter moi même. Mais j'avais peur de mal m'y prendre et d'empirer les choses... Pour faire court, j'ai tellement appréhender que je m'y suis mal pris et ça a été pire, j'ai attendu des semaines après avoir démonté l'ordinateur, autant dire que je ne savais plus où était quoi ...
 
 J'ai pu **apprendre de mes erreurs** et lorsque j'ai eu à le refaire sur un autre ordinateur, ça s'est pasé beaucoup mieux.
 
@@ -80,6 +80,7 @@ Mais ... Comme d'habitude le premier résultat est décevant et pleins d'erreurs
 Et ensuite, quelques années plus tard, avec pratiquement les mêmes pièces que j'ai modifié car c'est très onéreux, j'ai fais les choses mieux, plus propre et moins cher 😀
 ![2e WC](/T2Z9aZ9.jpg)
 ça m'a demandé pas mal de travail en amont, en passant beaucoup de temps sur des forums spécialisé, pour, notamment trouver des pièces moins cher et trouver les bonnes. Maintenant je suis **fier** de présenter mon ordinateur.
+Et voici mon dernier boitier à ce jour, enfin plutot setup la ![3e WC](/buro3.jpg), je vous passe les détails car il y a eu beaucoup de choses de faite (la j'ai carrément fais un mur et un plafond pour pouvoir cacher les cables du boitier)
 
 
 ## Moto
@@ -98,9 +99,13 @@ C'est en forgeant qu'on devient forgeron après tout, alors j'ai pris mon courag
 
 Au final ça ressemble beaucoup à l'informatique : tu as un problème, il faut savoir l'identifier, rechercher une solution et tester si ça fonctionne. Plus tu as rencontré de difficultés et plus tu es capable d'identifier les problèmes et ainsi de les résoudre.
 
-Et avec la mienne j'ai été bien servi niveau problèmes croyez moi ... 😒 Mais bon, les garages ne pourront plus me la mettre à l'envers 🙃
+Et avec la mienne j'ai été bien servi niveau problèmes croyez moi ... 😒![pb moto](/motopb.jpg) Mais bon, les garages ne pourront plus me la mettre à l'envers 🙃
 
-Je suis très content de ce que j'ai appris avec ma petite moto, maintenant je fais de la piste de temps en temps sur Carole (la encore c'est un autre monde et il faut **savoir se dépasser** aussi, pour le moment je les trouve tous fous 🤯) les motards sont super cools entre eux, ils m'ont donné pleins de conseils et j'aime le fait que l'on **s'entraide** dès que possible. Je suis très content et fier de faire parti de cette communauté ✌️
+Je suis très content de ce que j'ai appris avec ma petite moto, maintenant je fais de la piste de temps en temps sur le cicuit Carole (là encore c'est un autre monde et il faut **savoir se dépasser** aussi, pour le moment je les trouve tous fous 🤯) 
 
-Petite photo sur le circuit Carole (on voit qu'elle est pas pareil qu'au début la moto 😅)
+Les motards sont super cools entre eux, ils m'ont donné pleins de conseils et j'aime le fait que l'on **s'entraide** dès que possible. Je suis très content et fier de faire parti de cette communauté ✌️
+
+Petite photo sur le circuit Carole
 ![sur le circuit carole](/vuuFZiR.jpg)
+
+La aussi petite update: voici ma nouvelle moto ![ma super nouvelle moto](/moto2.jpg)
