@@ -1,5 +1,5 @@
 ---
-title: "iBanFirst - Administrateur infra, système réseau, cloud, devops - 2 ans"
+title: "iBanFirst - Administrateur système réseau, cloud, devops - 2 ans"
 date: 2021-12-01T10:17:34+02:00
 draft: false
 ---
@@ -33,6 +33,7 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 - Gestion policies intune
 - Mise en place Pfsense
 - Déploiement de notre baie serveur sur les différents site en europe (switch - cisco catalyst/firewall - Palo Alto/AP - Meraki)
+- Mise en place de log forwarder + Load balancer (HAproxy)
 
 
 ### Univers techniques :
@@ -40,6 +41,7 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 - Windows (10/Azure/Intune)
 - vSphere
 - Cloud (AWS/Azure)
+- Automatisation (Ansible/Terraform/Gitlab CI/CD)
 
 ### Ce que j'ai aimé :
 - Autonomie sur mes sujets et mon temps
