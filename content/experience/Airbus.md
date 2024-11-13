@@ -16,7 +16,7 @@ J'ai d'ailleurs implémenté une partie d'automatisation des configs BIOS et ILO
 - L'univers technique ...
 
 ### Ce que j'ai pas aimé
-- Le gros point noir c'est toujours le même dans ce genre de grosse entreprise, les process lourd et long pour absolument tout.
+- Le gros point noir c'est toujours le même dans ce genre de grosse entreprise, la synergie de la moindre action. 
 - Le management a été assez mal géré du coup l'équipe s'est fracturée
 - ... L'univers techniques semblait bien sur le papier, mais en réalité mal géré, pas justifié pour les différents besoins.
 - Les missions qui m'étaient affectés n'étaient pas du tout celle que j'avais espéré, manque de challenge et je ne me sentais pas du tout écouté.
