@@ -13,7 +13,7 @@ Je suis rentré dans un contexte un peu particulier, qui ne m'a pas permis de tr
 
 ### Ce que j'ai fait
 - MCO/MCS de l'infra (VMWare - Debian - Ubuntu - Fedora)
-- POC de solutions pour faire évoluer l'infra (Gitlab on K8s, AWX on K8S, refonte de playboks existants etc...)
+- POC de solutions pour faire évoluer l'infra (Gitlab on K8s, AWX on K8S, refonte de playbooks existants etc...)
 - Contenerisation d'applications
 - Creation/Modifications de playbooks Ansible
 - Optimisation et documentation d'un environnement existant
@@ -31,6 +31,7 @@ Je suis rentré dans un contexte un peu particulier, qui ne m'a pas permis de tr
 ### Ce que j'ai aimé :
 - Responsable techniquement très bon
 - Autonomie sur mes sujets et mon temps
+- Travailler sur la distro que je veux
 
 ### Ce que j'ai moins aimé
 - Manque de suivi dans les projets, manque de clareté sur les objectifs attendus 
