@@ -1,201 +1,354 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/experience/</loc>
-    <lastmod>2019-07-09T19:31:11+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-07-09T19:31:11+02:00</lastmod>
-    <priority>0</priority>
+    <loc>http://florian.katech.net/tags/3d/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/"
+                href="http://florian.katech.net/en/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/"
+                href="http://florian.katech.net/blog/"
                 />
-  </url>
-  
-  <url>
-    <loc>/experience/lagefi/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/tags/diy/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/printer/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/blog/voron-2.4/</loc>
+    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/cheatsheet/</loc>
+    <lastmod>2022-05-03T15:31:05+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/logs/</loc>
+    <lastmod>2022-05-03T15:31:05+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/systemd-tricks/</loc>
+    <lastmod>2022-05-03T15:31:05+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/gestion-des-logs-journalctl/</loc>
+    <lastmod>2022-05-03T15:16:44+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/</loc>
+    <lastmod>2021-12-01T10:17:34+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/ibanfirst/</loc>
+    <lastmod>2021-12-01T10:17:34+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/vim-tips/</loc>
+    <lastmod>2021-06-04T10:51:43+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/airbus/</loc>
+    <lastmod>2020-12-01T10:17:34+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/realisations/</loc>
+    <lastmod>2020-07-30T12:25:42+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/realisations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/realisations/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/realisations/vsphere/</loc>
+    <lastmod>2020-07-30T12:25:42+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/imprimante-3d/</loc>
+    <lastmod>2020-06-14T17:41:43+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</loc>
+    <lastmod>2020-03-06T15:36:41+01:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/archlinux/</loc>
+    <lastmod>2019-09-27T09:56:58+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/i3/</loc>
+    <lastmod>2019-09-27T09:56:58+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/i3-arch-linux/</loc>
+    <lastmod>2019-09-27T09:56:58+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/ricing/</loc>
+    <lastmod>2019-09-27T09:56:58+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/tuto/</loc>
+    <lastmod>2019-09-27T09:56:58+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/powershell/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/powershell/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/powershell/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</loc>
+    <lastmod>2019-08-05T09:31:26+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/appcool/</loc>
+    <lastmod>2019-07-22T14:37:09+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/crossplateforme/</loc>
+    <lastmod>2019-07-22T14:37:09+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</loc>
+    <lastmod>2019-07-22T14:37:09+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</loc>
+    <lastmod>2019-07-22T14:28:13+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</loc>
+    <lastmod>2019-07-22T11:55:31+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/lagefi/</loc>
     <lastmod>2019-07-09T19:31:11+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/about/</loc>
     <lastmod>2019-06-07T14:19:58+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/gestion-utilisateur-linux-avec-ansible/</loc>
-    <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/tags/"
+                href="http://florian.katech.net/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/tags/"
+                href="http://florian.katech.net/about/"
                 />
-  </url>
-  
-  <url>
-    <loc>/tags/ansible/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/tags/ansible/</loc>
     <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/automatisation/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/ansible/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/ansible/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/automatisation/</loc>
     <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/devops/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/tags/devops/</loc>
     <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/syst%C3%A8me/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</loc>
     <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/tuto/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</loc>
     <lastmod>2019-05-29T14:29:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/agrandir-stockage-vm/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/tags/syst%C3%A8me/</loc>
+    <lastmod>2019-05-29T14:29:12+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/blog/agrandir-stockage-vm/</loc>
     <lastmod>2019-05-28T16:12:16+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/virtualisation/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/tags/virtualisation/</loc>
     <lastmod>2019-05-28T16:12:16+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/diy/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</loc>
     <lastmod>2019-05-23T12:22:30+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</loc>
-    <lastmod>2019-05-23T12:22:30+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/sensibilisation/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/blog/sensibilisation/</loc>
     <lastmod>2019-05-22T16:38:17+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
+  </url><url>
+    <loc>http://florian.katech.net/comp%C3%A9tences/</loc>
     <lastmod>2019-05-22T15:38:26+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projets/all/</loc>
-    <lastmod>2019-05-22T11:17:59+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projets/</loc>
-    <lastmod>2019-05-22T11:17:59+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/experience/thales/</loc>
-    <lastmod>2018-03-01T17:04:36+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projets/nemesis/</loc>
-    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/s%C3%A9curit%C3%A9/</loc>
-    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/aws/</loc>
-    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/projets/challenge-accepted/</loc>
-    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/iaas/</loc>
-    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/terraform/</loc>
-    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/experience/malesherbes/</loc>
-    <lastmod>2015-07-09T19:55:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projets/mon-premier-site/</loc>
-    <lastmod>2006-06-27T16:03:28+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <priority>0</priority>
+  </url><url>
+    <loc>http://florian.katech.net/realisations/installation-awx/</loc>
+    <lastmod>2018-08-05T09:45:10+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/categories/"
+                href="http://florian.katech.net/en/realisations/installation-awx/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/categories/"
+                href="http://florian.katech.net/realisations/installation-awx/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/experience/thales/</loc>
+    <lastmod>2018-03-01T17:04:36+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/projets/nemesis/</loc>
+    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/realisations/nemesis/</loc>
+    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/projets/</loc>
+    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/projets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/projets/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/s%C3%A9curit%C3%A9/</loc>
+    <lastmod>2017-10-20T17:51:46+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/tags/aws/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/aws/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/projets/challenge-accepted/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/projets/challenge-accepted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/projets/challenge-accepted/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/realisations/challenge-accepted/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/realisations/challenge-accepted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/realisations/challenge-accepted/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/iaas/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/iaas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/iaas/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/tags/terraform/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/terraform/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/experience/malesherbes/</loc>
+    <lastmod>2015-07-09T19:55:28+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/intech/</loc>
+    <lastmod>2013-09-10T12:40:05+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/projets/mon-premier-site/</loc>
+    <lastmod>2006-06-27T16:03:28+02:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/categories/"
                 />
   </url>
-  
 </urlset>

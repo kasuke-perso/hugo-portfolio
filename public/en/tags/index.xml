@@ -1,14 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hello Friend NG</title>
-    <link>/en/tags/</link>
-    <description>Recent content in Tags on Hello Friend NG</description>
+    <title>Tags on Florian DUGAT</title>
+    <link>http://florian.katech.net/en/tags/</link>
+    <description>Recent content in Tags on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
+    <lastBuildDate>Tue, 17 Sep 2019 09:54:45 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>powershell</title>
+      <link>http://florian.katech.net/en/tags/powershell/</link>
+      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/tags/powershell/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible</title>
+      <link>http://florian.katech.net/en/tags/ansible/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/tags/ansible/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>AWS</title>
+      <link>http://florian.katech.net/en/tags/aws/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IaaS</title>
+      <link>http://florian.katech.net/en/tags/iaas/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/tags/iaas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>http://florian.katech.net/en/tags/terraform/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/tags/terraform/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -8,16 +8,17 @@
     content="Florian Dugat ">
 <meta name="description"
     content="Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
 J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
 Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="/blog/agrandir-stockage-vm/" />
+<link rel="canonical" href="http://florian.katech.net/blog/agrandir-stockage-vm/" />
 
 
 <title>
     
-    Agrandir Stockage Vm :: Florian DUGAT 
+    Agrandir Stockage Vm vSphere :: Florian DUGAT 
     
 </title>
 
@@ -28,7 +29,7 @@ Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer l
 
 
 
-<link rel="stylesheet" href="/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+<link rel="stylesheet" href="/main.min.cabb110faab88d3545467f36114f6bf3ac23f81434679cf37338752570b2eda1.css">
 
 
 
@@ -38,23 +39,17 @@ Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer l
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Agrandir Stockage Vm">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Agrandir Stockage Vm vSphere">
 <meta itemprop="description" content="Prérequis Il faut avoir augmenté la taille de l&rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
 J&rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&rsquo;affaire)
-Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd :">
-
-
-<meta itemprop="datePublished" content="2019-05-28T16:12:16&#43;02:00" />
-<meta itemprop="dateModified" content="2019-05-28T16:12:16&#43;02:00" />
-<meta itemprop="wordCount" content="974">
-
-
-
-<meta itemprop="keywords" content="tuto,système,virtualisation," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Agrandir Stockage Vm"/>
+Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd :"><meta itemprop="datePublished" content="2019-05-28T16:12:16+02:00" />
+<meta itemprop="dateModified" content="2019-05-28T16:12:16+02:00" />
+<meta itemprop="wordCount" content="984">
+<meta itemprop="keywords" content="tuto,système,virtualisation," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Agrandir Stockage Vm vSphere"/>
 <meta name="twitter:description" content="Prérequis Il faut avoir augmenté la taille de l&rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
 J&rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&rsquo;affaire)
 Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd :"/>
 
@@ -75,7 +70,7 @@ Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd
         <div class="container">
             <header class="header">
     <span class="header__inner">
-        <a href="/" style="text-decoration: none;">
+        <a href="http://florian.katech.net" style="text-decoration: none;">
     <div class="logo">
         
             <span class="logo__mark">></span>
@@ -89,7 +84,7 @@ Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/projets">Projets</a></li><li><a href="/experience">Experiences</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact">Contact</a></li><li><a href="/about">A propos</a></li>
+    <ul class="menu__inner"><li><a href="http://florian.katech.net/realisations">Réalisations</a></li><li><a href="http://florian.katech.net/experience">Expériences</a></li><li><a href="http://florian.katech.net/blog">Blog</a></li><li><a href="http://florian.katech.net/about">A propos</a></li>
     </ul>
 </nav>
 
@@ -122,45 +117,36 @@ Se mettre en LiveCD sur vSphere Comment j&rsquo;ai procédé pour insérer le cd
         </div>
 
         <article>
-            <h2 class="post-title"><a href="/blog/agrandir-stockage-vm/">Agrandir Stockage Vm</a></h2>
+            <h2 class="post-title"><a href="http://florian.katech.net/blog/agrandir-stockage-vm/">Agrandir Stockage Vm vSphere</a></h2>
 
             
 
             <div class="post-content">
-                
-
-<h3 id="prérequis">Prérequis</h3>
-
+                <h3 id="prérequis">Prérequis</h3>
 <p>Il faut avoir augmenté la taille de l&rsquo;espace disque (donc là je le fais sur vsphere avec une VM)</p>
-
+<p><strong>Je suis sous ubuntu 16.04 et vSphere 6.0</strong></p>
 <p>J&rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
-<img src="/screen_vsphere.PNG" alt="screen vsphere" />
+<img src="/screen_vsphere.PNG" alt="screen vsphere">
 Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&rsquo;affaire)</p>
-
 <h3 id="se-mettre-en-livecd-sur-vsphere">Se mettre en LiveCD sur vSphere</h3>
-
 <p>Comment j&rsquo;ai procédé pour insérer le cd :</p>
-
 <p>On est dans vSphere</p>
-
 <ol>
 <li>Modifier les paramètres</li>
 <li>Dans l&rsquo;onglet <strong>Matériel</strong> -&gt; clic sur Lecteur CD/DVD -&gt; Fichier ISO banque de données (faut avoir mis l&rsquo;iso dans la banque de données avant)
-<img src="/vsphere_lecteurCD.PNG" alt="screen vsphere" /></li>
+<img src="/vsphere_lecteurCD.PNG" alt="screen vsphere"></li>
 <li>Dans l&rsquo;onglet <strong>Options</strong> -&gt; Option de démarrage -&gt; Forcer la configuation BIOS
-<img src="/vsphere_option_boot.PNG" alt="screen vsphere" /></li>
+<img src="/vsphere_option_boot.PNG" alt="screen vsphere"></li>
 <li>Démarrer la machine -&gt; Menu du BIOS -&gt; Onglet <strong>Boot</strong> -&gt; appuyer sur <strong>+</strong> pour mettre le CD en premier boot
-<img src="/vsphere_bios.PNG" alt="screen vsphere" /></li>
+<img src="/vsphere_bios.PNG" alt="screen vsphere"></li>
 <li>Cliquer sur le logo CD -&gt; <strong>Connexion à une image ISO sur une banque de données&hellip;</strong>
-<img src="/vsphere_logo_cd.PNG" alt="screen vsphere" /></li>
+<img src="/vsphere_logo_cd.PNG" alt="screen vsphere"></li>
 <li>F10 et ça devrait booter sur gparted (ou l&rsquo;iso selectionné)
-<img src="/boot_gparted.PNG" alt="gparted" /></li>
+<img src="/boot_gparted.PNG" alt="gparted"></li>
 </ol>
-
-<h3 id="création-d-une-nouvelle-partition">Création d&rsquo;une nouvelle partition</h3>
-
+<h3 id="création-dune-nouvelle-partition">Création d&rsquo;une nouvelle partition</h3>
 <p>On peut voir avec la commande <code>fdisk</code> que j&rsquo;ai bien un disque de 150Go mais qu&rsquo;il n&rsquo;est pas encore attribué</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">➜  ~ sudo fdisk -l
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">➜  ~ sudo fdisk -l
 Disk /dev/sda: <span style="color:#ae81ff">150</span> GiB, <span style="color:#ae81ff">161061273600</span> bytes, <span style="color:#ae81ff">314572800</span> sectors
 Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
 Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
@@ -170,8 +156,8 @@ Disk identifier: 0x513bdfba
 
 Device     Boot   Start      End  Sectors  Size Id Type
 /dev/sda1  *       <span style="color:#ae81ff">2048</span>   <span style="color:#ae81ff">999423</span>   <span style="color:#ae81ff">997376</span>  487M <span style="color:#ae81ff">83</span> Linux
-/dev/sda2       <span style="color:#ae81ff">1001470</span> <span style="color:#ae81ff">33552383</span> <span style="color:#ae81ff">32550914</span> <span style="color:#ae81ff">15</span>.5G  <span style="color:#ae81ff">5</span> Extended
-/dev/sda5       <span style="color:#ae81ff">1001472</span> <span style="color:#ae81ff">33552383</span> <span style="color:#ae81ff">32550912</span> <span style="color:#ae81ff">15</span>.5G 8e Linux LVM
+/dev/sda2       <span style="color:#ae81ff">1001470</span> <span style="color:#ae81ff">33552383</span> <span style="color:#ae81ff">32550914</span> 15.5G  <span style="color:#ae81ff">5</span> Extended
+/dev/sda5       <span style="color:#ae81ff">1001472</span> <span style="color:#ae81ff">33552383</span> <span style="color:#ae81ff">32550912</span> 15.5G 8e Linux LVM
 
 
 Disk /dev/sdb: <span style="color:#ae81ff">100</span> GiB, <span style="color:#ae81ff">107374182400</span> bytes, <span style="color:#ae81ff">209715200</span> sectors
@@ -185,7 +171,7 @@ Device     Boot Start       End   Sectors  Size Id Type
 /dev/sdb1        <span style="color:#ae81ff">2048</span> <span style="color:#ae81ff">209715199</span> <span style="color:#ae81ff">209713152</span>  100G <span style="color:#ae81ff">83</span> Linux
 
 
-Disk /dev/mapper/ubuntuLTS--16--vg-root: <span style="color:#ae81ff">13</span>.5 GiB, <span style="color:#ae81ff">14516486144</span> bytes, <span style="color:#ae81ff">28352512</span> sectors
+Disk /dev/mapper/ubuntuLTS--16--vg-root: 13.5 GiB, <span style="color:#ae81ff">14516486144</span> bytes, <span style="color:#ae81ff">28352512</span> sectors
 Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
 Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
 I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
@@ -194,61 +180,54 @@ I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#
 Disk /dev/mapper/ubuntuLTS--16--vg-swap_1: <span style="color:#ae81ff">2</span> GiB, <span style="color:#ae81ff">2147483648</span> bytes, <span style="color:#ae81ff">4194304</span> sectors
 Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
 Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes</code></pre></div>
-<p>On peut faire cette commande pour confirmer (le -h permet d&rsquo;avoir les tailles en lisible Mo, Go &hellip;):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">➜  ~ df -h
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</code></pre></div><p>On peut faire cette commande pour confirmer (le -h permet d&rsquo;avoir les tailles en lisible Mo, Go &hellip;):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">➜  ~ df -h
 Filesystem                          Size  Used Avail Use% Mounted on
-udev                                <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /dev
-tmpfs                               799M  <span style="color:#ae81ff">8</span>.8M  790M   <span style="color:#ae81ff">2</span>% /run
-/dev/mapper/ubuntuLTS--16--vg-root   14G   13G     <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">100</span>% /
-tmpfs                               <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /dev/shm
-tmpfs                               <span style="color:#ae81ff">5</span>.0M     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">5</span>.0M   <span style="color:#ae81ff">0</span>% /run/lock
-tmpfs                               <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /sys/fs/cgroup
-/dev/sda1                           472M  159M  289M  <span style="color:#ae81ff">36</span>% /boot
-/dev/sdb1                            99G  <span style="color:#ae81ff">3</span>.7G   90G   <span style="color:#ae81ff">4</span>% /media/partition1
-tmpfs                               799M     <span style="color:#ae81ff">0</span>  799M   <span style="color:#ae81ff">0</span>% /run/user/1002</code></pre></div>
-<p>Sur Gparted, on devrait voir notre partition en <code>non allouée</code>, dans mon cas j&rsquo;ai été bloqué je ne pouvais pas modifié <code>/dev/sda2</code> qui est ma partition &lsquo;extended&rsquo;, il faut faire <strong>clic droit</strong> sur <code>dev/sda5</code> et <strong>désactiver</strong>
-<img src="/gparted_lock.PNG" alt="gparted lock" /></p>
+udev                                3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /dev
+tmpfs                               799M  8.8M  790M   2% /run
+/dev/mapper/ubuntuLTS--16--vg-root   14G   13G     <span style="color:#ae81ff">0</span> 100% /
+tmpfs                               3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /dev/shm
+tmpfs                               5.0M     <span style="color:#ae81ff">0</span>  5.0M   0% /run/lock
+tmpfs                               3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /sys/fs/cgroup
+/dev/sda1                           472M  159M  289M  36% /boot
+/dev/sdb1                            99G  3.7G   90G   4% /media/partition1
+tmpfs                               799M     <span style="color:#ae81ff">0</span>  799M   0% /run/user/1002
 
+</code></pre></div><p>Sur Gparted, on devrait voir notre partition en <code>non allouée</code>, dans mon cas j&rsquo;ai été bloqué je ne pouvais pas modifié <code>/dev/sda2</code> qui est ma partition &lsquo;extended&rsquo;, il faut faire <strong>clic droit</strong> sur <code>dev/sda5</code> et <strong>désactiver</strong>
+<img src="/gparted_lock.PNG" alt="gparted lock"></p>
 <p>Il ne faut plus qu&rsquo;il y ai le logo de clés ou d&rsquo;un cadenas !</p>
-
 <p>Ensuite clic droit sur la partition extended <code>dev/sda2</code> et <strong>Redimensionner/Déplacer</strong>, utiliser tout notre espace non alloué.</p>
-
 <p>Appliquer et on a notre <code>/dev/sda2</code> qui est de 149.52Go</p>
-
 <p>Mais ça ne suffira pas</p>
-
 <p>Seule la liste des PE (partition extended) du système LVM a été modifiée par ce qui vient d&rsquo;être fait avec GParted,
 maintenant, il va falloir attribuer ces nouveaux PE au VolumeGroup qui contient le VolumeLogique <strong>/ubuntuLTS-16&ndash;vg-root</strong> en agrandissant ce VolumeGroup</p>
-
 <p>puis agrandir le VolumeLogique <strong>/ubuntuLTS-16&ndash;vg-root</strong></p>
-
 <p>pour enfin pouvoir faire un <strong>resize2fs</strong> sur le système de fichiers de <strong>/ubuntuLTS-16&ndash;vg-root</strong></p>
-
 <p>Commande pour voir quel nomDeGroupe/nomDeVolume</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@SRV-ELK01:/home/fdugat# sudo -i -- sh -c pvs;vgs;lvs
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@SRV-ELK01:/home/fdugat# sudo -i -- sh -c pvs;vgs;lvs
   PV         VG              Fmt  Attr PSize  PFree
-  /dev/sda5  ubuntuLTS-16-vg lvm2 a--  <span style="color:#ae81ff">15</span>.52g    <span style="color:#ae81ff">0</span>
+  /dev/sda5  ubuntuLTS-16-vg lvm2 a--  15.52g    <span style="color:#ae81ff">0</span>
   VG              <span style="color:#75715e">#PV #LV #SN Attr   VSize  VFree</span>
-  ubuntuLTS-16-vg   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">0</span> wz--n- <span style="color:#ae81ff">15</span>.52g    <span style="color:#ae81ff">0</span>
+  ubuntuLTS-16-vg   <span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">0</span> wz--n- 15.52g    <span style="color:#ae81ff">0</span>
   LV     VG              Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
-  root   ubuntuLTS-16-vg -wi-ao---- <span style="color:#ae81ff">13</span>.52g
-  swap_1 ubuntuLTS-16-vg -wi-ao----  <span style="color:#ae81ff">2</span>.00g</code></pre></div>
-<p>Dans mon cas ce sera <strong>ubuntuLTS-16-vg</strong></p>
-
+  root   ubuntuLTS-16-vg -wi-ao---- 13.52g
+  swap_1 ubuntuLTS-16-vg -wi-ao----  2.00g
+</code></pre></div><p>Dans mon cas ce sera <strong>ubuntuLTS-16-vg</strong></p>
 <p>Let&rsquo;s do this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo pvresize /dev/sda5
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo pvresize /dev/sda5
   Physical volume <span style="color:#e6db74">&#34;/dev/sda5&#34;</span> changed
-  <span style="color:#ae81ff">1</span> physical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> resized / <span style="color:#ae81ff">0</span> physical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> not resized</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo vgchange -ay ubuntuLTS-16-vg
-  <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;ubuntuLTS-16-vg&#34;</span> now active</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo lvextend -l +100%FREE ubuntuLTS-16-vg/root
-  Size of logical volume ubuntuLTS-16-vg/root changed from <span style="color:#ae81ff">13</span>.52 GiB <span style="color:#f92672">(</span><span style="color:#ae81ff">3461</span> extents<span style="color:#f92672">)</span> to <span style="color:#ae81ff">147</span>.52 GiB <span style="color:#f92672">(</span><span style="color:#ae81ff">37765</span> extents<span style="color:#f92672">)</span>.
-  Logical volume root successfully resized.</code></pre></div>
-<p>On peut voir que nous sommes bien passé de 13.52Go à 147.52Go !
+  <span style="color:#ae81ff">1</span> physical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> resized / <span style="color:#ae81ff">0</span> physical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> not resized
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo vgchange -ay ubuntuLTS-16-vg
+  <span style="color:#ae81ff">2</span> logical volume<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span> in volume group <span style="color:#e6db74">&#34;ubuntuLTS-16-vg&#34;</span> now active
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo lvextend -l +100%FREE ubuntuLTS-16-vg/root
+  Size of logical volume ubuntuLTS-16-vg/root changed from 13.52 GiB <span style="color:#f92672">(</span><span style="color:#ae81ff">3461</span> extents<span style="color:#f92672">)</span> to 147.52 GiB <span style="color:#f92672">(</span><span style="color:#ae81ff">37765</span> extents<span style="color:#f92672">)</span>.
+  Logical volume root successfully resized.
+</code></pre></div><p>On peut voir que nous sommes bien passé de 13.52Go à 147.52Go !
 Il nous reste 2 commandes à effectuer mais il faut que la partition <code>dev/ubuntuLTS-16-vg/root</code> soit démontée&hellip;</p>
-
 <p>Et pour ceux qui sont parti du liveCD vous aurez ces messages d&rsquo;erreurs :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo e2fsck -f /dev/ubuntuLTS-16-vg/root
-e2fsck <span style="color:#ae81ff">1</span>.42.13 <span style="color:#f92672">(</span><span style="color:#ae81ff">17</span>-May-2015<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ sudo e2fsck -f /dev/ubuntuLTS-16-vg/root
+e2fsck 1.42.13 <span style="color:#f92672">(</span>17-May-2015<span style="color:#f92672">)</span>
 /dev/ubuntuLTS-16-vg/root is mounted.
 e2fsck: Cannot <span style="color:#66d9ef">continue</span>, aborting.
 
@@ -256,12 +235,11 @@ e2fsck: Cannot <span style="color:#66d9ef">continue</span>, aborting.
 ➜  ~ sudo umount /dev/ubuntuLTS-16-vg/root
 umount: /: target is busy
         <span style="color:#f92672">(</span>In some cases useful info about processes that
-         use the device is found by lsof<span style="color:#f92672">(</span><span style="color:#ae81ff">8</span><span style="color:#f92672">)</span> or fuser<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>.<span style="color:#f92672">)</span></code></pre></div>
-<p>Donc restez bien en liveCD (ou retournez-y pour ceux qui en sont partis)
-<img src="/vsphere_last_cmd.PNG" alt="last cmd" /></p>
-
+         use the device is found by lsof<span style="color:#f92672">(</span>8<span style="color:#f92672">)</span> or fuser<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>.<span style="color:#f92672">)</span>
+</code></pre></div><p>Donc restez bien en liveCD (ou retournez-y pour ceux qui en sont partis)
+<img src="/vsphere_last_cmd.PNG" alt="last cmd"></p>
 <p>On reboot tout et on peut voir que ça a fonctionné !</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Disk /dev/mapper/ubuntuLTS--16--vg-root: <span style="color:#ae81ff">147</span>.5 GiB, <span style="color:#ae81ff">158397890560</span> bytes, <span style="color:#ae81ff">309370880</span> sectors
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Disk /dev/mapper/ubuntuLTS--16--vg-root: 147.5 GiB, <span style="color:#ae81ff">158397890560</span> bytes, <span style="color:#ae81ff">309370880</span> sectors
 Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
 Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
 I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
@@ -270,19 +248,20 @@ I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#
 Disk /dev/mapper/ubuntuLTS--16--vg-swap_1: <span style="color:#ae81ff">2</span> GiB, <span style="color:#ae81ff">2147483648</span> bytes, <span style="color:#ae81ff">4194304</span> sectors
 Units: sectors of <span style="color:#ae81ff">1</span> * 512 <span style="color:#f92672">=</span> <span style="color:#ae81ff">512</span> bytes
 Sector size <span style="color:#f92672">(</span>logical/physical<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
-I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes</code></pre></div>
-<p>ou encore</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ df -h
+I/O size <span style="color:#f92672">(</span>minimum/optimal<span style="color:#f92672">)</span>: <span style="color:#ae81ff">512</span> bytes / <span style="color:#ae81ff">512</span> bytes
+</code></pre></div><p>ou encore</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  ~ df -h
 Filesystem                          Size  Used Avail Use% Mounted on
-udev                                <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /dev
-tmpfs                               799M  <span style="color:#ae81ff">8</span>.9M  790M   <span style="color:#ae81ff">2</span>% /run
-/dev/mapper/ubuntuLTS--16--vg-root  146G   13G  125G  <span style="color:#ae81ff">10</span>% /
-tmpfs                               <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /dev/shm
-tmpfs                               <span style="color:#ae81ff">5</span>.0M     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">5</span>.0M   <span style="color:#ae81ff">0</span>% /run/lock
-tmpfs                               <span style="color:#ae81ff">3</span>.9G     <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">3</span>.9G   <span style="color:#ae81ff">0</span>% /sys/fs/cgroup
-/dev/sdb1                            99G  <span style="color:#ae81ff">3</span>.7G   90G   <span style="color:#ae81ff">4</span>% /media/partition1
-/dev/sda1                           472M  159M  289M  <span style="color:#ae81ff">36</span>% /boot
-tmpfs                               799M     <span style="color:#ae81ff">0</span>  799M   <span style="color:#ae81ff">0</span>% /run/user/1002</code></pre></div>
+udev                                3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /dev
+tmpfs                               799M  8.9M  790M   2% /run
+/dev/mapper/ubuntuLTS--16--vg-root  146G   13G  125G  10% /
+tmpfs                               3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /dev/shm
+tmpfs                               5.0M     <span style="color:#ae81ff">0</span>  5.0M   0% /run/lock
+tmpfs                               3.9G     <span style="color:#ae81ff">0</span>  3.9G   0% /sys/fs/cgroup
+/dev/sdb1                            99G  3.7G   90G   4% /media/partition1
+/dev/sda1                           472M  159M  289M  36% /boot
+tmpfs                               799M     <span style="color:#ae81ff">0</span>  799M   0% /run/user/1002
+</code></pre></div>
             </div>
         </article>
 
@@ -290,10 +269,33 @@ tmpfs                               799M     <span style="color:#ae81ff">0</span
 
         <div class="post-info">
   				<p>
-  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/tuto">tuto</a></span><span class="tag"><a href="/tags/syst%C3%A8me">système</a></span><span class="tag"><a href="/tags/virtualisation">virtualisation</a></span>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://florian.katech.net/tags/tuto">tuto</a></span><span class="tag"><a href="http://florian.katech.net/tags/syst%C3%A8me">système</a></span><span class="tag"><a href="http://florian.katech.net/tags/virtualisation">virtualisation</a></span>
   				</p>
   			</div>
 
+        
+          <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "florian-dugat" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
         
     </main>
 
@@ -303,12 +305,12 @@ tmpfs                               799M     <span style="color:#ae81ff">0</span
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2019</span>
+            <span>&copy; 2024</span>
             
-                <span><a href="/">Florian Dugat</a></span>
+                <span><a href="http://florian.katech.net">Florian Dugat</a></span>
             
             <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
-            <span> <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <span> <a href="http://florian.katech.net/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
         </div>
     </div>
     <div class="footer__inner">
@@ -332,7 +334,7 @@ tmpfs                               799M     <span style="color:#ae81ff">0</span
 
 
 
-<script type="text/javascript" src="/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+<script type="text/javascript" src="/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
 
 
 

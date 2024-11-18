@@ -1,113 +1,199 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Florian DUGAT</title>
-    <link>/tags/</link>
+    <link>http://florian.katech.net/tags/</link>
     <description>Recent content in Tags on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 16 May 2022 00:21:53 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ansible</title>
-      <link>/tags/ansible/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      <title>3D</title>
+      <link>http://florian.katech.net/tags/3d/</link>
+      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
       
-      <guid>/tags/ansible/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automatisation</title>
-      <link>/tags/automatisation/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>/tags/automatisation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>/tags/devops/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>système</title>
-      <link>/tags/syst%C3%A8me/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>/tags/syst%C3%A8me/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tuto</title>
-      <link>/tags/tuto/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>/tags/tuto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>virtualisation</title>
-      <link>/tags/virtualisation/</link>
-      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
-      
-      <guid>/tags/virtualisation/</guid>
+      <guid>http://florian.katech.net/tags/3d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DIY</title>
-      <link>/tags/diy/</link>
-      <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
+      <link>http://florian.katech.net/tags/diy/</link>
+      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
       
-      <guid>/tags/diy/</guid>
+      <guid>http://florian.katech.net/tags/diy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>printer</title>
+      <link>http://florian.katech.net/tags/printer/</link>
+      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/printer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cheatsheet</title>
+      <link>http://florian.katech.net/tags/cheatsheet/</link>
+      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logs</title>
+      <link>http://florian.katech.net/tags/logs/</link>
+      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/logs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ArchLinux</title>
+      <link>http://florian.katech.net/tags/archlinux/</link>
+      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i3</title>
+      <link>http://florian.katech.net/tags/i3/</link>
+      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/i3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ricing</title>
+      <link>http://florian.katech.net/tags/ricing/</link>
+      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/ricing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tuto</title>
+      <link>http://florian.katech.net/tags/tuto/</link>
+      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/tuto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>http://florian.katech.net/tags/powershell/</link>
+      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>appcool</title>
+      <link>http://florian.katech.net/tags/appcool/</link>
+      <pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/appcool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crossplateforme</title>
+      <link>http://florian.katech.net/tags/crossplateforme/</link>
+      <pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/crossplateforme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>http://florian.katech.net/tags/ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automatisation</title>
+      <link>http://florian.katech.net/tags/automatisation/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/automatisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>http://florian.katech.net/tags/devops/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>système</title>
+      <link>http://florian.katech.net/tags/syst%C3%A8me/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/syst%C3%A8me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualisation</title>
+      <link>http://florian.katech.net/tags/virtualisation/</link>
+      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/tags/virtualisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sécurité</title>
-      <link>/tags/s%C3%A9curit%C3%A9/</link>
+      <link>http://florian.katech.net/tags/s%C3%A9curit%C3%A9/</link>
       <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
       
-      <guid>/tags/s%C3%A9curit%C3%A9/</guid>
+      <guid>http://florian.katech.net/tags/s%C3%A9curit%C3%A9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>/tags/aws/</link>
+      <link>http://florian.katech.net/tags/aws/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/tags/aws/</guid>
+      <guid>http://florian.katech.net/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IaaS</title>
-      <link>/tags/iaas/</link>
+      <link>http://florian.katech.net/tags/iaas/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/tags/iaas/</guid>
+      <guid>http://florian.katech.net/tags/iaas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>terraform</title>
-      <link>/tags/terraform/</link>
+      <link>http://florian.katech.net/tags/terraform/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/tags/terraform/</guid>
+      <guid>http://florian.katech.net/tags/terraform/</guid>
       <description></description>
     </item>
     

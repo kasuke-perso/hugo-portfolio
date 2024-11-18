@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheatsheet on Florian DUGAT</title>
+    <link>http://florian.katech.net/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 03 May 2022 15:31:05 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Systemd Tricks</title>
+      <link>http://florian.katech.net/blog/systemd-tricks/</link>
+      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/systemd-tricks/</guid>
+      <description>En rapport avec l&amp;rsquo;autre article : lien
+On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe. Faut aller dans vim /etc/systemd/system/leservice.service
+Exemple avec logstash [Unit] Description=logstash [Service] Type=simple User=root Group=root # Load env vars from /etc/default/ and /etc/sysconfig/ if they exist. # Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t # exist, it continues onward. EnvironmentFile=-/etc/default/logstash EnvironmentFile=-/etc/sysconfig/logstash ExecStart=/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34; Restart=always WorkingDirectory=/ Nice=19 LimitNOFILE=16384 # When stopping, how long to wait before giving up and sending SIGKILL?</description>
+    </item>
+    
+    <item>
+      <title>Gestion Des Logs Journalctl</title>
+      <link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link>
+      <pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid>
+      <description>Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule
+Cheatsheet  journalctl -xe pour voir tous les logs direct en bas je crois à vérif Filtrer par service : journalctl -u service journalctl -f pour faire comme tail -f dessus Filtrer par PID journalctl _PID=1 Filtrer par programme journalctl /usr/bin/tamere Filtrer par niveau de logs genre err journalctl -p err  </description>
+    </item>
+    
+  </channel>
+</rss>

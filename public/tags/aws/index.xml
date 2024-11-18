@@ -1,26 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AWS on Florian DUGAT</title>
-    <link>/tags/aws/</link>
+    <link>http://florian.katech.net/tags/aws/</link>
     <description>Recent content in AWS on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 20 Apr 2017 16:32:35 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/aws/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 20 Apr 2017 16:32:35 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/projets/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/projets/challenge-accepted/</guid>
+      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
+Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réaliser un TP.
+Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
+    </item>
     
     <item>
       <title>Challenge Accepted - IaaS</title>
-      <link>/projets/challenge-accepted/</link>
+      <link>http://florian.katech.net/realisations/challenge-accepted/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/projets/challenge-accepted/</guid>
+      <guid>http://florian.katech.net/realisations/challenge-accepted/</guid>
       <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
 Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infrastructure préconfigurée ainsi que sa destruction automatique. On fournit toutes les informations nécessaires pour que l&amp;rsquo;étudiant puisse réalisé un TP.
 Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
     </item>
     
