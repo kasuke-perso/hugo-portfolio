@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 16 May 2022 00:21:53 +0200</lastBuildDate><atom:link href="http://florian.katech.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Nov 2024 10:17:34 +0200</lastBuildDate><atom:link href="http://florian.katech.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Muséum national d&#39;histoire naturelle - Devops</title>
+      <link>http://florian.katech.net/experience/musee/</link>
+      <pubDate>Thu, 14 Nov 2024 10:17:34 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/experience/musee/</guid>
+      <description>27 Mai 2024 - Poste actuel
+Au sein de la DINSI, j&amp;rsquo;étais en charge, dans un premier temps, de l&amp;rsquo;infrastructure système (VMware) et dans un second temps, rejoindre une équipe fraichement créer pour faire des sujets de Devops.
+J&amp;rsquo;ai du faire du ménage de l&amp;rsquo;infrastructure déjà en place, il y a eu une grosse tâche de mise à plat de l&amp;rsquo;existant pour savoir vers où on allait évoluer. Pas mal de documentations à faire en autonomie en creusant dans l&amp;rsquo;existant.</description>
+    </item>
+    
     <item>
       <title>Voron 2.4</title>
       <link>http://florian.katech.net/blog/voron-2.4/</link>

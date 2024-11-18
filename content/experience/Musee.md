@@ -36,3 +36,4 @@ Je suis rentré dans un contexte un peu particulier, qui ne m'a pas permis de tr
 - Manque de suivi dans les projets, manque de clareté sur les objectifs attendus 
 - Communication assez difficile 
 - Manque de visibilité avec les collaborateurs
+- Mission pas en adéquations à mes attentes
