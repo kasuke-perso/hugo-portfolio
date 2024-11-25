@@ -19,6 +19,8 @@ Le service Ingénierie développe et intègre des solutions de communication et 
 
 Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ». Les machines à déployer fonctionnent sur un OS Linux Debian 7 et doivent avoir une configuration système et applicative spécifique à chaque instance.
 
+J'ai pu simuler, à l'aide d'une image de debian custom, la mise en place et la gestion de la configuration de plusieurs machines. J'ai notamment utilisé VMWare ainsi que VirtualBox afin de reproduire l'infrastructure cible.
+
 #### À ce titre, mes missions étaient :
 * Faire l’inventaire et formaliser les profils de configuration.
 * Spécifier les processus de déploiement.

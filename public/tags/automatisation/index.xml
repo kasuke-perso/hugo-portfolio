@@ -1,26 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>automatisation on Florian DUGAT</title>
-    <link>/tags/automatisation/</link>
+    <link>http://florian.katech.net/tags/automatisation/</link>
     <description>Recent content in automatisation on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/automatisation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/automatisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>/blog/gestion-utilisateur-linux-avec-ansible/</link>
+      <link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link>
       <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
       
-      <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
+      <guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid>
       <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
 Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
 Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Gestion clés ssh Linux avec Ansible</title>
+      <link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :
  Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
     </item>
     

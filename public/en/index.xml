@@ -1,14 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hello Friend NG</title>
-    <link>/en/</link>
-    <description>Recent content on Hello Friend NG</description>
+    <title>Florian DUGAT</title>
+    <link>http://florian.katech.net/en/</link>
+    <description>Recent content on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
+    <lastBuildDate>Wed, 05 Aug 2020 09:45:34 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation AWX</title>
+      <link>http://florian.katech.net/en/realisations/installation-awx/</link>
+      <pubDate>Wed, 05 Aug 2020 09:45:34 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/realisations/installation-awx/</guid>
+      <description>Ubuntu server 17.10 is used, you will need a network connection during the process.
+We will install some packages that are useful and needed to get ansible + awx working fine.
+First of all, you will need to update your package sources.
+sudo apt update Then we will install some packages:
+sudo apt install python-minimal open-ssh htop This will install python2.7.x, a ssh server to get access to your machine by ssh and htop a better top.</description>
+    </item>
     
-	<atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Script Powershell Créer Raccourcis Office 365</title>
+      <link>http://florian.katech.net/en/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</link>
+      <pubDate>Wed, 05 Aug 2020 09:33:33 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</guid>
+      <description>Here is an example with Outlook (Office 365 or Office 2019 Pro Plus) :
+# We prepare the creation of the shortcut $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Where the shortcut go $objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &amp;#34;\Desktop&amp;#34; +&amp;#34;\Outlook.lnk&amp;#34;) # Where the shortcut point to $objShortCut.TargetPath= $env:ProgramFiles + &amp;#34;\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34; # Creation of the shortcut $objShortCut.Save() Save it as .ps1 and execute it directly, boom new icon with Outlook on the desktop !</description>
+    </item>
     
+    <item>
+      <title>PowerShell Script to create office 365 shortcuts</title>
+      <link>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</link>
+      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</guid>
+      <description>I didn&amp;rsquo;t find any post which was talking about this so here I am with my little contribution. And a reminder for myself aswell.
+In PowerShell because it&amp;rsquo;s better. We don&amp;rsquo;t have sortcuts so we will create them the simpliest way possible.
+Here is an example with Outlook (Office 365 or Office 2019 Pro Plus) :
+# We prepare the creation of the shortcut $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Where the shortcut go $objShortCut = $objShell.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://florian.katech.net/en/about/</link>
+      <pubDate>Fri, 07 Jun 2019 14:19:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/about/</guid>
+      <description>Hi there,
+I am Florian, I like many things in life.
+I am just testing this page for the moment.
+Cheers.</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/en/projets/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/projets/challenge-accepted/</guid>
+      <description>Project from school (Semester 4) proposed by Eric Lalitte :
+The main goal was to provide an network infrastructure for students to make them practice the networks courses from OpenClassroom, automatically, from the creation, validation, to destruction.
+Depending on the lesson, we wanted to create a server or an infrastructure already configured, we provide every credentials the student need to access the course.
+So, to create the machines/infrastructures we used Terraform + AWS and for provisionning we used Ansible</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/en/realisations/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/realisations/challenge-accepted/</guid>
+      <description>Project from school (Semester 4) proposed by Eric Lalitte :
+The main goal was to provide an network infrastructure for students to make them practice the networks courses from OpenClassroom, automatically, from the creation, validation, to destruction.
+Depending on the lesson, we wanted to create a server or an infrastructure already configured, we provide every credentials the student need to access the course.
+So, to create the machines/infrastructures we used Terraform + AWS and for provisionning we used Ansible</description>
+    </item>
     
   </channel>
 </rss>

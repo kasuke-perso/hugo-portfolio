@@ -1,24 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtualisation on Florian DUGAT</title>
-    <link>/tags/virtualisation/</link>
+    <link>http://florian.katech.net/tags/virtualisation/</link>
     <description>Recent content in virtualisation on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 28 May 2019 16:12:16 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/virtualisation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 May 2019 16:12:16 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/virtualisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Agrandir Stockage Vm</title>
-      <link>/blog/agrandir-stockage-vm/</link>
+      <title>Agrandir Stockage Vm vSphere</title>
+      <link>http://florian.katech.net/blog/agrandir-stockage-vm/</link>
       <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
       
-      <guid>/blog/agrandir-stockage-vm/</guid>
+      <guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid>
       <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
 J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
 Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
     </item>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Florian Dugat ">
+<meta name="description"
+    content="Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock
+Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
+̀sudo pacman -S i3 là plusieurs choix s&amp;rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
+Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://florian.katech.net/blog/i3-arch-linux/" />
+
+
+<title>
+    
+    I3 Arch Linux :: Florian DUGAT 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.cabb110faab88d3545467f36114f6bf3ac23f81434679cf37338752570b2eda1.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="I3 Arch Linux">
+<meta itemprop="description" content="Sur Arch il n&rsquo;y a pas beaucoup de packages de base &hellip; No shit sherlock
+Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
+̀sudo pacman -S i3 là plusieurs choix s&rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
+Soit vous prenez i3-gaps vous permettant d&rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&rsquo;en fou, c&rsquo;est sur un ordi portable ou avec peu d&rsquo;affichage donc je pars sur du i3-wm."><meta itemprop="datePublished" content="2019-09-27T09:56:58+02:00" />
+<meta itemprop="dateModified" content="2019-09-27T09:56:58+02:00" />
+<meta itemprop="wordCount" content="2343">
+<meta itemprop="keywords" content="tuto,i3,ricing,ArchLinux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I3 Arch Linux"/>
+<meta name="twitter:description" content="Sur Arch il n&rsquo;y a pas beaucoup de packages de base &hellip; No shit sherlock
+Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
+̀sudo pacman -S i3 là plusieurs choix s&rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
+Soit vous prenez i3-gaps vous permettant d&rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&rsquo;en fou, c&rsquo;est sur un ordi portable ou avec peu d&rsquo;affichage donc je pars sur du i3-wm."/>
+
+
+
+
+<meta property="article:published_time" content="2019-09-27 09:56:58 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="http://florian.katech.net" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text"># cd /home</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://florian.katech.net/realisations">Réalisations</a></li><li><a href="http://florian.katech.net/experience">Expériences</a></li><li><a href="http://florian.katech.net/blog">Blog</a></li><li><a href="http://florian.katech.net/about">A propos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://florian.katech.net/blog/i3-arch-linux/">I3 Arch Linux</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>Sur Arch il n&rsquo;y a pas beaucoup de packages de base &hellip; No shit sherlock</p>
+<p>Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)</p>
+<p>̀<code>sudo pacman -S i3</code>
+là plusieurs choix s&rsquo;offrent à vous <code>1) i3-gaps  2) i3-wm  3) i3blocks  4) i3lock  5) i3status</code></p>
+<p>Soit vous prenez i3-gaps vous permettant d&rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&rsquo;en fou, c&rsquo;est sur un ordi portable ou avec peu d&rsquo;affichage donc je pars sur du i3-wm.</p>
+<p>Sélectionnez tous les autres packages aussi sinon vous aurez une belle erreur au lancement.</p>
+<p>De façon général tout va se configurer dans ce fichier <code>~/.config/i3/config</code> on va revenir sur ce fichier tout au long de ce &ldquo;tuto&rdquo; plus une doc ++ que je me fais.</p>
+<h4 id="voici-une-liste-de-packages-qui-vous-seront-bien-utiles-">Voici une liste de packages qui vous seront bien utiles :</h4>
+<ul>
+<li>ranger - gestionnaire de fichier en ligne de commande (pas mal)</li>
+<li>rofi - lanceur d&rsquo;application (qui remplacera dmenu)</li>
+<li>feh - en gros pour avoir un fond d&rsquo;écran</li>
+<li><code>sudo pacman -S NetworkManager</code> - pour gérer le wifi :)</li>
+<li>polybar - remplace la vieille barre dégueulasse de base</li>
+<li>compton-tryone-git - si vous voulez rajouter des trucs jolies</li>
+<li>flameshot - pour prendre des captures d&rsquo;écran</li>
+<li>urxvt - Terminal</li>
+<li>pywal - gestion xressources selon fond d&rsquo;écran</li>
+</ul>
+<p>Je vous conseil de prendre des powerline fonts aussi. Si vous voulez un git avec pleins de dotfiles plutôt propre -&gt; <a href="https://github.com/NicklasLallo/dotfiles">https://github.com/NicklasLallo/dotfiles</a></p>
+<p>Pratiquement chacun de ces packages ont besoin de se faire config. Personnellement j&rsquo;ai ranger toute mes config dans <code>~/.config</code></p>
+<p>Bien souvent les config (design) de ces apps sont aussi lié au <code>~/.Xressources</code></p>
+<h1 id="gestion-wifi">Gestion wifi</h1>
+<p>Il faut installer <code>NetworkManager</code> puis rajouter cette ligne dans le fichier de configuration de i3 (<code>~/.config/i3/config</code>) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># network manager (always runs)</span>
+exec --no-startup-id nm-applet
+</code></pre></div><p>De base ce c*n ne retient pas les mots de passe wifi et il faut les retaper sans cesse &hellip; sauf si vous installer ceci :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">pacman -S gnome-keyring
+</code></pre></div><p>🤔 D&rsquo;après mes recherches et mon expérience, je vais plutôt utiliser <code>nmtui</code> qui permet d&rsquo;avoir une interface &ldquo;graphique&rdquo; en ligne de commande.
+Vos réseaux sont enregistrés automatiquement et dès que vous croiser un réseau connu, il s&rsquo;y connecte automatiquement à condition d&rsquo;avoir cocher les cases nécessaire.</p>
+<h1 id="rofi">Rofi</h1>
+<p>Pour que rofi fonctionne bien, il faut rajouter une ligne dans le fichier <code>.config/i3/config</code></p>
+<p><code>bindsym $mod+d exec rofi -show drun</code>
+Donc quand on appuie sur (Windows) + d, on aura rofi qui se lancera.</p>
+<p>Mais il y a plusieurs &ldquo;mode&rdquo; de lancement. <code>rofi -show run</code> va montrer toute les commandes possibles, tandis que drun va juste montrer que des &ldquo;executables&rdquo;.
+Voici les autres options :</p>
+<ul>
+<li>windowcd</li>
+<li>run</li>
+<li>ssh</li>
+<li>drun</li>
+<li>combi</li>
+<li>keys</li>
+</ul>
+<p>Je crois que de base c&rsquo;est moche et si vous êtes un master flemmard comme moi et bien vous pouvez utiliser un thème qui existe déjà en faisant <code>rofi-theme-selector</code> vous permettant d&rsquo;avoir une preview d&rsquo;un thème et en faisant <code>alt+a</code> vous pouvez appliquer ce thème et voilà ! Finis aussi simple que ça.</p>
+<p>Sinon vous pouvez le custom vous même dans le <code>~/.Xressources</code></p>
+<p><strong>Je vous conseil ce site si vous voulez custom les Xressources :</strong> <a href="https://terminal.sexy/">https://terminal.sexy/</a></p>
+<h3 id="dès-que-vous-changer-le-moindre-truc-dans-votre-config-i3-il-faut-le-relancer--i3-msg-restart-ou-modshiftc">Dès que vous changer le moindre truc dans votre config i3, il faut le relancer : <code>i3-msg restart</code> ou <code>mod+shift+c</code></h3>
+<h1 id="urxvt">URXVT</h1>
+<p>Prenez plutot celui-là : <code>pacman -S rxvt-unicode-pixbuf</code> qui vous permettra d&rsquo;avoir les previews d&rsquo;image dans ranger (on en parle juste après)</p>
+<p>Pour ce terminal le fichier de conf sera soit dans le <code>.Xressources</code> soit on fera appel à un fichier dédié que l&rsquo;on nommera <code>.urxvt</code>. On peut rajouter des extensions perl à urxvt par exemple une extension pour faire en sorte que les liens soient cliquables.</p>
+<ul>
+<li>Pour copier - Ctrl+Inser</li>
+<li>Pour coller - Ctrl+Shift+Inser</li>
+</ul>
+<p>Un peu de personnalisation</p>
+<h1 id="ranger">Ranger</h1>
+<p>Il est déjà très bien de base, je veux juste un truc en plus les previews d&rsquo;images quand on passe dessus, pour ne pas avoir à les ouvrir avec un logiciel</p>
+<p>Donc pour se faire, je pense qu&rsquo;il faut ajouter ces lignes ici <code>~/.config/ranger/rc.conf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set preview_images true
+<span style="color:#75715e">#set use_preview_script true</span>
+<span style="color:#75715e">#set preview_script /usr/share/doc/ranger/config/scope.sh</span>
+set preview_images_method urxvt
+</code></pre></div><p>(ok moi ça fonctionne pas mais je vais creuser car j&rsquo;ai une erreur w3mimgdisplay)</p>
+<h1 id="polybar">Polybar</h1>
+<p>Sur le git c&rsquo;est très bien expliqué comment installer <a href="https://github.com/polybar/polybar">polybar</a>
+, si vous avez des soucis avec yaourt, il faudra juste le builder et cela fonctionne très bien.</p>
+<p><strong>Si vous avez build faites attention quand vous faites un update des apps via yaourt, ça va vous casser votre polybar</strong>
+(si vous avez casser votre polybar, il suffit de le rebuild et ça roule nickel)</p>
+<p>Ensuite va falloir résoudre moulte problèmes. Vous pouvez lancer <code>polybar example</code> et il y a de grande chance que vous ayez une bar toute jolie ok super mais avec pleins de messages d&rsquo;erreur en dessous, genre :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kasuke@ArchSSD  ~  polybar example                                                                                                                                                         ✔  <span style="color:#ae81ff">1987</span>  12:34:27
+warn: No monitor specified, using <span style="color:#e6db74">&#34;eDP-1-1&#34;</span>
+error: Disabling module <span style="color:#e6db74">&#34;bspwm&#34;</span> <span style="color:#f92672">(</span>reason: Could not find socket: /tmp/bspwm_0_0-socket<span style="color:#f92672">)</span>
+error: module/xbacklight: Could not get data <span style="color:#f92672">(</span>err: XCB_NAME <span style="color:#f92672">(</span>15<span style="color:#f92672">))</span>
+error: Disabling module <span style="color:#e6db74">&#34;xbacklight&#34;</span> <span style="color:#f92672">(</span>reason: Not supported <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#34;eDP-1-1&#34;</span><span style="color:#f92672">)</span>
+warn: pulseaudio: using default sink alsa_output.pci-0000_00_1f.3.analog-stereo
+error: tray: Failed to put tray above 0x1200002 in the stack <span style="color:#f92672">(</span>XCB_MATCH <span style="color:#f92672">(</span>8<span style="color:#f92672">))</span>
+warn: Systray selection already managed <span style="color:#f92672">(</span>window<span style="color:#f92672">=</span>0x060000c<span style="color:#f92672">)</span>
+</code></pre></div><p>Certains modules ne sont pas trop compatibles selon les machines du coup parfois il faut faire des scripts. Sauf qu&rsquo;on s&rsquo;en fou c&rsquo;est juste pour afficher des infos sur polybar.</p>
+<p>C&rsquo;est découpé en modules et chaque module va vous afficher des trucs dans la bar(re)</p>
+<p>Ce qu&rsquo;il faut changer dans le fichier de configuration de i3 <code>~/.config/i3/config</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Faut retirer cette ligne</span>
+bar <span style="color:#f92672">{</span>
+    i3bar_command i3bar
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Pour lancer polybar au démarrage cf la partie Pywal.</p>
+<h3 id="custom-polybar">Custom Polybar</h3>
+<p>Perso je me suis pas embêté, j&rsquo;ai clone ce git <a href="https://github.com/adi1090x/polybar-themes.git">https://github.com/adi1090x/polybar-themes.git</a></p>
+<p>J&rsquo;ai pris le polybar-4, il faut juste ajouter les polices :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">~/polybar-themes/polybar-4
+cd fonts
+cp * /usr/local/share/fonts/
+<span style="color:#75715e">#reload les fonts</span>
+fc-cache
+</code></pre></div><p>Vous avez un script qui vous permet de tester les différents modules <code>tester.sh</code></p>
+<p>Mais c&rsquo;est pas tout, il va falloir pimper à sa sauce quand même. On a une belle base mais il y a des trucs qui me plaise pas.</p>
+<p>Déjà j&rsquo;ai changé la position de base de la bar <code>vim ~/.config/polybar/config.ini</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">; Put the bar at the bottom of the screen
+<span style="color:#75715e"># De base il était à true</span>
+bottom <span style="color:#f92672">=</span> false
+</code></pre></div><p>Il faudra gérer aussi les modules <code>vim ~/.config/polybar/modules.ini</code></p>
+<p>Mais ce serait trop long de dire un par un ce que j&rsquo;ai changé, je le mettrais sur mon <a href="https://github.com/kasuke5">git</a> ce qu&rsquo;il faut surtout savoir c&rsquo;est que polybar fonctionne avec des modules, donc regarder les différents modules, voir leur configuation sur github ou sur unixporn si y&rsquo;en a un qui vous a plus. Vous pouvez aussi faire vos propres modules, dans mon cas ils sont ici <code>~/.config/polybar/user_modules.ini</code> qui font eux même appel aux scripts situés dans le dossier <code>~/.config/polybar/scripts</code></p>
+<p>Je vous conseil de vous mettre en mode debug pour voir tout ce qui est chargé en temps réel pour ainsi identifier les éléments qui ne fonctionnent pas (qui sont propre à chacun)</p>
+<p># Quelques configuration d&rsquo;i3
+Par exemple moi j&rsquo;utilise un script pour pouvoir gérer la luminosité vu que le module xbacklight ne fonctionne pas.</p>
+<p>Voici mon <code>brightness.sh</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span><span style="color:#75715e">#./brightness.sh + eDP1     Increase brightness of eDP1 display by 0.1</span>
+CURRBRIGHT<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>xrandr --current --verbose | grep -m <span style="color:#ae81ff">1</span> <span style="color:#e6db74">&#39;Brightness:&#39;</span> | cut -f2- -d:<span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;+&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[</span> <span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$CURRBRIGHT<span style="color:#e6db74"> &lt; 1&#34;</span> | bc<span style="color:#66d9ef">)</span> -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+<span style="color:#66d9ef">then</span>
+xrandr --output $2 --brightness <span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$CURRBRIGHT<span style="color:#e6db74"> + 0.1&#34;</span> | bc<span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[</span> <span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$CURRBRIGHT<span style="color:#e6db74"> &gt; 0&#34;</span> | bc<span style="color:#66d9ef">)</span> -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+<span style="color:#66d9ef">then</span>
+xrandr --output $2 --brightness <span style="color:#66d9ef">$(</span>echo <span style="color:#e6db74">&#34;</span>$CURRBRIGHT<span style="color:#e6db74"> - 0.1&#34;</span> | bc<span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>Il faudra bien évidemment rajouter une petite ligne dans le fichier de configuation de i3 (<code>~/.config/i3/config</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Sreen brightness controls dont work</span>
+bindsym XF86MonBrightnessUp exec ~/brightness.sh + eDP-1-1 <span style="color:#75715e"># increase screen brightness</span>
+bindsym XF86MonBrightnessDown exec ~/brightness.sh - eDP-1-1 <span style="color:#75715e"># decrease screen brightness</span>
+</code></pre></div><p>La particularité est de mettre + ou - avec le nom de votre écran, dans mon cas c&rsquo;est eDP-1-1 (souvent le nom qu&rsquo;un écran d&rsquo;ordinateur portable va avoir). Pour voir le nom de l&rsquo;écran, on peut éxecuter polybar cf au dessus quand je le lance.</p>
+<p>Je vous invite à regarder sur mon github pour les différents scripts que j&rsquo;ai du faire entre autre pour gérer le &ldquo;backlight&rdquo; et aussi un petit script pour lock l&rsquo;écran en floutant sur ce que je vous êtes en train de faire. Normalement c&rsquo;est assez flou pour que personne chope la moindre infos ne vous inquietez pas. Ensuite libre à vous de faire autrement.</p>
+<h1 id="mettre-un-fond-décran">Mettre un fond d&rsquo;écran</h1>
+<p>Il existe une multitude de façon de faire pour avoir un fond d&rsquo;écran avec i3, personnellement j&rsquo;utilise <code>feh</code>. On l&rsquo;installe et ensuite j&rsquo;ai rajouté cette ligne dans mon fichier de configuration d&rsquo;i3 :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">exec --no-startup-id feh --bg-scale ~/Images/hackerman.png
+</code></pre></div><p>Plusieurs options viennent avec feh, dans mon cas j&rsquo;ai mis l&rsquo;option pour que la taille s&rsquo;adapte en fond d&rsquo;écran <code>--bg-scale</code> mais il y a d&rsquo;autres options :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">--bg-tile FILE
+--bg-center FILE
+--bg-max FILE
+--bg-fill FILE
+</code></pre></div><p>On est d&rsquo;accord le chemin pointe vers une image qui existe &hellip;
+Plus d&rsquo;info sur feh ici <a href="https://wiki.archlinux.org/index.php/Feh">https://wiki.archlinux.org/index.php/Feh</a></p>
+<p><strong>Mais on peut faire autrement &hellip;</strong></p>
+<h1 id="pywal">Pywal</h1>
+<p>Pywal est un outil qui génère une palette de couleur à partir des couleurs dominante d&rsquo;une image. Ensuite il l&rsquo;applique à tout le système à la volée sur la plupart des programmes.</p>
+<p>Alors pas grand chose à configurer pour que ça fonctionne, ensuite vous pouvez aller voir sur son <a href="https://github.com/dylanaraps/pywal">git</a></p>
+<p>Petite configuration à rajouter dans le <code>~.config/i3/config</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">###--- i3 coloring ---###</span>
+<span style="color:#75715e"># Make it clear when failed using red - otherwise set i3 colors with wal from xresources</span>
+set_from_resource $bg           i3wm.color0 <span style="color:#75715e">#ff0000</span>
+set_from_resource $bg-alt       i3wm.color14 <span style="color:#75715e">#ff0000</span>
+set_from_resource $fg           i3wm.color15 <span style="color:#75715e">#ff0000</span>
+set_from_resource $fg-alt       i3wm.color2 <span style="color:#75715e">#ff0000</span>
+set_from_resource $hl           i3wm.color13 <span style="color:#75715e">#ff0000</span>
+
+<span style="color:#75715e"># class                 border      backgr. text indicator      child_border</span>
+client.focused          $fg-alt     $bg     $hl  $fg-alt        $hl
+client.focused_inactive $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.unfocused        $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.urgent           $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+client.placeholder      $fg-alt     $bg     $fg  $fg-alt        $fg-alt
+
+client.background       $bg
+
+<span style="color:#75715e"># Active les couleurs de pywal avant de lancer polybar</span>
+exec --no-startup-id sleep 2; sh ~/beautify.sh
+</code></pre></div><p>Le script <code>beautify.sh</code> :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Waits for wal to set colors and then starts polybar</span>
+<span style="color:#66d9ef">while</span> true; <span style="color:#66d9ef">do</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> ! $color15 <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+        source <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span><span style="color:#e6db74">/.cache/wal/colors.sh&#34;</span>
+        sh ~/.config/polybar/launch.sh
+        exit <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">fi</span>
+    sleep 0.1
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>Ajouter cette option dans le fichier de configuation de ranger <code>~/.config/ranger/rc.conf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">map bw shell wal -i %s
+</code></pre></div><p>Ce qui permettra de pouvoir utiliser et appliquer pywal, depuis ranger en étant sur une image,  en appuyant juste sur <code>bw</code></p>
+<h1 id="avoir-de-belles-fenêtres-">Avoir de belles fenêtres 🤩</h1>
+<p>Alors de base il y a une police dégueulasse sur le titre des fenêtres et il suffit de changer cette ligne dans le fichier de configutation de i3 :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">font pango:monospace <span style="color:#ae81ff">8</span>
+</code></pre></div><p>Et de la remplacer par une un peu plus jolie :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">font pango:monospace <span style="color:#ae81ff">12</span>
+</code></pre></div><p>Faut que je trouve quelque chose de mieux mais déjà c&rsquo;est moins pire.</p>
+<h1 id="résoudre-les-problèmes-de-tearing-et-ajouter-des-effets-transparent-fade-">Résoudre les problèmes de tearing et ajouter des effets (transparent, fade &hellip;)</h1>
+<p>ça va être le boulot de compton &hellip; non pas celui-là (même si on l&rsquo;adore) <img src="/Straight_Outta_Compton_logo.jpg" alt="compton"></p>
+<p>Dans vos recherches je vous conseil de mettre compton window manager sinon vous allez tomber sur N.W.A 😅</p>
+<p>Prenez la version <code>compton-tryone-git</code> qui est dispo dans AUR, cela vous permettra d&rsquo;avoir la gestion du blur (flou)</p>
+<p>Pareil ici cela reste assez simple, il va falloir configurer à sa sauce. Je vous conseil de prendre un fichier d&rsquo;exemple sur github et de l&rsquo;adapter.</p>
+<p>Perso je trouve que le wiki sur le github explique pas grand chose &hellip; Sinon vous prenez le fichier qu&rsquo;il y a sur mon github et vous l&rsquo;adaptez à vos besoins</p>
+<h1 id="zsh">ZSH</h1>
+<p>Pour moi c&rsquo;est un must have, plus complet que bash et d&rsquo;autre (en fait c&rsquo;est une compil de fonctionnalité cool de bash, ksh et tcsh). Bref je vous le recommande fortement et l&rsquo;autocomplétion est carrément mieux gérée.</p>
+<p>Combiné avec <a href="https://ohmyz.sh/">oh-my-zsh</a>, vous aurez un super shell 🤟</p>
+<p>Et je vous conseil un thème (qui n&rsquo;est pas dans les thèmes officiel de zsh) <a href="https://github.com/romkatv/powerlevel10k">Powerlevel10k</a> qui a l&rsquo;avantage d&rsquo;être beau ET rapide.</p>
+<p>Rendez-vous sur les liens fournies pour installer le tout (c&rsquo;est très bien expliqué et facile). Dans l&rsquo;ordre zsh ensuite oh-my-zsh et ensuite Powerlevel10k. Si jamais vous voulez reconfigurer Powerlevel10k, vous pouvez en faisant un petit <code>p10k configure</code></p>
+<h1 id="bonus-bootloader">Bonus (bootloader)</h1>
+<p>On peut aussi pimper notre bootloader, dans mon cas c&rsquo;est grub et pour la plupart des gens ça va être la même chose.</p>
+<p>Pour se faire, comme d&rsquo;habitude j&rsquo;ai trouvé un git sympa -&gt; <a href="https://github.com/vinceliuice/grub2-themes">https://github.com/vinceliuice/grub2-themes</a></p>
+<p>Petit preview de la gueule que ça a, mais vous pouvez avoir d&rsquo;autres thèmes :
+<img src="/grub-theme-vimix.jpg" alt="grub"></p>
+<hr>
+<h1 id="preview">Preview</h1>
+<p>Voilà ce que ça peut donner (mais j&rsquo;ai pas finis ça va changer)
+<img src="/clear.png" alt="clean">
+![busy](/Capture d’écran du 2019-10-25 11-26-15.png)
+![busy2](/Capture d’écran du 2019-10-25 11-46-23.png)</p>
+<h1 id="reminder-de-mes-raccourcis">Reminder de mes raccourcis</h1>
+<ul>
+<li>mod+d - rofi</li>
+<li>mod+f - fullscreen</li>
+<li>mod+v - mode vertical (ouvre les fenêtres de haut en bas)</li>
+<li>mod+h - mode horizontal (remettre comme d&rsquo;hab je crois)</li>
+<li>mod+shift+c - reload config i3</li>
+<li>mod+shift+e - pour quitter session</li>
+<li>mod+shit+space - passer de mode tiling a floating</li>
+<li>mod+shift+q - pour kill une app (faites attention dans la conf c&rsquo;est marqué a mais on est en azerty donc c&rsquo;est q)</li>
+<li>mod+r - pour resize des fenêtres</li>
+<li>mod+l - pour lock</li>
+<li>dans ranger bw sur une image pour changer et le fond d&rsquo;écran et les couleurs systèmes</li>
+</ul>
+<hr>
+<p>Et si vous êtes un MASTER flemmard&hellip; Ba en fait il y a une distrib Arch avec déjà i3 configuré (et pleins d&rsquo;autre WM).</p>
+<p>C&rsquo;est ArcoLinux (anciennement Archmerge il me semble) -&gt; <a href="https://arcolinux.info/download/">https://arcolinux.info/download/</a> , je vous conseil la LTS (ArcoLinuxB) pour des raisons évidente de stabilité</p>
+<p>Mais attention car elle est un peu &hellip; comment dire &hellip; surchargée, mais il y a pleins de choses configurées (il n&rsquo;y a qu&rsquo;à voir le bashrc pour s&rsquo;en rendre compte). Il faudra sans doute faire du ménage dans les packages et configurer à votre sauce quand même (genre rien que les touches i3). Ce &ldquo;tuto&rdquo; pourra quand même vous éclairer sur la configuration de tous les éléments.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://florian.katech.net/tags/tuto">tuto</a></span><span class="tag"><a href="http://florian.katech.net/tags/i3">i3</a></span><span class="tag"><a href="http://florian.katech.net/tags/ricing">ricing</a></span><span class="tag"><a href="http://florian.katech.net/tags/archlinux">ArchLinux</a></span>
+  				</p>
+  			</div>
+
+        
+          <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "florian-dugat" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            
+                <span><a href="http://florian.katech.net">Florian Dugat</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="http://florian.katech.net/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
+
+
+
+    </body>
+</html>

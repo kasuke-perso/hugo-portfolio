@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Florian DUGAT</title>
+    <link>http://florian.katech.net/en/blog/</link>
+    <description>Recent content in Blogs on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 17 Sep 2019 09:54:45 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell Script to create office 365 shortcuts</title>
+      <link>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</link>
+      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</guid>
+      <description>I didn&amp;rsquo;t find any post which was talking about this so here I am with my little contribution. And a reminder for myself aswell.
+In PowerShell because it&amp;rsquo;s better. We don&amp;rsquo;t have sortcuts so we will create them the simpliest way possible.
+Here is an example with Outlook (Office 365 or Office 2019 Pro Plus) :
+# We prepare the creation of the shortcut $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Where the shortcut go $objShortCut = $objShell.</description>
+    </item>
+    
+  </channel>
+</rss>

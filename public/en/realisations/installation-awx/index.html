@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Florian Dugat ">
+<meta name="description"
+    content="Ubuntu server 17.10 is used, you will need a network connection during the process.
+We will install some packages that are useful and needed to get ansible &#43; awx working fine.
+First of all, you will need to update your package sources.
+sudo apt update Then we will install some packages:
+sudo apt install python-minimal open-ssh htop This will install python2.7.x, a ssh server to get access to your machine by ssh and htop a better top." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://florian.katech.net/en/realisations/installation-awx/" />
+
+
+<title>
+    
+    Installation AWX :: Florian DUGAT 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.cabb110faab88d3545467f36114f6bf3ac23f81434679cf37338752570b2eda1.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Installation AWX">
+<meta itemprop="description" content="Ubuntu server 17.10 is used, you will need a network connection during the process.
+We will install some packages that are useful and needed to get ansible &#43; awx working fine.
+First of all, you will need to update your package sources.
+sudo apt update Then we will install some packages:
+sudo apt install python-minimal open-ssh htop This will install python2.7.x, a ssh server to get access to your machine by ssh and htop a better top."><meta itemprop="datePublished" content="2020-08-05T09:45:34+02:00" />
+<meta itemprop="dateModified" content="2020-08-05T09:45:34+02:00" />
+<meta itemprop="wordCount" content="630">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installation AWX"/>
+<meta name="twitter:description" content="Ubuntu server 17.10 is used, you will need a network connection during the process.
+We will install some packages that are useful and needed to get ansible &#43; awx working fine.
+First of all, you will need to update your package sources.
+sudo apt update Then we will install some packages:
+sudo apt install python-minimal open-ssh htop This will install python2.7.x, a ssh server to get access to your machine by ssh and htop a better top."/>
+
+
+
+
+<meta property="article:published_time" content="2020-08-05 09:45:34 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text"># cd /home/french</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://florian.katech.net/en/about">About</a></li><li><a href="http://florian.katech.net/en/projets">Projects</a></li><li><a href="http://florian.katech.net/en/blog">Showcase</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+                Also available in
+                
+                    <a href="http://florian.katech.net/realisations/installation-awx/"><span class="flag flag-icon flag-icon-fr flag-icon-squared"></span></a>
+                
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://florian.katech.net/en/realisations/installation-awx/">Installation AWX</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>Ubuntu server 17.10 is used, you will need a network connection during the process.</p>
+<p>We will install some packages that are useful and needed to get ansible + awx working fine.</p>
+<p>First of all, you will need to update your package sources.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt update
+</code></pre></div><p>Then we will install some packages:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install python-minimal open-ssh htop
+</code></pre></div><p>This will install python2.7.x, a ssh server to get access to your machine by ssh and htop a better top.</p>
+<p>Then you will download Ansible but you need to install by their sources because in the official repository of Ubuntu the version is not updated, and you NEED to have an ansible version &gt;= 2.4 otherwise awx couldn’t be installable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+</code></pre></div><p>You will also need docker to install awx because it’s depended and can only run in a container if you want a local awx. The version in the official package is good enough.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install docker.io
+</code></pre></div><p>To check if the installation was good just run this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker run hello-world
+</code></pre></div><p>This should enable the docker service, download the hello-world image and run it. To check if the service is running just type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl status docker
+</code></pre></div><p>This sould tell you that docker is active and running. To get docker service activated every time you boot just type :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl enable docker
+</code></pre></div><p>We need pip to install python packages, we also need git but it’s already included by default on Ubuntu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install python-pip
+</code></pre></div><p>We need to install the docker python library too</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install docker
+</code></pre></div><p>If you want to have some “easy” man with real examples then install eg and cheat</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install eg cheat
+</code></pre></div><p>I suggest you that you install tree, it will help you with your directories</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install tree
+</code></pre></div><p>Now, here’s come the AWX installation, you will need to clone the awx repository from github, you already have github (2.14.1)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/ansible/awx 	
+</code></pre></div><p>Then go to the installer awx directory</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd awx/installer
+</code></pre></div><p>You have to change some lines in the inventory file
+vim inventory
+Uncomment this line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># project_data_dir=/var/lib/awx/projects</span>
+</code></pre></div><p>For some reasons, you need to change this line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dockerhub_version<span style="color:#f92672">=</span>latest
+</code></pre></div><p>by</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">dockerhub_version<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><p>Uncomment this line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># use_docker_compose=false</span>
+</code></pre></div><p>Because we want our data to be persistent, change this line</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">postgres_data_dir<span style="color:#f92672">=</span>/tmp/pgdocker
+</code></pre></div><p>By this one</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">postgres_data_dir<span style="color:#f92672">=</span>/opt/pgdocker
+</code></pre></div><p>Then you are ready to execute the playbook for the installation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ansible-playbook –i inventory install.yml
+</code></pre></div><p>If everything went right, you can see the progression of the installation by checking the container awx_task log</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker logs –f awx_task
+</code></pre></div><p>You will see output similar to the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Using /etc/ansible/ansible.cfg as config file
+127.0.0.1 | SUCCESS <span style="color:#f92672">=</span>&gt; <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;changed&#34;</span>: false,
+    <span style="color:#e6db74">&#34;db&#34;</span>: <span style="color:#e6db74">&#34;awx&#34;</span>
+<span style="color:#f92672">}</span>
+Operations to perform:
+  Synchronize unmigrated apps: solo, api, staticfiles, messages, channels, django_extensions, ui, rest_framework, polymorphic
+  Apply all migrations: sso, taggit, sessions, djcelery, sites, kombu_transport_django, social_auth, contenttypes, auth, conf, main
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0001_initial... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying taggit.0001_initial... OK
+  Applying taggit.0002_auto_20150616_2121... OK
+  Applying main.0001_initial... OK
+...
+</code></pre></div><p>Once migrations complete, you will see the following log output, indicating that migrations have completed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&gt;&gt;&gt; &lt;User: admin&gt;
+&gt;&gt;&gt; Default organization added.
+Demo Credential, Inventory, and Job Template added.
+Successfully registered instance awx
+<span style="color:#f92672">(</span>changed: True<span style="color:#f92672">)</span>
+Creating instance group tower
+Added instance awx to tower
+<span style="color:#f92672">(</span>changed: True<span style="color:#f92672">)</span>
+...
+</code></pre></div><p>Next step is to make a directory inside the awx project</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /var/lib/awx/projects/your_project_name
+</code></pre></div><p>And put everything you need for your project: playbooks, resources, files, directories. If you call a file that is somewhere else than there, awx won’t see it. And if you don’t create the directory, awx won’t let you create a local project</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            
+                <span><a href="http://florian.katech.net">Florian Dugat</a></span>
+            
+            <span></span>
+            <span> <a href="http://florian.katech.net/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
+
+
+
+    </body>
+</html>

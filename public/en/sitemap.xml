@@ -1,50 +1,225 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/en/categories/</loc>
-    <priority>0</priority>
+    <loc>http://florian.katech.net/en/</loc>
+    <lastmod>2020-08-05T09:45:34+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/categories/"
+                href="http://florian.katech.net/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/categories/"
+                href="http://florian.katech.net/en/"
                 />
-  </url>
-  
-  <url>
-    <loc>/en/</loc>
-    <priority>0</priority>
+  </url><url>
+    <loc>http://florian.katech.net/en/realisations/installation-awx/</loc>
+    <lastmod>2020-08-05T09:45:34+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/"
+                href="http://florian.katech.net/realisations/installation-awx/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/"
+                href="http://florian.katech.net/en/realisations/installation-awx/"
                 />
-  </url>
-  
-  <url>
-    <loc>/en/tags/</loc>
-    <priority>0</priority>
+  </url><url>
+    <loc>http://florian.katech.net/en/realisations/</loc>
+    <lastmod>2020-08-05T09:45:34+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/tags/"
+                href="http://florian.katech.net/realisations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/en/tags/"
+                href="http://florian.katech.net/en/realisations/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</loc>
+    <lastmod>2020-08-05T09:33:33+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/blog/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/blog/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/powershell/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/powershell/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/powershell/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/</loc>
+    <lastmod>2019-09-17T09:54:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/about/</loc>
+    <lastmod>2019-06-07T14:19:58+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/about/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/ansible/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/ansible/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/ansible/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/aws/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/aws/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/projets/challenge-accepted/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/projets/challenge-accepted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/projets/challenge-accepted/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/realisations/challenge-accepted/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/realisations/challenge-accepted/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/realisations/challenge-accepted/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/iaas/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/iaas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/iaas/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/projets/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/projets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/projets/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/tags/terraform/</loc>
+    <lastmod>2017-04-20T16:32:35+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/tags/terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/tags/terraform/"
+                />
+  </url><url>
+    <loc>http://florian.katech.net/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/categories/"
                 />
   </url>
-  
 </urlset>

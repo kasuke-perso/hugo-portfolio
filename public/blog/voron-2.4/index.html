@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Florian Dugat ">
+<meta name="description"
+    content="Let&amp;rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.
+Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; ici" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://florian.katech.net/blog/voron-2.4/" />
+
+
+<title>
+    
+    Voron 2.4 :: Florian DUGAT 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.cabb110faab88d3545467f36114f6bf3ac23f81434679cf37338752570b2eda1.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Voron 2.4">
+<meta itemprop="description" content="Let&rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&rsquo;univers de l&rsquo;impression 3D (j&rsquo;aurais jamais du commencer je n&rsquo;arrive plus à m&rsquo;arrêter &hellip;) vous ne connaissez sûrement pas ce qu&rsquo;est une Voron.
+Ce n&rsquo;est pas vraiment une marque, c&rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&gt; ici"><meta itemprop="datePublished" content="2022-05-16T00:21:53+02:00" />
+<meta itemprop="dateModified" content="2022-05-16T00:21:53+02:00" />
+<meta itemprop="wordCount" content="1521">
+<meta itemprop="keywords" content="3D,printer,DIY," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Voron 2.4"/>
+<meta name="twitter:description" content="Let&rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&rsquo;univers de l&rsquo;impression 3D (j&rsquo;aurais jamais du commencer je n&rsquo;arrive plus à m&rsquo;arrêter &hellip;) vous ne connaissez sûrement pas ce qu&rsquo;est une Voron.
+Ce n&rsquo;est pas vraiment une marque, c&rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&gt; ici"/>
+
+
+
+
+<meta property="article:published_time" content="2022-05-16 00:21:53 &#43;0200 CEST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="http://florian.katech.net" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text"># cd /home</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://florian.katech.net/realisations">Réalisations</a></li><li><a href="http://florian.katech.net/experience">Expériences</a></li><li><a href="http://florian.katech.net/blog">Blog</a></li><li><a href="http://florian.katech.net/about">A propos</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://florian.katech.net/blog/voron-2.4/">Voron 2.4</a></h2>
+
+            
+
+            <div class="post-content">
+                <h1 id="lets-make-a-3d-printer-">Let&rsquo;s make a 3D printer !</h1>
+<p>Pour ceux qui ne connaissent pas du tout l&rsquo;univers de l&rsquo;impression 3D (j&rsquo;aurais jamais du commencer je n&rsquo;arrive plus à m&rsquo;arrêter &hellip;) vous ne connaissez sûrement pas ce qu&rsquo;est une Voron.</p>
+<p>Ce n&rsquo;est pas vraiment une marque, c&rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&rsquo;est totalement opensource et alimenté par une communauté de passioné.
+Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&gt; <a href="https://vorondesign.com/">ici</a></p>
+<blockquote>
+<p>Mais il existe plein d&rsquo;imprimantes pas trop cher déjà pré assemblé et tout ?</p>
+</blockquote>
+<p>Alors oui et pour la plupart des gens ce sera largement suffisant mais je ne sais pas, quand on commence on a tendance à aller beaucoup plus loin, c&rsquo;est ce que j&rsquo;avais par ailleurs fait avec mes ordinateurs 😏. Au moment où j&rsquo;écris ces lignes, je possède pas moins de 3 imprimantes <a href="https://fr.3dilla.com/imprimante-3d/fused-deposition-modeling/">FDM</a> et une résine (SLA) et personnellement je suis pas du tout un grand fan de la résine pour tout un tas de raison et vu que ce n&rsquo;est pas le sujet, je ne vais pas m&rsquo;attarder.</p>
+<blockquote>
+<p>Mais pourquoi tu as tant d&rsquo;imprimantes ? ça ne te suffit pas ?</p>
+</blockquote>
+<p>Alors oui et non 😅 Si je pouvais affirmer qu&rsquo;elles fonctionnent toutes correctement, oui ça me suffirait, sauf QU&rsquo;AUCUNE d&rsquo;entre elle ne fonctionne correctement 😮</p>
+<p>J&rsquo;ai commencé l&rsquo;impression 3D avec une vidéo <a href="https://youtu.be/dtI-r2uUCMs">d&rsquo;Heliox</a> car il n&rsquo;y avait pas énormément de choses à faire durant le tout premier confinement &hellip; et quelle erreur ! Désormais j&rsquo;y passe beaucoup (trop) de temps dessus et je m&rsquo;amuse bien avec (pas tout le temps &hellip;)</p>
+<p>J&rsquo;ai commencé avec une Creality Ender 3 pro du coup, machine réputée pour être pas cher et très personnalisable car il lui manque quand même pas mal de fonctionnalité de base et ce n&rsquo;est pas la plus fiable du game. Ce qui fait que je l&rsquo;ai pimpé comme jamais, j&rsquo;ai appris beaucoup de choses, notamment CAO, electronique et faire ses cables soit meme tout ça tout ça, j&rsquo;ai eu plein (plein) de frustrations mais pas que. Aujourd&rsquo;hui c&rsquo;est un peu ma machine &ldquo;Tweak&rdquo; c&rsquo;est sur elle que je test plein de choses et où je m&rsquo;amuse à l&rsquo;améliorer encore et toujours.</p>
+<p>Je vais pas entrer dans les détails avec toute les galères que j&rsquo;ai eu avec mes différentes imprimantes (même la résine) mais sur quasiment toute, j&rsquo;ai changé des choses. Je ne suis pas en train de dire que les imprimantes pas cher chinoise sont mauvaise mais il faut sacrifier un peu de son temps pour résoudre les différents problèmes qui leur sont liés, c&rsquo;est un peu comme quand vous prenez un logiciel Opensource vs un payant avec support officiel plutot que les forums 😉</p>
+<blockquote>
+<p>Ouais cool ta vie mais tu parlais pas d&rsquo;une espèce de machine qui s&rsquo;appelle Voron de base ?</p>
+</blockquote>
+<p>Si si, je remettais un peu de contexte, donc comme j&rsquo;adore tout ce qui est opensource et bidouiller tout tout le temps, la voron sur la papier m&rsquo;a l&rsquo;air super !</p>
+<p>Cet article est un petit journal de bord des différentes étapes que je suis en train de réaliser pour permettre la construction de cette fameuse imprimante.</p>
+<p>Au moment où j&rsquo;écris ces lignes j&rsquo;ai l&rsquo;impression qu&rsquo;avec la &ldquo;pénurie&rdquo; de composants électronique, les &ldquo;kits&rdquo; tout fait pour pouvoir construire sa Voron sont devenu hors de prix et indisponible par la même occasion. Mais honnetement, je vais pas me faire une super imprimante 3D DIY pour être limité par les kits.</p>
+<p>Je décide donc de faire mon self sourcing, je ne dis pas que ça va pas être moins cher du tout mais le but étant de la construire tranquillement en achetant les pièces au fur et à mesure et sachant qu&rsquo;il y a des upgrade constante dessus, ce serait bête d&rsquo;en rater une majeure.</p>
+<h1 id="les-différents-modèles-de-voron">Les différents modèles de Voron</h1>
+<p>Il existe 4 design d&rsquo;imprimante Voron :</p>
+<ul>
+<li>Voron0 :  Core XY en taille réduit</li>
+<li>Voron Trident : Core YZ (permet d&rsquo;être plus rapide et existe en différente taille)</li>
+<li>Voron Switchwire : Style i3 comme les ender, prusa MK3 &amp; cie mais quand meme différent :)</li>
+<li>Voron 2 : Core XY avec plusieurs taille (250x250, 300x300, 350x350) mais bien évidemment vous pouvez pimper la taille comme bon vous semble c&rsquo;est vous qui fabriquez l&rsquo;imprimante</li>
+</ul>
+<p>Tout le monde vous dira qu&rsquo;il vaut mieux commencer avec une Switchwire ou Voron0 qui seront bien plus facile à monter. Mais moi j&rsquo;aime les challenges et comme je possède déjà plusieurs imprimantes de différentes taille, je décide de partir sur la Voron 2(2.4R2).</p>
+<p>Sur le site, vous pouvez générer une BOM (liste de matériel nécessaire pour réaliser le projet) avec des liens pour acheté les pièces, mais bon généralement c&rsquo;est aliexpress, amazon de je ne sais quel pays et souvent pas à jour non plus &hellip;</p>
+<p>Donc j&rsquo;y vais un peu en mode solo paulo, je me débrouille pour avoir les composants sans trop me faire souiller par les fdp et autres. Pour cela, je m&rsquo;aide beaucoup du discord Voron et de la section <a href="https://discord.com/channels/460117602945990666/500407802414628876">FR- honhonhonbaguette</a></p>
+<p>Il y a un peu de tout, ça semble assez caothique au début mais on s&rsquo;y fait 😄 Il faut bien aussi regarder les autres sections qui ont chacune leur spécificité, et checker les messages pinned : <img src="/pinned.PNG" alt="discord"></p>
+<h1 id="1ere-étape---la-frame-">1ere étape - La frame !</h1>
+<p>Pour commencer, j&rsquo;ai décidé de prendre d&rsquo;abord les profilés aluminium, apparemment sur ce <a href="https://www.dold-mechatronik.de/Profile-en-aluminium-20x20-rainure-de-type-B-6">site</a> c&rsquo;est pas mal et c&rsquo;est beaucoup moins cher que les Misumi recommandé par la BOM  (Bill of Material) officiel de Voron.</p>
+<p>Je possédais pas mal de vis mais pour faire plus simple j&rsquo;ai commandé un set de vis spécial voron qui respect la BOM officiel -&gt; <a href="https://fr.aliexpress.com/item/1005003333222664.html">https://fr.aliexpress.com/item/1005003333222664.html</a> comme ça j&rsquo;ai un peu de spare.</p>
+<p>Pour pouvoir monter tout le cadre il me fallait aussi des rails DIN qui sont en fait des rails standardisé pour prendre les appareils électrique comme les disjoncteur et autres. Pratique car on peut y mettre toute l&rsquo;electronique dessus.
+<img src="/din.webp" alt="din"></p>
+<p>Il me fallait ensuite la plaque qui va en dessous de l&rsquo;imprimante et par la même occasion celle qui va derrière.
+<img src="/plaque-voron.PNG" alt="plaque-cad">
+Ce sont les plaques en alu que l&rsquo;on voit souvent dans les magasins de brico au niveau des découpe (bois, plexi, alu).
+<img src="/voron-plaque-2.jpg" alt="plaque-1">
+Je peux vous dire que une plaque suffit largement, regardez moi la taille de ce machin !
+<img src="/voron-plaque-1.jpg" alt="plaque-2"></p>
+<hr>
+<h1 id="les-profilés-aluminium-reçu">Les profilés aluminium reçu</h1>
+<p><img src="/mes-rails.jpg" alt="rails">
+Il va falloir faire des trous et des tarauds &hellip; Perso je m&rsquo;y connais pas du tout mais apparemment c&rsquo;est facile, il suffit d&rsquo;avoir les outils qu&rsquo;il faut et pour tarauder l&rsquo;aluminium c&rsquo;est simple étant donné que le matériau n&rsquo;est pas trop dur.</p>
+<p>Je vous conseil ces fichiers STL <a href="https://github.com/elpopo-eng/VoronFrenchUsers/tree/main/Mod/Blind_Hole_Tools">https://github.com/elpopo-eng/VoronFrenchUsers/tree/main/Mod/Blind_Hole_Tools</a> qui vont vous aider pour faire les trous surtout.</p>
+<p>On va avoir un soucis avec ceux-la :
+<img src="/mesure-profil.PNG" alt="discord"></p>
+<p>Un gars, qui s&rsquo;y connait bien en taraudage pour le coup, m&rsquo;a <strong>certifié</strong> qu&rsquo;il fallait au moins 1mm pour tarauder donc pour faire un pas de vis en M6 il fallait faire un trou de 5mm et non 5,5 comme annoncé ici &hellip; Mais bon apparemment pleins de personnes ont réussi à faire en sorte que ça bouge pas. Il m&rsquo;a dit que c&rsquo;était faisable mais qu&rsquo;il fallait pas serré comme un goret.</p>
+<p>Après avoir essayé de tarauder, je peux vous dire que ça fonctionne pas trop&hellip; donc ce que j&rsquo;ai fais c&rsquo;est de visser directement la vis dedans, l&rsquo;aluminium étant assez tendre, ça passe, j&rsquo;aurais préféré pouvoir faire un vrai taraudage donc je ne suis pas sûr de recommandé les profilés aluminium que j&rsquo;ai pris. Toutefois il était possible de pouvoir mettre un taraudage M6 lors de la commande, mais à 1,19X2 (pour les deux côtés) X 10 = 24€ sachant que c&rsquo;est 6€ le mètre &hellip;</p>
+<p>Il y a déjà de bon tutos sur le sujet de comment avoir une frame bien carré :
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/GSg7RDLgYV0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+ et  
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/TCMxw5fH0VA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+<h1 id="2---les-rails-linéaires">2 - Les rails linéaires</h1>
+<p>Toujours en se basant sur la BOM officiel, désormais pour l&rsquo;axe X, il ne faut plus deux rails MG9H mais un rail MG12H, je prends un truc pas cher chez ali qui a de bons retours  -&gt; <a href="https://fr.aliexpress.com/item/32829826159.html">https://fr.aliexpress.com/item/32829826159.html</a></p>
+<h1 id="3---découpe-de-la-plaque-de-dibond">3 - Découpe de la plaque de dibond</h1>
+<p>ça n&rsquo;a pas été une mince affaire 😕 mais avec un cutter, de la patience et une perceuse (surtout pour tout ce qui sera les ronds).</p>
+<p>Je vous conseil, si vous faites comme moi, de couper déjà la plaque en plusieurs morceaux car elle est super grande de base quand vous la prenez chez leroy merlin ou autre. Pour se faire, prenez une règle et essayer de suivre quand vous couper avec le cutter, allez y progressivement, on force de plus en plus pour aller le plus profond possible car la deuxieme couche en dessous est assez compliqué à avoir. Une fois plusieurs coupe passée, je vous conseil de ne pas aller jusqu&rsquo;au bout mais à partir d&rsquo;un moment de plier la plaque, vous allez voir que ça part plutot simplement au final.</p>
+<p>Servez vous du guide qui est dans le github -&gt; Drawings_DFX -&gt; Panels -&gt; [la_taille]_Deck_Panel.dxf, ouvrez le avec fusion 360 ou autre et utilisez l&rsquo;outil inspecter pour avoir vos mesures :
+<img src="./2022-0inspecter-fusion.png" alt="inspecter"></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://florian.katech.net/tags/3d">3D</a></span><span class="tag"><a href="http://florian.katech.net/tags/printer">printer</a></span><span class="tag"><a href="http://florian.katech.net/tags/diy">DIY</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            
+                <span><a href="http://florian.katech.net">Florian Dugat</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="http://florian.katech.net/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.648cbdb411bb57181906d73a5e1c9f26680cde5c03e04de5350e4d20c491ff3db990efb0d71e1fd5f57604f06c78379555c7f829c9bf6c2782acfd6471867611.js" integrity="sha512-ZIy9tBG7VxgZBtc6XhyfJmgM3lwD4E3lNQ5NIMSR/z25kO&#43;w1x4f1fV2BPBseDeVVcf4Kcm/bCeCrP1kcYZ2EQ=="></script>
+
+
+
+    </body>
+</html>

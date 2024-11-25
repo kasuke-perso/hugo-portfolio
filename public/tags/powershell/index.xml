@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on Florian DUGAT</title>
+    <link>http://florian.katech.net/tags/powershell/</link>
+    <description>Recent content in powershell on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 17 Sep 2019 09:54:45 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Script PowerShell pour créer raccourcis Office 365</title>
+      <link>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</link>
+      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</guid>
+      <description>N&amp;rsquo;ayant pas trouvé de post précisément pour office (365), puisqu&amp;rsquo;il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅
+En PowerShell parce que c&amp;rsquo;est mieux. On a pas de raccourci donc on va en créer un de la plus simple des façons.
+Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :
+# On prépare la création du raccourci $objShell = New-Object -ComObject (&amp;#34;WScript.</description>
+    </item>
+    
+  </channel>
+</rss>
