@@ -21,7 +21,7 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 - Passe d'applications sur du Kubernetes et cloud
 - IaC via terraform
 
-### Ce que j'ai fais
+### Ce que j'ai fait
 - Mise en place d'Ansible/AWX sur un K3s avec inventaire dynamique (Netbox) + SSO + Inventory from VMware
 - Mise en place d'un gitlab privé avec accès sso
 - Provisionnement de l'inventaire système et réseau de tous les sites sur netbox
@@ -39,9 +39,10 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 ### Univers techniques :
 - Linux (CentOS/Ubuntu)
 - Windows (10/Azure/Intune)
-- vSphere
+- vSphere/vCenter
 - Cloud (AWS/Azure)
 - Automatisation (Ansible/Terraform/Gitlab CI/CD)
+- Netbox
 
 ### Ce que j'ai aimé :
 - Autonomie sur mes sujets et mon temps
@@ -50,3 +51,4 @@ Nous sommes aussi étroitement lié à l'équipe cybersécurité qui nous tiens 
 
 ### Ce que j'ai moins aimé
 - Manque d'organisations du coup projet souvent commencé mais pas fini
+- Manque de reconnaissance

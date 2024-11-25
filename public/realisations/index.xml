@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Realisations on Florian DUGAT</title>
+    <link>http://florian.katech.net/realisations/</link>
+    <description>Recent content in Realisations on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 30 Jul 2020 12:25:42 +0200</lastBuildDate><atom:link href="http://florian.katech.net/realisations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSphere - Augmenter taille de stockage sur machine existante</title>
+      <link>http://florian.katech.net/realisations/vsphere/</link>
+      <pubDate>Thu, 30 Jul 2020 12:25:42 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/vsphere/</guid>
+      <description>Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système Linux déjà existant qui utilise déjà un disque, on veut booster sa taille.
+Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
+J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)</description>
+    </item>
+    
+    <item>
+      <title>Script Powershell Créer Raccourcis Office 365</title>
+      <link>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</link>
+      <pubDate>Mon, 05 Aug 2019 09:31:26 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</guid>
+      <description>Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :
+# On prépare la création du raccourci $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Destination du raccourci $objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &amp;#34;\Desktop&amp;#34; +&amp;#34;\Outlook.lnk&amp;#34;) # Vers ou doit pointer le raccourci $objShortCut.TargetPath=&amp;#34;C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34; # Création du raccourci $objShortCut.Save() Enregistrez au format .ps1 et exéctuez direct, boom nouvel îcone sur le bureau avec Outlook !
+En fait on peut l&amp;rsquo;apliquer pout tout, mais il faut bien faire attention au chemin qu&amp;rsquo;il y a d&amp;rsquo;afficher sur l&amp;rsquo;explorer qui n&amp;rsquo;est pas le bon car en réalité c&amp;rsquo;est plutôt ceci :</description>
+    </item>
+    
+    <item>
+      <title>Gestion clés ssh Linux avec Ansible</title>
+      <link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Installation AWX</title>
+      <link>http://florian.katech.net/realisations/installation-awx/</link>
+      <pubDate>Sun, 05 Aug 2018 09:45:10 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/installation-awx/</guid>
+      <description>On va se servir d&amp;rsquo;Ubuntu 17.10 et on aura besoin d&amp;rsquo;une connexion internet.
+Nous allons installer quelques paquets qui seront utiles pour que Ansible et AWX fonctionnent correctement.
+Premièrement, il faudra mettre à jour son source-list.
+sudo apt update Ensuite procédé à l&amp;rsquo;installation de quelques paquets:
+sudo apt install python-minimal open-ssh htop Ceci va installer python2.7.x, un serveur ssh pour avoir accès à la machine via ssh et htop un meilleur top</description>
+    </item>
+    
+    <item>
+      <title>Nemesis - Sécurité réseaux</title>
+      <link>http://florian.katech.net/realisations/nemesis/</link>
+      <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/nemesis/</guid>
+      <description>Projet de sécurité informatique (équipe de 3 personnes).
+Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
+À l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/realisations/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/challenge-accepted/</guid>
+      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
+Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infrastructure préconfigurée ainsi que sa destruction automatique. On fournit toutes les informations nécessaires pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
+    </item>
+    
+  </channel>
+</rss>

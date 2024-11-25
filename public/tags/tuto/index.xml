@@ -1,23 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tuto on Florian DUGAT</title>
-    <link>/tags/tuto/</link>
+    <link>http://florian.katech.net/tags/tuto/</link>
     <description>Recent content in tuto on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/tuto/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 27 Sep 2019 09:56:58 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/tuto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I3 Arch Linux</title>
+      <link>http://florian.katech.net/blog/i3-arch-linux/</link>
+      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/i3-arch-linux/</guid>
+      <description>Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock
+Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
+̀sudo pacman -S i3 là plusieurs choix s&amp;rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
+Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm.</description>
+    </item>
     
     <item>
       <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>/blog/gestion-utilisateur-linux-avec-ansible/</link>
+      <link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link>
       <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
       
-      <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
+      <guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid>
       <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
 Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
 Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
@@ -25,12 +33,25 @@ Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
     </item>
     
     <item>
-      <title>Agrandir Stockage Vm</title>
-      <link>/blog/agrandir-stockage-vm/</link>
+      <title>Gestion clés ssh Linux avec Ansible</title>
+      <link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Agrandir Stockage Vm vSphere</title>
+      <link>http://florian.katech.net/blog/agrandir-stockage-vm/</link>
       <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
       
-      <guid>/blog/agrandir-stockage-vm/</guid>
+      <guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid>
       <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
+Je suis sous ubuntu 16.04 et vSphere 6.0
 J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
 Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
     </item>

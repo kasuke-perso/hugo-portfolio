@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ansible on Florian DUGAT</title>
-    <link>/tags/ansible/</link>
+    <link>http://florian.katech.net/tags/ansible/</link>
     <description>Recent content in ansible on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 May 2019 14:29:12 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>/blog/gestion-utilisateur-linux-avec-ansible/</link>
+      <link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link>
       <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
       
-      <guid>/blog/gestion-utilisateur-linux-avec-ansible/</guid>
+      <guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid>
       <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
 Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
 Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
@@ -25,11 +21,23 @@ Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
     </item>
     
     <item>
-      <title>Thales</title>
-      <link>/experience/thales/</link>
+      <title>Gestion clés ssh Linux avec Ansible</title>
+      <link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link>
+      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid>
+      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
+Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
+Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :
+ Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
+    </item>
+    
+    <item>
+      <title>Thales - Stage Ansible - 6 mois</title>
+      <link>http://florian.katech.net/experience/thales/</link>
       <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
       
-      <guid>/experience/thales/</guid>
+      <guid>http://florian.katech.net/experience/thales/</guid>
       <description>Stage à Thales Velizy pendant 6 mois
 Mars 2018 - Août 2018 Thème de la mission :
 Gestion de configuration massive Description de la mission :
@@ -39,13 +47,25 @@ Pour les projets exports Lusail et Doha, vous avez pour mission principale la mi
     
     <item>
       <title>Challenge Accepted - IaaS</title>
-      <link>/projets/challenge-accepted/</link>
+      <link>http://florian.katech.net/projets/challenge-accepted/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/projets/challenge-accepted/</guid>
+      <guid>http://florian.katech.net/projets/challenge-accepted/</guid>
       <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
 Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réaliser un TP.
+Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/realisations/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/realisations/challenge-accepted/</guid>
+      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
+Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infrastructure préconfigurée ainsi que sa destruction automatique. On fournit toutes les informations nécessaires pour que l&amp;rsquo;étudiant puisse réalisé un TP.
 Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
     </item>
     

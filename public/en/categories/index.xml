@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hello Friend NG</title>
-    <link>/en/categories/</link>
-    <description>Recent content in Categories on Hello Friend NG</description>
+    <title>Categories on Florian DUGAT</title>
+    <link>http://florian.katech.net/en/categories/</link>
+    <description>Recent content in Categories on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    
-	<atom:link href="/en/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>fr-fr</language><atom:link href="http://florian.katech.net/en/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,27 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DIY on Florian DUGAT</title>
-    <link>/tags/diy/</link>
+    <link>http://florian.katech.net/tags/diy/</link>
     <description>Recent content in DIY on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 23 May 2019 12:22:30 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/diy/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 16 May 2022 00:21:53 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/diy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voron 2.4</title>
+      <link>http://florian.katech.net/blog/voron-2.4/</link>
+      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/voron-2.4/</guid>
+      <description>Let&amp;rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.
+Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; ici</description>
+    </item>
     
     <item>
       <title>Recycler Un Vieux Écran De Pc Portable</title>
-      <link>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link>
+      <link>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link>
       <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
       
-      <guid>/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
+      <guid>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
       <description>En gros c&amp;rsquo;est très simple.
 Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)
-Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écran
-Plusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
+Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écranPlusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
     </item>
     
   </channel>

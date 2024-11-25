@@ -16,6 +16,9 @@ Je mettais en place, sur des vms, différents PoC pour tester si certaines solut
 
 J'ai pu élargir mes compétences durant cette alternance.
 
+Mon plus gros projet durant cette expérience a été la mise en place d'un serveur mail (Postal) et d'une stack ELK pour donner des informations à l'équipe Marketing digital, suite aux envois de mails massif. Par exemple, si les mails arrivent bien à destination, s'ils sont lus etc ...
+Il a fallu que j'optilmise la partie logstash car elle prenait de nombreuse données.
+
 ### Univers techniques :
 * Vsphere
 * Windows (server 2008/2012/core 2016 et desktop 10\7)

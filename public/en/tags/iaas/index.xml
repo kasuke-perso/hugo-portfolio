@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IaaS on Florian DUGAT</title>
+    <link>http://florian.katech.net/en/tags/iaas/</link>
+    <description>Recent content in IaaS on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Thu, 20 Apr 2017 16:32:35 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/en/projets/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/projets/challenge-accepted/</guid>
+      <description>Project from school (Semester 4) proposed by Eric Lalitte :
+The main goal was to provide an network infrastructure for students to make them practice the networks courses from OpenClassroom, automatically, from the creation, validation, to destruction.
+Depending on the lesson, we wanted to create a server or an infrastructure already configured, we provide every credentials the student need to access the course.
+So, to create the machines/infrastructures we used Terraform + AWS and for provisionning we used Ansible</description>
+    </item>
+    
+    <item>
+      <title>Challenge Accepted - IaaS</title>
+      <link>http://florian.katech.net/en/realisations/challenge-accepted/</link>
+      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/en/realisations/challenge-accepted/</guid>
+      <description>Project from school (Semester 4) proposed by Eric Lalitte :
+The main goal was to provide an network infrastructure for students to make them practice the networks courses from OpenClassroom, automatically, from the creation, validation, to destruction.
+Depending on the lesson, we wanted to create a server or an infrastructure already configured, we provide every credentials the student need to access the course.
+So, to create the machines/infrastructures we used Terraform + AWS and for provisionning we used Ansible</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,34 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projets on Florian DUGAT</title>
-    <link>/projets/</link>
+    <link>http://florian.katech.net/projets/</link>
     <description>Recent content in Projets on Florian DUGAT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 22 May 2019 11:17:59 +0200</lastBuildDate>
-    
-	<atom:link href="/projets/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>All</title>
-      <link>/projets/all/</link>
-      <pubDate>Wed, 22 May 2019 11:17:59 +0200</pubDate>
-      
-      <guid>/projets/all/</guid>
-      <description>Voici une liste de tout mes projets réalisés à ce jour html
-&amp;lt;h1&amp;gt; je suis un test de code &amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt; et pour ça je fais des trucs tout simple &amp;lt;/p&amp;gt; shell
-## Ceci est un commentaire $ echo ceci est une commande ceci est une commande ## édition d&amp;#39;un fichier $vi foo.md +++ date = &amp;#34;2014-09-28&amp;#34; title = &amp;#34;Création d&amp;#39;un nouveau thème&amp;#34; +++ Contenu du fichier :wq ## L&amp;#39;afficher $ cat foo.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 20 Oct 2017 17:51:46 +0200</lastBuildDate><atom:link href="http://florian.katech.net/projets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nemesis - Sécurité réseaux</title>
-      <link>/projets/nemesis/</link>
+      <link>http://florian.katech.net/projets/nemesis/</link>
       <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
       
-      <guid>/projets/nemesis/</guid>
+      <guid>http://florian.katech.net/projets/nemesis/</guid>
       <description>Projet de sécurité informatique (équipe de 3 personnes).
 Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
 A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
@@ -36,22 +21,22 @@ A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos
     
     <item>
       <title>Challenge Accepted - IaaS</title>
-      <link>/projets/challenge-accepted/</link>
+      <link>http://florian.katech.net/projets/challenge-accepted/</link>
       <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
       
-      <guid>/projets/challenge-accepted/</guid>
+      <guid>http://florian.katech.net/projets/challenge-accepted/</guid>
       <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
 Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réalisé un TP.
+Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réaliser un TP.
 Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
     </item>
     
     <item>
       <title>Mon Premier Site</title>
-      <link>/projets/mon-premier-site/</link>
+      <link>http://florian.katech.net/projets/mon-premier-site/</link>
       <pubDate>Tue, 27 Jun 2006 16:03:28 +0200</pubDate>
       
-      <guid>/projets/mon-premier-site/</guid>
+      <guid>http://florian.katech.net/projets/mon-premier-site/</guid>
       <description>Ma première expérience avec le monde de l&amp;rsquo;informatique 🤗
 Le site est affreux, j&amp;rsquo;étais très loin de savoir comment faire. Je me rappel j&amp;rsquo;étais déterminé et passionné comme jamais !
 Ceci est plus un &amp;ldquo;retour d&amp;rsquo;expérience&amp;rdquo; qu&amp;rsquo;autre chose.

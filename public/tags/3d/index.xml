@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D on Florian DUGAT</title>
+    <link>http://florian.katech.net/tags/3d/</link>
+    <description>Recent content in 3D on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 16 May 2022 00:21:53 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/3d/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voron 2.4</title>
+      <link>http://florian.katech.net/blog/voron-2.4/</link>
+      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/voron-2.4/</guid>
+      <description>Let&amp;rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.
+Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; ici</description>
+    </item>
+    
+  </channel>
+</rss>

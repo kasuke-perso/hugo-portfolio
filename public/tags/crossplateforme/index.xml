@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crossplateforme on Florian DUGAT</title>
+    <link>http://florian.katech.net/tags/crossplateforme/</link>
+    <description>Recent content in crossplateforme on Florian DUGAT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Jul 2019 14:37:09 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/crossplateforme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Franz - Un logiciel qui regroupe chat et service de messagerie</title>
+      <link>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</link>
+      <pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</guid>
+      <description>Franz 5 (à l&amp;rsquo;heure où j&amp;rsquo;écris)
+Franz is the former Emperor of Austria - mais aussi une app de messagerie qui regroupe chat &amp;amp; messaging services en UNE seule application. Franz supporte Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype, Trello et quelques autres.
+Perso j&amp;rsquo;aime bien, c&amp;rsquo;est bien intégrer, il y a un dark mode pour les &amp;ldquo;geek&amp;rdquo; qui voient la vie en noir 😏 et c&amp;rsquo;est super utile plutôt que d&amp;rsquo;avoir 15 000 onglets en plus de tout ce que vous faites déjà.</description>
+    </item>
+    
+    <item>
+      <title>Eternal Terminal - Accès ssh sans coupure</title>
+      <link>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</link>
+      <pubDate>Mon, 22 Jul 2019 14:28:13 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</guid>
+      <description>Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.
+Contrairement à une session SSH classique, les sessions ET survivront à une coupure réseau ou à un changement d’adresse IP. Inspiré de Mosh, SSH et AutoSSH, Eternal Terminal utilise SSH pour la mise en relation et le chiffrement et supporte le mode « control » de tmux, ce qui vous permet de disposer de fenêtres, d’onglets et de barres de défilement dans votre terminal.</description>
+    </item>
+    
+    <item>
+      <title>VidCutter - Logiciel pour découper facilement des vidéos</title>
+      <link>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</link>
+      <pubDate>Mon, 22 Jul 2019 11:55:31 +0200</pubDate>
+      
+      <guid>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</guid>
+      <description>Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi VidCutter pourrait vous intéresser.
+Le logiciel est crossplateforme (ce que j&amp;rsquo;adore perso) et il fait bien son taff, tout simplement. Pas besoin de lancer Adobe Première Pro pour juste faire quelques cuts.
+le logiciel ne modifie rien des vidéos sources, que ce soit leur format, leur résolution ou leur débit.</description>
+    </item>
+    
+  </channel>
+</rss>
