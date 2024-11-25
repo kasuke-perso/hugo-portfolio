@@ -2,11 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://florian.katech.net/experience/</loc>
-    <lastmod>2024-11-14T10:17:34+02:00</lastmod>
+    <loc>http://florian.katech.net/blog/</loc>
+    <lastmod>2024-11-25T10:19:22+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://florian.katech.net/en/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://florian.katech.net/blog/"
+                />
   </url><url>
     <loc>http://florian.katech.net/</loc>
-    <lastmod>2024-11-14T10:17:34+02:00</lastmod>
+    <lastmod>2024-11-25T10:19:22+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,24 +28,17 @@
                 href="http://florian.katech.net/"
                 />
   </url><url>
+    <loc>http://florian.katech.net/blog/recuperer-vmware-awx/</loc>
+    <lastmod>2024-11-25T10:19:22+01:00</lastmod>
+  </url><url>
+    <loc>http://florian.katech.net/experience/</loc>
+    <lastmod>2024-11-14T10:17:34+02:00</lastmod>
+  </url><url>
     <loc>http://florian.katech.net/experience/musee/</loc>
     <lastmod>2024-11-14T10:17:34+02:00</lastmod>
   </url><url>
     <loc>http://florian.katech.net/tags/3d/</loc>
     <lastmod>2022-05-16T00:21:53+02:00</lastmod>
-  </url><url>
-    <loc>http://florian.katech.net/blog/</loc>
-    <lastmod>2022-05-16T00:21:53+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://florian.katech.net/en/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://florian.katech.net/blog/"
-                />
   </url><url>
     <loc>http://florian.katech.net/tags/diy/</loc>
     <lastmod>2022-05-16T00:21:53+02:00</lastmod>

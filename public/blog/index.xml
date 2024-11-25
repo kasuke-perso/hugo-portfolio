@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 16 May 2022 00:21:53 +0200</lastBuildDate><atom:link href="http://florian.katech.net/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Nov 2024 10:19:22 +0100</lastBuildDate><atom:link href="http://florian.katech.net/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synchroniser VMWare inventory sur AWX</title>
+      <link>http://florian.katech.net/blog/recuperer-vmware-awx/</link>
+      <pubDate>Mon, 25 Nov 2024 10:19:22 +0100</pubDate>
+      
+      <guid>http://florian.katech.net/blog/recuperer-vmware-awx/</guid>
+      <description>Dans AWX, il existe de base, un inventaire dynamique basé sur VMWare.
+Je trouve la documentation et les ressources sur internet un peu trop vague à ce sujet alors j&amp;rsquo;écris ce petit article qui pourrait en aider d&amp;rsquo;autre.
+Creation de l&amp;rsquo;inventaire VMWare Tout d&amp;rsquo;abord il faudra aller dans l&amp;rsquo;UI ressources/inventory/add inventory la vous donner un nom à votre inventaire, ce sera juste pour l&amp;rsquo;identifier (mettez VMWare inventory par exemple)
+Une fois crée, vous devrez aller dans votre inventaire et aller dans l&amp;rsquo;onglet sources, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l&amp;rsquo;extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d&amp;rsquo;execution (pour rappel, cela permet d&amp;rsquo;utilliser une version d&amp;rsquo;ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -&amp;gt; lien documentation )</description>
+    </item>
+    
     <item>
       <title>Voron 2.4</title>
       <link>http://florian.katech.net/blog/voron-2.4/</link>
