@@ -12,7 +12,7 @@ Tout d'abord il faudra aller dans l'UI `ressources/inventory/add inventory` la v
 
 Une fois crée, vous devrez aller dans votre inventaire et aller dans l'onglet *sources*, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l'extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d'execution (pour rappel, cela permet d'utilliser une version d'ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -> lien documentation )
 
-Au préalable vous avez déjà créer vos credentials qui vous permette de communiquer avec l'API de VMWare, vous choisissez cela, je vous conseil vivement de cocher la case *Replace*, cela permettera d'êêtre toujours à jour avec l'inventaire présent sur VMWare, si une machine a été supprimée, elle le sera aussi dans votre inventaire dynamique sur AWX.
+Au préalable vous avez déjà créer vos credentials qui vous permette de communiquer avec l'API de VMWare, vous choisissez cela, je vous conseil vivement de cocher la case *Replace*, cela permettera d'être toujours à jour avec l'inventaire présent sur VMWare, si une machine a été supprimée, elle le sera aussi dans votre inventaire dynamique sur AWX.
 
 # Variables Sources 
 
@@ -29,13 +29,17 @@ Mais, en fait on va vouloir aussi récupérer d'autres infos, de base il va nous
 
 Prenons un exemple concret, vous avez installé une VM il y a des années basé sur une debian 5, votre `config.guestId` sera donc debian5, or vous avez fait pleins de choses dessus et depuis vous l'avez upgrade admettons en debian 10. Sauf que votre `config.guestId` n'a pas changé malgré l'upgrade de la machine. Ce que je vous conseil c'est de se baser plutôt sur le `guest.guestId` qui lui sera (normalement) syncro avec la vraie version installé sur votre VM.
 
-Mais, il y a encore un mais, de base (lien vers la doc ) on récupere que ces infos -> (mettre le truc Default avec toute les valeurs)
+Vous aimeriez aussi bien créer un groupe basé sur le type de VM (par exemple toute les Linux)
 
-On remarque qu'il n'y a pas notre `guest.guestId`, mais si on défini à la main ce que l'on veut récupérer, il faut mettre toute les infos que l'on veut récupérer. Je vais vous montrer un exemple concret ça sera plus parlant.
+Mais, il y a encore un mais, de base on récupere que ces infos ->  
+``` yaml
+Default: ["name", "config.cpuHotAddEnabled", "config.cpuHotRemoveEnabled", "config.instanceUuid", "config.hardware.numCPU", "config.template", "config.name", "config.uuid", "guest.hostName", "guest.ipAddress", "guest.guestId", "guest.guestState", "runtime.maxMemoryUsage", "customValue", "summary.runtime.powerState", "config.guestId"]
+```
+On remarque qu'il n'y a pas notre `guest.guestFamily`, mais si on défini à la main ce que l'on veut récupérer, il faut mettre toute les infos que l'on veut récupérer ça va écraser ces valeurs par défaut qui sont récupérées. Je vais vous montrer un exemple concret ça sera plus parlant.
 
-Je veux récupérer `guest.guestId`, je veux récupérer `config.name` (pour avoir le nom de la machine), je veux récupérer `guest.guestFamily` pour avoir un groupe basé sur le type d'OS (dans notre exemple, Linux)
+Je veux récupérer `guest.guestId`, je veux récupérer `config.name` (pour avoir le nom de la machine) et je veux récupérer `guest.guestFamily` pour avoir un groupe basé sur le type d'OS (dans notre exemple, Linux)
 
-Pour se faire, je défini d'abord dans properties, toute les propriétés que je veux récupérer, ça ne va plus se baser sur le Default (lien défault)
+Pour se faire, je défini d'abord dans properties toute les propriétés que je veux récupérer, ça ne va plus se baser sur le `Default` précédemment mentionné.
 
 Voici ce qu'il faudra mettre dans les variables sources dans AWX : 
 ``` yaml
@@ -51,6 +55,8 @@ keyed_groups:
 - key: guest.guestFamily
   separator: ''
 ```
-Ainsi nous allons récupérer dans notre inventaire les bonnes informations pour qu'AWX créer les bons groupes. Si vous mettez `hostnames` avant les properties, vous aurez une erreur car il n'aura pas récupérer les variables. L'ordre à son importance.
+Ainsi nous allons récupérer dans notre inventaire les bonnes informations pour qu'AWX créer les bons groupes. 
+
+*Attention* Si vous mettez `hostnames` avant les properties, vous aurez une erreur car il n'aura pas récupérer les variables. L'ordre à son importance.
 
 Voila dans les grandes lignes, je vous invite à adapter la chose en fonction de votre infra en allant voir directement dans la partie Host dans votre inventaire, vous prenez un host et vous regarder toute les variables que le module VMWare vous a récupérer.
