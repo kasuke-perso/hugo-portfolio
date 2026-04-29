@@ -1,9 +1,8 @@
 # Mettre basurl = "florian-dugat.ddns.net" quand sur serveur
 # Sinon baseurl = "/"
 baseurl = "http://florian.katech.net"
-languageCode = "fr-fr"
+locale = "fr-fr"
 title = "Portfolio Florian"
-theme = "hugo-theme-hello-friend-ng-master"
 DefaultContentLanguage = "fr"
 
 PygmentsCodeFences = true
@@ -145,3 +144,7 @@ disqusShortname = "florian-dugat"
     identifier = "blog"
     name       = "Blog"
     url        = "/posts"
+
+[module]
+  [[module.imports]]
+    path = "github.com/rhazdon/hugo-theme-hello-friend-ng"

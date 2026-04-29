@@ -1,23 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>powershell on Florian DUGAT</title>
-    <link>http://florian.katech.net/en/tags/powershell/</link>
-    <description>Recent content in powershell on Florian DUGAT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    <lastBuildDate>Tue, 17 Sep 2019 09:54:45 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PowerShell Script to create office 365 shortcuts</title>
-      <link>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</link>
-      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</guid>
-      <description>I didn&amp;rsquo;t find any post which was talking about this so here I am with my little contribution. And a reminder for myself aswell.
-In PowerShell because it&amp;rsquo;s better. We don&amp;rsquo;t have sortcuts so we will create them the simpliest way possible.
-Here is an example with Outlook (Office 365 or Office 2019 Pro Plus) :
-# We prepare the creation of the shortcut $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Where the shortcut go $objShortCut = $objShell.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Powershell on Florian DUGAT</title><link>http://florian.katech.net/en/tags/powershell/</link><description>Recent content in Powershell on Florian DUGAT</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 17 Sep 2019 09:54:45 +0200</lastBuildDate><atom:link href="http://florian.katech.net/en/tags/powershell/index.xml" rel="self" type="application/rss+xml"/><item><title>PowerShell Script to create office 365 shortcuts</title><link>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</link><pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate><guid>http://florian.katech.net/en/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-3650/</guid><description>&lt;p&gt;I didn&amp;rsquo;t find any post which was talking about this so here I am with my little contribution. And a reminder for myself aswell.&lt;/p&gt;
+&lt;p&gt;In PowerShell because it&amp;rsquo;s better. We don&amp;rsquo;t have sortcuts so we will create them the simpliest way possible.&lt;/p&gt;
+&lt;p&gt;Here is an example with Outlook (Office 365 or Office 2019 Pro Plus) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-PowerShell" data-lang="PowerShell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# We prepare the creation of the shortcut&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShell = New-Object -ComObject (&lt;span style="color:#e6db74"&gt;&amp;#34;WScript.Shell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Where the shortcut go&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &lt;span style="color:#e6db74"&gt;&amp;#34;\Desktop&amp;#34;&lt;/span&gt; +&lt;span style="color:#e6db74"&gt;&amp;#34;\Outlook.lnk&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Where the shortcut point to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.TargetPath= $env:ProgramFiles + &lt;span style="color:#e6db74"&gt;&amp;#34;\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Creation of the shortcut&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.Save()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save it as .ps1 and execute it directly, boom new icon with Outlook on the desktop !&lt;/p&gt;</description></item></channel></rss>

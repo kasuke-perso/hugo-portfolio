@@ -1,188 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on Florian DUGAT</title>
-    <link>http://florian.katech.net/blog/</link>
-    <description>Recent content in Blogs on Florian DUGAT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 25 Nov 2024 10:19:22 +0100</lastBuildDate><atom:link href="http://florian.katech.net/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Synchroniser VMWare inventory sur AWX</title>
-      <link>http://florian.katech.net/blog/recuperer-vmware-awx/</link>
-      <pubDate>Mon, 25 Nov 2024 10:19:22 +0100</pubDate>
-      
-      <guid>http://florian.katech.net/blog/recuperer-vmware-awx/</guid>
-      <description>Dans AWX, il existe de base, un inventaire dynamique basé sur VMWare.
-Je trouve la documentation et les ressources sur internet un peu trop vague à ce sujet alors j&amp;rsquo;écris ce petit article qui pourrait en aider d&amp;rsquo;autre.
-Creation de l&amp;rsquo;inventaire VMWare Tout d&amp;rsquo;abord il faudra aller dans l&amp;rsquo;UI ressources/inventory/add inventory la vous donner un nom à votre inventaire, ce sera juste pour l&amp;rsquo;identifier (mettez VMWare inventory par exemple)
-Une fois crée, vous devrez aller dans votre inventaire et aller dans l&amp;rsquo;onglet sources, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l&amp;rsquo;extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d&amp;rsquo;execution (pour rappel, cela permet d&amp;rsquo;utilliser une version d&amp;rsquo;ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -&amp;gt; lien documentation )</description>
-    </item>
-    
-    <item>
-      <title>Voron 2.4</title>
-      <link>http://florian.katech.net/blog/voron-2.4/</link>
-      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/voron-2.4/</guid>
-      <description>Let&amp;rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.
-Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; ici</description>
-    </item>
-    
-    <item>
-      <title>Systemd Tricks</title>
-      <link>http://florian.katech.net/blog/systemd-tricks/</link>
-      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/systemd-tricks/</guid>
-      <description>En rapport avec l&amp;rsquo;autre article : lien
-On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe. Faut aller dans vim /etc/systemd/system/leservice.service
-Exemple avec logstash [Unit] Description=logstash [Service] Type=simple User=root Group=root # Load env vars from /etc/default/ and /etc/sysconfig/ if they exist. # Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t # exist, it continues onward. EnvironmentFile=-/etc/default/logstash EnvironmentFile=-/etc/sysconfig/logstash ExecStart=/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34; Restart=always WorkingDirectory=/ Nice=19 LimitNOFILE=16384 # When stopping, how long to wait before giving up and sending SIGKILL?</description>
-    </item>
-    
-    <item>
-      <title>Gestion Des Logs Journalctl</title>
-      <link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link>
-      <pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid>
-      <description>Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule
-Cheatsheet  journalctl -xe pour voir tous les logs direct en bas je crois à vérif Filtrer par service : journalctl -u service journalctl -f pour faire comme tail -f dessus Filtrer par PID journalctl _PID=1 Filtrer par programme journalctl /usr/bin/tamere Filtrer par niveau de logs genre err journalctl -p err  </description>
-    </item>
-    
-    <item>
-      <title>Vim Tips</title>
-      <link>http://florian.katech.net/blog/vim-tips/</link>
-      <pubDate>Fri, 04 Jun 2021 10:51:43 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/vim-tips/</guid>
-      <description>Navigation:  Aller en début de ligne: xG ou x=le numero de la ligne Aller en fin de ligne: $ Aller au premier caractère de la ligne: ^^ ou 0 pour tout début de la ligne Aller en début de fichier: gg et en fin de fichier G  En mode insertion:  Pour autocompletion des chemins en mode insertion: ctl-x + ctrl-f  Ouvrir d&amp;rsquo;autre fichiers:   Pour se déplacer depuis vim pour aller dans un autre fichier: :e em /[TAB]</description>
-    </item>
-    
-    <item>
-      <title>Imprimante 3D</title>
-      <link>http://florian.katech.net/blog/imprimante-3d/</link>
-      <pubDate>Sun, 14 Jun 2020 17:41:43 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/imprimante-3d/</guid>
-      <description>Quelle imprimante ? J&amp;rsquo;ai longtemps songé à acquérir une imprimante 3D, étant donné que je suis une personne peu soigneuse de mon matériel, il m&amp;rsquo;arrive souvent de casser des trucs 😔 Et bien souvent c&amp;rsquo;est un bout de plastique ou un bout de pièce que l&amp;rsquo;on ne peut pas récupérer/racheter. Plutôt que de racheter un produit en entier, je trouve ça bien plus amusant de le réparer avec des bouts de plastique.</description>
-    </item>
-    
-    <item>
-      <title>Applications Qui Servent À Rien</title>
-      <link>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</link>
-      <pubDate>Fri, 06 Mar 2020 15:36:41 +0100</pubDate>
-      
-      <guid>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</guid>
-      <description>Des applications inutiles donc forcément indispensables.
-Tout droit tiré du script d&amp;rsquo;arcolinux : git clone https://github.com/erikdubois/arcolinux-nemesis
-Je vous invite à aller sur ce lien pour avoir plus d&amp;rsquo;infos sur les différentes applis que ça pourrait insallé.
-From Arch Repo
- asciiquarium cmatrix cool-retro-term cowfortune ou cowsay figlet lolcat mc ranger sl ufetch-arco  From AUR
- bash-pipes boxes cava cpufetch-git curseradio-git gotop-bin python-pywal toilet slurm tty-clock ufetch   Mais je vais en rajouter d&amp;rsquo;autres dans la liste :</description>
-    </item>
-    
-    <item>
-      <title>I3 Arch Linux</title>
-      <link>http://florian.katech.net/blog/i3-arch-linux/</link>
-      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/i3-arch-linux/</guid>
-      <description>Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock
-Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
-̀sudo pacman -S i3 là plusieurs choix s&amp;rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
-Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm.</description>
-    </item>
-    
-    <item>
-      <title>Script PowerShell pour créer raccourcis Office 365</title>
-      <link>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</link>
-      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</guid>
-      <description>N&amp;rsquo;ayant pas trouvé de post précisément pour office (365), puisqu&amp;rsquo;il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅
-En PowerShell parce que c&amp;rsquo;est mieux. On a pas de raccourci donc on va en créer un de la plus simple des façons.
-Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :
-# On prépare la création du raccourci $objShell = New-Object -ComObject (&amp;#34;WScript.</description>
-    </item>
-    
-    <item>
-      <title>Franz - Un logiciel qui regroupe chat et service de messagerie</title>
-      <link>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</link>
-      <pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</guid>
-      <description>Franz 5 (à l&amp;rsquo;heure où j&amp;rsquo;écris)
-Franz is the former Emperor of Austria - mais aussi une app de messagerie qui regroupe chat &amp;amp; messaging services en UNE seule application. Franz supporte Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype, Trello et quelques autres.
-Perso j&amp;rsquo;aime bien, c&amp;rsquo;est bien intégrer, il y a un dark mode pour les &amp;ldquo;geek&amp;rdquo; qui voient la vie en noir 😏 et c&amp;rsquo;est super utile plutôt que d&amp;rsquo;avoir 15 000 onglets en plus de tout ce que vous faites déjà.</description>
-    </item>
-    
-    <item>
-      <title>Eternal Terminal - Accès ssh sans coupure</title>
-      <link>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</link>
-      <pubDate>Mon, 22 Jul 2019 14:28:13 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</guid>
-      <description>Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.
-Contrairement à une session SSH classique, les sessions ET survivront à une coupure réseau ou à un changement d’adresse IP. Inspiré de Mosh, SSH et AutoSSH, Eternal Terminal utilise SSH pour la mise en relation et le chiffrement et supporte le mode « control » de tmux, ce qui vous permet de disposer de fenêtres, d’onglets et de barres de défilement dans votre terminal.</description>
-    </item>
-    
-    <item>
-      <title>VidCutter - Logiciel pour découper facilement des vidéos</title>
-      <link>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</link>
-      <pubDate>Mon, 22 Jul 2019 11:55:31 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</guid>
-      <description>Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi VidCutter pourrait vous intéresser.
-Le logiciel est crossplateforme (ce que j&amp;rsquo;adore perso) et il fait bien son taff, tout simplement. Pas besoin de lancer Adobe Première Pro pour juste faire quelques cuts.
-le logiciel ne modifie rien des vidéos sources, que ce soit leur format, leur résolution ou leur débit.</description>
-    </item>
-    
-    <item>
-      <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid>
-      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
-Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
-Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
- Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
-    </item>
-    
-    <item>
-      <title>Agrandir Stockage Vm vSphere</title>
-      <link>http://florian.katech.net/blog/agrandir-stockage-vm/</link>
-      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid>
-      <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
-Je suis sous ubuntu 16.04 et vSphere 6.0
-J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
-Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
-    </item>
-    
-    <item>
-      <title>Recycler Un Vieux Écran De Pc Portable</title>
-      <link>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link>
-      <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
-      <description>En gros c&amp;rsquo;est très simple.
-Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)
-Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écranPlusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
-    </item>
-    
-    <item>
-      <title>Sensibilisation au lockpicking</title>
-      <link>http://florian.katech.net/blog/sensibilisation/</link>
-      <pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/sensibilisation/</guid>
-      <description>Avant de me faire embrouille, je test juste un truc, ça vient de korben ;) 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐
- Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Florian DUGAT</title><link>http://florian.katech.net/blog/</link><description>Recent content in Blogs on Florian DUGAT</description><generator>Hugo</generator><language>fr-fr</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><lastBuildDate>Mon, 25 Nov 2024 10:19:22 +0100</lastBuildDate><atom:link href="http://florian.katech.net/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Synchroniser VMWare inventory sur AWX</title><link>http://florian.katech.net/blog/recuperer-vmware-awx/</link><pubDate>Mon, 25 Nov 2024 10:19:22 +0100</pubDate><guid>http://florian.katech.net/blog/recuperer-vmware-awx/</guid><description>&lt;p&gt;Dans AWX, il existe de base, un inventaire dynamique basé sur VMWare.&lt;/p&gt;
+&lt;p&gt;Je trouve la documentation et les ressources sur internet un peu trop vague à ce sujet alors j&amp;rsquo;écris ce petit article qui pourrait en aider d&amp;rsquo;autre.&lt;/p&gt;
+&lt;h1 id="creation-de-linventaire-vmware"&gt;Creation de l&amp;rsquo;inventaire VMWare&lt;/h1&gt;
+&lt;p&gt;Tout d&amp;rsquo;abord il faudra aller dans l&amp;rsquo;UI &lt;code&gt;ressources/inventory/add inventory&lt;/code&gt; la vous donner un nom à votre inventaire, ce sera juste pour l&amp;rsquo;identifier (mettez VMWare inventory par exemple)&lt;/p&gt;
+&lt;p&gt;Une fois crée, vous devrez aller dans votre inventaire et aller dans l&amp;rsquo;onglet &lt;em&gt;sources&lt;/em&gt;, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l&amp;rsquo;extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d&amp;rsquo;execution (pour rappel, cela permet d&amp;rsquo;utilliser une version d&amp;rsquo;ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -&amp;gt; lien documentation )&lt;/p&gt;</description></item><item><title>Voron 2.4</title><link>http://florian.katech.net/blog/voron-2.4/</link><pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate><guid>http://florian.katech.net/blog/voron-2.4/</guid><description>&lt;h1 id="lets-make-a-3d-printer-"&gt;Let&amp;rsquo;s make a 3D printer !&lt;/h1&gt;
+&lt;p&gt;Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.&lt;/p&gt;
+&lt;p&gt;Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné.
+Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; &lt;a href="https://vorondesign.com/"&gt;ici&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Systemd Tricks</title><link>http://florian.katech.net/blog/systemd-tricks/</link><pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate><guid>http://florian.katech.net/blog/systemd-tricks/</guid><description>&lt;p&gt;En rapport avec l&amp;rsquo;autre article : lien&lt;/p&gt;
+&lt;p&gt;On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe.
+Faut aller dans &lt;code&gt;vim /etc/systemd/system/leservice.service&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="exemple-avec-logstash"&gt;Exemple avec logstash&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Unit]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Description&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Service]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;User&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Group&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Load env vars from /etc/default/ and /etc/sysconfig/ if they exist.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# exist, it continues onward.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/default/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/sysconfig/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;ExecStart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Restart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;always&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WorkingDirectory&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Nice&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;LimitNOFILE&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# When stopping, how long to wait before giving up and sending SIGKILL?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Keep in mind that SIGKILL on a process can cause data loss.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;TimeoutStopSec&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;infinity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Install]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WantedBy&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;multi-user.target&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On peut voir que j&amp;rsquo;ai changé le User et le groupe, on peut aussi changer les options de démarrage et les chemins des binaires :)&lt;/p&gt;</description></item><item><title>Gestion Des Logs Journalctl</title><link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link><pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate><guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid><description>&lt;p&gt;Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule&lt;/p&gt;
+&lt;h1 id="cheatsheet"&gt;Cheatsheet&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;journalctl -xe&lt;/code&gt; pour voir tous les logs direct en bas je crois à vérif&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;service&lt;/strong&gt; : &lt;code&gt;journalctl -u service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;journalctl -f&lt;/code&gt; pour faire comme tail -f dessus&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;PID&lt;/strong&gt; &lt;code&gt;journalctl _PID=1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;programme&lt;/strong&gt; &lt;code&gt;journalctl /usr/bin/tamere&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par niveau de logs genre &lt;strong&gt;err&lt;/strong&gt; &lt;code&gt;journalctl -p err&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Vim Tips</title><link>http://florian.katech.net/blog/vim-tips/</link><pubDate>Fri, 04 Jun 2021 10:51:43 +0200</pubDate><guid>http://florian.katech.net/blog/vim-tips/</guid><description>&lt;h2 id="navigation"&gt;Navigation:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Aller en début de ligne: &lt;code&gt;xG&lt;/code&gt; ou x=le numero de la ligne&lt;/li&gt;
+&lt;li&gt;Aller en fin de ligne: &lt;code&gt;$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Aller au premier caractère de la ligne: &lt;code&gt;^^&lt;/code&gt; ou &lt;code&gt;0&lt;/code&gt; pour tout début de la ligne&lt;/li&gt;
+&lt;li&gt;Aller en début de fichier: &lt;code&gt;gg&lt;/code&gt; et en fin de fichier &lt;code&gt;G&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="en-mode-insertion"&gt;En mode insertion:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pour autocompletion des chemins en mode insertion: &lt;code&gt;ctl-x + ctrl-f&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ouvrir-dautre-fichiers"&gt;Ouvrir d&amp;rsquo;autre fichiers:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pour se déplacer depuis vim pour aller dans un autre fichier: &lt;code&gt;:e em /[TAB]&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Imprimante 3D</title><link>http://florian.katech.net/blog/imprimante-3d/</link><pubDate>Sun, 14 Jun 2020 17:41:43 +0200</pubDate><guid>http://florian.katech.net/blog/imprimante-3d/</guid><description>&lt;h1 id="quelle-imprimante-"&gt;Quelle imprimante ?&lt;/h1&gt;
+&lt;p&gt;J&amp;rsquo;ai longtemps songé à acquérir une imprimante 3D, étant donné que je suis une personne peu soigneuse de mon matériel, il m&amp;rsquo;arrive souvent de casser des trucs 😔 Et bien souvent c&amp;rsquo;est un bout de plastique ou un bout de pièce que l&amp;rsquo;on ne peut pas récupérer/racheter. Plutôt que de racheter un produit en entier, je trouve ça bien plus amusant de le réparer avec des bouts de plastique.&lt;/p&gt;</description></item><item><title>Applications Qui Servent À Rien</title><link>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</link><pubDate>Fri, 06 Mar 2020 15:36:41 +0100</pubDate><guid>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</guid><description>&lt;p&gt;Des applications inutiles donc forcément indispensables.&lt;/p&gt;
+&lt;p&gt;Tout droit tiré du script d&amp;rsquo;arcolinux :
+&lt;code&gt;git clone https://github.com/erikdubois/arcolinux-nemesis&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Je vous invite à aller sur ce &lt;a href="https://arcolinux.com/installing-fun-stuff-for-the-terminal-on-arcolinux/"&gt;lien&lt;/a&gt; pour avoir plus d&amp;rsquo;infos sur les différentes applis que ça pourrait insallé.&lt;/p&gt;
+&lt;p&gt;From Arch Repo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;asciiquarium&lt;/li&gt;
+&lt;li&gt;cmatrix&lt;/li&gt;
+&lt;li&gt;cool-retro-term&lt;/li&gt;
+&lt;li&gt;cowfortune ou cowsay&lt;/li&gt;
+&lt;li&gt;figlet&lt;/li&gt;
+&lt;li&gt;lolcat&lt;/li&gt;
+&lt;li&gt;mc&lt;/li&gt;
+&lt;li&gt;ranger&lt;/li&gt;
+&lt;li&gt;sl&lt;/li&gt;
+&lt;li&gt;ufetch-arco&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From AUR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bash-pipes&lt;/li&gt;
+&lt;li&gt;boxes&lt;/li&gt;
+&lt;li&gt;cava&lt;/li&gt;
+&lt;li&gt;cpufetch-git&lt;/li&gt;
+&lt;li&gt;curseradio-git&lt;/li&gt;
+&lt;li&gt;gotop-bin&lt;/li&gt;
+&lt;li&gt;python-pywal&lt;/li&gt;
+&lt;li&gt;toilet&lt;/li&gt;
+&lt;li&gt;slurm&lt;/li&gt;
+&lt;li&gt;tty-clock&lt;/li&gt;
+&lt;li&gt;ufetch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Mais je vais en rajouter d&amp;rsquo;autres dans la liste :&lt;/p&gt;</description></item><item><title>I3 Arch Linux</title><link>http://florian.katech.net/blog/i3-arch-linux/</link><pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate><guid>http://florian.katech.net/blog/i3-arch-linux/</guid><description>&lt;p&gt;Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock&lt;/p&gt;
+&lt;p&gt;Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)&lt;/p&gt;
+&lt;p&gt;̀&lt;code&gt;sudo pacman -S i3&lt;/code&gt;
+là plusieurs choix s&amp;rsquo;offrent à vous &lt;code&gt;1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm.&lt;/p&gt;</description></item><item><title>Script PowerShell pour créer raccourcis Office 365</title><link>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</link><pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate><guid>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</guid><description>&lt;p&gt;N&amp;rsquo;ayant pas trouvé de post précisément pour office (365), puisqu&amp;rsquo;il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅&lt;/p&gt;
+&lt;p&gt;En PowerShell parce que c&amp;rsquo;est mieux. On a pas de raccourci donc on va en créer un de la plus simple des façons.&lt;/p&gt;
+&lt;p&gt;Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-PowerShell" data-lang="PowerShell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# On prépare la création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShell = New-Object -ComObject (&lt;span style="color:#e6db74"&gt;&amp;#34;WScript.Shell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Destination du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &lt;span style="color:#e6db74"&gt;&amp;#34;\Desktop&amp;#34;&lt;/span&gt; +&lt;span style="color:#e6db74"&gt;&amp;#34;\Outlook.lnk&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Vers ou doit pointer le raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.TargetPath=&lt;span style="color:#e6db74"&gt;&amp;#34;C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.Save()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enregistrez au format .ps1 et éxectuer direct, boom nouvel îcone sur le bureau avec Outlook !&lt;/p&gt;</description></item><item><title>Franz - Un logiciel qui regroupe chat et service de messagerie</title><link>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</link><pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate><guid>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</guid><description>&lt;p&gt;&lt;img src="http://florian.katech.net/franz.bmp" alt="Logo franz"&gt; Franz 5 (à l&amp;rsquo;heure où j&amp;rsquo;écris)&lt;/p&gt;
+&lt;p&gt;Franz is the former Emperor of Austria - mais aussi une app de messagerie qui regroupe chat &amp;amp; messaging services en UNE seule application. Franz supporte Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype, Trello et quelques autres.&lt;/p&gt;
+&lt;p&gt;Perso j&amp;rsquo;aime bien, c&amp;rsquo;est bien intégrer, il y a un dark mode pour les &amp;ldquo;geek&amp;rdquo; qui voient la vie en noir 😏 et c&amp;rsquo;est super utile plutôt que d&amp;rsquo;avoir 15 000 onglets en plus de tout ce que vous faites déjà. Les notifications sont très pratiques et vous aurez (presque) plus d&amp;rsquo;excuses pour ne pas voir ce qu&amp;rsquo;il se passe sur votre téléphone 😉&lt;/p&gt;</description></item><item><title>Eternal Terminal - Accès ssh sans coupure</title><link>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</link><pubDate>Mon, 22 Jul 2019 14:28:13 +0200</pubDate><guid>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</guid><description>&lt;p&gt;Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.&lt;/p&gt;
+&lt;p&gt;Contrairement à une session SSH classique, les sessions ET survivront à une coupure réseau ou à un changement d’adresse IP. Inspiré de Mosh, SSH et AutoSSH, Eternal Terminal utilise SSH pour la mise en relation et le chiffrement et supporte le mode « control » de tmux, ce qui vous permet de disposer de fenêtres, d’onglets et de barres de défilement dans votre terminal.&lt;/p&gt;</description></item><item><title>VidCutter - Logiciel pour découper facilement des vidéos</title><link>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</link><pubDate>Mon, 22 Jul 2019 11:55:31 +0200</pubDate><guid>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</guid><description>&lt;p&gt;Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi &lt;a href="https://github.com/ozmartian/vidcutter"&gt;VidCutter&lt;/a&gt; pourrait vous intéresser.&lt;/p&gt;
+&lt;p&gt;Le logiciel est crossplateforme (ce que j&amp;rsquo;adore perso) et il fait bien son taff, tout simplement. Pas besoin de lancer Adobe Première Pro pour juste faire quelques cuts.&lt;/p&gt;
+&lt;p&gt;le logiciel ne modifie rien des vidéos sources, que ce soit leur format, leur résolution ou leur débit. En dehors de la durée, les fichiers exportés seront identiques à ceux d’origine. Ce qui peut être bien ou non car vous ne pourrez pas compresser la taille de la vidéo mais au moins on ne touche pas à la qualité.&lt;/p&gt;</description></item><item><title>Gestion clés ssh Linux avec Ansible</title><link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link><pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate><guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid><description>&lt;p&gt;Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration.
+Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !&lt;/p&gt;
+&lt;p&gt;Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faire de A à Z un playbook avec le module &lt;a href="https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module"&gt;user&lt;/a&gt;, la doc d&amp;rsquo;ansible est plutôt bien.&lt;/li&gt;
+&lt;li&gt;Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur &lt;a href="https://galaxy.ansible.com/"&gt;ansible galaxy&lt;/a&gt; ou github par exemple&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les 2 options peuvent convenir, mais généralement les rôles qu&amp;rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&amp;rsquo;en servir que de le refaire sois-même.&lt;/p&gt;</description></item><item><title>Agrandir Stockage Vm vSphere</title><link>http://florian.katech.net/blog/agrandir-stockage-vm/</link><pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate><guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid><description>&lt;h3 id="prérequis"&gt;Prérequis&lt;/h3&gt;
+&lt;p&gt;Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Je suis sous ubuntu 16.04 et vSphere 6.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
+&lt;img src="http://florian.katech.net/screen_vsphere.PNG" alt="screen vsphere"&gt;
+Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)&lt;/p&gt;
+&lt;h3 id="se-mettre-en-livecd-sur-vsphere"&gt;Se mettre en LiveCD sur vSphere&lt;/h3&gt;
+&lt;p&gt;Comment j&amp;rsquo;ai procédé pour insérer le cd :&lt;/p&gt;</description></item><item><title>Recycler Un Vieux Écran De Pc Portable</title><link>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link><pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate><guid>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid><description>&lt;p&gt;En gros c&amp;rsquo;est très simple.&lt;/p&gt;
+&lt;p&gt;Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://florian.katech.net/back_screen.jpg" alt="derriere ecran portable"&gt;&lt;/p&gt;
+&lt;p&gt;Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve)
+On cherche &lt;!-- raw HTML omitted --&gt;board controller &lt;!-- raw HTML omitted --&gt;+ &lt;!-- raw HTML omitted --&gt;ref de l&amp;rsquo;écran&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>Sensibilisation au lockpicking</title><link>http://florian.katech.net/blog/sensibilisation/</link><pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate><guid>http://florian.katech.net/blog/sensibilisation/</guid><description>&lt;h3 id="avant-de-me-faire-embrouille-je-test-juste-un-truc-ça-vient-de-korben-"&gt;Avant de me faire embrouille, je test juste un truc, ça vient de korben ;)&lt;/h3&gt;
+&lt;p&gt;🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé. C’est du hacking de serrure si vous préférez. Et c’est juste passionnant (et bien sûr interdit si ce n’est pas votre propre serrure).&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -9,7 +9,7 @@ Des applications inutiles donc forcément indispensables.
 Tout droit tiré du script d'arcolinux :
 `git clone https://github.com/erikdubois/arcolinux-nemesis`
 
-Je vous invite à aller sur ce [lien](!https://arcolinux.com/installing-fun-stuff-for-the-terminal-on-arcolinux/) pour avoir plus d'infos sur les différentes applis que ça pourrait insallé.
+Je vous invite à aller sur ce [lien](https://arcolinux.com/installing-fun-stuff-for-the-terminal-on-arcolinux/) pour avoir plus d'infos sur les différentes applis que ça pourrait insallé.
 
 From Arch Repo
 

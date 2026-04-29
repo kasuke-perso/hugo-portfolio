@@ -1,33 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>logs on Florian DUGAT</title>
-    <link>http://florian.katech.net/tags/logs/</link>
-    <description>Recent content in logs on Florian DUGAT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 May 2022 15:31:05 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/logs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Systemd Tricks</title>
-      <link>http://florian.katech.net/blog/systemd-tricks/</link>
-      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/systemd-tricks/</guid>
-      <description>En rapport avec l&amp;rsquo;autre article : lien
-On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe. Faut aller dans vim /etc/systemd/system/leservice.service
-Exemple avec logstash [Unit] Description=logstash [Service] Type=simple User=root Group=root # Load env vars from /etc/default/ and /etc/sysconfig/ if they exist. # Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t # exist, it continues onward. EnvironmentFile=-/etc/default/logstash EnvironmentFile=-/etc/sysconfig/logstash ExecStart=/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34; Restart=always WorkingDirectory=/ Nice=19 LimitNOFILE=16384 # When stopping, how long to wait before giving up and sending SIGKILL?</description>
-    </item>
-    
-    <item>
-      <title>Gestion Des Logs Journalctl</title>
-      <link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link>
-      <pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid>
-      <description>Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule
-Cheatsheet  journalctl -xe pour voir tous les logs direct en bas je crois à vérif Filtrer par service : journalctl -u service journalctl -f pour faire comme tail -f dessus Filtrer par PID journalctl _PID=1 Filtrer par programme journalctl /usr/bin/tamere Filtrer par niveau de logs genre err journalctl -p err  </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Logs on Florian DUGAT</title><link>http://florian.katech.net/tags/logs/</link><description>Recent content in Logs on Florian DUGAT</description><generator>Hugo</generator><language>fr-fr</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><lastBuildDate>Tue, 03 May 2022 15:31:05 +0200</lastBuildDate><atom:link href="http://florian.katech.net/tags/logs/index.xml" rel="self" type="application/rss+xml"/><item><title>Systemd Tricks</title><link>http://florian.katech.net/blog/systemd-tricks/</link><pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate><guid>http://florian.katech.net/blog/systemd-tricks/</guid><description>&lt;p&gt;En rapport avec l&amp;rsquo;autre article : lien&lt;/p&gt;
+&lt;p&gt;On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe.
+Faut aller dans &lt;code&gt;vim /etc/systemd/system/leservice.service&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="exemple-avec-logstash"&gt;Exemple avec logstash&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Unit]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Description&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Service]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;User&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Group&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Load env vars from /etc/default/ and /etc/sysconfig/ if they exist.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# exist, it continues onward.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/default/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/sysconfig/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;ExecStart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Restart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;always&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WorkingDirectory&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Nice&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;LimitNOFILE&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# When stopping, how long to wait before giving up and sending SIGKILL?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Keep in mind that SIGKILL on a process can cause data loss.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;TimeoutStopSec&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;infinity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Install]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WantedBy&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;multi-user.target&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On peut voir que j&amp;rsquo;ai changé le User et le groupe, on peut aussi changer les options de démarrage et les chemins des binaires :)&lt;/p&gt;</description></item><item><title>Gestion Des Logs Journalctl</title><link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link><pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate><guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid><description>&lt;p&gt;Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule&lt;/p&gt;
+&lt;h1 id="cheatsheet"&gt;Cheatsheet&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;journalctl -xe&lt;/code&gt; pour voir tous les logs direct en bas je crois à vérif&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;service&lt;/strong&gt; : &lt;code&gt;journalctl -u service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;journalctl -f&lt;/code&gt; pour faire comme tail -f dessus&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;PID&lt;/strong&gt; &lt;code&gt;journalctl _PID=1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;programme&lt;/strong&gt; &lt;code&gt;journalctl /usr/bin/tamere&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par niveau de logs genre &lt;strong&gt;err&lt;/strong&gt; &lt;code&gt;journalctl -p err&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

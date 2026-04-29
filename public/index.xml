@@ -1,394 +1,236 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Florian DUGAT</title>
-    <link>http://florian.katech.net/</link>
-    <description>Recent content on Florian DUGAT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 25 Nov 2024 10:19:22 +0100</lastBuildDate><atom:link href="http://florian.katech.net/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Synchroniser VMWare inventory sur AWX</title>
-      <link>http://florian.katech.net/blog/recuperer-vmware-awx/</link>
-      <pubDate>Mon, 25 Nov 2024 10:19:22 +0100</pubDate>
-      
-      <guid>http://florian.katech.net/blog/recuperer-vmware-awx/</guid>
-      <description>Dans AWX, il existe de base, un inventaire dynamique basé sur VMWare.
-Je trouve la documentation et les ressources sur internet un peu trop vague à ce sujet alors j&amp;rsquo;écris ce petit article qui pourrait en aider d&amp;rsquo;autre.
-Creation de l&amp;rsquo;inventaire VMWare Tout d&amp;rsquo;abord il faudra aller dans l&amp;rsquo;UI ressources/inventory/add inventory la vous donner un nom à votre inventaire, ce sera juste pour l&amp;rsquo;identifier (mettez VMWare inventory par exemple)
-Une fois crée, vous devrez aller dans votre inventaire et aller dans l&amp;rsquo;onglet sources, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l&amp;rsquo;extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d&amp;rsquo;execution (pour rappel, cela permet d&amp;rsquo;utilliser une version d&amp;rsquo;ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -&amp;gt; lien documentation )</description>
-    </item>
-    
-    <item>
-      <title>Muséum national d&#39;histoire naturelle - Devops</title>
-      <link>http://florian.katech.net/experience/musee/</link>
-      <pubDate>Thu, 14 Nov 2024 10:17:34 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/musee/</guid>
-      <description>27 Mai 2024 - 31 Mars 2025
-Au sein de la DINSI, j&amp;rsquo;étais en charge, dans un premier temps, de l&amp;rsquo;infrastructure système (VMware) et dans un second temps, rejoindre une équipe fraichement créer pour faire des sujets de Devops.
-J&amp;rsquo;ai du faire du ménage de l&amp;rsquo;infrastructure déjà en place, il y a eu une grosse tâche de mise à plat de l&amp;rsquo;existant pour savoir vers où on allait évoluer. Pas mal de documentations à faire en autonomie en allant fouiller dans toute l&amp;rsquo;infrastructure existante.</description>
-    </item>
-    
-    <item>
-      <title>Voron 2.4</title>
-      <link>http://florian.katech.net/blog/voron-2.4/</link>
-      <pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/voron-2.4/</guid>
-      <description>Let&amp;rsquo;s make a 3D printer ! Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.
-Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné. Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; ici</description>
-    </item>
-    
-    <item>
-      <title>Systemd Tricks</title>
-      <link>http://florian.katech.net/blog/systemd-tricks/</link>
-      <pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/systemd-tricks/</guid>
-      <description>En rapport avec l&amp;rsquo;autre article : lien
-On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe. Faut aller dans vim /etc/systemd/system/leservice.service
-Exemple avec logstash [Unit] Description=logstash [Service] Type=simple User=root Group=root # Load env vars from /etc/default/ and /etc/sysconfig/ if they exist. # Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t # exist, it continues onward. EnvironmentFile=-/etc/default/logstash EnvironmentFile=-/etc/sysconfig/logstash ExecStart=/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34; Restart=always WorkingDirectory=/ Nice=19 LimitNOFILE=16384 # When stopping, how long to wait before giving up and sending SIGKILL?</description>
-    </item>
-    
-    <item>
-      <title>Gestion Des Logs Journalctl</title>
-      <link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link>
-      <pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid>
-      <description>Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule
-Cheatsheet  journalctl -xe pour voir tous les logs direct en bas je crois à vérif Filtrer par service : journalctl -u service journalctl -f pour faire comme tail -f dessus Filtrer par PID journalctl _PID=1 Filtrer par programme journalctl /usr/bin/tamere Filtrer par niveau de logs genre err journalctl -p err  </description>
-    </item>
-    
-    <item>
-      <title>iBanFirst - Administrateur système réseau, cloud, devops - 2 ans</title>
-      <link>http://florian.katech.net/experience/ibanfirst/</link>
-      <pubDate>Wed, 01 Dec 2021 10:17:34 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/ibanfirst/</guid>
-      <description>Durée 2 ans (Décembre 2021 - Décembre 2023)
-Au sein d&amp;rsquo;une startup fintech, je suis dans l&amp;rsquo;équipe IT qui est composé de deux équipes : une partie Helpdesk et une partie projet, je suis rattaché directement à la partie projet où on gère toute l&amp;rsquo;infrastructure système et réseau de l&amp;rsquo;entreprise sur plusieurs sites et régions d&amp;rsquo;europe.
-Elle est composée d&amp;rsquo;une grosse partie en interne on premise mais possède aussi des composants dans le cloud (AWS/Azure).</description>
-    </item>
-    
-    <item>
-      <title>Vim Tips</title>
-      <link>http://florian.katech.net/blog/vim-tips/</link>
-      <pubDate>Fri, 04 Jun 2021 10:51:43 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/vim-tips/</guid>
-      <description>Navigation:  Aller en début de ligne: xG ou x=le numero de la ligne Aller en fin de ligne: $ Aller au premier caractère de la ligne: ^^ ou 0 pour tout début de la ligne Aller en début de fichier: gg et en fin de fichier G  En mode insertion:  Pour autocompletion des chemins en mode insertion: ctl-x + ctrl-f  Ouvrir d&amp;rsquo;autre fichiers:   Pour se déplacer depuis vim pour aller dans un autre fichier: :e em /[TAB]</description>
-    </item>
-    
-    <item>
-      <title>Airbus - Intégrateur infra - 11 Mois</title>
-      <link>http://florian.katech.net/experience/airbus/</link>
-      <pubDate>Tue, 01 Dec 2020 10:17:34 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/airbus/</guid>
-      <description>Durée 11 mois (Décembre 2020 - Fin novembre 2021)
-Dans une équipe de 7 personnes, je suis responsable du déploiement d&amp;rsquo;un socle composé de BM (HP) et de VM (Nutanix) ainsi que de nombreuses autres solutions techniques. Le but est de le faire de la manière la plus automatisée possible, chacun développe un élément du socle, par exemple une personne est en charge de toute la partie supervision/remonté de logs, et je suis en charge de regroupé toute les parties de tout le monde, déployer de façon séquentielle dans l&amp;rsquo;ordre nécessaire et faire en sorte que cela fonctionne.</description>
-    </item>
-    
-    <item>
-      <title>VSphere - Augmenter taille de stockage sur machine existante</title>
-      <link>http://florian.katech.net/realisations/vsphere/</link>
-      <pubDate>Thu, 30 Jul 2020 12:25:42 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/vsphere/</guid>
-      <description>Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système Linux déjà existant qui utilise déjà un disque, on veut booster sa taille.
-Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
-Je suis sous ubuntu 16.04 et vSphere 6.0
-J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)</description>
-    </item>
-    
-    <item>
-      <title>Imprimante 3D</title>
-      <link>http://florian.katech.net/blog/imprimante-3d/</link>
-      <pubDate>Sun, 14 Jun 2020 17:41:43 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/imprimante-3d/</guid>
-      <description>Quelle imprimante ? J&amp;rsquo;ai longtemps songé à acquérir une imprimante 3D, étant donné que je suis une personne peu soigneuse de mon matériel, il m&amp;rsquo;arrive souvent de casser des trucs 😔 Et bien souvent c&amp;rsquo;est un bout de plastique ou un bout de pièce que l&amp;rsquo;on ne peut pas récupérer/racheter. Plutôt que de racheter un produit en entier, je trouve ça bien plus amusant de le réparer avec des bouts de plastique.</description>
-    </item>
-    
-    <item>
-      <title>Applications Qui Servent À Rien</title>
-      <link>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</link>
-      <pubDate>Fri, 06 Mar 2020 15:36:41 +0100</pubDate>
-      
-      <guid>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</guid>
-      <description>Des applications inutiles donc forcément indispensables.
-Tout droit tiré du script d&amp;rsquo;arcolinux : git clone https://github.com/erikdubois/arcolinux-nemesis
-Je vous invite à aller sur ce lien pour avoir plus d&amp;rsquo;infos sur les différentes applis que ça pourrait insallé.
-From Arch Repo
- asciiquarium cmatrix cool-retro-term cowfortune ou cowsay figlet lolcat mc ranger sl ufetch-arco  From AUR
- bash-pipes boxes cava cpufetch-git curseradio-git gotop-bin python-pywal toilet slurm tty-clock ufetch   Mais je vais en rajouter d&amp;rsquo;autres dans la liste :</description>
-    </item>
-    
-    <item>
-      <title>I3 Arch Linux</title>
-      <link>http://florian.katech.net/blog/i3-arch-linux/</link>
-      <pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/i3-arch-linux/</guid>
-      <description>Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock
-Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)
-̀sudo pacman -S i3 là plusieurs choix s&amp;rsquo;offrent à vous 1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status
-Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm.</description>
-    </item>
-    
-    <item>
-      <title>Script PowerShell pour créer raccourcis Office 365</title>
-      <link>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</link>
-      <pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</guid>
-      <description>N&amp;rsquo;ayant pas trouvé de post précisément pour office (365), puisqu&amp;rsquo;il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅
-En PowerShell parce que c&amp;rsquo;est mieux. On a pas de raccourci donc on va en créer un de la plus simple des façons.
-Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :
-# On prépare la création du raccourci $objShell = New-Object -ComObject (&amp;#34;WScript.</description>
-    </item>
-    
-    <item>
-      <title>Script Powershell Créer Raccourcis Office 365</title>
-      <link>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</link>
-      <pubDate>Mon, 05 Aug 2019 09:31:26 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</guid>
-      <description>Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :
-# On prépare la création du raccourci $objShell = New-Object -ComObject (&amp;#34;WScript.Shell&amp;#34;) # Destination du raccourci $objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &amp;#34;\Desktop&amp;#34; +&amp;#34;\Outlook.lnk&amp;#34;) # Vers ou doit pointer le raccourci $objShortCut.TargetPath=&amp;#34;C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34; # Création du raccourci $objShortCut.Save() Enregistrez au format .ps1 et exéctuez direct, boom nouvel îcone sur le bureau avec Outlook !
-En fait on peut l&amp;rsquo;apliquer pout tout, mais il faut bien faire attention au chemin qu&amp;rsquo;il y a d&amp;rsquo;afficher sur l&amp;rsquo;explorer qui n&amp;rsquo;est pas le bon car en réalité c&amp;rsquo;est plutôt ceci :</description>
-    </item>
-    
-    <item>
-      <title>Franz - Un logiciel qui regroupe chat et service de messagerie</title>
-      <link>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</link>
-      <pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</guid>
-      <description>Franz 5 (à l&amp;rsquo;heure où j&amp;rsquo;écris)
-Franz is the former Emperor of Austria - mais aussi une app de messagerie qui regroupe chat &amp;amp; messaging services en UNE seule application. Franz supporte Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype, Trello et quelques autres.
-Perso j&amp;rsquo;aime bien, c&amp;rsquo;est bien intégrer, il y a un dark mode pour les &amp;ldquo;geek&amp;rdquo; qui voient la vie en noir 😏 et c&amp;rsquo;est super utile plutôt que d&amp;rsquo;avoir 15 000 onglets en plus de tout ce que vous faites déjà.</description>
-    </item>
-    
-    <item>
-      <title>Eternal Terminal - Accès ssh sans coupure</title>
-      <link>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</link>
-      <pubDate>Mon, 22 Jul 2019 14:28:13 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</guid>
-      <description>Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.
-Contrairement à une session SSH classique, les sessions ET survivront à une coupure réseau ou à un changement d’adresse IP. Inspiré de Mosh, SSH et AutoSSH, Eternal Terminal utilise SSH pour la mise en relation et le chiffrement et supporte le mode « control » de tmux, ce qui vous permet de disposer de fenêtres, d’onglets et de barres de défilement dans votre terminal.</description>
-    </item>
-    
-    <item>
-      <title>VidCutter - Logiciel pour découper facilement des vidéos</title>
-      <link>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</link>
-      <pubDate>Mon, 22 Jul 2019 11:55:31 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</guid>
-      <description>Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi VidCutter pourrait vous intéresser.
-Le logiciel est crossplateforme (ce que j&amp;rsquo;adore perso) et il fait bien son taff, tout simplement. Pas besoin de lancer Adobe Première Pro pour juste faire quelques cuts.
-le logiciel ne modifie rien des vidéos sources, que ce soit leur format, leur résolution ou leur débit.</description>
-    </item>
-    
-    <item>
-      <title>L&#39;AGEFI - Administrateur systèmes et réseaux junior - 2 ans</title>
-      <link>http://florian.katech.net/experience/lagefi/</link>
-      <pubDate>Tue, 09 Jul 2019 19:31:11 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/lagefi/</guid>
-      <description>Durée : 2 ans (Octobre 2018 - Septembre 2020)
-Dans une entreprise de taille moyenne (environ 100 collaborateurs), je gère tout ce qu&amp;rsquo;il y a de relié à l&amp;rsquo;informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher ses périphériques qu&amp;rsquo;à installer un serveur de supervision ELK pour statistiques d&amp;rsquo;envoi de mail.
-Etant dans une équipe de trois personnes (un DSI, un Administrateur systèmes et réseaux et moi-même) nous servons un peu à tout, donc aussi de support pour les salariés de l&amp;rsquo;entreprise.</description>
-    </item>
-    
-    <item>
-      <title>A propos de moi</title>
-      <link>http://florian.katech.net/about/</link>
-      <pubDate>Fri, 07 Jun 2019 14:19:58 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/about/</guid>
-      <description>Quiconque arrête d&amp;rsquo;apprendre, à vingt ou quatre-vingts ans, devient vieux. Celui qui continue d&amp;rsquo;apprendre reste jeune. Dans la vie, le plus beau est de rester jeune d&amp;rsquo;esprit.
-&amp;ndash; Henry Ford Passionné d&amp;rsquo;informatique et de nouvelles technologies depuis &amp;hellip; toujours je crois bien, j&amp;rsquo;ai décidé d&amp;rsquo;en faire mon métier.
-Polyvalent, curieux et créatif, j&amp;rsquo;ai toujours aimé bidouiller tout ce que je touche.
-DIY Do It Yourself ou fais le toi même pour les gens fâchés avec l&amp;rsquo;anglais.</description>
-    </item>
-    
-    <item>
-      <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid>
-      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
-Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
-Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:
- Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
-    </item>
-    
-    <item>
-      <title>Gestion clés ssh Linux avec Ansible</title>
-      <link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link>
-      <pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid>
-      <description>Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration. Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;
-Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !
-Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :
- Faire de A à Z un playbook avec le module user, la doc d&amp;rsquo;ansible est plutôt bien.</description>
-    </item>
-    
-    <item>
-      <title>Agrandir Stockage Vm vSphere</title>
-      <link>http://florian.katech.net/blog/agrandir-stockage-vm/</link>
-      <pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid>
-      <description>Prérequis Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)
-Je suis sous ubuntu 16.04 et vSphere 6.0
-J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)
-Se mettre en LiveCD sur vSphere Comment j&amp;rsquo;ai procédé pour insérer le cd :</description>
-    </item>
-    
-    <item>
-      <title>Recycler Un Vieux Écran De Pc Portable</title>
-      <link>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link>
-      <pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid>
-      <description>En gros c&amp;rsquo;est très simple.
-Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)
-Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve) On cherche board controller + ref de l&amp;rsquo;écranPlusieurs options s&amp;rsquo;offrent à vous, choisissez bien vos sorties vidéo disponibles dessus ;) HDMI c&amp;rsquo;est simple à brancher 😉</description>
-    </item>
-    
-    <item>
-      <title>Sensibilisation au lockpicking</title>
-      <link>http://florian.katech.net/blog/sensibilisation/</link>
-      <pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/blog/sensibilisation/</guid>
-      <description>Avant de me faire embrouille, je test juste un truc, ça vient de korben ;) 🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐
- Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé.</description>
-    </item>
-    
-    <item>
-      <title>Compétences</title>
-      <link>http://florian.katech.net/comp%C3%A9tences/</link>
-      <pubDate>Wed, 22 May 2019 15:38:26 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/comp%C3%A9tences/</guid>
-      <description>Compétences techniques Linux Depuis le début de mes études j&amp;rsquo;ai tout de suite adhérer à Linux, j&amp;rsquo;avais un peu commencé de mon côté avant l&amp;rsquo;école mais c&amp;rsquo;est vraiment là-bas que j&amp;rsquo;ai pu le plus approfondir mes connaissances.
-Pour moi l&amp;rsquo;OpenSource c&amp;rsquo;est essentiel et pour des étudiants, c&amp;rsquo;est bien pratique d&amp;rsquo;avoir un OS totalement gratuit. De plus, Linux dispose d&amp;rsquo;un support d&amp;rsquo;assez bonne qualité sur internet notamment par le biais de groupes de diffusion ou de forums.</description>
-    </item>
-    
-    <item>
-      <title>Installation AWX</title>
-      <link>http://florian.katech.net/realisations/installation-awx/</link>
-      <pubDate>Sun, 05 Aug 2018 09:45:10 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/installation-awx/</guid>
-      <description>On va se servir d&amp;rsquo;Ubuntu 17.10 et on aura besoin d&amp;rsquo;une connexion internet.
-Nous allons installer quelques paquets qui seront utiles pour que Ansible et AWX fonctionnent correctement.
-Premièrement, il faudra mettre à jour son source-list.
-sudo apt update Ensuite procédé à l&amp;rsquo;installation de quelques paquets:
-sudo apt install python-minimal open-ssh htop Ceci va installer python2.7.x, un serveur ssh pour avoir accès à la machine via ssh et htop un meilleur top</description>
-    </item>
-    
-    <item>
-      <title>Thales - Stage Ansible - 6 mois</title>
-      <link>http://florian.katech.net/experience/thales/</link>
-      <pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/thales/</guid>
-      <description>Stage à Thales Velizy pendant 6 mois
-Mars 2018 - Août 2018 Thème de la mission :
-Gestion de configuration massive Description de la mission :
-Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.
-Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ».</description>
-    </item>
-    
-    <item>
-      <title>Nemesis - Sécurité réseaux</title>
-      <link>http://florian.katech.net/projets/nemesis/</link>
-      <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/projets/nemesis/</guid>
-      <description>Projet de sécurité informatique (équipe de 3 personnes).
-Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
-A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
-    </item>
-    
-    <item>
-      <title>Nemesis - Sécurité réseaux</title>
-      <link>http://florian.katech.net/realisations/nemesis/</link>
-      <pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/nemesis/</guid>
-      <description>Projet de sécurité informatique (équipe de 3 personnes).
-Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.
-À l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.</description>
-    </item>
-    
-    <item>
-      <title>Challenge Accepted - IaaS</title>
-      <link>http://florian.katech.net/projets/challenge-accepted/</link>
-      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/projets/challenge-accepted/</guid>
-      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
-Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réaliser un TP.
-Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
-    </item>
-    
-    <item>
-      <title>Challenge Accepted - IaaS</title>
-      <link>http://florian.katech.net/realisations/challenge-accepted/</link>
-      <pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/realisations/challenge-accepted/</guid>
-      <description>Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :
-Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.
-Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infrastructure préconfigurée ainsi que sa destruction automatique. On fournit toutes les informations nécessaires pour que l&amp;rsquo;étudiant puisse réalisé un TP.
-Pour se faire, nous avons utilisé Ansible, Terraform et AWS.</description>
-    </item>
-    
-    <item>
-      <title>Malesherbes - Développeur Web junior - 4 mois</title>
-      <link>http://florian.katech.net/experience/malesherbes/</link>
-      <pubDate>Thu, 09 Jul 2015 19:55:28 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/malesherbes/</guid>
-      <description>Stage Développeur web (4 mois) Novembre 2015 - Février 2016
-Au sein d&amp;rsquo;une petite entreprise (Groupe Malesherbes Paris 17), j&amp;rsquo;ai pu aider au développement de l&amp;rsquo;interface web pour &amp;ldquo;l&amp;rsquo;uberistation&amp;rdquo; d&amp;rsquo;une application d&amp;rsquo;auto-école.
-J&amp;rsquo;ai pu développer quelques fonctionnalités et apporter l&amp;rsquo;éxperience que j&amp;rsquo;ai eu à l&amp;rsquo;école où, à l&amp;rsquo;époque, je n&amp;rsquo;avais fais que des applications web essentiellement en php/mysql html/css.
-Univers technique :  HTML/CSS PHP/MYSQL WordPress IDE (j&amp;rsquo;ai commencé sur dreamwever mais j&amp;rsquo;ai préféré être sur phpstorm) API google (google maps)  </description>
-    </item>
-    
-    <item>
-      <title>In&#39;tech - Préparation titre expert systèmes et réseaux RNCP 1</title>
-      <link>http://florian.katech.net/experience/intech/</link>
-      <pubDate>Tue, 10 Sep 2013 12:40:05 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/experience/intech/</guid>
-      <description>Ce que j&amp;rsquo;ai bien aimé dans cet école c&amp;rsquo;était l&amp;rsquo;apprentissage en mode projet qui est beaucoup plus parlant que juste des cours théoriques que l&amp;rsquo;on ne met jamais vraiment en pratique. Cela m&amp;rsquo;a aussi permis de voir comment s&amp;rsquo;effectue un projet avec tout ce que ça comporte, pas uniquement l&amp;rsquo;aspect technique qui m&amp;rsquo;intéressait plus que la gestion de projet. Cela n&amp;rsquo;a pas toujours été évident pour moi car j&amp;rsquo;ai eu du mal à me faire à tout l&amp;rsquo;aspect non technique.</description>
-    </item>
-    
-    <item>
-      <title>Mon Premier Site</title>
-      <link>http://florian.katech.net/projets/mon-premier-site/</link>
-      <pubDate>Tue, 27 Jun 2006 16:03:28 +0200</pubDate>
-      
-      <guid>http://florian.katech.net/projets/mon-premier-site/</guid>
-      <description>Ma première expérience avec le monde de l&amp;rsquo;informatique 🤗
-Le site est affreux, j&amp;rsquo;étais très loin de savoir comment faire. Je me rappel j&amp;rsquo;étais déterminé et passionné comme jamais !
-Ceci est plus un &amp;ldquo;retour d&amp;rsquo;expérience&amp;rdquo; qu&amp;rsquo;autre chose.
-Je ne savais même pas qu&amp;rsquo;il était encore en ligne et le fait de le revoir m&amp;rsquo;a mis un coup de nostalgie.
-Je me rappel très bien, je me butais au site du zero (qui maintenant s&amp;rsquo;appel OpenClassroom &amp;hellip;) je faisais du html sur papier parceque j&amp;rsquo;avais &amp;ldquo;que&amp;rdquo; un mac (on se détent rien à voir avec vos macbook pro actuel hein &amp;hellip;)</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Florian DUGAT</title><link>http://florian.katech.net/</link><description>Recent content on Florian DUGAT</description><generator>Hugo</generator><language>fr-fr</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener"&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><lastBuildDate>Mon, 25 Nov 2024 10:19:22 +0100</lastBuildDate><atom:link href="http://florian.katech.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Synchroniser VMWare inventory sur AWX</title><link>http://florian.katech.net/blog/recuperer-vmware-awx/</link><pubDate>Mon, 25 Nov 2024 10:19:22 +0100</pubDate><guid>http://florian.katech.net/blog/recuperer-vmware-awx/</guid><description>&lt;p&gt;Dans AWX, il existe de base, un inventaire dynamique basé sur VMWare.&lt;/p&gt;
+&lt;p&gt;Je trouve la documentation et les ressources sur internet un peu trop vague à ce sujet alors j&amp;rsquo;écris ce petit article qui pourrait en aider d&amp;rsquo;autre.&lt;/p&gt;
+&lt;h1 id="creation-de-linventaire-vmware"&gt;Creation de l&amp;rsquo;inventaire VMWare&lt;/h1&gt;
+&lt;p&gt;Tout d&amp;rsquo;abord il faudra aller dans l&amp;rsquo;UI &lt;code&gt;ressources/inventory/add inventory&lt;/code&gt; la vous donner un nom à votre inventaire, ce sera juste pour l&amp;rsquo;identifier (mettez VMWare inventory par exemple)&lt;/p&gt;
+&lt;p&gt;Une fois crée, vous devrez aller dans votre inventaire et aller dans l&amp;rsquo;onglet &lt;em&gt;sources&lt;/em&gt;, la vous lui donnez un nom (VMWare vcenter par exemple), à vérifier mais je crois que l&amp;rsquo;extension vmware est intégré de base donc pas forcément besoin de spécifier un environement d&amp;rsquo;execution (pour rappel, cela permet d&amp;rsquo;utilliser une version d&amp;rsquo;ansible spécifique, avec des add-ons ou des plugins qui ne sont plus installé de base avec ansible-core -&amp;gt; lien documentation )&lt;/p&gt;</description></item><item><title>Muséum national d'histoire naturelle - Devops</title><link>http://florian.katech.net/experience/musee/</link><pubDate>Thu, 14 Nov 2024 10:17:34 +0200</pubDate><guid>http://florian.katech.net/experience/musee/</guid><description>&lt;p&gt;27 Mai 2024 - 31 Mars 2025&lt;/p&gt;
+&lt;p&gt;Au sein de la DINSI, j&amp;rsquo;étais en charge, dans un premier temps, de l&amp;rsquo;infrastructure système (VMware) et dans un second temps, rejoindre une équipe fraichement créer pour faire des sujets de Devops.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai du faire du ménage de l&amp;rsquo;infrastructure déjà en place, il y a eu une grosse tâche de mise à plat de l&amp;rsquo;existant pour savoir vers où on allait évoluer. Pas mal de documentations à faire en autonomie en allant fouiller dans toute l&amp;rsquo;infrastructure existante.&lt;/p&gt;</description></item><item><title>Voron 2.4</title><link>http://florian.katech.net/blog/voron-2.4/</link><pubDate>Mon, 16 May 2022 00:21:53 +0200</pubDate><guid>http://florian.katech.net/blog/voron-2.4/</guid><description>&lt;h1 id="lets-make-a-3d-printer-"&gt;Let&amp;rsquo;s make a 3D printer !&lt;/h1&gt;
+&lt;p&gt;Pour ceux qui ne connaissent pas du tout l&amp;rsquo;univers de l&amp;rsquo;impression 3D (j&amp;rsquo;aurais jamais du commencer je n&amp;rsquo;arrive plus à m&amp;rsquo;arrêter &amp;hellip;) vous ne connaissez sûrement pas ce qu&amp;rsquo;est une Voron.&lt;/p&gt;
+&lt;p&gt;Ce n&amp;rsquo;est pas vraiment une marque, c&amp;rsquo;est plutôt un projet commun, le concept ressemble beaucoup à linux car c&amp;rsquo;est totalement opensource et alimenté par une communauté de passioné.
+Tout ce petit monde à permis de pouvoir construire plusieurs imprimante et je vous invite grandement à aller voir le projet en question -&amp;gt; &lt;a href="https://vorondesign.com/"&gt;ici&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Systemd Tricks</title><link>http://florian.katech.net/blog/systemd-tricks/</link><pubDate>Tue, 03 May 2022 15:31:05 +0200</pubDate><guid>http://florian.katech.net/blog/systemd-tricks/</guid><description>&lt;p&gt;En rapport avec l&amp;rsquo;autre article : lien&lt;/p&gt;
+&lt;p&gt;On peut gérer les options tel que l&amp;rsquo;utilisateur et groupe.
+Faut aller dans &lt;code&gt;vim /etc/systemd/system/leservice.service&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="exemple-avec-logstash"&gt;Exemple avec logstash&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Unit]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Description&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Service]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Type&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;simple&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;User&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Group&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Load env vars from /etc/default/ and /etc/sysconfig/ if they exist.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Prefixing the path with &amp;#39;-&amp;#39; makes it try to load, but if the file doesn&amp;#39;t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# exist, it continues onward.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/default/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;EnvironmentFile&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;-/etc/sysconfig/logstash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;ExecStart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/root/logstash-7.16.3/bin/logstash &amp;#34;--path.settings&amp;#34; &amp;#34;/etc/logstash&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Restart&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;always&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WorkingDirectory&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;Nice&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;LimitNOFILE&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# When stopping, how long to wait before giving up and sending SIGKILL?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Keep in mind that SIGKILL on a process can cause data loss.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;TimeoutStopSec&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;infinity&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;[Install]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;WantedBy&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;multi-user.target&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On peut voir que j&amp;rsquo;ai changé le User et le groupe, on peut aussi changer les options de démarrage et les chemins des binaires :)&lt;/p&gt;</description></item><item><title>Gestion Des Logs Journalctl</title><link>http://florian.katech.net/blog/gestion-des-logs-journalctl/</link><pubDate>Tue, 03 May 2022 15:16:44 +0200</pubDate><guid>http://florian.katech.net/blog/gestion-des-logs-journalctl/</guid><description>&lt;p&gt;Petite notes pour les logs de journalisation linux, journalctl car à chaque fois ça parle mandarin et ça me saoule&lt;/p&gt;
+&lt;h1 id="cheatsheet"&gt;Cheatsheet&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;journalctl -xe&lt;/code&gt; pour voir tous les logs direct en bas je crois à vérif&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;service&lt;/strong&gt; : &lt;code&gt;journalctl -u service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;journalctl -f&lt;/code&gt; pour faire comme tail -f dessus&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;PID&lt;/strong&gt; &lt;code&gt;journalctl _PID=1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par &lt;strong&gt;programme&lt;/strong&gt; &lt;code&gt;journalctl /usr/bin/tamere&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filtrer par niveau de logs genre &lt;strong&gt;err&lt;/strong&gt; &lt;code&gt;journalctl -p err&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>iBanFirst - Administrateur système réseau, cloud, devops - 2 ans</title><link>http://florian.katech.net/experience/ibanfirst/</link><pubDate>Wed, 01 Dec 2021 10:17:34 +0200</pubDate><guid>http://florian.katech.net/experience/ibanfirst/</guid><description>&lt;p&gt;Durée 2 ans (Décembre 2021 - Décembre 2023)&lt;/p&gt;
+&lt;p&gt;Au sein d&amp;rsquo;une startup fintech, je suis dans l&amp;rsquo;équipe IT qui est composé de deux équipes :
+une partie Helpdesk et une partie projet, je suis rattaché directement à la partie projet où on gère toute l&amp;rsquo;infrastructure système et réseau de l&amp;rsquo;entreprise sur plusieurs sites et régions d&amp;rsquo;europe.&lt;/p&gt;
+&lt;p&gt;Elle est composée d&amp;rsquo;une grosse partie en interne on premise mais possède aussi des composants dans le cloud (AWS/Azure).&lt;/p&gt;</description></item><item><title>Vim Tips</title><link>http://florian.katech.net/blog/vim-tips/</link><pubDate>Fri, 04 Jun 2021 10:51:43 +0200</pubDate><guid>http://florian.katech.net/blog/vim-tips/</guid><description>&lt;h2 id="navigation"&gt;Navigation:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Aller en début de ligne: &lt;code&gt;xG&lt;/code&gt; ou x=le numero de la ligne&lt;/li&gt;
+&lt;li&gt;Aller en fin de ligne: &lt;code&gt;$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Aller au premier caractère de la ligne: &lt;code&gt;^^&lt;/code&gt; ou &lt;code&gt;0&lt;/code&gt; pour tout début de la ligne&lt;/li&gt;
+&lt;li&gt;Aller en début de fichier: &lt;code&gt;gg&lt;/code&gt; et en fin de fichier &lt;code&gt;G&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="en-mode-insertion"&gt;En mode insertion:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pour autocompletion des chemins en mode insertion: &lt;code&gt;ctl-x + ctrl-f&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ouvrir-dautre-fichiers"&gt;Ouvrir d&amp;rsquo;autre fichiers:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Pour se déplacer depuis vim pour aller dans un autre fichier: &lt;code&gt;:e em /[TAB]&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Airbus - Intégrateur infra - 11 Mois</title><link>http://florian.katech.net/experience/airbus/</link><pubDate>Tue, 01 Dec 2020 10:17:34 +0200</pubDate><guid>http://florian.katech.net/experience/airbus/</guid><description>&lt;p&gt;Durée 11 mois (Décembre 2020 - Fin novembre 2021)&lt;/p&gt;
+&lt;p&gt;Dans une équipe de 7 personnes, je suis responsable du déploiement d&amp;rsquo;un socle composé de BM (HP) et de VM (Nutanix) ainsi que de nombreuses autres solutions techniques. Le but est de le faire de la manière la plus automatisée possible, chacun développe un élément du socle, par exemple une personne est en charge de toute la partie supervision/remonté de logs, et je suis en charge de regroupé toute les parties de tout le monde, déployer de façon séquentielle dans l&amp;rsquo;ordre nécessaire et faire en sorte que cela fonctionne. Mais bien souvent cela ne se passe pas comme prévu et je doit vérifier les différents composants, par exemple je debug un conteneur mal déployé ou un problème dans un playbook.&lt;/p&gt;</description></item><item><title>VSphere - Augmenter taille de stockage sur machine existante</title><link>http://florian.katech.net/realisations/vsphere/</link><pubDate>Thu, 30 Jul 2020 12:25:42 +0200</pubDate><guid>http://florian.katech.net/realisations/vsphere/</guid><description>&lt;p&gt;Voici une petite réalisation sous vSphere pour pouvoir augmenter la taille de stockage sur un système Linux déjà existant qui utilise déjà un disque, on veut booster sa taille.&lt;/p&gt;
+&lt;h3 id="prérequis"&gt;Prérequis&lt;/h3&gt;
+&lt;p&gt;Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Je suis sous ubuntu 16.04 et vSphere 6.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
+&lt;img src="http://florian.katech.net/screen_vsphere.PNG" alt="screen vsphere"&gt;
+Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)&lt;/p&gt;</description></item><item><title>Imprimante 3D</title><link>http://florian.katech.net/blog/imprimante-3d/</link><pubDate>Sun, 14 Jun 2020 17:41:43 +0200</pubDate><guid>http://florian.katech.net/blog/imprimante-3d/</guid><description>&lt;h1 id="quelle-imprimante-"&gt;Quelle imprimante ?&lt;/h1&gt;
+&lt;p&gt;J&amp;rsquo;ai longtemps songé à acquérir une imprimante 3D, étant donné que je suis une personne peu soigneuse de mon matériel, il m&amp;rsquo;arrive souvent de casser des trucs 😔 Et bien souvent c&amp;rsquo;est un bout de plastique ou un bout de pièce que l&amp;rsquo;on ne peut pas récupérer/racheter. Plutôt que de racheter un produit en entier, je trouve ça bien plus amusant de le réparer avec des bouts de plastique.&lt;/p&gt;</description></item><item><title>Applications Qui Servent À Rien</title><link>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</link><pubDate>Fri, 06 Mar 2020 15:36:41 +0100</pubDate><guid>http://florian.katech.net/blog/applications-qui-servent-%C3%A0-rien/</guid><description>&lt;p&gt;Des applications inutiles donc forcément indispensables.&lt;/p&gt;
+&lt;p&gt;Tout droit tiré du script d&amp;rsquo;arcolinux :
+&lt;code&gt;git clone https://github.com/erikdubois/arcolinux-nemesis&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Je vous invite à aller sur ce &lt;a href="https://arcolinux.com/installing-fun-stuff-for-the-terminal-on-arcolinux/"&gt;lien&lt;/a&gt; pour avoir plus d&amp;rsquo;infos sur les différentes applis que ça pourrait insallé.&lt;/p&gt;
+&lt;p&gt;From Arch Repo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;asciiquarium&lt;/li&gt;
+&lt;li&gt;cmatrix&lt;/li&gt;
+&lt;li&gt;cool-retro-term&lt;/li&gt;
+&lt;li&gt;cowfortune ou cowsay&lt;/li&gt;
+&lt;li&gt;figlet&lt;/li&gt;
+&lt;li&gt;lolcat&lt;/li&gt;
+&lt;li&gt;mc&lt;/li&gt;
+&lt;li&gt;ranger&lt;/li&gt;
+&lt;li&gt;sl&lt;/li&gt;
+&lt;li&gt;ufetch-arco&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From AUR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bash-pipes&lt;/li&gt;
+&lt;li&gt;boxes&lt;/li&gt;
+&lt;li&gt;cava&lt;/li&gt;
+&lt;li&gt;cpufetch-git&lt;/li&gt;
+&lt;li&gt;curseradio-git&lt;/li&gt;
+&lt;li&gt;gotop-bin&lt;/li&gt;
+&lt;li&gt;python-pywal&lt;/li&gt;
+&lt;li&gt;toilet&lt;/li&gt;
+&lt;li&gt;slurm&lt;/li&gt;
+&lt;li&gt;tty-clock&lt;/li&gt;
+&lt;li&gt;ufetch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Mais je vais en rajouter d&amp;rsquo;autres dans la liste :&lt;/p&gt;</description></item><item><title>I3 Arch Linux</title><link>http://florian.katech.net/blog/i3-arch-linux/</link><pubDate>Fri, 27 Sep 2019 09:56:58 +0200</pubDate><guid>http://florian.katech.net/blog/i3-arch-linux/</guid><description>&lt;p&gt;Sur Arch il n&amp;rsquo;y a pas beaucoup de packages de base &amp;hellip; No shit sherlock&lt;/p&gt;
+&lt;p&gt;Il faut installer un minimum de paquet rien que pour le lancer donc soit avec pacman ou yaourt (ça revient au même de toute façon)&lt;/p&gt;
+&lt;p&gt;̀&lt;code&gt;sudo pacman -S i3&lt;/code&gt;
+là plusieurs choix s&amp;rsquo;offrent à vous &lt;code&gt;1) i3-gaps 2) i3-wm 3) i3blocks 4) i3lock 5) i3status&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Soit vous prenez i3-gaps vous permettant d&amp;rsquo;avoir des bordures de fenêtre, soit vous prenez i3-wm pour ne pas en avoir, généralement les gens préfèrent i3-gaps mais moi je m&amp;rsquo;en fou, c&amp;rsquo;est sur un ordi portable ou avec peu d&amp;rsquo;affichage donc je pars sur du i3-wm.&lt;/p&gt;</description></item><item><title>Script PowerShell pour créer raccourcis Office 365</title><link>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</link><pubDate>Tue, 17 Sep 2019 09:54:45 +0200</pubDate><guid>http://florian.katech.net/blog/script-powershell-pour-cr%C3%A9er-raccourcis-office-365/</guid><description>&lt;p&gt;N&amp;rsquo;ayant pas trouvé de post précisément pour office (365), puisqu&amp;rsquo;il contient une suite de logiciels, je fais ce petit post pour aider des gens (flemmard ou noob) comme moi 😅&lt;/p&gt;
+&lt;p&gt;En PowerShell parce que c&amp;rsquo;est mieux. On a pas de raccourci donc on va en créer un de la plus simple des façons.&lt;/p&gt;
+&lt;p&gt;Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-PowerShell" data-lang="PowerShell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# On prépare la création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShell = New-Object -ComObject (&lt;span style="color:#e6db74"&gt;&amp;#34;WScript.Shell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Destination du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &lt;span style="color:#e6db74"&gt;&amp;#34;\Desktop&amp;#34;&lt;/span&gt; +&lt;span style="color:#e6db74"&gt;&amp;#34;\Outlook.lnk&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Vers ou doit pointer le raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.TargetPath=&lt;span style="color:#e6db74"&gt;&amp;#34;C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.Save()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enregistrez au format .ps1 et éxectuer direct, boom nouvel îcone sur le bureau avec Outlook !&lt;/p&gt;</description></item><item><title>Script Powershell Créer Raccourcis Office 365</title><link>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</link><pubDate>Mon, 05 Aug 2019 09:31:26 +0200</pubDate><guid>http://florian.katech.net/realisations/script-powershell-cr%C3%A9er-raccourcis-office-365/</guid><description>&lt;p&gt;Voici un exemple avec Outlook (Office 365 ou Office 2019 Pro Plus) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-PowerShell" data-lang="PowerShell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# On prépare la création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShell = New-Object -ComObject (&lt;span style="color:#e6db74"&gt;&amp;#34;WScript.Shell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Destination du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut = $objShell.CreateShortcut($env:USERPROFILE + &lt;span style="color:#e6db74"&gt;&amp;#34;\Desktop&amp;#34;&lt;/span&gt; +&lt;span style="color:#e6db74"&gt;&amp;#34;\Outlook.lnk&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Vers ou doit pointer le raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.TargetPath=&lt;span style="color:#e6db74"&gt;&amp;#34;C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Création du raccourci&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$objShortCut.Save()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enregistrez au format .ps1 et exéctuez direct, boom nouvel îcone sur le bureau avec Outlook !&lt;/p&gt;
+&lt;p&gt;En fait on peut l&amp;rsquo;apliquer pout tout, mais il faut bien faire attention au chemin qu&amp;rsquo;il y a d&amp;rsquo;afficher sur l&amp;rsquo;explorer
+&lt;img src="http://florian.katech.net/explorer-office.PNG" alt="explorer"&gt;
+qui n&amp;rsquo;est pas le bon car en réalité c&amp;rsquo;est plutôt ceci :&lt;/p&gt;</description></item><item><title>Franz - Un logiciel qui regroupe chat et service de messagerie</title><link>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</link><pubDate>Mon, 22 Jul 2019 14:37:09 +0200</pubDate><guid>http://florian.katech.net/blog/franz-un-logiciel-qui-regroupe-plein-de-r%C3%A9seaux-sociaux/</guid><description>&lt;p&gt;&lt;img src="http://florian.katech.net/franz.bmp" alt="Logo franz"&gt; Franz 5 (à l&amp;rsquo;heure où j&amp;rsquo;écris)&lt;/p&gt;
+&lt;p&gt;Franz is the former Emperor of Austria - mais aussi une app de messagerie qui regroupe chat &amp;amp; messaging services en UNE seule application. Franz supporte Slack, WhatsApp, WeChat, Facebook Messenger, Telegram, Google Hangouts, GroupMe, Skype, Trello et quelques autres.&lt;/p&gt;
+&lt;p&gt;Perso j&amp;rsquo;aime bien, c&amp;rsquo;est bien intégrer, il y a un dark mode pour les &amp;ldquo;geek&amp;rdquo; qui voient la vie en noir 😏 et c&amp;rsquo;est super utile plutôt que d&amp;rsquo;avoir 15 000 onglets en plus de tout ce que vous faites déjà. Les notifications sont très pratiques et vous aurez (presque) plus d&amp;rsquo;excuses pour ne pas voir ce qu&amp;rsquo;il se passe sur votre téléphone 😉&lt;/p&gt;</description></item><item><title>Eternal Terminal - Accès ssh sans coupure</title><link>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</link><pubDate>Mon, 22 Jul 2019 14:28:13 +0200</pubDate><guid>http://florian.katech.net/blog/eternal-terminal-acces-ssh-sans-coupure/</guid><description>&lt;p&gt;Ce shell s’installe sur le client et sur le serveur (port 2022) et permet de se reconnecter à votre session sans interruption.&lt;/p&gt;
+&lt;p&gt;Contrairement à une session SSH classique, les sessions ET survivront à une coupure réseau ou à un changement d’adresse IP. Inspiré de Mosh, SSH et AutoSSH, Eternal Terminal utilise SSH pour la mise en relation et le chiffrement et supporte le mode « control » de tmux, ce qui vous permet de disposer de fenêtres, d’onglets et de barres de défilement dans votre terminal.&lt;/p&gt;</description></item><item><title>VidCutter - Logiciel pour découper facilement des vidéos</title><link>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</link><pubDate>Mon, 22 Jul 2019 11:55:31 +0200</pubDate><guid>http://florian.katech.net/blog/logiciel-pour-decouper-facilement-video/</guid><description>&lt;p&gt;Si vous avez besoin de découper des vidéos ou « clipper » certaines parties, vous n’avez pas forcément besoin d’une machine de guerre. C’est pourquoi &lt;a href="https://github.com/ozmartian/vidcutter"&gt;VidCutter&lt;/a&gt; pourrait vous intéresser.&lt;/p&gt;
+&lt;p&gt;Le logiciel est crossplateforme (ce que j&amp;rsquo;adore perso) et il fait bien son taff, tout simplement. Pas besoin de lancer Adobe Première Pro pour juste faire quelques cuts.&lt;/p&gt;
+&lt;p&gt;le logiciel ne modifie rien des vidéos sources, que ce soit leur format, leur résolution ou leur débit. En dehors de la durée, les fichiers exportés seront identiques à ceux d’origine. Ce qui peut être bien ou non car vous ne pourrez pas compresser la taille de la vidéo mais au moins on ne touche pas à la qualité.&lt;/p&gt;</description></item><item><title>L'AGEFI - Administrateur systèmes et réseaux junior - 2 ans</title><link>http://florian.katech.net/experience/lagefi/</link><pubDate>Tue, 09 Jul 2019 19:31:11 +0200</pubDate><guid>http://florian.katech.net/experience/lagefi/</guid><description>&lt;p&gt;Durée : 2 ans (Octobre 2018 - Septembre 2020)&lt;/p&gt;
+&lt;p&gt;Dans une entreprise de taille moyenne (environ 100 collaborateurs), je gère tout ce qu&amp;rsquo;il y a de relié à l&amp;rsquo;informatique. Je peux aussi bien aider un utilisateur (que des internes) à bien brancher ses périphériques qu&amp;rsquo;à installer un serveur de supervision ELK pour statistiques d&amp;rsquo;envoi de mail.&lt;/p&gt;
+&lt;p&gt;Etant dans une équipe de trois personnes (un DSI, un Administrateur systèmes et réseaux et moi-même) nous servons un peu à tout, donc aussi de support pour les salariés de l&amp;rsquo;entreprise.&lt;/p&gt;</description></item><item><title>A propos de moi</title><link>http://florian.katech.net/about/</link><pubDate>Fri, 07 Jun 2019 14:19:58 +0200</pubDate><guid>http://florian.katech.net/about/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Quiconque arrête d&amp;rsquo;apprendre, à vingt ou quatre-vingts ans, devient vieux. Celui qui continue d&amp;rsquo;apprendre reste jeune. Dans la vie, le plus beau est de rester jeune d&amp;rsquo;esprit.&lt;/p&gt;
+&lt;p&gt;&amp;ndash; &lt;!-- raw HTML omitted --&gt;Henry Ford&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Passionné d&amp;rsquo;informatique et de nouvelles technologies depuis &amp;hellip; toujours je crois bien, j&amp;rsquo;ai décidé d&amp;rsquo;en faire mon métier.&lt;/p&gt;
+&lt;p&gt;Polyvalent, curieux et créatif, j&amp;rsquo;ai toujours aimé bidouiller tout ce que je touche.&lt;/p&gt;
+&lt;h2 id="diy"&gt;DIY&lt;/h2&gt;
+&lt;p&gt;Do It Yourself ou fais le toi même pour les gens fâchés avec l&amp;rsquo;anglais.&lt;/p&gt;</description></item><item><title>Gestion clés ssh Linux avec Ansible</title><link>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</link><pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate><guid>http://florian.katech.net/blog/gestion-utilisateur-linux-avec-ansible/</guid><description>&lt;p&gt;Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration.
+Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !&lt;/p&gt;
+&lt;p&gt;Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faire de A à Z un playbook avec le module &lt;a href="https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module"&gt;user&lt;/a&gt;, la doc d&amp;rsquo;ansible est plutôt bien.&lt;/li&gt;
+&lt;li&gt;Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur &lt;a href="https://galaxy.ansible.com/"&gt;ansible galaxy&lt;/a&gt; ou github par exemple&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les 2 options peuvent convenir, mais généralement les rôles qu&amp;rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&amp;rsquo;en servir que de le refaire sois-même.&lt;/p&gt;</description></item><item><title>Gestion clés ssh Linux avec Ansible</title><link>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</link><pubDate>Wed, 29 May 2019 14:29:12 +0200</pubDate><guid>http://florian.katech.net/realisations/gestion-utilisateur-linux-avec-ansible/</guid><description>&lt;p&gt;Il arrive assez souvent de créer plein de VM ou de machine physique avec les mêmes utilisateurs qui vont s&amp;rsquo;en servir avec la même configuration.
+Rajouter leur clé ssh, être dans le groupe admin, créer leur /home, etc&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Des tâches répétitives qu&amp;rsquo;on aimerait bien automatiser. C&amp;rsquo;est pourquoi Ansible est là !&lt;/p&gt;
+&lt;p&gt;Pour se faire, plusieurs méthodes s&amp;rsquo;offrent à nous :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faire de A à Z un playbook avec le module &lt;a href="https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module"&gt;user&lt;/a&gt;, la doc d&amp;rsquo;ansible est plutôt bien.&lt;/li&gt;
+&lt;li&gt;Faire les flemmards et trouver un rôle qui fasse tout ça 😎 sur &lt;a href="https://galaxy.ansible.com/"&gt;ansible galaxy&lt;/a&gt; ou github par exemple.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les 2 options peuvent convenir, mais généralement les rôles qu&amp;rsquo;il y a sur ansible galaxy sont prévus pour gérer tellement de cas que cela semble encore plus compliqué de s&amp;rsquo;en servir que de le refaire sois-même.&lt;/p&gt;</description></item><item><title>Agrandir Stockage Vm vSphere</title><link>http://florian.katech.net/blog/agrandir-stockage-vm/</link><pubDate>Tue, 28 May 2019 16:12:16 +0200</pubDate><guid>http://florian.katech.net/blog/agrandir-stockage-vm/</guid><description>&lt;h3 id="prérequis"&gt;Prérequis&lt;/h3&gt;
+&lt;p&gt;Il faut avoir augmenté la taille de l&amp;rsquo;espace disque (donc là je le fais sur vsphere avec une VM)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Je suis sous ubuntu 16.04 et vSphere 6.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;avais initialement 16Go et je rajoute 134Go donc on se retrouve avec un disque de 150Go
+&lt;img src="http://florian.katech.net/screen_vsphere.PNG" alt="screen vsphere"&gt;
+Ensuite on va faire au plus simple, on va se mettre en liveCD (un iso de gparted fera très bien l&amp;rsquo;affaire)&lt;/p&gt;
+&lt;h3 id="se-mettre-en-livecd-sur-vsphere"&gt;Se mettre en LiveCD sur vSphere&lt;/h3&gt;
+&lt;p&gt;Comment j&amp;rsquo;ai procédé pour insérer le cd :&lt;/p&gt;</description></item><item><title>Recycler Un Vieux Écran De Pc Portable</title><link>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</link><pubDate>Thu, 23 May 2019 12:22:30 +0200</pubDate><guid>http://florian.katech.net/blog/recycler-un-vieux-%C3%A9cran-de-pc-portable/</guid><description>&lt;p&gt;En gros c&amp;rsquo;est très simple.&lt;/p&gt;
+&lt;p&gt;Ce qu&amp;rsquo;il vous faut c&amp;rsquo;est la référence de l&amp;rsquo;écran (qui doit être marquée derrière, après le plus dur c&amp;rsquo;est de voir quel numéro correspond à la référence)&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://florian.katech.net/back_screen.jpg" alt="derriere ecran portable"&gt;&lt;/p&gt;
+&lt;p&gt;Ensuite avec cette référence aller sur ebay (la plupart du temps on le trouve)
+On cherche &lt;!-- raw HTML omitted --&gt;board controller &lt;!-- raw HTML omitted --&gt;+ &lt;!-- raw HTML omitted --&gt;ref de l&amp;rsquo;écran&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description></item><item><title>Sensibilisation au lockpicking</title><link>http://florian.katech.net/blog/sensibilisation/</link><pubDate>Wed, 22 May 2019 16:38:17 +0200</pubDate><guid>http://florian.katech.net/blog/sensibilisation/</guid><description>&lt;h3 id="avant-de-me-faire-embrouille-je-test-juste-un-truc-ça-vient-de-korben-"&gt;Avant de me faire embrouille, je test juste un truc, ça vient de korben ;)&lt;/h3&gt;
+&lt;p&gt;🤗 🤩 🤔 🤨 😐 😑 😶 🙄 😏 😣 😥 😮 🤐&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Lors de la dernière Nuit du Hack, j’ai eu la chance de rencontrer MrJack, un passionné de lockpicking spécialiste des techniques d’ouvertures fines en tous genres. Pour ceux qui n’auraient jamais entendu ce mot, le lockpicking c’est l’art d’ouvrir les serrures sans clé. C’est du hacking de serrure si vous préférez. Et c’est juste passionnant (et bien sûr interdit si ce n’est pas votre propre serrure).&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Compétences</title><link>http://florian.katech.net/comp%C3%A9tences/</link><pubDate>Wed, 22 May 2019 15:38:26 +0200</pubDate><guid>http://florian.katech.net/comp%C3%A9tences/</guid><description>&lt;h1 id="compétences-techniques"&gt;Compétences techniques&lt;/h1&gt;
+&lt;h2 id="linux"&gt;Linux&lt;/h2&gt;
+&lt;p&gt;Depuis le début de mes études j&amp;rsquo;ai tout de suite adhérer à Linux, j&amp;rsquo;avais un peu commencé de mon côté avant l&amp;rsquo;école mais c&amp;rsquo;est vraiment là-bas que j&amp;rsquo;ai pu le plus approfondir mes connaissances.&lt;/p&gt;
+&lt;p&gt;Pour moi l&amp;rsquo;OpenSource c&amp;rsquo;est essentiel et pour des étudiants, c&amp;rsquo;est bien pratique d&amp;rsquo;avoir un OS totalement gratuit. De plus, Linux dispose d&amp;rsquo;un support d&amp;rsquo;assez bonne qualité sur internet notamment par le biais de groupes de diffusion ou de forums. Bien que les versions de Linux soient souvent mis à jour (ce qui est très bien par ailleurs) il reste quand même facile de trouver une solution à son problème en regardant sur des forums.&lt;/p&gt;</description></item><item><title>Installation AWX</title><link>http://florian.katech.net/realisations/installation-awx/</link><pubDate>Sun, 05 Aug 2018 09:45:10 +0200</pubDate><guid>http://florian.katech.net/realisations/installation-awx/</guid><description>&lt;p&gt;On va se servir d&amp;rsquo;Ubuntu 17.10 et on aura besoin d&amp;rsquo;une connexion internet.&lt;/p&gt;
+&lt;p&gt;Nous allons installer quelques paquets qui seront utiles pour que Ansible et AWX fonctionnent correctement.&lt;/p&gt;
+&lt;p&gt;Premièrement, il faudra mettre à jour son source-list.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ensuite procédé à l&amp;rsquo;installation de quelques paquets:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install python-minimal open-ssh htop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ceci va installer python2.7.x, un serveur ssh pour avoir accès à la machine via ssh et &lt;code&gt;htop&lt;/code&gt; un meilleur &lt;code&gt;top&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Thales - Stage Ansible - 6 mois</title><link>http://florian.katech.net/experience/thales/</link><pubDate>Thu, 01 Mar 2018 17:04:36 +0200</pubDate><guid>http://florian.katech.net/experience/thales/</guid><description>&lt;p&gt;Stage à Thales Velizy pendant 6 mois&lt;/p&gt;
+&lt;h4 id="mars-2018---août-2018"&gt;Mars 2018 - Août 2018&lt;/h4&gt;
+&lt;p&gt;Thème de la mission :&lt;/p&gt;
+&lt;h3 id="gestion-de-configuration-massive"&gt;Gestion de configuration massive&lt;/h3&gt;
+&lt;p&gt;Description de la mission :&lt;/p&gt;
+&lt;p&gt;Le service Ingénierie développe et intègre des solutions de communication et de supervision pour les marchés du Transport ferroviaire.&lt;/p&gt;
+&lt;p&gt;Pour les projets exports Lusail et Doha, vous avez pour mission principale la mise en place d’un environnement de déploiement logiciel bâtit autour de la plate-forme de gestion de configuration libre nommée « Ansible ». Les machines à déployer fonctionnent sur un OS Linux Debian 7 et doivent avoir une configuration système et applicative spécifique à chaque instance.&lt;/p&gt;</description></item><item><title>Nemesis - Sécurité réseaux</title><link>http://florian.katech.net/projets/nemesis/</link><pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate><guid>http://florian.katech.net/projets/nemesis/</guid><description>&lt;img src="http://florian.katech.net/Logo_nemesis_153x165.png" alt="Hello Friend" class="center" style="border-radius: 8px;background-color: white;" /&gt;
+
+
+&lt;p&gt;Projet de sécurité informatique (équipe de 3 personnes).&lt;/p&gt;
+&lt;p&gt;Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.&lt;/p&gt;
+&lt;p&gt;A l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.&lt;/p&gt;</description></item><item><title>Nemesis - Sécurité réseaux</title><link>http://florian.katech.net/realisations/nemesis/</link><pubDate>Fri, 20 Oct 2017 17:51:46 +0200</pubDate><guid>http://florian.katech.net/realisations/nemesis/</guid><description>&lt;img src="http://florian.katech.net/Logo_nemesis_153x165.png" alt="Hello Friend" class="center" style="border-radius: 8px;background-color: white;" /&gt;
+
+
+&lt;p&gt;Projet de sécurité informatique (équipe de 3 personnes).&lt;/p&gt;
+&lt;p&gt;Sur un Raspberry avec Kali, nous voulions faire un système de récupération d&amp;rsquo;autant de données que possible de façon totalement indépendante et automatique sur les réseaux wifi et bluetooth.&lt;/p&gt;
+&lt;p&gt;À l&amp;rsquo;aide d&amp;rsquo;une batterie externe et d&amp;rsquo;un sac à dos, nous voulions montrer aux gens la fragilité des systèmes mais surtout le danger bien réel que représente notre époque et ses technologies.&lt;/p&gt;</description></item><item><title>Challenge Accepted - IaaS</title><link>http://florian.katech.net/projets/challenge-accepted/</link><pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate><guid>http://florian.katech.net/projets/challenge-accepted/</guid><description>&lt;p&gt;
+ &lt;img src="http://florian.katech.net/challenge-accepted.jpg" alt="Hello Friend" class="center" style="border-radius: 8px;" /&gt;
+
+
+Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :&lt;/p&gt;
+&lt;p&gt;Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.&lt;/p&gt;
+&lt;p&gt;Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infra préconfiguré ainsi que sa destruction automatique. On fournit toute les informations nécessaire pour que l&amp;rsquo;étudiant puisse réaliser un TP.&lt;/p&gt;
+&lt;p&gt;Pour se faire, nous avons utilisé Ansible, Terraform et AWS.&lt;/p&gt;</description></item><item><title>Challenge Accepted - IaaS</title><link>http://florian.katech.net/realisations/challenge-accepted/</link><pubDate>Thu, 20 Apr 2017 16:32:35 +0200</pubDate><guid>http://florian.katech.net/realisations/challenge-accepted/</guid><description>&lt;p&gt;
+ &lt;img src="http://florian.katech.net/challenge-accepted.jpg" alt="Hello Friend" class="center" style="border-radius: 8px;" /&gt;
+
+
+Projet d&amp;rsquo;école (S4) proposé par Eric Lalitte :&lt;/p&gt;
+&lt;p&gt;Automatisation de génération d&amp;rsquo;infrastructure réseau pour permettre aux étudiants de pouvoir mettre en pratique les cours réseaux disponibles sur le site OpenClassroom.&lt;/p&gt;
+&lt;p&gt;Selon la leçon, il fallait pouvoir mettre à disposition un serveur et/ou une infrastructure préconfigurée ainsi que sa destruction automatique. On fournit toutes les informations nécessaires pour que l&amp;rsquo;étudiant puisse réalisé un TP.&lt;/p&gt;
+&lt;p&gt;Pour se faire, nous avons utilisé Ansible, Terraform et AWS.&lt;/p&gt;</description></item><item><title>Malesherbes - Développeur Web junior - 4 mois</title><link>http://florian.katech.net/experience/malesherbes/</link><pubDate>Thu, 09 Jul 2015 19:55:28 +0200</pubDate><guid>http://florian.katech.net/experience/malesherbes/</guid><description>&lt;h1 id="stage-développeur-web-4-mois"&gt;Stage Développeur web (4 mois)&lt;/h1&gt;
+&lt;p&gt;Novembre 2015 - Février 2016&lt;/p&gt;
+&lt;p&gt;Au sein d&amp;rsquo;une petite entreprise (Groupe Malesherbes Paris 17), j&amp;rsquo;ai pu aider au développement de l&amp;rsquo;interface web pour &amp;ldquo;l&amp;rsquo;uberistation&amp;rdquo; d&amp;rsquo;une application d&amp;rsquo;auto-école.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai pu développer quelques fonctionnalités et apporter l&amp;rsquo;éxperience que j&amp;rsquo;ai eu à l&amp;rsquo;école où, à l&amp;rsquo;époque, je n&amp;rsquo;avais fais que des applications web essentiellement en php/mysql html/css.&lt;/p&gt;
+&lt;h4 id="univers-technique-"&gt;Univers technique :&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML/CSS&lt;/li&gt;
+&lt;li&gt;PHP/MYSQL&lt;/li&gt;
+&lt;li&gt;WordPress&lt;/li&gt;
+&lt;li&gt;IDE (j&amp;rsquo;ai commencé sur dreamwever mais j&amp;rsquo;ai préféré être sur phpstorm)&lt;/li&gt;
+&lt;li&gt;API google (google maps)&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>In'tech - Préparation titre expert systèmes et réseaux RNCP 1</title><link>http://florian.katech.net/experience/intech/</link><pubDate>Tue, 10 Sep 2013 12:40:05 +0200</pubDate><guid>http://florian.katech.net/experience/intech/</guid><description>&lt;img src="http://florian.katech.net/intech.png" alt="Hello Friend" class="center" style="border-radius: 8px;" /&gt;
+
+
+&lt;p&gt;Ce que j&amp;rsquo;ai bien aimé dans cet école c&amp;rsquo;était l&amp;rsquo;apprentissage en mode projet qui est beaucoup plus parlant que juste des cours théoriques que l&amp;rsquo;on ne met jamais vraiment en pratique. Cela m&amp;rsquo;a aussi permis de voir comment s&amp;rsquo;effectue un projet avec tout ce que ça comporte, pas uniquement l&amp;rsquo;aspect technique qui m&amp;rsquo;intéressait plus que la gestion de projet. Cela n&amp;rsquo;a pas toujours été évident pour moi car j&amp;rsquo;ai eu du mal à me faire à tout l&amp;rsquo;aspect non technique. J&amp;rsquo;ai découvert ce que c&amp;rsquo;était de travailler en équipe et c&amp;rsquo;est loin d&amp;rsquo;être évident croyez moi 😅&lt;/p&gt;</description></item><item><title>Mon Premier Site</title><link>http://florian.katech.net/projets/mon-premier-site/</link><pubDate>Tue, 27 Jun 2006 16:03:28 +0200</pubDate><guid>http://florian.katech.net/projets/mon-premier-site/</guid><description>&lt;p&gt;
+ &lt;img src="http://florian.katech.net/la_planque_a_ratchet.jpg" alt="Logo site" class="center" style="border-radius: 8px;" /&gt;
+
+
+Ma première expérience avec le monde de l&amp;rsquo;informatique 🤗&lt;/p&gt;
+&lt;p&gt;Le site est affreux, j&amp;rsquo;étais très loin de savoir comment faire. Je me rappel j&amp;rsquo;étais déterminé et passionné comme jamais !&lt;/p&gt;
+&lt;p&gt;Ceci est plus un &amp;ldquo;retour d&amp;rsquo;expérience&amp;rdquo; qu&amp;rsquo;autre chose.&lt;/p&gt;
+&lt;p&gt;Je ne savais même pas qu&amp;rsquo;il était encore en ligne et le fait de le revoir m&amp;rsquo;a mis un coup de nostalgie.&lt;/p&gt;
+&lt;p&gt;Je me rappel très bien, je me butais au site du zero (qui maintenant s&amp;rsquo;appel OpenClassroom &amp;hellip;) je faisais du html sur papier parceque j&amp;rsquo;avais &amp;ldquo;que&amp;rdquo; un mac (on se détent rien à voir avec vos macbook pro actuel hein &amp;hellip;)&lt;/p&gt;</description></item></channel></rss>
